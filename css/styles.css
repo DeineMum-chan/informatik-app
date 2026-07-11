@@ -1146,3 +1146,75 @@ button { font-family: inherit; color: inherit; }
   font-weight: 500;
   margin: 0.9rem 0 0;
 }
+
+/* ---- Kaffeekasse / Unterstützung (Login-Screen) ----------------------------- */
+
+.support-card { text-align: center; }
+
+.support-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.4rem;
+}
+
+.support-text {
+  color: var(--ink-dim);
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin: 0 auto 1.2rem;
+  max-width: 34ch;
+}
+
+.support-qr-wrap {
+  display: inline-block;
+  background: #ffffff;               /* immer weiß, damit der Code scannbar bleibt */
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.support-qr { display: block; width: 168px; height: 168px; }
+
+.support-hint {
+  color: var(--ink-faint);
+  font-size: 0.76rem;
+  font-weight: 500;
+  margin: 0.7rem 0 1.1rem;
+}
+
+.support-or {
+  color: var(--ink-dim);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.support-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+
+.support-email::before { content: "⧉"; color: var(--accent-strong); font-size: 1em; }
+.support-email:hover { border-color: var(--accent); color: var(--accent-strong); }
+.support-email:active { transform: scale(0.97); }
+
+.support-toast {
+  color: var(--ok);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 0.8rem 0 0;
+  animation: qIn 0.25s var(--ease);
+}

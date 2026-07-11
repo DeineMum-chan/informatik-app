@@ -1367,8 +1367,70 @@
       errEl,
       el('div', { className: 'btn-row' }, btn)));
 
+    view.appendChild(buildSupportCard());
+
     setView(view, '');
     setTimeout(() => input.focus(), 50);
+  }
+
+  // ---- Freiwillige Unterstützung (Kaffeekasse) ------------------------------
+
+  const SUPPORT_EMAIL = 'john-tahir.ahmed@web.de';
+  // PayPal lässt sich mit reiner E-Mail nicht zuverlässig vorbefüllen; der
+  // Button öffnet daher die PayPal-Sendeseite und legt die Adresse in die
+  // Zwischenablage, sodass man sie dort nur noch einfügen muss.
+  const PAYPAL_SEND_URL = 'https://www.paypal.com/myaccount/transfer/homepage/pay';
+
+  function copyEmailToClipboard(toastEl) {
+    const showToast = () => {
+      if (!toastEl) return;
+      toastEl.textContent = '✓ E-Mail kopiert – in PayPal einfügen';
+      toastEl.hidden = false;
+      window.clearTimeout(copyEmailToClipboard._t);
+      copyEmailToClipboard._t = window.setTimeout(() => { toastEl.hidden = true; }, 3000);
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(SUPPORT_EMAIL).then(showToast, showToast);
+      } else {
+        showToast();
+      }
+    } catch (err) { showToast(); }
+  }
+
+  function buildSupportCard() {
+    const toast = el('p', { className: 'support-toast', hidden: '' });
+
+    const qrWrap = el('div', { className: 'support-qr-wrap' },
+      el('img', {
+        className: 'support-qr',
+        src: 'assets/qrcode.png',
+        alt: 'PayPal-QR-Code zum Senden eines Beitrags',
+        width: '168', height: '168',
+      }));
+
+    const emailBtn = el('button', {
+      type: 'button',
+      className: 'support-email',
+      title: 'E-Mail-Adresse kopieren',
+      onclick: () => copyEmailToClipboard(toast),
+    }, SUPPORT_EMAIL);
+
+    const payBtn = el('button', {
+      type: 'button',
+      className: 'btn btn-primary btn-block',
+      onclick: () => { copyEmailToClipboard(toast); window.open(PAYPAL_SEND_URL, '_blank', 'noopener'); },
+    }, 'Mit PayPal senden');
+
+    return el('div', { className: 'card support-card' },
+      el('h2', { className: 'support-title', text: '☕ Kaffeekasse – ganz freiwillig' }),
+      el('p', { className: 'support-text', text: 'Die App ist und bleibt kostenlos. Wer sie feiert und mich ein bisschen unterstützen mag, darf gern was dalassen – überhaupt kein Muss, freut mich aber.' }),
+      qrWrap,
+      el('p', { className: 'support-hint', text: 'Am Laptop? Einfach mit dem Handy scannen.' }),
+      el('p', { className: 'support-or', text: 'oder per PayPal an:' }),
+      emailBtn,
+      el('div', { className: 'btn-row', style: 'margin-top:0.8rem' }, payBtn),
+      toast);
   }
 
   async function doLogout() {
