@@ -1,0 +1,22 @@
+{
+  "_hinweis": "Erlaubte Login-Namen (klein geschrieben, nur a-z, 0-9, - und _). Neuen Nutzer hinzufügen: Name ergänzen, committen, redeployen — wirkt sofort.",
+  "users": [
+    "ben",
+    "hendrik",
+    "luca",
+    "maxim",
+    "nico",
+    "niklas",
+    "rieke",
+    "robin",
+    "silas",
+    "tim",
+    "ebertz",
+    "acki",
+    "arne",
+    "bruce",
+    "cameron",
+    "lenja",
+    "quentin"
+  ]
+}

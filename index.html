@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>C-Klausurtrainer · Informatik 1 (THM)</title>
+  <meta name="description" content="Offline-Trainer für die C-Klausur (Informatik 1, THM StudiumPlus): Üben nach Thema, Klausursimulation, Fehler wiederholen.">
+  <meta name="theme-color" content="#10140f">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button type="button" class="brand" id="brandHome" title="Zur Startseite">
+      <span class="brand-brace">{</span>&hairsp;C&hairsp;<span class="brand-brace">}</span>
+      <span class="brand-name">Klausurtrainer</span>
+    </button>
+    <div class="topbar-right">
+      <span id="topbarInfo" class="topbar-info" aria-live="polite"></span>
+      <span id="userChip" class="user-chip" hidden></span>
+      <button type="button" id="logoutBtn" class="icon-btn" title="Abmelden" aria-label="Abmelden" hidden>⏻</button>
+      <button type="button" id="themeToggle" class="icon-btn" title="Hell/Dunkel umschalten" aria-label="Farbschema umschalten">◐</button>
+    </div>
+  </header>
+
+  <main id="app" class="app" aria-live="polite">
+    <div class="loading-screen">
+      <div class="loading-cursor">▮</div>
+      <p>Fragenpool wird geladen&nbsp;…</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span id="footerNote"></span>
+  </footer>
+
+  <!-- Fallback für den Start per Doppelklick (file://): identische Kopie des
+       Pools als JS-Datei, weil Browser fetch() auf lokale Dateien blockieren.
+       Quelle der Wahrheit bleibt data/questions.json (siehe README). -->
+  <script defer src="data/questions.js" onerror="/* optional, fehlt ggf. */"></script>
+  <script defer src="js/storage.js"></script>
+  <script defer src="js/quiz-engine.js"></script>
+  <script defer src="js/app.js"></script>
+</body>
+</html>
