@@ -12,13 +12,14 @@
  * damit alte Caches aufgeräumt und alle Assets neu geladen werden.
  */
 
-const VERSION = 'ckt-v2';
+const VERSION = 'ckt-v3';
 const CACHE_NAME = `c-klausurtrainer-${VERSION}`;
 
 const APP_SHELL = [
   './',
   './index.html',
   './css/styles.css',
+  './js/config.js',
   './js/app.js',
   './js/quiz-engine.js',
   './js/storage.js',

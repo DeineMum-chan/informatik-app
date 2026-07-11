@@ -87,13 +87,21 @@
       groups: {},           // groupId → { id, code, groupPrompt, topicId, questions: [] }
       groupOrder: [],
       skipped: 0,
+      disabledCount: 0,     // Fragen aus deaktivierten Themen (siehe config.js)
+      disabledTopicNames: [],
     };
     if (!raw || typeof raw !== 'object') return result;
 
-    // Themen übernehmen (defekte überspringen)
+    // Global deaktivierte Themen (config.js) — Fragen bleiben in der Datei,
+    // werden aber nirgends verwendet.
+    const cfg = (typeof window !== 'undefined' && window.CKT_CONFIG) || {};
+    const disabled = new Set(Array.isArray(cfg.disabledTopics) ? cfg.disabledTopics : []);
+
+    // Themen übernehmen (defekte und deaktivierte überspringen)
     const rawTopics = Array.isArray(raw.topics) ? raw.topics : [];
     for (const t of rawTopics) {
       if (!t || !isNonEmptyString(t.id) || !isNonEmptyString(t.name)) continue;
+      if (disabled.has(t.id)) { result.disabledTopicNames.push(t.name); continue; }
       const topic = { id: t.id, name: t.name, area: isNonEmptyString(t.area) ? t.area : 'Sonstiges' };
       result.topics.push(topic);
       result.topicById[topic.id] = topic;
@@ -102,6 +110,9 @@
     const rawQuestions = Array.isArray(raw.questions) ? raw.questions : [];
     const seenIds = new Set();
     for (const q of rawQuestions) {
+      // Deaktivierte Themen ganz früh aussortieren — vor der Fallback-Logik,
+      // sonst würde eine solche Frage unter einem Ersatzthema wieder auftauchen.
+      if (q && disabled.has(q.topicId)) { result.disabledCount += 1; continue; }
       if (!validateQuestion(q) || seenIds.has(q.id)) { result.skipped += 1; continue; }
       seenIds.add(q.id);
 

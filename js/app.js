@@ -602,6 +602,10 @@
     if (data.skipped > 0) {
       view.appendChild(el('div', { className: 'notice', text: `${data.skipped} fehlerhafte Frage(n) im Pool wurden übersprungen.` }));
     }
+    if (data.disabledCount > 0) {
+      const themen = data.disabledTopicNames.length ? ' (' + data.disabledTopicNames.join(', ') + ')' : '';
+      view.appendChild(el('div', { className: 'notice', text: `${data.disabledCount} Frage(n) sind aktuell deaktiviert${themen} und werden nicht abgefragt.` }));
+    }
 
     // Themen-Statistik
     view.appendChild(el('div', { className: 'section-title', text: 'Fortschritt nach Thema' }));
