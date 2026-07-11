@@ -12,7 +12,7 @@
  * damit alte Caches aufgeräumt und alle Assets neu geladen werden.
  */
 
-const VERSION = 'ckt-v3';
+const VERSION = 'ckt-v4';
 const CACHE_NAME = `c-klausurtrainer-${VERSION}`;
 
 const APP_SHELL = [
@@ -27,6 +27,11 @@ const APP_SHELL = [
   './manifest.webmanifest',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
+  './assets/fonts/montserrat-latin-400-normal.woff2',
+  './assets/fonts/montserrat-latin-500-normal.woff2',
+  './assets/fonts/montserrat-latin-600-normal.woff2',
+  './assets/fonts/montserrat-latin-700-normal.woff2',
+  './assets/fonts/montserrat-latin-800-normal.woff2',
 ];
 
 self.addEventListener('install', (event) => {

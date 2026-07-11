@@ -132,6 +132,7 @@ c-klausurtrainer/
 ├── data/questions.json     # Fragenpool (Quelle der Wahrheit)
 ├── data/questions.js       # generierte Kopie für den Start per Doppelklick
 ├── assets/icons/           # PWA-Icons (192/512 px)
+├── assets/fonts/           # Montserrat (lokal eingebettet, kein CDN)
 ├── manifest.webmanifest    # PWA-Manifest
 ├── service-worker.js       # Offline-Caching aller Dateien
 ├── server.js               # Mini-Backend für den Online-Betrieb (Node, ohne npm)

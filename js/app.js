@@ -104,7 +104,7 @@
     const dark = document.documentElement.dataset.theme === 'dark' ||
       (!document.documentElement.dataset.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
     const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', dark ? '#10140f' : '#f2f3ec');
+    if (meta) meta.setAttribute('content', dark ? '#0a0a0c' : '#f5f5f7');
   }
 
   function toggleTheme() {
@@ -1296,7 +1296,7 @@
     const chip = document.getElementById('userChip');
     const logoutBtn = document.getElementById('logoutBtn');
     if (AUTH.name) {
-      chip.textContent = '▸ ' + AUTH.name + (AUTH.mode === 'offline' ? ' (offline)' : '');
+      chip.textContent = AUTH.name + (AUTH.mode === 'offline' ? ' (offline)' : '');
       chip.hidden = false;
       logoutBtn.hidden = false;
     } else {
