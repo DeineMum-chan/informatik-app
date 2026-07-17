@@ -198,39 +198,54 @@
   // ===========================================================================
 
   /**
+   * Anzeige-Reihenfolge der Optionen: gemischt, damit man sich nicht "es war
+   * die dritte" merken kann. Richtig/Falsch bleibt in fester Reihenfolge.
+   * Liefert ein Array von Original-Indizes in Anzeige-Reihenfolge.
+   */
+  function makeOptionOrder(q) {
+    const identity = q.options.map((_, i) => i);
+    if (q.type === 'true-false') return identity;
+    return CKT.engine.shuffle(identity);
+  }
+
+  /**
    * Optionsliste (Radio-Verhalten bei single, Checkbox-Verhalten bei multi).
-   * Rückgabe: { root, getAnswer, setEnabled, reveal, selectKey }
+   * Anzeige gemischt (opts.order überschreibbar, z. B. stabil pro Klausur);
+   * Auswahl/Antworten laufen IMMER im Original-Indexraum der Frage.
+   * Rückgabe: { root, order, getAnswer, setEnabled, reveal, selectKey }
    */
   function createOptionList(q, opts) {
     const multi = q.type === 'mc-multi' || q.type === 'find-bug';
     const onChange = opts && opts.onChange;
+    const order = (opts && opts.order) || makeOptionOrder(q);
     let selection = new Set(opts && opts.initial != null
       ? (multi ? opts.initial : [opts.initial]) : []);
     let enabled = true;
 
-    const buttons = q.options.map((text, i) => {
+    // buttons[d] zeigt die Original-Option order[d]
+    const buttons = order.map((oi, d) => {
       const btn = el('button', {
         type: 'button',
         className: 'option',
         onclick: () => {
           if (!enabled) return;
           if (multi) {
-            if (selection.has(i)) selection.delete(i); else selection.add(i);
+            if (selection.has(oi)) selection.delete(oi); else selection.add(oi);
           } else {
-            selection = new Set([i]);
+            selection = new Set([oi]);
           }
           sync();
           if (onChange) onChange(getAnswer());
         },
       },
-        el('span', { className: 'option-key', text: String(i + 1) }),
-        el('span', { className: 'option-text', text: text })
+        el('span', { className: 'option-key', text: String(d + 1) }),
+        el('span', { className: 'option-text', text: q.options[oi] })
       );
       return btn;
     });
 
     function sync() {
-      buttons.forEach((b, i) => b.classList.toggle('selected', selection.has(i)));
+      buttons.forEach((b, d) => b.classList.toggle('selected', selection.has(order[d])));
     }
     sync();
 
@@ -241,14 +256,16 @@
 
     return {
       root: el('div', { className: 'options' }, ...buttons),
+      order,
       getAnswer,
       setEnabled(v) { enabled = v; buttons.forEach((b) => { b.disabled = !v; }); },
       selectKey(i) { if (enabled && i < buttons.length) buttons[i].click(); },
       reveal() {
         const correct = new Set(multi ? q.answerIndices : [q.answerIndex]);
-        buttons.forEach((b, i) => {
-          if (correct.has(i)) b.classList.add('reveal-correct');
-          else if (selection.has(i)) b.classList.add('reveal-wrong');
+        buttons.forEach((b, d) => {
+          const oi = order[d];
+          if (correct.has(oi)) b.classList.add('reveal-correct');
+          else if (selection.has(oi)) b.classList.add('reveal-wrong');
         });
       },
     };
@@ -310,24 +327,45 @@
     return row;
   }
 
-  function explanationBox(q) {
+  /**
+   * Nummerierte Pro-Option-Erklärungen ("1. ✓ …") an die gemischte
+   * Anzeige-Reihenfolge anpassen. Prosa-Erklärungen bleiben unverändert.
+   */
+  function displayExplanation(q, order) {
+    const text = q.explanation || '';
+    if (!order || !q.options) return text;
+    const lines = text.split('\n');
+    if (lines.length !== q.options.length) return text;
+    if (!lines.every((l, i) => l.startsWith((i + 1) + '. '))) return text;
+    return order.map((oi, d) => (d + 1) + '. ' + lines[oi].replace(/^\d+\. /, '')).join('\n');
+  }
+
+  function explanationBox(q, order) {
     if (!q.explanation) return null;
     return el('div', { className: 'explanation' },
       el('span', { className: 'exp-label', text: 'Erklärung' }),
-      q.explanation);
+      displayExplanation(q, order));
   }
 
   function feedbackBanner(correct, extraText) {
     return el('div', { className: 'feedback ' + (correct ? 'ok' : 'bad'), text: (correct ? '✔ Richtig!' : '✘ Falsch.') + (extraText ? ' ' + extraText : '') });
   }
 
-  /** Text der Musterlösung für den Feedback-/Review-Block. */
-  function correctAnswerText(q) {
+  /**
+   * Text der Musterlösung für den Feedback-/Review-Block.
+   * order (falls übergeben): Nummern beziehen sich auf die ANGEZEIGTE
+   * (gemischte) Reihenfolge, damit sie zum Bildschirm passen.
+   */
+  function correctAnswerText(q, order) {
+    const num = (i) => (order ? order.indexOf(i) : i) + 1;
     switch (q.type) {
       case 'mc-single': case 'predict-output': case 'true-false':
         return q.options[q.answerIndex];
       case 'mc-multi': case 'find-bug':
-        return q.answerIndices.map((i) => `${i + 1}. ${q.options[i]}`).join('\n');
+        return q.answerIndices
+          .slice()
+          .sort((a, b) => num(a) - num(b))
+          .map((i) => `${num(i)}. ${q.options[i]}`).join('\n');
       case 'short-answer': case 'code-explain':
         return q.answer;
       default: return '';
@@ -388,9 +426,9 @@
       if (q.type === 'short-answer' || !correct) {
         feedbackSlot.appendChild(el('div', { className: 'explanation' },
           el('span', { className: 'exp-label', text: 'Musterlösung' }),
-          correctAnswerText(q)));
+          correctAnswerText(q, widget.order)));
       }
-      const exp = explanationBox(q);
+      const exp = explanationBox(q, widget.order);
       if (exp) feedbackSlot.appendChild(exp);
       if (!correct) card.classList.add('shake');
       actionBtn.textContent = 'Weiter →';
@@ -556,7 +594,9 @@
     const data = S.data;
     const stats = CKT.storage.globalStats();
     const reviewCount = CKT.engine.buildReviewPool(data).length;
-    const runAll = CKT.storage.runProgress(data.questions);
+    const overall = CKT.engine.overallProgress(data);
+    const runAll = overall.families;   // Durchlauf zählt in Konzepten
+    const seenQ = overall.questions;   // Gesamtstand zählt in Einzelfragen
     const view = el('div', { className: 'view' });
 
     // Hero + Kennzahlen
@@ -581,22 +621,22 @@
     const runFill = el('div', { className: 'bar-fill' });
     runFill.style.width = runAll.total > 0 ? Math.round((runAll.done / runAll.total) * 100) + '%' : '0%';
     const seenFill = el('div', { className: 'bar-fill' });
-    seenFill.style.width = runAll.total > 0 ? Math.round((runAll.answered / runAll.total) * 100) + '%' : '0%';
+    seenFill.style.width = seenQ.total > 0 ? Math.round((seenQ.answered / seenQ.total) * 100) + '%' : '0%';
 
     view.appendChild(el('div', { className: 'card progress-card' },
       el('div', { className: 'progress-row' },
-        el('span', { className: 'progress-label', text: 'Aktueller Durchlauf' }),
+        el('span', { className: 'progress-label', text: 'Aktueller Durchlauf (Konzepte)' }),
         el('span', { className: 'progress-value', text: `${runAll.done} / ${runAll.total}` })),
       el('div', { className: 'bar' }, runFill),
       el('p', { className: 'progress-sub', text: runAll.open > 0
-        ? `Noch ${runAll.open} Fragen offen, bis der Durchlauf komplett ist.`
-        : 'Durchlauf komplett — beim nächsten Üben startet ein neuer.' }),
+        ? `Noch ${runAll.open} Konzepte offen. Varianten derselben Vorlage zählen als ein Konzept — pro Durchlauf siehst du je eine davon.`
+        : 'Durchlauf komplett — beim nächsten Üben startet ein neuer mit anderen Varianten.' }),
       el('div', { className: 'progress-row', style: 'margin-top:1rem' },
-        el('span', { className: 'progress-label', text: 'Schon mal beantwortet' }),
-        el('span', { className: 'progress-value', text: `${runAll.answered} / ${runAll.total}` })),
+        el('span', { className: 'progress-label', text: 'Schon mal beantwortet (Fragen)' }),
+        el('span', { className: 'progress-value', text: `${seenQ.answered} / ${seenQ.total}` })),
       el('div', { className: 'bar' }, seenFill),
-      el('p', { className: 'progress-sub', text: runAll.fresh > 0
-        ? `${runAll.fresh} Fragen hast du noch nie gesehen. Diese Zahl bleibt auch nach einem Durchlauf-Reset erhalten.`
+      el('p', { className: 'progress-sub', text: seenQ.total - seenQ.answered > 0
+        ? `${seenQ.total - seenQ.answered} Einzelfragen hast du noch nie gesehen. Diese Zahl bleibt auch nach einem Durchlauf-Reset erhalten.`
         : 'Du hast jede Frage aus dem Pool mindestens einmal gesehen.' })));
 
     // Modus-Karten
@@ -605,8 +645,8 @@
       el('button', { className: 'mode-card', type: 'button', onclick: renderPracticeSetup },
         el('span', { className: 'mode-icon', text: '▤' }),
         el('h3', { text: 'Üben nach Thema' }),
-        el('p', { text: 'Jede Frage einmal richtig — geschaffte verschwinden, bis der Durchlauf komplett ist.' }),
-        el('span', { className: 'mode-meta', text: runAll.open > 0 ? `${runAll.open} von ${runAll.total} noch offen` : 'alle geschafft 🎉' })),
+        el('p', { text: 'Jedes Konzept einmal richtig — geschaffte verschwinden, bis der Durchlauf komplett ist.' }),
+        el('span', { className: 'mode-meta', text: runAll.open > 0 ? `${runAll.open} von ${runAll.total} Konzepten offen` : 'alle geschafft 🎉' })),
       el('button', { className: 'mode-card', type: 'button', onclick: renderExamSetup },
         el('span', { className: 'mode-icon', text: '⏱' }),
         el('h3', { text: 'Klausursimulation' }),
@@ -802,7 +842,7 @@
       const st = session.stats();
       countEl.textContent = st.total === 0
         ? 'Keine Fragen ausgewählt'
-        : `${st.open} von ${st.total} Fragen offen`;
+        : `${st.open} von ${st.total} Konzepten offen`;
       startBtn.disabled = st.total === 0;
     }
     updateCount();
@@ -836,7 +876,7 @@
 
     const refreshProgress = () => {
       const st = p.session.stats();
-      label.textContent = `${st.done} von ${st.total} geschafft · noch ${st.open} offen`;
+      label.textContent = `${st.done} von ${st.total} Konzepten geschafft · noch ${st.open} offen`;
       fill.style.width = st.total > 0 ? Math.round((st.done / st.total) * 100) + '%' : '0%';
     };
     refreshProgress();
@@ -888,9 +928,9 @@
       el('div', { className: 'big', style: 'font-size:3rem', text: '🎉' }),
       el('h1', { className: 'login-title', text: 'Durchlauf geschafft!' }),
       el('p', { className: 'result-points', text: total === 1
-        ? 'Die Frage hast du richtig beantwortet.'
-        : `Alle ${total} Fragen mindestens einmal richtig beantwortet.` }),
-      el('p', { className: 'result-sub', text: 'Der Stand wurde zurückgesetzt — du kannst direkt einen neuen Durchlauf starten. Deine Statistik bleibt natürlich erhalten.' }),
+        ? 'Das Konzept hast du richtig beantwortet.'
+        : `Alle ${total} Konzepte mindestens einmal richtig beantwortet.` }),
+      el('p', { className: 'result-sub', text: 'Der Stand wurde zurückgesetzt — der nächste Durchlauf zeigt dir pro Konzept eine andere Variante (andere Zahlen und Namen). Deine Statistik bleibt erhalten.' }),
       el('div', { className: 'btn-row', style: 'justify-content:center' },
         el('button', { className: 'btn btn-primary', type: 'button', text: 'Neuer Durchlauf', onclick: startPractice }),
         el('button', { className: 'btn', type: 'button', text: 'Themen ändern', onclick: renderPracticeSetup }),
@@ -978,6 +1018,7 @@
     S.exam = {
       exam,
       answers: {},
+      perms: {}, // stabile Options-Mischung pro Frage (bleibt beim Blättern gleich)
       idx: 0,
       deadline: options.timed ? Date.now() + options.minutes * 60000 : null,
       timerId: null,
@@ -1126,6 +1167,7 @@
       widget = createOptionList(q, {
         initial: ex.answers[q.id],
         onChange: (a) => { ex.answers[q.id] = a; onAnswerChange(); },
+        order: ex.perms[q.id] || (ex.perms[q.id] = makeOptionOrder(q)),
       });
     }
     card.appendChild(widget.root);
@@ -1456,23 +1498,23 @@
    * Der Bestätigungs-Stand liegt im synchronisierten Fortschritt (storage),
    * damit der Dialog nicht auf jedem Gerät neu aufpoppt.
    */
-  const NEWS_VERSION = 1;
+  const NEWS_VERSION = 2;
 
   const NEWS_ITEMS = [
     {
-      icon: '🎯',
-      title: 'Dein Lernfortschritt zählt jetzt',
-      text: 'Beim Üben verschwinden Fragen, die du richtig hattest — Schluss mit Fragen, die du längst kannst. Ein Balken zeigt, wie viele noch offen sind. Sind alle einmal richtig, ist der Durchlauf geschafft und startet neu.',
+      icon: '🧠',
+      title: 'Kein Déjà-vu mehr beim Üben',
+      text: 'Viele Fragen waren Varianten derselben Vorlage (gleiche Antworten, andere Zahlen) — man kannte die Antwort, ohne das Konzept zu können. Jetzt zählt der Durchlauf in 393 Konzepten: Pro Vorlage kommt genau eine Variante, im nächsten Durchlauf eine andere.',
     },
     {
-      icon: '🔁',
-      title: '„Fehler wiederholen" räumt schneller auf',
-      text: 'Eine falsche Frage fliegt jetzt schon bei der ersten richtigen Antwort aus dem Fehler-Pool — vorher brauchte es vier.',
+      icon: '🔀',
+      title: 'Antworten stehen nie mehr an derselben Stelle',
+      text: '„Es war immer die dritte" funktioniert nicht mehr: Die Antwortmöglichkeiten werden bei jeder Anzeige neu gemischt.',
     },
     {
-      icon: '💡',
-      title: 'Deutlich bessere Erklärungen',
-      text: 'Bei 434 Fragen stand vorher nur „Antwort 1 richtig, 2 falsch". Jetzt wird jede Antwortmöglichkeit einzeln begründet — mit Rechenweg und dem C-Konzept dahinter.',
+      icon: '📊',
+      title: 'Gesamt-Lernstand auf der Startseite',
+      text: 'Zwei Balken zeigen jetzt deinen Durchlauf-Fortschritt (Konzepte) und wie viele der Einzelfragen du überhaupt schon gesehen hast.',
     },
   ];
 

@@ -55,6 +55,7 @@
       global: { answered: 0, correct: 0, streak: 0, bestStreak: 0, lastPracticed: null },
       exams: [],
       newsSeen: 0,   // zuletzt bestätigte Neuerungs-Version (siehe NEWS_VERSION in app.js)
+      runSeed: 0,    // rotiert die Varianten-Auswahl pro Übungs-Durchlauf
       savedAt: 0,
     };
   }
@@ -89,6 +90,7 @@
       global: Object.assign(base.global, parsed.global),
       exams: Array.isArray(parsed.exams) ? parsed.exams : base.exams,
       newsSeen: Number(parsed.newsSeen) || 0,
+      runSeed: Number(parsed.runSeed) || 0,
       savedAt: Number(parsed.savedAt) || 0,
     };
   }
@@ -286,14 +288,19 @@
   /**
    * Durchlauf zurücksetzen: d-Flags der übergebenen Frage-IDs löschen.
    * Statistik (s/c/w), Markierungen und Fehler-Pool bleiben unberührt.
+   * Der runSeed wird hochgezählt → der nächste Durchlauf zeigt pro Konzept
+   * eine ANDERE Variante (Werte/Namen wechseln, die Antwort ist nicht merkbar).
    */
   function resetRun(ids) {
     for (const id of ids) {
       const r = state.perQuestion[id];
       if (r) r.d = false;
     }
+    state.runSeed = (state.runSeed || 0) + 1;
     save();
   }
+
+  function getRunSeed() { return state.runSeed || 0; }
 
   function globalStats() {
     const g = state.global;
@@ -384,6 +391,7 @@
     isDone,
     runProgress,
     resetRun,
+    getRunSeed,
     globalStats,
     topicStats,
     addExamResult,

@@ -155,7 +155,98 @@
       a.topics.push(t);
     }
 
+    buildFamilies(result);
     return result;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Varianten-Familien
+  //
+  // Der Pool wurde aus Vorlagen generiert: Viele Fragen sind Werte-Varianten
+  // derselben Vorlage ("double a[25]" vs. "double a[40]", quadrat vs. umfang,
+  // gleiches Snippet mit anderem Array). Wer mehrere Varianten im selben
+  // Durchlauf sieht, erkennt die Antwort wieder, statt das Konzept zu prüfen.
+  //
+  // Lösung: Varianten werden zu einer FAMILIE gebündelt. Der Übungsmodus zeigt
+  // pro Durchlauf genau eine Variante je Familie; im nächsten Durchlauf
+  // rotiert die Auswahl (runSeed). Klausur & Fehler-Pool nutzen weiter alle.
+  // ---------------------------------------------------------------------------
+
+  /** Zahlen, Hex, String-Literale, variablen Funktionsnamen → Platzhalter. */
+  function normalizeForFamily(s, fname) {
+    let t = String(s == null ? '' : s);
+    if (fname) t = t.split(fname).join('F');
+    return t
+      .replace(/"[^"]*"/g, '"S"')
+      .replace(/0x[0-9a-fA-F]+/g, '#')
+      .replace(/\d+(\.\d+)?/g, '#')
+      .toLowerCase();
+  }
+
+  function familyKeyOf(dataset, q) {
+    if (isNonEmptyString(q.group) && dataset.groups[q.group]) {
+      const g = dataset.groups[q.group];
+      return 'G|' + g.topicId + '|' + normalizeForFamily(g.code, null);
+    }
+    // Bewusst NUR Prompt + Code (nicht die Optionen): Viele Vorlagen rotieren
+    // ihre Distraktoren — die Frage ist trotzdem dieselbe. Der Code ist Teil
+    // des Schlüssels, damit z. B. Predict-Output-Fragen (identischer Prompt,
+    // anderes Fragment) sauber getrennt bleiben.
+    const fm = q.prompt.match(/Die Funktion (\w+) soll/);
+    const fname = fm ? fm[1] : null;
+    return q.type + '|' + q.topicId + '|' + normalizeForFamily(q.prompt, fname) + '|' + normalizeForFamily(q.code, fname);
+  }
+
+  /**
+   * dataset.families: Array von { key, units: [unit, …] } — Einheiten (Frage
+   * oder Snippet-Gruppe), die Varianten derselben Vorlage sind.
+   * dataset.familyByUnitKey: unitKey → Familien-Index.
+   */
+  function buildFamilies(dataset) {
+    const units = toUnits(dataset, dataset.questions);
+    const byKey = new Map();
+    dataset.families = [];
+    dataset.familyByUnitKey = {};
+    for (const u of units) {
+      const q = u.kind === 'group' ? u.group.questions[0] : u.q;
+      const key = familyKeyOf(dataset, q);
+      let fam = byKey.get(key);
+      if (!fam) {
+        fam = { key, units: [] };
+        byKey.set(key, fam);
+        dataset.families.push(fam);
+      }
+      fam.units.push(u);
+      dataset.familyByUnitKey[unitKey(u)] = dataset.families.length - 1;
+    }
+  }
+
+  /** Simpler, stabiler String-Hash für die Varianten-Rotation. */
+  function hashStr(s) {
+    let h = 0;
+    for (let i = 0; i < s.length; i++) h = ((h << 5) - h + s.charCodeAt(i)) | 0;
+    return Math.abs(h);
+  }
+
+  function unitFullyDone(unit) {
+    return unitQuestions(unit).every((q) => CKT.storage.isDone(q.id));
+  }
+
+  /** Fortschritt in Familien ("Konzepten") + Fragen über den ganzen Pool. */
+  function overallProgress(dataset) {
+    let doneF = 0;
+    for (const fam of dataset.families) {
+      if (fam.units.some(unitFullyDone)) doneF += 1;
+    }
+    let answeredQ = 0;
+    for (const q of dataset.questions) {
+      const r = CKT.storage.getRecord(q.id);
+      if (r && r.s > 0) answeredQ += 1;
+    }
+    return {
+      families: { total: dataset.families.length, done: doneF, open: dataset.families.length - doneF },
+      questions: { total: dataset.questions.length, answered: answeredQ },
+    };
   }
 
   // ---------------------------------------------------------------------------
@@ -193,13 +284,13 @@
   /**
    * filters: { topicIds: Set|null, difficulties: Set|null }
    *
-   * Fahrschul-Prinzip: Die Sitzung liefert nur Fragen, die im aktuellen
-   * Durchlauf noch NICHT richtig beantwortet wurden (storage.isDone === false).
-   * Richtig beantwortete verschwinden sofort aus dem Strom, falsche kommen
-   * wieder. Sind alle geschafft, liefert next() null → Durchlauf komplett.
+   * Fahrschul-Prinzip auf FAMILIEN-Basis: Ein Durchlauf umfasst jedes Konzept
+   * (Varianten-Familie) genau einmal. Pro Familie wird eine Variante gewählt —
+   * deterministisch aus runSeed, sodass der nächste Durchlauf andere Varianten
+   * zeigt und man Antworten nicht wiedererkennen kann.
    *
-   * Wichtig: Der offene Pool wird bei jedem next() neu ausgewertet, weil sich
-   * der Erledigt-Status während der Sitzung laufend ändert.
+   * Eine Familie gilt als geschafft, sobald EINE ihrer Varianten vollständig
+   * richtig beantwortet ist (auch z. B. über die Klausursimulation).
    */
   function createPracticeSession(dataset, filters) {
     const topicIds = filters && filters.topicIds;
@@ -214,50 +305,67 @@
       return true;
     });
 
-    /** Eine Einheit ist offen, solange mindestens eine ihrer Fragen offen ist. */
-    function isUnitOpen(unit) {
-      return unitQuestions(unit).some((q) => !CKT.storage.isDone(q.id));
+    // Auswählbare Einheiten nach Familien bündeln (nur Familien mit Treffern)
+    const eligibleUnits = toUnits(dataset, eligible);
+    const famMap = new Map(); // Familien-Index → [unit, …]
+    for (const u of eligibleUnits) {
+      const fi = dataset.familyByUnitKey[unitKey(u)];
+      if (!famMap.has(fi)) famMap.set(fi, []);
+      famMap.get(fi).push(u);
+    }
+    const seed = CKT.storage.getRunSeed();
+    const families = [...famMap.entries()].map(([fi, units]) => ({
+      key: dataset.families[fi].key,
+      units,
+      // Varianten-Rotation: pro Durchlauf (seed) eine andere Variante
+      chosen: units[(hashStr(dataset.families[fi].key) + seed) % units.length],
+    }));
+
+    function familyDone(fam) {
+      return fam.units.some(unitFullyDone);
     }
 
-    function openUnits() {
-      const open = eligible.filter((q) => !CKT.storage.isDone(q.id));
-      return toUnits(dataset, open);
+    function openFamilies() {
+      return families.filter((f) => !familyDone(f));
     }
 
     let queue = [];
-    const recent = []; // zuletzt gezeigte unitKeys (FIFO), gegen direkte Wiederholung
+    const recent = []; // zuletzt gezeigte Familien-Keys (FIFO), gegen direkte Wiederholung
 
-    function refill(units) {
+    function refill(open) {
       const recentSet = new Set(recent);
-      let candidates = units.filter((u) => !recentSet.has(unitKey(u)));
-      if (candidates.length === 0) candidates = units.slice();
+      let candidates = open.filter((f) => !recentSet.has(f.key));
+      if (candidates.length === 0) candidates = open.slice();
       queue = shuffle(candidates);
     }
 
-    function remember(unit, poolSize) {
-      recent.push(unitKey(unit));
-      // Rückstell-Fenster an den Restpool koppeln, damit kleine Pools nicht blockieren
+    function remember(fam, poolSize) {
+      recent.push(fam.key);
       const cap = Math.min(200, Math.max(1, Math.floor(poolSize / 2)));
       while (recent.length > cap) recent.shift();
     }
 
     return {
       eligibleIds: () => eligible.map((q) => q.id),
-      stats: () => CKT.storage.runProgress(eligible),
       questionCount: eligible.length,
+      /** Fortschritt in Konzepten (Familien) — das ist die Durchlauf-Einheit. */
+      stats() {
+        let done = 0;
+        for (const f of families) if (familyDone(f)) done += 1;
+        return { total: families.length, done, open: families.length - done };
+      },
       next() {
-        const units = openUnits();
-        if (units.length === 0) return null; // Durchlauf geschafft
-        if (queue.length === 0) refill(units);
-        // Einheiten überspringen, die seit dem Befüllen erledigt wurden
+        const open = openFamilies();
+        if (open.length === 0) return null; // Durchlauf geschafft
+        if (queue.length === 0) refill(open);
         while (queue.length > 0) {
-          const unit = queue.pop();
-          if (isUnitOpen(unit)) { remember(unit, units.length); return unit; }
+          const fam = queue.pop();
+          if (!familyDone(fam)) { remember(fam, open.length); return fam.chosen; }
         }
-        refill(units);
-        const unit = queue.pop();
-        remember(unit, units.length);
-        return unit;
+        refill(open);
+        const fam = queue.pop();
+        remember(fam, open.length);
+        return fam.chosen;
       },
     };
   }
@@ -496,6 +604,7 @@
   CKT.engine = {
     DIFFICULTIES,
     prepare,
+    overallProgress,
     validateQuestion,
     toUnits,
     unitQuestions,
