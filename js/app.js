@@ -556,6 +556,7 @@
     const data = S.data;
     const stats = CKT.storage.globalStats();
     const reviewCount = CKT.engine.buildReviewPool(data).length;
+    const runAll = CKT.storage.runProgress(data.questions);
     const view = el('div', { className: 'view' });
 
     // Hero + Kennzahlen
@@ -582,8 +583,8 @@
       el('button', { className: 'mode-card', type: 'button', onclick: renderPracticeSetup },
         el('span', { className: 'mode-icon', text: '▤' }),
         el('h3', { text: 'Üben nach Thema' }),
-        el('p', { text: 'Themen auswählen, endloser Fragenstrom mit Sofort-Feedback und Erklärungen.' }),
-        el('span', { className: 'mode-meta', text: `${data.questions.length} Fragen · ${data.topics.length} Themen` })),
+        el('p', { text: 'Jede Frage einmal richtig — geschaffte verschwinden, bis der Durchlauf komplett ist.' }),
+        el('span', { className: 'mode-meta', text: runAll.open > 0 ? `${runAll.open} von ${runAll.total} noch offen` : 'alle geschafft 🎉' })),
       el('button', { className: 'mode-card', type: 'button', onclick: renderExamSetup },
         el('span', { className: 'mode-icon', text: '⏱' }),
         el('h3', { text: 'Klausursimulation' }),
@@ -771,8 +772,11 @@
 
     function updateCount() {
       const session = CKT.engine.createPracticeSession(data, f);
-      countEl.textContent = `${session.questionCount} Fragen im Pool`;
-      startBtn.disabled = session.questionCount === 0;
+      const st = session.stats();
+      countEl.textContent = st.total === 0
+        ? 'Keine Fragen ausgewählt'
+        : `${st.open} von ${st.total} Fragen offen`;
+      startBtn.disabled = st.total === 0;
     }
     updateCount();
 
@@ -791,24 +795,37 @@
   function renderPracticeQuestion() {
     const p = S.practice;
     const unit = p.session.next();
-    if (!unit) { renderPracticeSetup(); return; }
+    if (!unit) { renderPracticeDone(); return; }
 
     const view = el('div', { className: 'view' });
-    const stats = () => `${p.answered} beantwortet · ${p.answered > 0 ? Math.round((p.correct / p.answered) * 100) + ' % richtig' : '–'} · Serie ${CKT.storage.globalStats().streak}`;
+
+    // Durchlauf-Fortschritt: „x von y geschafft" + Balken
+    const label = el('span');
+    const fill = el('div', { className: 'bar-fill' });
     const head = el('div', { className: 'session-head' },
-      el('span', { text: stats() }),
+      label,
       el('button', { className: 'btn btn-ghost btn-small', type: 'button', text: 'Beenden', onclick: renderHome }));
+    const bar = el('div', { className: 'bar run-bar' }, fill);
+
+    const refreshProgress = () => {
+      const st = p.session.stats();
+      label.textContent = `${st.done} von ${st.total} geschafft · noch ${st.open} offen`;
+      fill.style.width = st.total > 0 ? Math.round((st.done / st.total) * 100) + '%' : '0%';
+    };
+    refreshProgress();
+
     view.appendChild(head);
+    view.appendChild(bar);
 
     const onDoneSingle = (correct) => {
       CKT.storage.recordAnswer(unit.q.id, correct);
       p.answered += 1; if (correct) p.correct += 1;
-      head.firstChild.textContent = stats();
+      refreshProgress();
     };
     const onDoneGroupStatement = (q, correct) => {
       CKT.storage.recordAnswer(q.id, correct);
       p.answered += 1; if (correct) p.correct += 1;
-      head.firstChild.textContent = stats();
+      refreshProgress();
     };
 
     if (unit.kind === 'group') {
@@ -822,6 +839,35 @@
         onNext: renderPracticeQuestion,
       }));
     }
+
+    setView(view, 'Üben');
+  }
+
+  /**
+   * Durchlauf komplett: alle Fragen der Auswahl mindestens einmal richtig.
+   * Hier wird der Stand zurückgesetzt, damit der nächste Durchlauf wieder
+   * bei null startet (Fahrschul-Prinzip).
+   */
+  function renderPracticeDone() {
+    S.keyHandler = null;
+    const p = S.practice;
+    const total = p.session.stats().total;
+
+    // Stand zurücksetzen — Statistik, Markierungen und Fehler-Pool bleiben.
+    CKT.storage.resetRun(p.session.eligibleIds());
+
+    const view = el('div', { className: 'view' });
+    view.appendChild(el('div', { className: 'card result-hero' },
+      el('div', { className: 'big', style: 'font-size:3rem', text: '🎉' }),
+      el('h1', { className: 'login-title', text: 'Durchlauf geschafft!' }),
+      el('p', { className: 'result-points', text: total === 1
+        ? 'Die Frage hast du richtig beantwortet.'
+        : `Alle ${total} Fragen mindestens einmal richtig beantwortet.` }),
+      el('p', { className: 'result-sub', text: 'Der Stand wurde zurückgesetzt — du kannst direkt einen neuen Durchlauf starten. Deine Statistik bleibt natürlich erhalten.' }),
+      el('div', { className: 'btn-row', style: 'justify-content:center' },
+        el('button', { className: 'btn btn-primary', type: 'button', text: 'Neuer Durchlauf', onclick: startPractice }),
+        el('button', { className: 'btn', type: 'button', text: 'Themen ändern', onclick: renderPracticeSetup }),
+        el('button', { className: 'btn btn-ghost', type: 'button', text: 'Startseite', onclick: renderHome }))));
 
     setView(view, 'Üben');
   }
@@ -850,7 +896,7 @@
     const pool = CKT.engine.buildReviewPool(S.data);
     const r = CKT.storage.getRecord(q.id);
     view.appendChild(el('div', { className: 'session-head' },
-      el('span', { text: `${pool.length} Fragen im Fehler-Pool · Stufe ${r ? r.box : 0}/${CKT.storage.MAX_BOX}${r && r.m ? ' · ★ gemerkt' : ''}` })));
+      el('span', { text: `Noch ${pool.length} im Fehler-Pool · richtig beantwortet = raus${r && r.m ? ' · ★ gemerkt' : ''}` })));
 
     view.appendChild(renderImmediateQuestion(q, {
       onDone: (correct) => CKT.storage.recordAnswer(q.id, correct),

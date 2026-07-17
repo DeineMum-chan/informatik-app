@@ -192,8 +192,14 @@
 
   /**
    * filters: { topicIds: Set|null, difficulties: Set|null }
-   * Eine Session liefert mit next() endlos Einheiten; kürzlich gezeigte
-   * werden zurückgestellt, bis der Rest des Pools durch ist.
+   *
+   * Fahrschul-Prinzip: Die Sitzung liefert nur Fragen, die im aktuellen
+   * Durchlauf noch NICHT richtig beantwortet wurden (storage.isDone === false).
+   * Richtig beantwortete verschwinden sofort aus dem Strom, falsche kommen
+   * wieder. Sind alle geschafft, liefert next() null → Durchlauf komplett.
+   *
+   * Wichtig: Der offene Pool wird bei jedem next() neu ausgewertet, weil sich
+   * der Erledigt-Status während der Sitzung laufend ändert.
    */
   function createPracticeSession(dataset, filters) {
     const topicIds = filters && filters.topicIds;
@@ -208,36 +214,56 @@
       return true;
     });
 
-    const units = toUnits(dataset, eligible);
-    // Rückstell-Fenster: gut die Hälfte des Pools, gedeckelt — so wiederholt
-    // sich bei großen Pools lange nichts, kleine Pools blockieren nicht.
-    const recentCap = Math.min(200, Math.max(1, Math.floor(units.length / 2)));
-    let queue = [];
-    const recent = []; // zuletzt gezeigte unitKeys (FIFO)
+    /** Eine Einheit ist offen, solange mindestens eine ihrer Fragen offen ist. */
+    function isUnitOpen(unit) {
+      return unitQuestions(unit).some((q) => !CKT.storage.isDone(q.id));
+    }
 
-    function refill() {
+    function openUnits() {
+      const open = eligible.filter((q) => !CKT.storage.isDone(q.id));
+      return toUnits(dataset, open);
+    }
+
+    let queue = [];
+    const recent = []; // zuletzt gezeigte unitKeys (FIFO), gegen direkte Wiederholung
+
+    function refill(units) {
       const recentSet = new Set(recent);
       let candidates = units.filter((u) => !recentSet.has(unitKey(u)));
       if (candidates.length === 0) candidates = units.slice();
       queue = shuffle(candidates);
     }
 
+    function remember(unit, poolSize) {
+      recent.push(unitKey(unit));
+      // Rückstell-Fenster an den Restpool koppeln, damit kleine Pools nicht blockieren
+      const cap = Math.min(200, Math.max(1, Math.floor(poolSize / 2)));
+      while (recent.length > cap) recent.shift();
+    }
+
     return {
-      poolSize: units.length,
+      eligibleIds: () => eligible.map((q) => q.id),
+      stats: () => CKT.storage.runProgress(eligible),
       questionCount: eligible.length,
       next() {
-        if (units.length === 0) return null;
-        if (queue.length === 0) refill();
+        const units = openUnits();
+        if (units.length === 0) return null; // Durchlauf geschafft
+        if (queue.length === 0) refill(units);
+        // Einheiten überspringen, die seit dem Befüllen erledigt wurden
+        while (queue.length > 0) {
+          const unit = queue.pop();
+          if (isUnitOpen(unit)) { remember(unit, units.length); return unit; }
+        }
+        refill(units);
         const unit = queue.pop();
-        recent.push(unitKey(unit));
-        while (recent.length > recentCap) recent.shift();
+        remember(unit, units.length);
         return unit;
       },
     };
   }
 
   // ---------------------------------------------------------------------------
-  // Fehler wiederholen: gewichtete Auswahl (einfaches Leitner-Prinzip)
+  // Fehler wiederholen: falsch beantwortete + gemerkte Fragen
   // ---------------------------------------------------------------------------
 
   function buildReviewPool(dataset) {
@@ -246,30 +272,17 @@
   }
 
   /**
-   * Zieht die nächste Frage aus dem Fehler-Pool.
-   * Gewicht: niedrige Leitner-Stufe → häufiger; markierte Fragen extra.
-   * excludeId verhindert die direkte Wiederholung derselben Frage.
+   * Zieht die nächste Frage aus dem Fehler-Pool (zufällig, gleichverteilt).
+   * Der Pool schrumpft von selbst: Wer eine Frage richtig beantwortet, nimmt
+   * sie aus dem Pool (storage.recordAnswer setzt rv=false).
+   * excludeId verhindert, dass direkt dieselbe Frage nochmal kommt.
    */
   function drawReviewQuestion(dataset, excludeId) {
     const pool = buildReviewPool(dataset);
     if (pool.length === 0) return null;
     let candidates = pool.filter((q) => q.id !== excludeId);
     if (candidates.length === 0) candidates = pool;
-
-    let total = 0;
-    const weighted = candidates.map((q) => {
-      const r = CKT.storage.getRecord(q.id);
-      const box = r ? r.box : 0;
-      const w = (CKT.storage.MAX_BOX + 1 - box) + (r && r.m ? 2 : 0);
-      total += w;
-      return { q, w };
-    });
-    let roll = Math.random() * total;
-    for (const item of weighted) {
-      roll -= item.w;
-      if (roll <= 0) return item.q;
-    }
-    return weighted[weighted.length - 1].q;
+    return candidates[Math.floor(Math.random() * candidates.length)];
   }
 
   // ---------------------------------------------------------------------------

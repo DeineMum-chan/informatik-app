@@ -11,14 +11,21 @@
  *
  * Datenmodell (ein JSON-Blob pro Nutzer):
  * {
- *   perQuestion: { "Q-000001": { s, c, w, box: 0..4, last, m } },
+ *   perQuestion: { "Q-000001": { s, c, w, last, m, d, rv } },
  *   global: { answered, correct, streak, bestStreak, lastPracticed },
  *   exams:  [ { ts, points, max, percent, grade, negative, timed } ],
  *   savedAt: Zeitstempel des letzten save()
  * }
  *
- * "box" ist die Leitner-Stufe für "Fehler wiederholen":
- * falsch → box 0 (kommt oft), richtig → box+1, ab box 4 gilt sie als gelernt.
+ * Fahrschul-Prinzip (zwei Flags pro Frage):
+ *   d  = "im aktuellen Durchlauf schon richtig beantwortet". Solche Fragen
+ *        kommen im Übungsmodus nicht mehr. Ist der Durchlauf komplett, werden
+ *        alle d-Flags der Auswahl zurückgesetzt (resetRun) und es geht von vorn.
+ *   rv = "steht im Fehler-Pool" (falsch beantwortet, noch nicht korrigiert).
+ *        Einmal richtig beantwortet → rv=false → raus aus dem Pool.
+ *
+ * s/c/w bleiben kumulative Statistik (für Quote und Themen-Fortschritt) und
+ * werden von den Durchlauf-Resets nicht angetastet.
  */
 
 (function () {
@@ -29,7 +36,7 @@
   const BASE_KEY = 'ckt-progress-v1';
   const THEME_KEY = 'ckt-theme';
   const LAST_USER_KEY = 'ckt-last-user';
-  const MAX_BOX = 4;
+  const LEGACY_MAX_BOX = 4; // nur noch für die Migration alter Stände
   const MAX_EXAM_HISTORY = 10;
   const SYNC_DEBOUNCE_MS = 2000;
 
@@ -51,11 +58,33 @@
     };
   }
 
+  /**
+   * Alte Datensätze (Leitner-Modell mit "box") auf d/rv umstellen.
+   * Läuft nur, wenn die Felder fehlen — bestehender Fortschritt bleibt erhalten:
+   *   rv (Fehler-Pool) = frühere Bedingung "falsch gehabt und noch nicht gelernt"
+   *   d  (Durchlauf)   = schon mal richtig beantwortet und nicht im Fehler-Pool
+   */
+  function migrateRecord(r) {
+    if (!r || typeof r !== 'object') return { s: 0, c: 0, w: 0, last: 0, m: false, d: false, rv: false };
+    if (typeof r.rv === 'undefined') {
+      const box = typeof r.box === 'number' ? r.box : LEGACY_MAX_BOX;
+      r.rv = (r.w > 0 && box < LEGACY_MAX_BOX);
+    }
+    if (typeof r.d === 'undefined') {
+      r.d = (r.c > 0 && !r.rv);
+    }
+    delete r.box; // wird nicht mehr verwendet
+    r.m = !!r.m;
+    return r;
+  }
+
   function sanitize(parsed) {
     const base = emptyState();
     if (!parsed || typeof parsed !== 'object') return base;
+    const perQuestion = (typeof parsed.perQuestion === 'object' && parsed.perQuestion) || base.perQuestion;
+    for (const id of Object.keys(perQuestion)) migrateRecord(perQuestion[id]);
     return {
-      perQuestion: (typeof parsed.perQuestion === 'object' && parsed.perQuestion) || base.perQuestion,
+      perQuestion,
       global: Object.assign(base.global, parsed.global),
       exams: Array.isArray(parsed.exams) ? parsed.exams : base.exams,
       savedAt: Number(parsed.savedAt) || 0,
@@ -161,7 +190,7 @@
   function rec(id) {
     let r = state.perQuestion[id];
     if (!r) {
-      r = { s: 0, c: 0, w: 0, box: MAX_BOX, last: 0, m: false };
+      r = { s: 0, c: 0, w: 0, last: 0, m: false, d: false, rv: false };
       state.perQuestion[id] = r;
     }
     return r;
@@ -170,6 +199,9 @@
   /**
    * Eine beantwortete Frage verbuchen.
    * opts.streak: false im Klausurmodus (Batch-Auswertung zählt nicht als Serie).
+   *
+   * Richtig → gilt als geschafft (d) und verlässt den Fehler-Pool (rv).
+   * Falsch  → zurück in den Durchlauf (d=false) und rein in den Fehler-Pool.
    */
   function recordAnswer(id, correct, opts) {
     const countStreak = !opts || opts.streak !== false;
@@ -178,10 +210,12 @@
     r.last = Date.now();
     if (correct) {
       r.c += 1;
-      r.box = Math.min(MAX_BOX, r.box + 1); // richtig → seltener wiederholen
+      r.d = true;
+      r.rv = false;
     } else {
       r.w += 1;
-      r.box = 0; // falsch → zurück auf Stufe 0, kommt häufig wieder
+      r.d = false;
+      r.rv = true;
     }
     const g = state.global;
     g.answered += 1;
@@ -210,14 +244,43 @@
     return state.perQuestion[id] || null;
   }
 
-  /** IDs für "Fehler wiederholen": markiert oder falsch beantwortet & noch nicht verheilt. */
+  /**
+   * IDs für "Fehler wiederholen": aktuell offene Fehler (rv) oder gemerkte Fragen.
+   * Eine falsch beantwortete Frage fliegt raus, sobald sie einmal richtig
+   * beantwortet wurde (rv=false) — gemerkte bleiben, bis die Markierung weg ist.
+   */
   function reviewIds() {
     const ids = [];
     for (const id of Object.keys(state.perQuestion)) {
       const r = state.perQuestion[id];
-      if (r.m || (r.w > 0 && r.box < MAX_BOX)) ids.push(id);
+      if (r.m || r.rv) ids.push(id);
     }
     return ids;
+  }
+
+  /** Im aktuellen Durchlauf bereits richtig beantwortet? */
+  function isDone(id) {
+    const r = state.perQuestion[id];
+    return !!(r && r.d);
+  }
+
+  /** Durchlauf-Fortschritt über eine Fragenmenge: { total, done, open }. */
+  function runProgress(questions) {
+    let done = 0;
+    for (const q of questions) if (isDone(q.id)) done += 1;
+    return { total: questions.length, done, open: questions.length - done };
+  }
+
+  /**
+   * Durchlauf zurücksetzen: d-Flags der übergebenen Frage-IDs löschen.
+   * Statistik (s/c/w), Markierungen und Fehler-Pool bleiben unberührt.
+   */
+  function resetRun(ids) {
+    for (const id of ids) {
+      const r = state.perQuestion[id];
+      if (r) r.d = false;
+    }
+    save();
   }
 
   function globalStats() {
@@ -279,7 +342,6 @@
   }
 
   CKT.storage = {
-    MAX_BOX,
     // Nutzer & Sync
     setUser,
     getUser,
@@ -296,6 +358,9 @@
     isMarked,
     getRecord,
     reviewIds,
+    isDone,
+    runProgress,
+    resetRun,
     globalStats,
     topicStats,
     addExamResult,

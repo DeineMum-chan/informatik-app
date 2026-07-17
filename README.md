@@ -107,9 +107,9 @@ erkennt die App das automatisch und läuft wie bisher im Gastmodus ohne Login.
 
 | Modus | Was passiert |
 |---|---|
-| **Üben nach Thema** | Themen/Schwierigkeit wählen, endloser Fragenstrom mit Sofort-Feedback und Erklärung. Kürzlich gezeigte Fragen werden zurückgestellt. „☆ merken" markiert schwierige Fragen. |
+| **Üben nach Thema** | Themen/Schwierigkeit wählen, Sofort-Feedback und Erklärung. **Fahrschul-Prinzip:** Jede Frage muss einmal richtig beantwortet werden; geschaffte Fragen verschwinden aus dem Strom, falsche kommen wieder. Ein Balken zeigt „x von y geschafft". Ist der Durchlauf komplett, wird der Stand zurückgesetzt und es geht von vorn los. „☆ merken" markiert schwierige Fragen. |
 | **Klausursimulation** | Realistischer Mix: Teil 1 (~40 Fragen: R/F-Aussagen, „Was trifft zu?", Predict-Output, Zahlensysteme, Einfachauswahl) + Teil 2 (4 Code-Snippets à ~10 Aussagen + 1 Fehler-finden). Optionen: Zeitlimit (Standard 90 min) und Negativ-Marking (unbeantwortet = −0,5 P., wie beim Dozenten). Am Ende: Punkte, Prozent, geschätzte Note, Themen-Schwächen und komplette Durchsicht. |
-| **Fehler wiederholen** | Falsch beantwortete + gemerkte Fragen. Leitner-Prinzip: falsch → Stufe 0 (kommt oft), richtig → Stufe hoch; ab Stufe 4 gilt die Frage als gelernt. |
+| **Fehler wiederholen** | Falsch beantwortete + gemerkte Fragen. Wer eine Frage **einmal richtig** beantwortet, nimmt sie sofort aus dem Pool — so wiederholen sich dieselben Fragen nicht. Gemerkte Fragen bleiben, bis die Markierung entfernt wird. |
 
 **Notenschätzung** (üblicher Hochschulschlüssel, Bestehensgrenze 50 %):
 ≥95 % → 1,0 · ≥90 % → 1,3 · ≥85 % → 1,7 · ≥80 % → 2,0 · ≥75 % → 2,3 ·

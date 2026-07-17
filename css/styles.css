@@ -961,11 +961,14 @@ button { font-family: inherit; color: inherit; }
   align-items: center;
   justify-content: space-between;
   gap: 0.6rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--ink-dim);
 }
+
+/* Durchlauf-Fortschritt im Übungsmodus */
+.run-bar { margin-bottom: 1.1rem; }
 
 /* ---- Klausurmodus --------------------------------------------------------------------------- */
 
