@@ -5711,7 +5711,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: \\n = newline.",
+   "explanation": "Richtig: \\n ist eine Escape-Sequenz: Der Backslash kündigt ein Sonderzeichen an, n steht für \"new line\".",
    "source": "T-05 / AT-1",
    "verified": true
   },
@@ -5726,7 +5726,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: \\t = Tabulator.",
+   "explanation": "Richtig: \\t ist die Escape-Sequenz für einen horizontalen Tabulator.",
    "source": "T-05 / AT-1",
    "verified": true
   },
@@ -5756,7 +5756,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: z. B. \\n, \\t, \\\\, \\\".",
+   "explanation": "Richtig: Der Backslash leitet Sonderzeichen ein: \\n (Zeilenumbruch), \\t (Tabulator), \\\\ (Backslash selbst), \\\" (Anführungszeichen).",
    "source": "T-05 / AT-1",
    "verified": true
   },
@@ -5831,7 +5831,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: %d bzw. %i steht für int.",
+   "explanation": "Richtig: %d (\"decimal\") ist der Specifier für int. Zum Vergleich: %lf für double, %c für char, %s für Strings.",
    "source": "T-06 / AT-1",
    "verified": true
   },
@@ -5861,7 +5861,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: h steht für short.",
+   "explanation": "Richtig: Das h (\"half\") verkleinert das d: %hd = short. Analog vergrößert l: %ld = long, %lld = long long.",
    "source": "T-06 / AT-1",
    "verified": true
   },
@@ -5876,7 +5876,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: ll steht für long long.",
+   "explanation": "Richtig: Jedes l steht für ein \"long\": %lld = long long. Gegenstück: %hd = short.",
    "source": "T-06 / AT-1",
    "verified": true
   },
@@ -5891,7 +5891,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: u = unsigned.",
+   "explanation": "Richtig: u = \"unsigned\". Für vorzeichenlose Ganzzahlen nimmt man %u — mit %d würden sehr große Werte falsch (negativ) angezeigt.",
    "source": "T-06 / AT-1",
    "verified": true
   },
@@ -5906,7 +5906,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: Kombination aus ll und u.",
+   "explanation": "Richtig: Kombination aus ll (long long) und u (unsigned) → %llu.",
    "source": "T-06 / AT-1",
    "verified": true
   },
@@ -5951,7 +5951,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: %c = character.",
+   "explanation": "Richtig: %c = \"character\": genau ein Zeichen. Ganze Zeichenketten gibt %s aus.",
    "source": "T-06 / AT-1",
    "verified": true
   },
@@ -6101,7 +6101,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: z. B. scanf(\"%d %d\", &a, &b);.",
+   "explanation": "Richtig: Im Formatstring dürfen mehrere Specifier stehen: scanf(\"%d %d\", &a, &b); liest zwei Werte — für jede Zielvariable braucht es ein &.",
    "source": "T-08 / AT-1",
    "verified": true
   },
@@ -6176,7 +6176,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: double = 8 Byte, float = 4 Byte.",
+   "explanation": "Richtig: Merktabelle: char 1, short 2, int/float 4, double/long long 8 Byte. Durch die 8 Byte hat double ca. 15 Nachkommastellen Genauigkeit (float nur ~7).",
    "source": "T-10 / AT-1",
    "verified": true
   },
@@ -6206,7 +6206,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: short = 2 Byte.",
+   "explanation": "Richtig: Merktabelle: char 1, short 2, int/float 4, double/long long 8 Byte. Wertebereich von short: −32.768 … 32.767.",
    "source": "T-10 / AT-1",
    "verified": true
   },
@@ -6221,7 +6221,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: long long = 8 Byte.",
+   "explanation": "Richtig: Merktabelle: char 1, short 2, int/float 4, double/long long 8 Byte.",
    "source": "T-10 / AT-1",
    "verified": true
   },
@@ -6266,7 +6266,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: 2^8 = 256 Werte, von 0 bis 255.",
+   "explanation": "Richtig: 1 Byte = 8 Bit → 2⁸ = 256 mögliche Werte. Ohne Vorzeichen: 0 bis 255. (Mit Vorzeichen: −128 bis 127.)",
    "source": "T-11 / AT-1",
    "verified": true
   },
@@ -6401,7 +6401,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: C ist case-sensitive.",
+   "explanation": "Richtig: C ist case-sensitiv — bei Variablen, Funktionen und Schlüsselwörtern. Deshalb ist auch Quadrat(...) ein anderer Name als quadrat(...).",
    "source": "T-09 / AT-1",
    "verified": true
   },
@@ -6641,7 +6641,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: (double)5 / 2 = 2.5.",
+   "explanation": "Richtig: int / int ist GANZZAHLdivision: 5/2 = 2, der Rest fällt weg. Sobald ein Operand Gleitkomma ist — 5.0/2 oder (double)a/b —, wird echt dividiert.",
    "source": "T-12 / AT-1",
    "verified": true
   },
@@ -6686,7 +6686,7 @@
     "Falsch"
    ],
    "answerIndex": 1,
-   "explanation": "Falsch: Casten schneidet ab – (int)3.9 = 3.",
+   "explanation": "Falsch: Der Cast auf int SCHNEIDET die Nachkommastellen ab: (int)3.9 = 3. Kaufmännisches Runden müsste man selbst bauen (z. B. 0.5 addieren).",
    "source": "T-12 / AT-1",
    "verified": true
   },
@@ -6731,7 +6731,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: 5 = 2·2 + 1, der Rest ist 1.",
+   "explanation": "Richtig: % liefert den Divisionsrest: 5 = 2·2 + 1 → Rest 1. Praktisch für gerade/ungerade: x % 2 == 0 ⇔ x ist gerade.",
    "source": "T-13 / AT-1",
    "verified": true
   },
@@ -6776,7 +6776,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: a = a * 2.",
+   "explanation": "Richtig: Zusammengesetzte Zuweisung: a *= 2 ist die Kurzform von a = a * 2.",
    "source": "T-18 / AT-1",
    "verified": true
   },
@@ -6791,7 +6791,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: Inkrement-Operator.",
+   "explanation": "Richtig: i++ (Inkrement) ist die Kurzform von i = i + 1.",
    "source": "T-19 / AT-1",
    "verified": true
   },
@@ -6806,7 +6806,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: Dekrement-Operator.",
+   "explanation": "Richtig: i-- (Dekrement) ist die Kurzform von i = i - 1.",
    "source": "T-19 / AT-1",
    "verified": true
   },
@@ -7046,7 +7046,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: Wie in der Mathematik.",
+   "explanation": "Richtig: Wie in der Mathematik: 2 + 3 * 4 = 14, nicht 20. % zählt zur Punktrechnung, denn es ist eine Division (Rest).",
    "source": "T-25 / AT-1",
    "verified": true
   },
@@ -7076,7 +7076,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: a || b && c bedeutet a || (b && c).",
+   "explanation": "Richtig: a || b && c wird als a || (b && c) ausgewertet — \"und vor oder\", analog zu Punkt vor Strich. Im Zweifel: Klammern setzen.",
    "source": "T-25 / AT-1",
    "verified": true
   },
@@ -7166,7 +7166,7 @@
     "Falsch"
    ],
    "answerIndex": 1,
-   "explanation": "Falsch: strcpy gehört zu string.h.",
+   "explanation": "Falsch: strcpy ist eine String-Funktion → string.h. In math.h stehen sqrt, pow, sin, …",
    "source": "T-14 / AT-1",
    "verified": true
   },
@@ -7226,7 +7226,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: ceil(3.2) = 4.0, floor(3.8) = 3.0.",
+   "explanation": "Richtig: ceil (\"Decke\") rundet immer auf, floor (\"Boden\") immer ab: ceil(3.2) = 4, floor(3.9) = 3. Beide aus math.h, Rückgabetyp double.",
    "source": "T-14 / AT-1",
    "verified": true
   },
@@ -7256,7 +7256,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: fabs(-4.2) = 4.2.",
+   "explanation": "Richtig: fabs (\"floating-point absolute value\") aus math.h: fabs(-4.5) = 4.5.",
    "source": "T-14 / AT-1",
    "verified": true
   },
@@ -7271,7 +7271,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: log10(1000) = 3.",
+   "explanation": "Richtig: log10(100) = 2. Achtung: log (ohne 10) ist in C der NATÜRLICHE Logarithmus zur Basis e.",
    "source": "T-14 / AT-1",
    "verified": true
   },
@@ -7361,7 +7361,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: else ist optional.",
+   "explanation": "Richtig: else ist optional — ohne else passiert im \"falsch\"-Fall einfach nichts.",
    "source": "T-26 / AT-1",
    "verified": true
   },
@@ -7451,7 +7451,7 @@
     "Falsch"
    ],
    "answerIndex": 1,
-   "explanation": "Falsch: default ist optional.",
+   "explanation": "Falsch: default ist OPTIONAL: Trifft kein case zu und default fehlt, wird der switch einfach übersprungen. (Guter Stil ist ein default trotzdem.)",
    "source": "T-27 / AT-1",
    "verified": true
   },
@@ -7481,7 +7481,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: Kopfgesteuerte Schleife.",
+   "explanation": "Richtig: while ist KOPFgesteuert. Das Gegenstück do-while prüft am Ende und läuft deshalb immer mindestens einmal.",
    "source": "T-28 / AT-1",
    "verified": true
   },
@@ -7661,7 +7661,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: void = kein Rückgabewert.",
+   "explanation": "Richtig: void = \"nichts\": return; ohne Wert ist erlaubt, aber x = f(); ist mit einer void-Funktion ein Compilerfehler.",
    "source": "T-32 / AT-1",
    "verified": true
   },
@@ -7736,7 +7736,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: z. B. double mittelwert(...).",
+   "explanation": "Richtig: Muster: Rückgabetyp Name(Parameter) { … } — z. B. double flaeche(double a, double b).",
    "source": "T-31 / AT-1",
    "verified": true
   },
@@ -7751,7 +7751,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: z. B. int quadrat(int zahl).",
+   "explanation": "Richtig: In der DEFINITION braucht jeder Parameter Typ und Namen (double a). Nur im Prototyp darf der Name entfallen.",
    "source": "T-31 / AT-1",
    "verified": true
   },
@@ -7961,7 +7961,7 @@
     "Falsch"
    ],
    "answerIndex": 1,
-   "explanation": "Falsch: C-Arrays beginnen bei Index 0.",
+   "explanation": "Falsch: Arrays starten in C IMMER bei 0; das letzte Element ist a[Größe−1]. Der \"Start bei 1\" ist der Klassiker unter den Denkfehlern.",
    "source": "T-36 / AT-1",
    "verified": true
   },
@@ -8246,7 +8246,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: \"THM\" belegt 4 Byte: 'T','H','M','\\0'.",
+   "explanation": "Richtig: Am Ende jedes Strings steht der Null-Terminator '\\0' (Zahlenwert 0): \"Yes\" belegt 4 Byte. strlen zählt ihn nicht mit, sizeof schon.",
    "source": "T-40 / AT-1",
    "verified": true
   },
@@ -8261,7 +8261,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: Strings sind char-Arrays.",
+   "explanation": "Richtig: Ein String ist ein char-Array — jedes Zeichen (auch der Terminator) ist ein char von 1 Byte.",
    "source": "T-40 / AT-1",
    "verified": true
   },
@@ -8471,7 +8471,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: z. B. p.x = 3.0;",
+   "explanation": "Richtig: variable.element, z. B. p.x = 3; — eckige Klammern sind für Arrays, -> nur für Zeiger auf Structs.",
    "source": "T-43 / AT-1",
    "verified": true
   },
@@ -8486,7 +8486,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: z. B. struct punkt liste[10];",
+   "explanation": "Richtig: Ein struct ist ein normaler Datentyp — Arrays davon sind erlaubt: struct punkt liste[10]; Zugriff: liste[0].x.",
    "source": "T-43 / AT-1",
    "verified": true
   },
@@ -8531,7 +8531,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: z. B. gerade liesGeradeEin(...).",
+   "explanation": "Richtig: Ein typedef-Name ist ein vollwertiger Typname und überall einsetzbar, wo int oder double stehen könnte.",
    "source": "T-44 / AT-1",
    "verified": true
   },
@@ -8606,7 +8606,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: 2 × 8 Byte (double) = 16 Byte.",
+   "explanation": "Richtig: Struct-Größe = (mindestens) Summe der Elementgrößen: 2 × double = 2 × 8 = 16 Byte.",
    "source": "T-45 / AT-1",
    "verified": true
   },
@@ -8686,7 +8686,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: include <math.h> · Richtig: #include <math.h> · Richtig: #pragma once · Falsch: return 42;",
+   "explanation": "1. ✗ Ohne das führende # ist es KEINE Direktive — der Compiler sieht nur ungültigen Text und meldet einen Syntaxfehler.\n2. ✓ Gültig: beginnt mit #, Standard-Header stehen in spitzen Klammern.\n3. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.\n4. ✗ return ist eine normale C-ANWEISUNG, keine Präprozessor-Direktive — Direktiven beginnen mit #.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -8706,7 +8706,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: Der Präprozessor läuft vor dem Compiler. · Falsch: Der Präprozessor übersetzt direkt in Maschinencode. · Falsch: Der Compiler erzeugt direkt die fertige .exe-Datei. · Richtig: Der Assembler erzeugt aus Assemblercode Objektcode.",
+   "explanation": "1. ✓ Reihenfolge der Toolchain: Präprozessor (Textersetzung: #include, #define) → Compiler (→ Assemblercode) → Assembler (→ Objektcode) → Linker (→ .exe).\n2. ✗ Der Präprozessor macht reine TEXTERSETZUNG (#include einfügen, #define ersetzen). Maschinencode entsteht erst durch Compiler und Assembler.\n3. ✗ Der Compiler erzeugt (über den Assembler) Objektdateien (.obj). Die .exe baut erst der Linker aus allen Objektdateien zusammen.\n4. ✓ Kette: Compiler erzeugt Assemblercode → Assembler macht daraus Objektcode (.obj) → Linker verbindet alles zur .exe.",
    "source": "T-01 / AT-9",
    "verified": true
   },
@@ -8727,7 +8727,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: #include <math.h> bindet einen Standard-Header ein. · Falsch: #include wird erst zur Laufzeit ausgewertet. · Richtig: Für eigene Header nutzt man doppelte Anführungszeichen. · Richtig: Der Header-Inhalt wird textuell an der #include-Stelle eingefügt.",
+   "explanation": "1. ✓ Spitze Klammern = Standard-Header aus dem Suchpfad des Compilers. Eigene Header bindet man mit \"…\" ein.\n2. ✗ #include erledigt der Präprozessor — der ALLERERSTE Schritt der Übersetzung, lange bevor das Programm läuft.\n3. ✓ #include \"meins.h\" sucht im Projektordner; #include <stdio.h> sucht im Standard-Suchpfad des Compilers.\n4. ✓ #include ist reine Textersetzung durch den Präprozessor — als hätte man den Header-Inhalt direkt dort hingeschrieben.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -8747,7 +8747,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: Die .exe entsteht erst durch den Linker. · Falsch: Eine .h-Datei muss kompiliert als eigene .exe vorliegen. · Richtig: Die Quelldatei (.c/.cpp) enthält die Funktionsdefinitionen. · Falsch: Header-Dateien werden vom Linker eingebunden.",
+   "explanation": "1. ✓ Der Linker verbindet alle Objektdateien und Bibliotheken zum ausführbaren Programm — der letzte Schritt der Übersetzung.\n2. ✗ Header werden nie einzeln kompiliert — ihr Inhalt wird per #include als Text in die Quelldateien eingefügt.\n3. ✓ Quelldatei = Implementierung (Funktionskörper); Header (.h) = Schnittstelle (Prototypen).\n4. ✗ Header fügt der PRÄPROZESSOR ein (Schritt 1, Textersetzung). Der Linker arbeitet ganz am Ende und verbindet Objektdateien.",
    "source": "T-02 / AT-9",
    "verified": true
   },
@@ -8765,7 +8765,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: #include <string.h> · Richtig: #include <stdio.h> · Falsch: #include <stdlib.h>",
+   "explanation": "1. ✗ Keine der verwendeten Funktionen (printf, sqrt) stammt aus string.h — die Zeile wäre überflüssig.\n2. ✓ Wird gebraucht: printf stammt aus stdio.h.\n3. ✗ Keine der verwendeten Funktionen (printf, sqrt) stammt aus stdlib.h — die Zeile wäre überflüssig.",
    "source": "T-04 / AT-8",
    "verified": true
   },
@@ -8786,7 +8786,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: #include <stdio.h> · Richtig: #pragma once · Falsch: return 42; · Richtig: #define MAX 100",
+   "explanation": "1. ✓ Gültig: beginnt mit #, Standard-Header stehen in spitzen Klammern.\n2. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.\n3. ✗ return ist eine normale C-ANWEISUNG, keine Präprozessor-Direktive — Direktiven beginnen mit #.\n4. ✓ Gültig: #define MAX 100 ersetzt im Code jedes MAX durch 100 — wichtig: OHNE Semikolon am Ende.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -8807,7 +8807,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Der Linker verbindet Objektdateien zur ausführbaren Datei. · Falsch: Der Linker läuft vor dem Compiler. · Richtig: Der Präprozessor läuft vor dem Compiler. · Richtig: Der Assembler erzeugt aus Assemblercode Objektcode.",
+   "explanation": "1. ✓ Genau seine Aufgabe — zusätzlich hängt er die benötigten Bibliotheken an. Ergebnis: die .exe.\n2. ✗ Umgekehrt: erst Präprozessor, dann Compiler, dann Assembler — der Linker kommt ganz am Ende.\n3. ✓ Reihenfolge der Toolchain: Präprozessor (Textersetzung: #include, #define) → Compiler (→ Assemblercode) → Assembler (→ Objektcode) → Linker (→ .exe).\n4. ✓ Kette: Compiler erzeugt Assemblercode → Assembler macht daraus Objektcode (.obj) → Linker verbindet alles zur .exe.",
    "source": "T-01 / AT-9",
    "verified": true
   },
@@ -8826,7 +8826,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Hinter #include muss ein Semikolon stehen. · Falsch: Runde Klammern um den Header-Namen sind erlaubt. · Richtig: Der Header-Inhalt wird textuell an der #include-Stelle eingefügt. · Falsch: #include wird erst zur Laufzeit ausgewertet.",
+   "explanation": "1. ✗ Präprozessor-Direktiven enden OHNE Semikolon — sie sind keine C-Anweisungen.\n2. ✗ Nur spitze Klammern <…> (Standard-Header) oder Anführungszeichen \"…\" (eigene Header) sind gültig.\n3. ✓ #include ist reine Textersetzung durch den Präprozessor — als hätte man den Header-Inhalt direkt dort hingeschrieben.\n4. ✗ #include erledigt der Präprozessor — der ALLERERSTE Schritt der Übersetzung, lange bevor das Programm läuft.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -8846,7 +8846,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: Header-Dateien werden vom Linker eingebunden. · Richtig: Eine .h-Datei enthält typischerweise Funktionsprototypen. · Falsch: .obj-Dateien sind bereits ausführbar. · Richtig: Die .exe entsteht erst durch den Linker.",
+   "explanation": "1. ✗ Header fügt der PRÄPROZESSOR ein (Schritt 1, Textersetzung). Der Linker arbeitet ganz am Ende und verbindet Objektdateien.\n2. ✓ Header deklarieren, was andere Dateien benutzen dürfen: Prototypen, Konstanten, typedefs. Die Implementierung steht in der .c/.cpp-Datei.\n3. ✗ .obj ist übersetzter ZWISCHENCODE einer einzelnen Quelldatei. Ausführbar wird das Programm erst, wenn der Linker alle .obj-Dateien zur .exe verbindet.\n4. ✓ Der Linker verbindet alle Objektdateien und Bibliotheken zum ausführbaren Programm — der letzte Schritt der Übersetzung.",
    "source": "T-02 / AT-9",
    "verified": true
   },
@@ -8864,7 +8864,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: #include <string.h> · Falsch: #include <stdlib.h> · Richtig: #include <math.h>",
+   "explanation": "1. ✗ Keine der verwendeten Funktionen (printf, sqrt) stammt aus string.h — die Zeile wäre überflüssig.\n2. ✗ Keine der verwendeten Funktionen (printf, sqrt) stammt aus stdlib.h — die Zeile wäre überflüssig.\n3. ✓ Wird gebraucht: sqrt stammt aus math.h.",
    "source": "T-04 / AT-8",
    "verified": true
   },
@@ -8884,7 +8884,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: #include <stdio.h> · Falsch: #include (stdio.h) · Richtig: #pragma once · Falsch: return 42;",
+   "explanation": "1. ✓ Gültig: beginnt mit #, Standard-Header stehen in spitzen Klammern.\n2. ✗ Runde Klammern sind ungültig: Standard-Header stehen in SPITZEN Klammern (#include <stdio.h>), eigene Header in Anführungszeichen.\n3. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.\n4. ✗ return ist eine normale C-ANWEISUNG, keine Präprozessor-Direktive — Direktiven beginnen mit #.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -8904,7 +8904,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: Der Linker verbindet Objektdateien zur ausführbaren Datei. · Falsch: Der Präprozessor übersetzt direkt in Maschinencode. · Richtig: Der Assembler erzeugt aus Assemblercode Objektcode. · Falsch: Der Compiler erzeugt direkt die fertige .exe-Datei.",
+   "explanation": "1. ✓ Genau seine Aufgabe — zusätzlich hängt er die benötigten Bibliotheken an. Ergebnis: die .exe.\n2. ✗ Der Präprozessor macht reine TEXTERSETZUNG (#include einfügen, #define ersetzen). Maschinencode entsteht erst durch Compiler und Assembler.\n3. ✓ Kette: Compiler erzeugt Assemblercode → Assembler macht daraus Objektcode (.obj) → Linker verbindet alles zur .exe.\n4. ✗ Der Compiler erzeugt (über den Assembler) Objektdateien (.obj). Die .exe baut erst der Linker aus allen Objektdateien zusammen.",
    "source": "T-01 / AT-9",
    "verified": true
   },
@@ -8923,7 +8923,7 @@
    "answerIndices": [
     3
    ],
-   "explanation": "Falsch: Hinter #include muss ein Semikolon stehen. · Falsch: Runde Klammern um den Header-Namen sind erlaubt. · Falsch: #include wird erst zur Laufzeit ausgewertet. · Richtig: Für eigene Header nutzt man doppelte Anführungszeichen.",
+   "explanation": "1. ✗ Präprozessor-Direktiven enden OHNE Semikolon — sie sind keine C-Anweisungen.\n2. ✗ Nur spitze Klammern <…> (Standard-Header) oder Anführungszeichen \"…\" (eigene Header) sind gültig.\n3. ✗ #include erledigt der Präprozessor — der ALLERERSTE Schritt der Übersetzung, lange bevor das Programm läuft.\n4. ✓ #include \"meins.h\" sucht im Projektordner; #include <stdio.h> sucht im Standard-Suchpfad des Compilers.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -8942,7 +8942,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: Die Quelldatei (.c/.cpp) enthält die Funktionsdefinitionen. · Falsch: .obj-Dateien sind bereits ausführbar. · Falsch: Header-Dateien werden vom Linker eingebunden. · Falsch: Eine .h-Datei muss kompiliert als eigene .exe vorliegen.",
+   "explanation": "1. ✓ Quelldatei = Implementierung (Funktionskörper); Header (.h) = Schnittstelle (Prototypen).\n2. ✗ .obj ist übersetzter ZWISCHENCODE einer einzelnen Quelldatei. Ausführbar wird das Programm erst, wenn der Linker alle .obj-Dateien zur .exe verbindet.\n3. ✗ Header fügt der PRÄPROZESSOR ein (Schritt 1, Textersetzung). Der Linker arbeitet ganz am Ende und verbindet Objektdateien.\n4. ✗ Header werden nie einzeln kompiliert — ihr Inhalt wird per #include als Text in die Quelldateien eingefügt.",
    "source": "T-02 / AT-9",
    "verified": true
   },
@@ -8960,7 +8960,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: #include <stdlib.h> · Falsch: #include <string.h> · Richtig: #include <math.h>",
+   "explanation": "1. ✗ Keine der verwendeten Funktionen (scanf, fabs) stammt aus stdlib.h — die Zeile wäre überflüssig.\n2. ✗ Keine der verwendeten Funktionen (scanf, fabs) stammt aus string.h — die Zeile wäre überflüssig.\n3. ✓ Wird gebraucht: fabs stammt aus math.h.",
    "source": "T-04 / AT-8",
    "verified": true
   },
@@ -8981,7 +8981,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: #pragma once · Falsch: return 42; · Richtig: #define MAX 100 · Richtig: #include <math.h>",
+   "explanation": "1. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.\n2. ✗ return ist eine normale C-ANWEISUNG, keine Präprozessor-Direktive — Direktiven beginnen mit #.\n3. ✓ Gültig: #define MAX 100 ersetzt im Code jedes MAX durch 100 — wichtig: OHNE Semikolon am Ende.\n4. ✓ Gültig: beginnt mit #, Standard-Header stehen in spitzen Klammern.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9002,7 +9002,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Der Assembler erzeugt aus Assemblercode Objektcode. · Falsch: Der Compiler erzeugt direkt die fertige .exe-Datei. · Richtig: Der Präprozessor läuft vor dem Compiler. · Richtig: Der Linker verbindet Objektdateien zur ausführbaren Datei.",
+   "explanation": "1. ✓ Kette: Compiler erzeugt Assemblercode → Assembler macht daraus Objektcode (.obj) → Linker verbindet alles zur .exe.\n2. ✗ Der Compiler erzeugt (über den Assembler) Objektdateien (.obj). Die .exe baut erst der Linker aus allen Objektdateien zusammen.\n3. ✓ Reihenfolge der Toolchain: Präprozessor (Textersetzung: #include, #define) → Compiler (→ Assemblercode) → Assembler (→ Objektcode) → Linker (→ .exe).\n4. ✓ Genau seine Aufgabe — zusätzlich hängt er die benötigten Bibliotheken an. Ergebnis: die .exe.",
    "source": "T-01 / AT-9",
    "verified": true
   },
@@ -9023,7 +9023,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: Die .exe entsteht erst durch den Linker. · Richtig: Die Quelldatei (.c/.cpp) enthält die Funktionsdefinitionen. · Richtig: Eine .h-Datei enthält typischerweise Funktionsprototypen. · Falsch: Eine .h-Datei muss kompiliert als eigene .exe vorliegen.",
+   "explanation": "1. ✓ Der Linker verbindet alle Objektdateien und Bibliotheken zum ausführbaren Programm — der letzte Schritt der Übersetzung.\n2. ✓ Quelldatei = Implementierung (Funktionskörper); Header (.h) = Schnittstelle (Prototypen).\n3. ✓ Header deklarieren, was andere Dateien benutzen dürfen: Prototypen, Konstanten, typedefs. Die Implementierung steht in der .c/.cpp-Datei.\n4. ✗ Header werden nie einzeln kompiliert — ihr Inhalt wird per #include als Text in die Quelldateien eingefügt.",
    "source": "T-02 / AT-9",
    "verified": true
   },
@@ -9042,7 +9042,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: #define ANZAHL 50 · Falsch: include <math.h> · Falsch: return 42; · Falsch: #define ANZAHL 50;",
+   "explanation": "1. ✓ Gültig: #define ANZAHL 50 ersetzt im Code jedes ANZAHL durch 50 — wichtig: OHNE Semikolon am Ende.\n2. ✗ Ohne das führende # ist es KEINE Direktive — der Compiler sieht nur ungültigen Text und meldet einen Syntaxfehler.\n3. ✗ return ist eine normale C-ANWEISUNG, keine Präprozessor-Direktive — Direktiven beginnen mit #.\n4. ✗ Das Semikolon wird bei #define MITERSETZT — aus x = ANZAHL + 1 würde x = 50; + 1: Syntaxfehler. Direktiven enden ohne Semikolon.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9060,7 +9060,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: #include <stdio.h> · Falsch: #include <stdlib.h> · Falsch: #include <math.h>",
+   "explanation": "1. ✓ Wird gebraucht: printf stammt aus stdio.h.\n2. ✗ Keine der verwendeten Funktionen (printf, strlen) stammt aus stdlib.h — die Zeile wäre überflüssig.\n3. ✗ Keine der verwendeten Funktionen (printf, strlen) stammt aus math.h — die Zeile wäre überflüssig.",
    "source": "T-04 / AT-8",
    "verified": true
   },
@@ -9081,7 +9081,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: include <math.h> · Richtig: #define ANZAHL 50 · Richtig: #include <math.h> · Richtig: #pragma once",
+   "explanation": "1. ✗ Ohne das führende # ist es KEINE Direktive — der Compiler sieht nur ungültigen Text und meldet einen Syntaxfehler.\n2. ✓ Gültig: #define ANZAHL 50 ersetzt im Code jedes ANZAHL durch 50 — wichtig: OHNE Semikolon am Ende.\n3. ✓ Gültig: beginnt mit #, Standard-Header stehen in spitzen Klammern.\n4. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9101,7 +9101,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: #include <string.h> bindet einen Standard-Header ein. · Falsch: #include wird erst zur Laufzeit ausgewertet. · Falsch: Hinter #include muss ein Semikolon stehen. · Richtig: Der Header-Inhalt wird textuell an der #include-Stelle eingefügt.",
+   "explanation": "1. ✓ Spitze Klammern = Standard-Header aus dem Suchpfad des Compilers. Eigene Header bindet man mit \"…\" ein.\n2. ✗ #include erledigt der Präprozessor — der ALLERERSTE Schritt der Übersetzung, lange bevor das Programm läuft.\n3. ✗ Präprozessor-Direktiven enden OHNE Semikolon — sie sind keine C-Anweisungen.\n4. ✓ #include ist reine Textersetzung durch den Präprozessor — als hätte man den Header-Inhalt direkt dort hingeschrieben.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9120,7 +9120,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: Eine .h-Datei enthält typischerweise Funktionsprototypen. · Falsch: Eine .h-Datei muss kompiliert als eigene .exe vorliegen. · Falsch: Header-Dateien werden vom Linker eingebunden. · Falsch: .obj-Dateien sind bereits ausführbar.",
+   "explanation": "1. ✓ Header deklarieren, was andere Dateien benutzen dürfen: Prototypen, Konstanten, typedefs. Die Implementierung steht in der .c/.cpp-Datei.\n2. ✗ Header werden nie einzeln kompiliert — ihr Inhalt wird per #include als Text in die Quelldateien eingefügt.\n3. ✗ Header fügt der PRÄPROZESSOR ein (Schritt 1, Textersetzung). Der Linker arbeitet ganz am Ende und verbindet Objektdateien.\n4. ✗ .obj ist übersetzter ZWISCHENCODE einer einzelnen Quelldatei. Ausführbar wird das Programm erst, wenn der Linker alle .obj-Dateien zur .exe verbindet.",
    "source": "T-02 / AT-9",
    "verified": true
   },
@@ -9141,7 +9141,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: #include <math.h> · Falsch: #include <stdlib.h> · Richtig: #include <string.h> · Richtig: #include <stdio.h>",
+   "explanation": "1. ✓ Wird gebraucht: sqrt stammt aus math.h.\n2. ✗ Keine der verwendeten Funktionen (printf, sqrt, strlen) stammt aus stdlib.h — die Zeile wäre überflüssig.\n3. ✓ Wird gebraucht: strlen stammt aus string.h.\n4. ✓ Wird gebraucht: printf stammt aus stdio.h.",
    "source": "T-04 / AT-8",
    "verified": true
   },
@@ -9160,7 +9160,7 @@
    "answerIndices": [
     3
    ],
-   "explanation": "Falsch: #define MWST 0.19; · Falsch: #include (stdio.h) · Falsch: return 42; · Richtig: #pragma once",
+   "explanation": "1. ✗ Das Semikolon wird bei #define MITERSETZT — aus x = MWST + 1 würde x = 0.19; + 1: Syntaxfehler. Direktiven enden ohne Semikolon.\n2. ✗ Runde Klammern sind ungültig: Standard-Header stehen in SPITZEN Klammern (#include <stdio.h>), eigene Header in Anführungszeichen.\n3. ✗ return ist eine normale C-ANWEISUNG, keine Präprozessor-Direktive — Direktiven beginnen mit #.\n4. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9180,7 +9180,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: Der Linker läuft vor dem Compiler. · Richtig: Der Assembler erzeugt aus Assemblercode Objektcode. · Richtig: Der Präprozessor läuft vor dem Compiler. · Falsch: Der Compiler erzeugt direkt die fertige .exe-Datei.",
+   "explanation": "1. ✗ Umgekehrt: erst Präprozessor, dann Compiler, dann Assembler — der Linker kommt ganz am Ende.\n2. ✓ Kette: Compiler erzeugt Assemblercode → Assembler macht daraus Objektcode (.obj) → Linker verbindet alles zur .exe.\n3. ✓ Reihenfolge der Toolchain: Präprozessor (Textersetzung: #include, #define) → Compiler (→ Assemblercode) → Assembler (→ Objektcode) → Linker (→ .exe).\n4. ✗ Der Compiler erzeugt (über den Assembler) Objektdateien (.obj). Die .exe baut erst der Linker aus allen Objektdateien zusammen.",
    "source": "T-01 / AT-9",
    "verified": true
   },
@@ -9200,7 +9200,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: #include <stdlib.h> · Richtig: #include <stdio.h> · Falsch: #include <math.h> · Richtig: #include <string.h>",
+   "explanation": "1. ✗ Keine der verwendeten Funktionen (printf, strlen) stammt aus stdlib.h — die Zeile wäre überflüssig.\n2. ✓ Wird gebraucht: printf stammt aus stdio.h.\n3. ✗ Keine der verwendeten Funktionen (printf, strlen) stammt aus math.h — die Zeile wäre überflüssig.\n4. ✓ Wird gebraucht: strlen stammt aus string.h.",
    "source": "T-04 / AT-8",
    "verified": true
   },
@@ -9221,7 +9221,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: #include <math.h> · Falsch: #define ANZAHL 50; · Richtig: #pragma once · Richtig: #define ANZAHL 50",
+   "explanation": "1. ✓ Gültig: beginnt mit #, Standard-Header stehen in spitzen Klammern.\n2. ✗ Das Semikolon wird bei #define MITERSETZT — aus x = ANZAHL + 1 würde x = 50; + 1: Syntaxfehler. Direktiven enden ohne Semikolon.\n3. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.\n4. ✓ Gültig: #define ANZAHL 50 ersetzt im Code jedes ANZAHL durch 50 — wichtig: OHNE Semikolon am Ende.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9242,7 +9242,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Der Assembler erzeugt aus Assemblercode Objektcode. · Falsch: Der Präprozessor übersetzt direkt in Maschinencode. · Richtig: Der Präprozessor läuft vor dem Compiler. · Richtig: Der Linker verbindet Objektdateien zur ausführbaren Datei.",
+   "explanation": "1. ✓ Kette: Compiler erzeugt Assemblercode → Assembler macht daraus Objektcode (.obj) → Linker verbindet alles zur .exe.\n2. ✗ Der Präprozessor macht reine TEXTERSETZUNG (#include einfügen, #define ersetzen). Maschinencode entsteht erst durch Compiler und Assembler.\n3. ✓ Reihenfolge der Toolchain: Präprozessor (Textersetzung: #include, #define) → Compiler (→ Assemblercode) → Assembler (→ Objektcode) → Linker (→ .exe).\n4. ✓ Genau seine Aufgabe — zusätzlich hängt er die benötigten Bibliotheken an. Ergebnis: die .exe.",
    "source": "T-01 / AT-9",
    "verified": true
   },
@@ -9263,7 +9263,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: Eine .h-Datei enthält typischerweise Funktionsprototypen. · Richtig: Die .exe entsteht erst durch den Linker. · Falsch: .obj-Dateien sind bereits ausführbar. · Richtig: Die Quelldatei (.c/.cpp) enthält die Funktionsdefinitionen.",
+   "explanation": "1. ✓ Header deklarieren, was andere Dateien benutzen dürfen: Prototypen, Konstanten, typedefs. Die Implementierung steht in der .c/.cpp-Datei.\n2. ✓ Der Linker verbindet alle Objektdateien und Bibliotheken zum ausführbaren Programm — der letzte Schritt der Übersetzung.\n3. ✗ .obj ist übersetzter ZWISCHENCODE einer einzelnen Quelldatei. Ausführbar wird das Programm erst, wenn der Linker alle .obj-Dateien zur .exe verbindet.\n4. ✓ Quelldatei = Implementierung (Funktionskörper); Header (.h) = Schnittstelle (Prototypen).",
    "source": "T-02 / AT-9",
    "verified": true
   },
@@ -9283,7 +9283,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: #include <stdio.h> · Richtig: #include <math.h> · Falsch: #include <stdlib.h> · Falsch: #include <string.h>",
+   "explanation": "1. ✓ Wird gebraucht: scanf stammt aus stdio.h.\n2. ✓ Wird gebraucht: fabs stammt aus math.h.\n3. ✗ Keine der verwendeten Funktionen (scanf, fabs) stammt aus stdlib.h — die Zeile wäre überflüssig.\n4. ✗ Keine der verwendeten Funktionen (scanf, fabs) stammt aus string.h — die Zeile wäre überflüssig.",
    "source": "T-04 / AT-8",
    "verified": true
   },
@@ -9303,7 +9303,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: #define MAX 100 · Falsch: return 42; · Falsch: include <stdio.h> · Richtig: #pragma once",
+   "explanation": "1. ✓ Gültig: #define MAX 100 ersetzt im Code jedes MAX durch 100 — wichtig: OHNE Semikolon am Ende.\n2. ✗ return ist eine normale C-ANWEISUNG, keine Präprozessor-Direktive — Direktiven beginnen mit #.\n3. ✗ Ohne das führende # ist es KEINE Direktive — der Compiler sieht nur ungültigen Text und meldet einen Syntaxfehler.\n4. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9323,7 +9323,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: #include <stdio.h> bindet einen Standard-Header ein. · Richtig: Der Header-Inhalt wird textuell an der #include-Stelle eingefügt. · Falsch: Hinter #include muss ein Semikolon stehen. · Falsch: Runde Klammern um den Header-Namen sind erlaubt.",
+   "explanation": "1. ✓ Spitze Klammern = Standard-Header aus dem Suchpfad des Compilers. Eigene Header bindet man mit \"…\" ein.\n2. ✓ #include ist reine Textersetzung durch den Präprozessor — als hätte man den Header-Inhalt direkt dort hingeschrieben.\n3. ✗ Präprozessor-Direktiven enden OHNE Semikolon — sie sind keine C-Anweisungen.\n4. ✗ Nur spitze Klammern <…> (Standard-Header) oder Anführungszeichen \"…\" (eigene Header) sind gültig.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9343,7 +9343,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: .obj-Dateien sind bereits ausführbar. · Falsch: Header-Dateien werden vom Linker eingebunden. · Richtig: Die .exe entsteht erst durch den Linker. · Richtig: Die Quelldatei (.c/.cpp) enthält die Funktionsdefinitionen.",
+   "explanation": "1. ✗ .obj ist übersetzter ZWISCHENCODE einer einzelnen Quelldatei. Ausführbar wird das Programm erst, wenn der Linker alle .obj-Dateien zur .exe verbindet.\n2. ✗ Header fügt der PRÄPROZESSOR ein (Schritt 1, Textersetzung). Der Linker arbeitet ganz am Ende und verbindet Objektdateien.\n3. ✓ Der Linker verbindet alle Objektdateien und Bibliotheken zum ausführbaren Programm — der letzte Schritt der Übersetzung.\n4. ✓ Quelldatei = Implementierung (Funktionskörper); Header (.h) = Schnittstelle (Prototypen).",
    "source": "T-02 / AT-9",
    "verified": true
   },
@@ -9362,7 +9362,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: #pragma once · Falsch: #include (stdio.h) · Falsch: return 42; · Falsch: include <stdio.h>",
+   "explanation": "1. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.\n2. ✗ Runde Klammern sind ungültig: Standard-Header stehen in SPITZEN Klammern (#include <stdio.h>), eigene Header in Anführungszeichen.\n3. ✗ return ist eine normale C-ANWEISUNG, keine Präprozessor-Direktive — Direktiven beginnen mit #.\n4. ✗ Ohne das führende # ist es KEINE Direktive — der Compiler sieht nur ungültigen Text und meldet einen Syntaxfehler.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9381,7 +9381,7 @@
    "answerIndices": [
     3
    ],
-   "explanation": "Falsch: Der Compiler erzeugt direkt die fertige .exe-Datei. · Falsch: Der Linker läuft vor dem Compiler. · Falsch: Der Präprozessor übersetzt direkt in Maschinencode. · Richtig: Der Präprozessor läuft vor dem Compiler.",
+   "explanation": "1. ✗ Der Compiler erzeugt (über den Assembler) Objektdateien (.obj). Die .exe baut erst der Linker aus allen Objektdateien zusammen.\n2. ✗ Umgekehrt: erst Präprozessor, dann Compiler, dann Assembler — der Linker kommt ganz am Ende.\n3. ✗ Der Präprozessor macht reine TEXTERSETZUNG (#include einfügen, #define ersetzen). Maschinencode entsteht erst durch Compiler und Assembler.\n4. ✓ Reihenfolge der Toolchain: Präprozessor (Textersetzung: #include, #define) → Compiler (→ Assemblercode) → Assembler (→ Objektcode) → Linker (→ .exe).",
    "source": "T-01 / AT-9",
    "verified": true
   },
@@ -9402,7 +9402,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: Der Header-Inhalt wird textuell an der #include-Stelle eingefügt. · Richtig: Für eigene Header nutzt man doppelte Anführungszeichen. · Richtig: #include <math.h> bindet einen Standard-Header ein. · Falsch: Runde Klammern um den Header-Namen sind erlaubt.",
+   "explanation": "1. ✓ #include ist reine Textersetzung durch den Präprozessor — als hätte man den Header-Inhalt direkt dort hingeschrieben.\n2. ✓ #include \"meins.h\" sucht im Projektordner; #include <stdio.h> sucht im Standard-Suchpfad des Compilers.\n3. ✓ Spitze Klammern = Standard-Header aus dem Suchpfad des Compilers. Eigene Header bindet man mit \"…\" ein.\n4. ✗ Nur spitze Klammern <…> (Standard-Header) oder Anführungszeichen \"…\" (eigene Header) sind gültig.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9423,7 +9423,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: Die Quelldatei (.c/.cpp) enthält die Funktionsdefinitionen. · Richtig: Die .exe entsteht erst durch den Linker. · Falsch: Header-Dateien werden vom Linker eingebunden. · Richtig: Eine .h-Datei enthält typischerweise Funktionsprototypen.",
+   "explanation": "1. ✓ Quelldatei = Implementierung (Funktionskörper); Header (.h) = Schnittstelle (Prototypen).\n2. ✓ Der Linker verbindet alle Objektdateien und Bibliotheken zum ausführbaren Programm — der letzte Schritt der Übersetzung.\n3. ✗ Header fügt der PRÄPROZESSOR ein (Schritt 1, Textersetzung). Der Linker arbeitet ganz am Ende und verbindet Objektdateien.\n4. ✓ Header deklarieren, was andere Dateien benutzen dürfen: Prototypen, Konstanten, typedefs. Die Implementierung steht in der .c/.cpp-Datei.",
    "source": "T-02 / AT-9",
    "verified": true
   },
@@ -9443,7 +9443,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: #include <string.h> · Falsch: #include <stdlib.h> · Richtig: #include <math.h> · Richtig: #include <stdio.h>",
+   "explanation": "1. ✗ Keine der verwendeten Funktionen (printf, sqrt) stammt aus string.h — die Zeile wäre überflüssig.\n2. ✗ Keine der verwendeten Funktionen (printf, sqrt) stammt aus stdlib.h — die Zeile wäre überflüssig.\n3. ✓ Wird gebraucht: sqrt stammt aus math.h.\n4. ✓ Wird gebraucht: printf stammt aus stdio.h.",
    "source": "T-04 / AT-8",
    "verified": true
   },
@@ -9463,7 +9463,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: #include <stdio.h> · Richtig: #pragma once · Falsch: return 42; · Falsch: #define MAX 100;",
+   "explanation": "1. ✓ Gültig: beginnt mit #, Standard-Header stehen in spitzen Klammern.\n2. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.\n3. ✗ return ist eine normale C-ANWEISUNG, keine Präprozessor-Direktive — Direktiven beginnen mit #.\n4. ✗ Das Semikolon wird bei #define MITERSETZT — aus x = MAX + 1 würde x = 100; + 1: Syntaxfehler. Direktiven enden ohne Semikolon.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9482,7 +9482,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Der Linker läuft vor dem Compiler. · Falsch: Der Compiler erzeugt direkt die fertige .exe-Datei. · Richtig: Der Linker verbindet Objektdateien zur ausführbaren Datei. · Falsch: Der Präprozessor übersetzt direkt in Maschinencode.",
+   "explanation": "1. ✗ Umgekehrt: erst Präprozessor, dann Compiler, dann Assembler — der Linker kommt ganz am Ende.\n2. ✗ Der Compiler erzeugt (über den Assembler) Objektdateien (.obj). Die .exe baut erst der Linker aus allen Objektdateien zusammen.\n3. ✓ Genau seine Aufgabe — zusätzlich hängt er die benötigten Bibliotheken an. Ergebnis: die .exe.\n4. ✗ Der Präprozessor macht reine TEXTERSETZUNG (#include einfügen, #define ersetzen). Maschinencode entsteht erst durch Compiler und Assembler.",
    "source": "T-01 / AT-9",
    "verified": true
   },
@@ -9503,7 +9503,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: #include <string.h> bindet einen Standard-Header ein. · Richtig: Der Header-Inhalt wird textuell an der #include-Stelle eingefügt. · Falsch: #include wird erst zur Laufzeit ausgewertet. · Richtig: Für eigene Header nutzt man doppelte Anführungszeichen.",
+   "explanation": "1. ✓ Spitze Klammern = Standard-Header aus dem Suchpfad des Compilers. Eigene Header bindet man mit \"…\" ein.\n2. ✓ #include ist reine Textersetzung durch den Präprozessor — als hätte man den Header-Inhalt direkt dort hingeschrieben.\n3. ✗ #include erledigt der Präprozessor — der ALLERERSTE Schritt der Übersetzung, lange bevor das Programm läuft.\n4. ✓ #include \"meins.h\" sucht im Projektordner; #include <stdio.h> sucht im Standard-Suchpfad des Compilers.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9523,7 +9523,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: Eine .h-Datei muss kompiliert als eigene .exe vorliegen. · Richtig: Die .exe entsteht erst durch den Linker. · Richtig: Eine .h-Datei enthält typischerweise Funktionsprototypen. · Falsch: .obj-Dateien sind bereits ausführbar.",
+   "explanation": "1. ✗ Header werden nie einzeln kompiliert — ihr Inhalt wird per #include als Text in die Quelldateien eingefügt.\n2. ✓ Der Linker verbindet alle Objektdateien und Bibliotheken zum ausführbaren Programm — der letzte Schritt der Übersetzung.\n3. ✓ Header deklarieren, was andere Dateien benutzen dürfen: Prototypen, Konstanten, typedefs. Die Implementierung steht in der .c/.cpp-Datei.\n4. ✗ .obj ist übersetzter ZWISCHENCODE einer einzelnen Quelldatei. Ausführbar wird das Programm erst, wenn der Linker alle .obj-Dateien zur .exe verbindet.",
    "source": "T-02 / AT-9",
    "verified": true
   },
@@ -9544,7 +9544,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: #include <stdio.h> · Richtig: #pragma once · Falsch: #include (stdio.h) · Richtig: #define MWST 0.19",
+   "explanation": "1. ✓ Gültig: beginnt mit #, Standard-Header stehen in spitzen Klammern.\n2. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.\n3. ✗ Runde Klammern sind ungültig: Standard-Header stehen in SPITZEN Klammern (#include <stdio.h>), eigene Header in Anführungszeichen.\n4. ✓ Gültig: #define MWST 0.19 ersetzt im Code jedes MWST durch 0.19 — wichtig: OHNE Semikolon am Ende.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9564,7 +9564,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: Der Linker läuft vor dem Compiler. · Richtig: Der Präprozessor läuft vor dem Compiler. · Richtig: Der Linker verbindet Objektdateien zur ausführbaren Datei. · Falsch: Der Präprozessor übersetzt direkt in Maschinencode.",
+   "explanation": "1. ✗ Umgekehrt: erst Präprozessor, dann Compiler, dann Assembler — der Linker kommt ganz am Ende.\n2. ✓ Reihenfolge der Toolchain: Präprozessor (Textersetzung: #include, #define) → Compiler (→ Assemblercode) → Assembler (→ Objektcode) → Linker (→ .exe).\n3. ✓ Genau seine Aufgabe — zusätzlich hängt er die benötigten Bibliotheken an. Ergebnis: die .exe.\n4. ✗ Der Präprozessor macht reine TEXTERSETZUNG (#include einfügen, #define ersetzen). Maschinencode entsteht erst durch Compiler und Assembler.",
    "source": "T-01 / AT-9",
    "verified": true
   },
@@ -9584,7 +9584,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: .obj-Dateien sind bereits ausführbar. · Richtig: Eine .h-Datei enthält typischerweise Funktionsprototypen. · Richtig: Die Quelldatei (.c/.cpp) enthält die Funktionsdefinitionen. · Falsch: Eine .h-Datei muss kompiliert als eigene .exe vorliegen.",
+   "explanation": "1. ✗ .obj ist übersetzter ZWISCHENCODE einer einzelnen Quelldatei. Ausführbar wird das Programm erst, wenn der Linker alle .obj-Dateien zur .exe verbindet.\n2. ✓ Header deklarieren, was andere Dateien benutzen dürfen: Prototypen, Konstanten, typedefs. Die Implementierung steht in der .c/.cpp-Datei.\n3. ✓ Quelldatei = Implementierung (Funktionskörper); Header (.h) = Schnittstelle (Prototypen).\n4. ✗ Header werden nie einzeln kompiliert — ihr Inhalt wird per #include als Text in die Quelldateien eingefügt.",
    "source": "T-02 / AT-9",
    "verified": true
   },
@@ -9603,7 +9603,7 @@
    "answerIndices": [
     3
    ],
-   "explanation": "Falsch: #include (string.h) · Falsch: include <string.h> · Falsch: return 42; · Richtig: #define MAX 100",
+   "explanation": "1. ✗ Runde Klammern sind ungültig: Standard-Header stehen in SPITZEN Klammern (#include <string.h>), eigene Header in Anführungszeichen.\n2. ✗ Ohne das führende # ist es KEINE Direktive — der Compiler sieht nur ungültigen Text und meldet einen Syntaxfehler.\n3. ✗ return ist eine normale C-ANWEISUNG, keine Präprozessor-Direktive — Direktiven beginnen mit #.\n4. ✓ Gültig: #define MAX 100 ersetzt im Code jedes MAX durch 100 — wichtig: OHNE Semikolon am Ende.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9624,7 +9624,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: Für eigene Header nutzt man doppelte Anführungszeichen. · Richtig: Der Header-Inhalt wird textuell an der #include-Stelle eingefügt. · Richtig: #include <stdio.h> bindet einen Standard-Header ein. · Falsch: #include wird erst zur Laufzeit ausgewertet.",
+   "explanation": "1. ✓ #include \"meins.h\" sucht im Projektordner; #include <stdio.h> sucht im Standard-Suchpfad des Compilers.\n2. ✓ #include ist reine Textersetzung durch den Präprozessor — als hätte man den Header-Inhalt direkt dort hingeschrieben.\n3. ✓ Spitze Klammern = Standard-Header aus dem Suchpfad des Compilers. Eigene Header bindet man mit \"…\" ein.\n4. ✗ #include erledigt der Präprozessor — der ALLERERSTE Schritt der Übersetzung, lange bevor das Programm läuft.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9644,7 +9644,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: #include <string.h> · Richtig: #pragma once · Falsch: #include (string.h) · Falsch: include <string.h>",
+   "explanation": "1. ✓ Gültig: beginnt mit #, Standard-Header stehen in spitzen Klammern.\n2. ✓ Gültig: #pragma once am Anfang eines Headers verhindert, dass er mehrfach eingebunden wird.\n3. ✗ Runde Klammern sind ungültig: Standard-Header stehen in SPITZEN Klammern (#include <string.h>), eigene Header in Anführungszeichen.\n4. ✗ Ohne das führende # ist es KEINE Direktive — der Compiler sieht nur ungültigen Text und meldet einen Syntaxfehler.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9664,7 +9664,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: Der Header-Inhalt wird textuell an der #include-Stelle eingefügt. · Richtig: #include <math.h> bindet einen Standard-Header ein. · Falsch: Hinter #include muss ein Semikolon stehen. · Falsch: #include wird erst zur Laufzeit ausgewertet.",
+   "explanation": "1. ✓ #include ist reine Textersetzung durch den Präprozessor — als hätte man den Header-Inhalt direkt dort hingeschrieben.\n2. ✓ Spitze Klammern = Standard-Header aus dem Suchpfad des Compilers. Eigene Header bindet man mit \"…\" ein.\n3. ✗ Präprozessor-Direktiven enden OHNE Semikolon — sie sind keine C-Anweisungen.\n4. ✗ #include erledigt der Präprozessor — der ALLERERSTE Schritt der Übersetzung, lange bevor das Programm läuft.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9683,7 +9683,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: #include <math.h> · Falsch: #define MAX 100; · Falsch: return 42; · Falsch: #include (math.h)",
+   "explanation": "1. ✓ Gültig: beginnt mit #, Standard-Header stehen in spitzen Klammern.\n2. ✗ Das Semikolon wird bei #define MITERSETZT — aus x = MAX + 1 würde x = 100; + 1: Syntaxfehler. Direktiven enden ohne Semikolon.\n3. ✗ return ist eine normale C-ANWEISUNG, keine Präprozessor-Direktive — Direktiven beginnen mit #.\n4. ✗ Runde Klammern sind ungültig: Standard-Header stehen in SPITZEN Klammern (#include <math.h>), eigene Header in Anführungszeichen.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9703,7 +9703,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: Runde Klammern um den Header-Namen sind erlaubt. · Richtig: Der Header-Inhalt wird textuell an der #include-Stelle eingefügt. · Richtig: Für eigene Header nutzt man doppelte Anführungszeichen. · Falsch: #include wird erst zur Laufzeit ausgewertet.",
+   "explanation": "1. ✗ Nur spitze Klammern <…> (Standard-Header) oder Anführungszeichen \"…\" (eigene Header) sind gültig.\n2. ✓ #include ist reine Textersetzung durch den Präprozessor — als hätte man den Header-Inhalt direkt dort hingeschrieben.\n3. ✓ #include \"meins.h\" sucht im Projektordner; #include <stdio.h> sucht im Standard-Suchpfad des Compilers.\n4. ✗ #include erledigt der Präprozessor — der ALLERERSTE Schritt der Übersetzung, lange bevor das Programm läuft.",
    "source": "T-04 / AT-9",
    "verified": true
   },
@@ -9722,7 +9722,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: a short[250]; ist eine korrekte Deklaration. · Falsch: short [250] a; ist eine korrekte Deklaration. · Richtig: short a[250]; ist eine korrekte Deklaration. · Falsch: Das letzte Element ist a[250].",
+   "explanation": "1. ✗ Falsche Reihenfolge: Der Typ steht VOR dem Namen (short a[250];).\n2. ✗ Falsche Reihenfolge: Die eckigen Klammern gehören HINTER den Namen (short a[250];), nicht zwischen Typ und Namen.\n3. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.\n4. ✗ Der erste Index ist 0, daher ist der letzte Index Größe−1 = 249 (nicht 250). a[249] ist das letzte Element.",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -9742,7 +9742,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: Gültige Indizes sind 1 bis 20. · Richtig: Gültige Indizes sind 0 bis 19. · Falsch: C prüft die Indexgrenzen zur Laufzeit automatisch. · Falsch: a[20] ist ein gültiger Zugriff.",
+   "explanation": "1. ✗ Arrays starten in C bei 0, nicht bei 1: gültig sind die Indizes 0 bis 19.\n2. ✓ Arrays starten bei Index 0; bei 20 Elementen ist der letzte Index 19.\n3. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.\n4. ✗ Erlaubt sind nur a[0] … a[19]. a[20] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -9764,7 +9764,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: sizeof(a) / sizeof(a[0]) liefert 25. · Richtig: sizeof(a) liefert 200 (Bytes). · Richtig: sizeof(a[0]) liefert 8. · Falsch: sizeof(a) liefert 25 (Elementzahl).",
+   "explanation": "1. ✓ Gesamtbytes ÷ Bytes pro Element = 200 / 8 = 25 — DIE Standardformel für die Elementanzahl.\n2. ✓ sizeof liefert die Größe in Bytes: 25 Elemente × 8 Byte (double) = 200.\n3. ✓ a[0] ist ein einzelnes double-Element und belegt 8 Byte.\n4. ✗ sizeof liefert IMMER Bytes (hier 25 × 8 = 200), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -9783,7 +9783,7 @@
    "answerIndices": [
     3
    ],
-   "explanation": "Falsch: Die Funktion kann das Original-Array nicht verändern. · Falsch: sizeof(a) liefert in der Funktion die volle Array-Größe. · Falsch: Das Array wird vollständig kopiert. · Richtig: Die Elementzahl wird deshalb als Parameter n mitgegeben.",
+   "explanation": "1. ✗ Arrays werden per STARTADRESSE übergeben (keine Kopie!) — a[i] = … in der Funktion ändert das Original in main.\n2. ✗ Im Parameter \"zerfällt\" das Array zur Adresse — sizeof misst dort nur noch die Adresse (typisch 8 Byte), nicht das Array. Genau deshalb übergibt man n mit.\n3. ✗ Nur die Startadresse wird übergeben. Deshalb sind Array-Übergaben billig — und Änderungen wirken auf das Original.\n4. ✓ In der Funktion ist a nur noch eine Adresse — sizeof(a) liefert dort nicht mehr die Array-Größe. Also muss die Anzahl separat mitgegeben werden.",
    "source": "T-38 / AT-10",
    "verified": true
   },
@@ -9802,7 +9802,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: Das letzte Element ist m[3][4]. · Falsch: m[4][5] ist ein gültiger Zugriff. · Falsch: Es besteht aus 9 Elementen.",
+   "explanation": "1. ✓ Zeilenindizes 0…3, Spaltenindizes 0…4 → das letzte Element ist m[3][4].\n2. ✗ Gültig sind Zeilen 0…3 und Spalten 0…4 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.\n3. ✗ Elementzahl eines 2D-Arrays = Zeilen × Spalten = 4 · 5 = 20, nicht 9.",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -9823,7 +9823,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: Das letzte Element ist a[200]. · Richtig: Der erste Index ist 0. · Richtig: short a[200]; ist eine korrekte Deklaration. · Richtig: Das letzte Element ist a[199].",
+   "explanation": "1. ✗ Der erste Index ist 0, daher ist der letzte Index Größe−1 = 199 (nicht 200). a[199] ist das letzte Element.\n2. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.\n3. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.\n4. ✓ Die Indizes laufen von 0 bis 200−1 — das letzte der 200 Elemente ist a[199].",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -9845,7 +9845,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Alle Elemente haben denselben Datentyp. · Falsch: a[25] ist ein gültiger Zugriff. · Richtig: Gültige Indizes sind 0 bis 24. · Richtig: Das Array hat 25 Elemente.",
+   "explanation": "1. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)\n2. ✗ Erlaubt sind nur a[0] … a[24]. a[25] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.\n3. ✓ Arrays starten bei Index 0; bei 25 Elementen ist der letzte Index 24.\n4. ✓ Die Zahl in den eckigen Klammern ist die Elementanzahl: 25.",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -9866,7 +9866,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: Das Array belegt 328 Byte. · Falsch: sizeof(a) liefert 160 (Bytes). · Richtig: sizeof(a[0]) liefert 8. · Richtig: sizeof(a) / sizeof(a[0]) liefert 40.",
+   "explanation": "1. ✗ Größe = Elementanzahl × Typgröße = 40 × 8 Byte (double) = 320 Byte, nicht 328.\n2. ✗ sizeof rechnet in Bytes: 40 × 8 (double) = 320, nicht 160.\n3. ✓ a[0] ist ein einzelnes double-Element und belegt 8 Byte.\n4. ✓ Gesamtbytes ÷ Bytes pro Element = 320 / 8 = 40 — DIE Standardformel für die Elementanzahl.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -9885,7 +9885,7 @@
    "answerIndices": [
     3
    ],
-   "explanation": "Falsch: Das Array wird vollständig kopiert. · Falsch: sizeof(a) liefert in der Funktion die volle Array-Größe. · Falsch: Die Funktion kann das Original-Array nicht verändern. · Richtig: Änderungen an a[i] in der Funktion wirken auf das Original.",
+   "explanation": "1. ✗ Nur die Startadresse wird übergeben. Deshalb sind Array-Übergaben billig — und Änderungen wirken auf das Original.\n2. ✗ Im Parameter \"zerfällt\" das Array zur Adresse — sizeof misst dort nur noch die Adresse (typisch 8 Byte), nicht das Array. Genau deshalb übergibt man n mit.\n3. ✗ Arrays werden per STARTADRESSE übergeben (keine Kopie!) — a[i] = … in der Funktion ändert das Original in main.\n4. ✓ Weil nur die Startadresse übergeben wird, schreibt a[i] = … direkt in das Array des Aufrufers.",
    "source": "T-38 / AT-10",
    "verified": true
   },
@@ -9904,7 +9904,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: m[5][3] ist ein gültiger Zugriff. · Falsch: Es besteht aus 8 Elementen. · Richtig: Es belegt 60 Byte.",
+   "explanation": "1. ✗ Gültig sind Zeilen 0…4 und Spalten 0…2 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.\n2. ✗ Elementzahl eines 2D-Arrays = Zeilen × Spalten = 5 · 3 = 15, nicht 8.\n3. ✓ 15 Elemente × 4 Byte (int) = 60 Byte.",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -9925,7 +9925,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Das letzte Element ist a[119]. · Falsch: Das letzte Element ist a[120]. · Richtig: Der erste Index ist 0. · Richtig: long long a[120]; ist eine korrekte Deklaration.",
+   "explanation": "1. ✓ Die Indizes laufen von 0 bis 120−1 — das letzte der 120 Elemente ist a[119].\n2. ✗ Der erste Index ist 0, daher ist der letzte Index Größe−1 = 119 (nicht 120). a[119] ist das letzte Element.\n3. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.\n4. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -9947,7 +9947,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: Das Array hat 120 Elemente. · Richtig: Gültige Indizes sind 0 bis 119. · Falsch: a[120] ist ein gültiger Zugriff. · Richtig: Alle Elemente haben denselben Datentyp.",
+   "explanation": "1. ✓ Die Zahl in den eckigen Klammern ist die Elementanzahl: 120.\n2. ✓ Arrays starten bei Index 0; bei 120 Elementen ist der letzte Index 119.\n3. ✗ Erlaubt sind nur a[0] … a[119]. a[120] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.\n4. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -9968,7 +9968,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: sizeof(a) / sizeof(a[0]) liefert 10. · Falsch: sizeof(a) liefert 40 (Bytes). · Richtig: sizeof(a) liefert 20 (Bytes). · Falsch: Das Array belegt 22 Byte.",
+   "explanation": "1. ✓ Gesamtbytes ÷ Bytes pro Element = 20 / 2 = 10 — DIE Standardformel für die Elementanzahl.\n2. ✗ sizeof rechnet in Bytes: 10 × 2 (short) = 20, nicht 40.\n3. ✓ sizeof liefert die Größe in Bytes: 10 Elemente × 2 Byte (short) = 20.\n4. ✗ Größe = Elementanzahl × Typgröße = 10 × 2 Byte (short) = 20 Byte, nicht 22.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -9988,7 +9988,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: Die Elementzahl wird deshalb als Parameter n mitgegeben. · Falsch: Die Funktion kann das Original-Array nicht verändern. · Richtig: Änderungen an a[i] in der Funktion wirken auf das Original. · Falsch: Das Array wird vollständig kopiert.",
+   "explanation": "1. ✓ In der Funktion ist a nur noch eine Adresse — sizeof(a) liefert dort nicht mehr die Array-Größe. Also muss die Anzahl separat mitgegeben werden.\n2. ✗ Arrays werden per STARTADRESSE übergeben (keine Kopie!) — a[i] = … in der Funktion ändert das Original in main.\n3. ✓ Weil nur die Startadresse übergeben wird, schreibt a[i] = … direkt in das Array des Aufrufers.\n4. ✗ Nur die Startadresse wird übergeben. Deshalb sind Array-Übergaben billig — und Änderungen wirken auf das Original.",
    "source": "T-38 / AT-10",
    "verified": true
   },
@@ -10010,7 +10010,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: Es hat 3 Zeilen und 4 Spalten. · Richtig: Es besteht aus 12 Elementen. · Falsch: m[3][4] ist ein gültiger Zugriff. · Richtig: Das letzte Element ist m[2][3].",
+   "explanation": "1. ✓ Die erste Klammer ist die Zeilenzahl (3), die zweite die Spaltenzahl (4).\n2. ✓ 3 Zeilen × 4 Spalten = 12 Elemente.\n3. ✗ Gültig sind Zeilen 0…2 und Spalten 0…3 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.\n4. ✓ Zeilenindizes 0…2, Spaltenindizes 0…3 → das letzte Element ist m[2][3].",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -10029,7 +10029,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: a int[120]; ist eine korrekte Deklaration. · Falsch: Das letzte Element ist a[120]. · Richtig: int a[120]; ist eine korrekte Deklaration. · Falsch: int [120] a; ist eine korrekte Deklaration.",
+   "explanation": "1. ✗ Falsche Reihenfolge: Der Typ steht VOR dem Namen (int a[120];).\n2. ✗ Der erste Index ist 0, daher ist der letzte Index Größe−1 = 119 (nicht 120). a[119] ist das letzte Element.\n3. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.\n4. ✗ Falsche Reihenfolge: Die eckigen Klammern gehören HINTER den Namen (int a[120];), nicht zwischen Typ und Namen.",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -10050,7 +10050,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: Alle Elemente haben denselben Datentyp. · Richtig: Das Array hat 20 Elemente. · Falsch: a[20] ist ein gültiger Zugriff. · Falsch: C prüft die Indexgrenzen zur Laufzeit automatisch.",
+   "explanation": "1. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)\n2. ✓ Die Zahl in den eckigen Klammern ist die Elementanzahl: 20.\n3. ✗ Erlaubt sind nur a[0] … a[19]. a[20] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.\n4. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -10071,7 +10071,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: Das Array belegt 242 Byte. · Richtig: sizeof(a) liefert 240 (Bytes). · Falsch: sizeof(a) liefert 120 (Elementzahl). · Richtig: sizeof(a[0]) liefert 2.",
+   "explanation": "1. ✗ Größe = Elementanzahl × Typgröße = 120 × 2 Byte (short) = 240 Byte, nicht 242.\n2. ✓ sizeof liefert die Größe in Bytes: 120 Elemente × 2 Byte (short) = 240.\n3. ✗ sizeof liefert IMMER Bytes (hier 120 × 2 = 240), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n4. ✓ a[0] ist ein einzelnes short-Element und belegt 2 Byte.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -10090,7 +10090,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: m[5][3] ist ein gültiger Zugriff. · Richtig: Es hat 5 Zeilen und 3 Spalten. · Falsch: Es besteht aus 8 Elementen.",
+   "explanation": "1. ✗ Gültig sind Zeilen 0…4 und Spalten 0…2 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.\n2. ✓ Die erste Klammer ist die Zeilenzahl (5), die zweite die Spaltenzahl (3).\n3. ✗ Elementzahl eines 2D-Arrays = Zeilen × Spalten = 5 · 3 = 15, nicht 8.",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -10110,7 +10110,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: char [100] a; ist eine korrekte Deklaration. · Falsch: Das letzte Element ist a[100]. · Richtig: Das letzte Element ist a[99]. · Richtig: Der erste Index ist 0.",
+   "explanation": "1. ✗ Falsche Reihenfolge: Die eckigen Klammern gehören HINTER den Namen (char a[100];), nicht zwischen Typ und Namen.\n2. ✗ Der erste Index ist 0, daher ist der letzte Index Größe−1 = 99 (nicht 100). a[99] ist das letzte Element.\n3. ✓ Die Indizes laufen von 0 bis 100−1 — das letzte der 100 Elemente ist a[99].\n4. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -10132,7 +10132,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Das Array hat 100 Elemente. · Falsch: C prüft die Indexgrenzen zur Laufzeit automatisch. · Richtig: Gültige Indizes sind 0 bis 99. · Richtig: Alle Elemente haben denselben Datentyp.",
+   "explanation": "1. ✓ Die Zahl in den eckigen Klammern ist die Elementanzahl: 100.\n2. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.\n3. ✓ Arrays starten bei Index 0; bei 100 Elementen ist der letzte Index 99.\n4. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -10152,7 +10152,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Das Array belegt 164 Byte. · Falsch: sizeof(a) liefert 40 (Elementzahl). · Richtig: sizeof(a) liefert 160 (Bytes). · Falsch: sizeof(a) liefert 320 (Bytes).",
+   "explanation": "1. ✗ Größe = Elementanzahl × Typgröße = 40 × 4 Byte (float) = 160 Byte, nicht 164.\n2. ✗ sizeof liefert IMMER Bytes (hier 40 × 4 = 160), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n3. ✓ sizeof liefert die Größe in Bytes: 40 Elemente × 4 Byte (float) = 160.\n4. ✗ sizeof rechnet in Bytes: 40 × 4 (float) = 160, nicht 320.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -10173,7 +10173,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: Es wird nur die Startadresse des Arrays übergeben. · Richtig: Änderungen an a[i] in der Funktion wirken auf das Original. · Richtig: Die Elementzahl wird deshalb als Parameter n mitgegeben. · Falsch: Die Funktion kann das Original-Array nicht verändern.",
+   "explanation": "1. ✓ Arrays werden nie kopiert: Die Funktion erhält die Adresse des ersten Elements und arbeitet direkt auf dem Original.\n2. ✓ Weil nur die Startadresse übergeben wird, schreibt a[i] = … direkt in das Array des Aufrufers.\n3. ✓ In der Funktion ist a nur noch eine Adresse — sizeof(a) liefert dort nicht mehr die Array-Größe. Also muss die Anzahl separat mitgegeben werden.\n4. ✗ Arrays werden per STARTADRESSE übergeben (keine Kopie!) — a[i] = … in der Funktion ändert das Original in main.",
    "source": "T-38 / AT-10",
    "verified": true
   },
@@ -10192,7 +10192,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Es besteht aus 8 Elementen. · Falsch: m[5][3] ist ein gültiger Zugriff. · Richtig: Es besteht aus 15 Elementen.",
+   "explanation": "1. ✗ Elementzahl eines 2D-Arrays = Zeilen × Spalten = 5 · 3 = 15, nicht 8.\n2. ✗ Gültig sind Zeilen 0…4 und Spalten 0…2 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.\n3. ✓ 5 Zeilen × 3 Spalten = 15 Elemente.",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -10212,7 +10212,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: a short[60]; ist eine korrekte Deklaration. · Richtig: short a[60]; ist eine korrekte Deklaration. · Falsch: Das letzte Element ist a[60]. · Richtig: Der erste Index ist 0.",
+   "explanation": "1. ✗ Falsche Reihenfolge: Der Typ steht VOR dem Namen (short a[60];).\n2. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.\n3. ✗ Der erste Index ist 0, daher ist der letzte Index Größe−1 = 59 (nicht 60). a[59] ist das letzte Element.\n4. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -10234,7 +10234,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: Das Array hat 10 Elemente. · Richtig: Alle Elemente haben denselben Datentyp. · Falsch: Gültige Indizes sind 1 bis 10. · Richtig: Gültige Indizes sind 0 bis 9.",
+   "explanation": "1. ✓ Die Zahl in den eckigen Klammern ist die Elementanzahl: 10.\n2. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)\n3. ✗ Arrays starten in C bei 0, nicht bei 1: gültig sind die Indizes 0 bis 9.\n4. ✓ Arrays starten bei Index 0; bei 10 Elementen ist der letzte Index 9.",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -10256,7 +10256,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: sizeof(a) liefert 400 (Bytes). · Richtig: sizeof(a) / sizeof(a[0]) liefert 200. · Falsch: sizeof(a) liefert 800 (Bytes). · Richtig: sizeof(a[0]) liefert 2.",
+   "explanation": "1. ✓ sizeof liefert die Größe in Bytes: 200 Elemente × 2 Byte (short) = 400.\n2. ✓ Gesamtbytes ÷ Bytes pro Element = 400 / 2 = 200 — DIE Standardformel für die Elementanzahl.\n3. ✗ sizeof rechnet in Bytes: 200 × 2 (short) = 400, nicht 800.\n4. ✓ a[0] ist ein einzelnes short-Element und belegt 2 Byte.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -10275,7 +10275,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: m[6][2] ist ein gültiger Zugriff. · Richtig: Das letzte Element ist m[5][1]. · Falsch: Es besteht aus 8 Elementen.",
+   "explanation": "1. ✗ Gültig sind Zeilen 0…5 und Spalten 0…1 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.\n2. ✓ Zeilenindizes 0…5, Spaltenindizes 0…1 → das letzte Element ist m[5][1].\n3. ✗ Elementzahl eines 2D-Arrays = Zeilen × Spalten = 6 · 2 = 12, nicht 8.",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -10296,7 +10296,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: short a[300]; ist eine korrekte Deklaration. · Richtig: Das letzte Element ist a[299]. · Richtig: Der erste Index ist 0. · Falsch: short [300] a; ist eine korrekte Deklaration.",
+   "explanation": "1. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.\n2. ✓ Die Indizes laufen von 0 bis 300−1 — das letzte der 300 Elemente ist a[299].\n3. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.\n4. ✗ Falsche Reihenfolge: Die eckigen Klammern gehören HINTER den Namen (short a[300];), nicht zwischen Typ und Namen.",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -10316,7 +10316,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Gültige Indizes sind 1 bis 100. · Falsch: C prüft die Indexgrenzen zur Laufzeit automatisch. · Richtig: Gültige Indizes sind 0 bis 99. · Falsch: a[100] ist ein gültiger Zugriff.",
+   "explanation": "1. ✗ Arrays starten in C bei 0, nicht bei 1: gültig sind die Indizes 0 bis 99.\n2. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.\n3. ✓ Arrays starten bei Index 0; bei 100 Elementen ist der letzte Index 99.\n4. ✗ Erlaubt sind nur a[0] … a[99]. a[100] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -10337,7 +10337,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: sizeof(a) liefert 320 (Bytes). · Falsch: sizeof(a) liefert 80 (Elementzahl). · Falsch: sizeof(a) liefert 640 (Bytes). · Richtig: sizeof(a) / sizeof(a[0]) liefert 80.",
+   "explanation": "1. ✓ sizeof liefert die Größe in Bytes: 80 Elemente × 4 Byte (float) = 320.\n2. ✗ sizeof liefert IMMER Bytes (hier 80 × 4 = 320), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n3. ✗ sizeof rechnet in Bytes: 80 × 4 (float) = 320, nicht 640.\n4. ✓ Gesamtbytes ÷ Bytes pro Element = 320 / 4 = 80 — DIE Standardformel für die Elementanzahl.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -10358,7 +10358,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: m[5][3] ist ein gültiger Zugriff. · Falsch: Es besteht aus 8 Elementen. · Richtig: Es hat 5 Zeilen und 3 Spalten. · Richtig: Es besteht aus 15 Elementen.",
+   "explanation": "1. ✗ Gültig sind Zeilen 0…4 und Spalten 0…2 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.\n2. ✗ Elementzahl eines 2D-Arrays = Zeilen × Spalten = 5 · 3 = 15, nicht 8.\n3. ✓ Die erste Klammer ist die Zeilenzahl (5), die zweite die Spaltenzahl (3).\n4. ✓ 5 Zeilen × 3 Spalten = 15 Elemente.",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -10379,7 +10379,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Der erste Index ist 0. · Falsch: char [10] a; ist eine korrekte Deklaration. · Richtig: Das letzte Element ist a[9]. · Richtig: char a[10]; ist eine korrekte Deklaration.",
+   "explanation": "1. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.\n2. ✗ Falsche Reihenfolge: Die eckigen Klammern gehören HINTER den Namen (char a[10];), nicht zwischen Typ und Namen.\n3. ✓ Die Indizes laufen von 0 bis 10−1 — das letzte der 10 Elemente ist a[9].\n4. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -10401,7 +10401,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Gültige Indizes sind 0 bis 49. · Falsch: a[50] ist ein gültiger Zugriff. · Richtig: Alle Elemente haben denselben Datentyp. · Richtig: Das Array hat 50 Elemente.",
+   "explanation": "1. ✓ Arrays starten bei Index 0; bei 50 Elementen ist der letzte Index 49.\n2. ✗ Erlaubt sind nur a[0] … a[49]. a[50] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.\n3. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)\n4. ✓ Die Zahl in den eckigen Klammern ist die Elementanzahl: 50.",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -10422,7 +10422,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: sizeof(a) / sizeof(a[0]) liefert 10. · Richtig: sizeof(a[0]) liefert 2. · Falsch: sizeof(a) liefert 10 (Elementzahl). · Falsch: sizeof(a) liefert 40 (Bytes).",
+   "explanation": "1. ✓ Gesamtbytes ÷ Bytes pro Element = 20 / 2 = 10 — DIE Standardformel für die Elementanzahl.\n2. ✓ a[0] ist ein einzelnes short-Element und belegt 2 Byte.\n3. ✗ sizeof liefert IMMER Bytes (hier 10 × 2 = 20), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n4. ✗ sizeof rechnet in Bytes: 10 × 2 (short) = 20, nicht 40.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -10443,7 +10443,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Änderungen an a[i] in der Funktion wirken auf das Original. · Falsch: sizeof(a) liefert in der Funktion die volle Array-Größe. · Richtig: Die Elementzahl wird deshalb als Parameter n mitgegeben. · Richtig: Es wird nur die Startadresse des Arrays übergeben.",
+   "explanation": "1. ✓ Weil nur die Startadresse übergeben wird, schreibt a[i] = … direkt in das Array des Aufrufers.\n2. ✗ Im Parameter \"zerfällt\" das Array zur Adresse — sizeof misst dort nur noch die Adresse (typisch 8 Byte), nicht das Array. Genau deshalb übergibt man n mit.\n3. ✓ In der Funktion ist a nur noch eine Adresse — sizeof(a) liefert dort nicht mehr die Array-Größe. Also muss die Anzahl separat mitgegeben werden.\n4. ✓ Arrays werden nie kopiert: Die Funktion erhält die Adresse des ersten Elements und arbeitet direkt auf dem Original.",
    "source": "T-38 / AT-10",
    "verified": true
   },
@@ -10464,7 +10464,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: Es besteht aus 8 Elementen. · Richtig: Es belegt 48 Byte. · Richtig: Das letzte Element ist m[5][1]. · Falsch: m[6][2] ist ein gültiger Zugriff.",
+   "explanation": "1. ✗ Elementzahl eines 2D-Arrays = Zeilen × Spalten = 6 · 2 = 12, nicht 8.\n2. ✓ 12 Elemente × 4 Byte (int) = 48 Byte.\n3. ✓ Zeilenindizes 0…5, Spaltenindizes 0…1 → das letzte Element ist m[5][1].\n4. ✗ Gültig sind Zeilen 0…5 und Spalten 0…1 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -10485,7 +10485,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: Das letzte Element ist a[249]. · Richtig: Der erste Index ist 0. · Falsch: a float[250]; ist eine korrekte Deklaration. · Richtig: float a[250]; ist eine korrekte Deklaration.",
+   "explanation": "1. ✓ Die Indizes laufen von 0 bis 250−1 — das letzte der 250 Elemente ist a[249].\n2. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.\n3. ✗ Falsche Reihenfolge: Der Typ steht VOR dem Namen (float a[250];).\n4. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -10507,7 +10507,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: C prüft die Indexgrenzen zur Laufzeit automatisch. · Richtig: Das Array hat 10 Elemente. · Richtig: Alle Elemente haben denselben Datentyp. · Richtig: Gültige Indizes sind 0 bis 9.",
+   "explanation": "1. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.\n2. ✓ Die Zahl in den eckigen Klammern ist die Elementanzahl: 10.\n3. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)\n4. ✓ Arrays starten bei Index 0; bei 10 Elementen ist der letzte Index 9.",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -10527,7 +10527,7 @@
    "answerIndices": [
     3
    ],
-   "explanation": "Falsch: Das Array belegt 484 Byte. · Falsch: sizeof(a) liefert 960 (Bytes). · Falsch: sizeof(a) liefert 120 (Elementzahl). · Richtig: sizeof(a[0]) liefert 4.",
+   "explanation": "1. ✗ Größe = Elementanzahl × Typgröße = 120 × 4 Byte (float) = 480 Byte, nicht 484.\n2. ✗ sizeof rechnet in Bytes: 120 × 4 (float) = 480, nicht 960.\n3. ✗ sizeof liefert IMMER Bytes (hier 120 × 4 = 480), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n4. ✓ a[0] ist ein einzelnes float-Element und belegt 4 Byte.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -10547,7 +10547,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: Das letzte Element ist a[119]. · Falsch: Das letzte Element ist a[120]. · Richtig: Der erste Index ist 0. · Falsch: long long [120] a; ist eine korrekte Deklaration.",
+   "explanation": "1. ✓ Die Indizes laufen von 0 bis 120−1 — das letzte der 120 Elemente ist a[119].\n2. ✗ Der erste Index ist 0, daher ist der letzte Index Größe−1 = 119 (nicht 120). a[119] ist das letzte Element.\n3. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.\n4. ✗ Falsche Reihenfolge: Die eckigen Klammern gehören HINTER den Namen (long long a[120];), nicht zwischen Typ und Namen.",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -10567,7 +10567,7 @@
    "answerIndices": [
     3
    ],
-   "explanation": "Falsch: a[25] ist ein gültiger Zugriff. · Falsch: Gültige Indizes sind 1 bis 25. · Falsch: C prüft die Indexgrenzen zur Laufzeit automatisch. · Richtig: Alle Elemente haben denselben Datentyp.",
+   "explanation": "1. ✗ Erlaubt sind nur a[0] … a[24]. a[25] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.\n2. ✗ Arrays starten in C bei 0, nicht bei 1: gültig sind die Indizes 0 bis 24.\n3. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.\n4. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -10589,7 +10589,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: sizeof(a) / sizeof(a[0]) liefert 250. · Falsch: sizeof(a) liefert 1000 (Bytes). · Richtig: sizeof(a) liefert 250 (Bytes). · Richtig: sizeof(a[0]) liefert 1.",
+   "explanation": "1. ✓ Gesamtbytes ÷ Bytes pro Element = 250 / 1 = 250 — DIE Standardformel für die Elementanzahl.\n2. ✗ sizeof rechnet in Bytes: 250 × 1 (char) = 250, nicht 1000.\n3. ✓ sizeof liefert die Größe in Bytes: 250 Elemente × 1 Byte (char) = 250.\n4. ✓ a[0] ist ein einzelnes char-Element und belegt 1 Byte.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -10610,7 +10610,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: Es besteht aus 9 Elementen. · Richtig: Es hat 4 Zeilen und 5 Spalten. · Falsch: m[4][5] ist ein gültiger Zugriff. · Richtig: Das letzte Element ist m[3][4].",
+   "explanation": "1. ✗ Elementzahl eines 2D-Arrays = Zeilen × Spalten = 4 · 5 = 20, nicht 9.\n2. ✓ Die erste Klammer ist die Zeilenzahl (4), die zweite die Spaltenzahl (5).\n3. ✗ Gültig sind Zeilen 0…3 und Spalten 0…4 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.\n4. ✓ Zeilenindizes 0…3, Spaltenindizes 0…4 → das letzte Element ist m[3][4].",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -10630,7 +10630,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: char a[80]; ist eine korrekte Deklaration. · Richtig: Der erste Index ist 0. · Falsch: char [80] a; ist eine korrekte Deklaration. · Falsch: a char[80]; ist eine korrekte Deklaration.",
+   "explanation": "1. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.\n2. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.\n3. ✗ Falsche Reihenfolge: Die eckigen Klammern gehören HINTER den Namen (char a[80];), nicht zwischen Typ und Namen.\n4. ✗ Falsche Reihenfolge: Der Typ steht VOR dem Namen (char a[80];).",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -10652,7 +10652,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: Alle Elemente haben denselben Datentyp. · Richtig: Das Array hat 50 Elemente. · Falsch: Gültige Indizes sind 1 bis 50. · Richtig: Gültige Indizes sind 0 bis 49.",
+   "explanation": "1. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)\n2. ✓ Die Zahl in den eckigen Klammern ist die Elementanzahl: 50.\n3. ✗ Arrays starten in C bei 0, nicht bei 1: gültig sind die Indizes 0 bis 49.\n4. ✓ Arrays starten bei Index 0; bei 50 Elementen ist der letzte Index 49.",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -10673,7 +10673,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: sizeof(a) / sizeof(a[0]) liefert 20. · Richtig: sizeof(a) liefert 20 (Bytes). · Falsch: sizeof(a) liefert 80 (Bytes). · Falsch: sizeof(a) liefert 20 (Elementzahl).",
+   "explanation": "1. ✓ Gesamtbytes ÷ Bytes pro Element = 20 / 1 = 20 — DIE Standardformel für die Elementanzahl.\n2. ✓ sizeof liefert die Größe in Bytes: 20 Elemente × 1 Byte (char) = 20.\n3. ✗ sizeof rechnet in Bytes: 20 × 1 (char) = 20, nicht 80.\n4. ✗ sizeof liefert IMMER Bytes (hier 20 × 1 = 20), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -10695,7 +10695,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Es belegt 64 Byte. · Falsch: m[4][4] ist ein gültiger Zugriff. · Richtig: Es besteht aus 16 Elementen. · Richtig: Es hat 4 Zeilen und 4 Spalten.",
+   "explanation": "1. ✓ 16 Elemente × 4 Byte (int) = 64 Byte.\n2. ✗ Gültig sind Zeilen 0…3 und Spalten 0…3 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.\n3. ✓ 4 Zeilen × 4 Spalten = 16 Elemente.\n4. ✓ Die erste Klammer ist die Zeilenzahl (4), die zweite die Spaltenzahl (4).",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -10715,7 +10715,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: float [300] a; ist eine korrekte Deklaration. · Falsch: Das letzte Element ist a[300]. · Richtig: float a[300]; ist eine korrekte Deklaration. · Richtig: Der erste Index ist 0.",
+   "explanation": "1. ✗ Falsche Reihenfolge: Die eckigen Klammern gehören HINTER den Namen (float a[300];), nicht zwischen Typ und Namen.\n2. ✗ Der erste Index ist 0, daher ist der letzte Index Größe−1 = 299 (nicht 300). a[299] ist das letzte Element.\n3. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.\n4. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -10735,7 +10735,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: C prüft die Indexgrenzen zur Laufzeit automatisch. · Falsch: Gültige Indizes sind 1 bis 40. · Richtig: Das Array hat 40 Elemente. · Falsch: a[40] ist ein gültiger Zugriff.",
+   "explanation": "1. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.\n2. ✗ Arrays starten in C bei 0, nicht bei 1: gültig sind die Indizes 0 bis 39.\n3. ✓ Die Zahl in den eckigen Klammern ist die Elementanzahl: 40.\n4. ✗ Erlaubt sind nur a[0] … a[39]. a[40] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -10756,7 +10756,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: sizeof(a) liefert 120 (Elementzahl). · Richtig: sizeof(a) / sizeof(a[0]) liefert 120. · Falsch: Das Array belegt 484 Byte. · Richtig: sizeof(a) liefert 480 (Bytes).",
+   "explanation": "1. ✗ sizeof liefert IMMER Bytes (hier 120 × 4 = 480), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n2. ✓ Gesamtbytes ÷ Bytes pro Element = 480 / 4 = 120 — DIE Standardformel für die Elementanzahl.\n3. ✗ Größe = Elementanzahl × Typgröße = 120 × 4 Byte (float) = 480 Byte, nicht 484.\n4. ✓ sizeof liefert die Größe in Bytes: 120 Elemente × 4 Byte (float) = 480.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -10775,7 +10775,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: Es besteht aus 9 Elementen. · Richtig: Es belegt 80 Byte. · Falsch: m[4][5] ist ein gültiger Zugriff.",
+   "explanation": "1. ✗ Elementzahl eines 2D-Arrays = Zeilen × Spalten = 4 · 5 = 20, nicht 9.\n2. ✓ 20 Elemente × 4 Byte (int) = 80 Byte.\n3. ✗ Gültig sind Zeilen 0…3 und Spalten 0…4 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -10796,7 +10796,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: char [200] a; ist eine korrekte Deklaration. · Richtig: Der erste Index ist 0. · Richtig: char a[200]; ist eine korrekte Deklaration. · Richtig: Das letzte Element ist a[199].",
+   "explanation": "1. ✗ Falsche Reihenfolge: Die eckigen Klammern gehören HINTER den Namen (char a[200];), nicht zwischen Typ und Namen.\n2. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.\n3. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.\n4. ✓ Die Indizes laufen von 0 bis 200−1 — das letzte der 200 Elemente ist a[199].",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -10817,7 +10817,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: C prüft die Indexgrenzen zur Laufzeit automatisch. · Richtig: Gültige Indizes sind 0 bis 9. · Falsch: a[10] ist ein gültiger Zugriff. · Richtig: Alle Elemente haben denselben Datentyp.",
+   "explanation": "1. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.\n2. ✓ Arrays starten bei Index 0; bei 10 Elementen ist der letzte Index 9.\n3. ✗ Erlaubt sind nur a[0] … a[9]. a[10] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.\n4. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -10838,7 +10838,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: sizeof(a[0]) liefert 4. · Falsch: Das Array belegt 324 Byte. · Richtig: sizeof(a) / sizeof(a[0]) liefert 80. · Falsch: sizeof(a) liefert 80 (Elementzahl).",
+   "explanation": "1. ✓ a[0] ist ein einzelnes float-Element und belegt 4 Byte.\n2. ✗ Größe = Elementanzahl × Typgröße = 80 × 4 Byte (float) = 320 Byte, nicht 324.\n3. ✓ Gesamtbytes ÷ Bytes pro Element = 320 / 4 = 80 — DIE Standardformel für die Elementanzahl.\n4. ✗ sizeof liefert IMMER Bytes (hier 80 × 4 = 320), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -10858,7 +10858,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: Die Elementzahl wird deshalb als Parameter n mitgegeben. · Falsch: Die Funktion kann das Original-Array nicht verändern. · Falsch: sizeof(a) liefert in der Funktion die volle Array-Größe. · Richtig: Es wird nur die Startadresse des Arrays übergeben.",
+   "explanation": "1. ✓ In der Funktion ist a nur noch eine Adresse — sizeof(a) liefert dort nicht mehr die Array-Größe. Also muss die Anzahl separat mitgegeben werden.\n2. ✗ Arrays werden per STARTADRESSE übergeben (keine Kopie!) — a[i] = … in der Funktion ändert das Original in main.\n3. ✗ Im Parameter \"zerfällt\" das Array zur Adresse — sizeof misst dort nur noch die Adresse (typisch 8 Byte), nicht das Array. Genau deshalb übergibt man n mit.\n4. ✓ Arrays werden nie kopiert: Die Funktion erhält die Adresse des ersten Elements und arbeitet direkt auf dem Original.",
    "source": "T-38 / AT-10",
    "verified": true
   },
@@ -10879,7 +10879,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: int [100] a; ist eine korrekte Deklaration. · Richtig: Der erste Index ist 0. · Richtig: int a[100]; ist eine korrekte Deklaration. · Richtig: Das letzte Element ist a[99].",
+   "explanation": "1. ✗ Falsche Reihenfolge: Die eckigen Klammern gehören HINTER den Namen (int a[100];), nicht zwischen Typ und Namen.\n2. ✓ Arrays starten in C IMMER bei 0 — das letzte Element hat den Index Größe−1.\n3. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.\n4. ✓ Die Indizes laufen von 0 bis 100−1 — das letzte der 100 Elemente ist a[99].",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -10899,7 +10899,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: Alle Elemente haben denselben Datentyp. · Falsch: Gültige Indizes sind 1 bis 120. · Falsch: a[120] ist ein gültiger Zugriff. · Falsch: C prüft die Indexgrenzen zur Laufzeit automatisch.",
+   "explanation": "1. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)\n2. ✗ Arrays starten in C bei 0, nicht bei 1: gültig sind die Indizes 0 bis 119.\n3. ✗ Erlaubt sind nur a[0] … a[119]. a[120] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.\n4. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -10919,7 +10919,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Das Array belegt 41 Byte. · Falsch: sizeof(a) liefert 40 (Elementzahl). · Richtig: sizeof(a) liefert 40 (Bytes). · Falsch: sizeof(a) liefert 160 (Bytes).",
+   "explanation": "1. ✗ Größe = Elementanzahl × Typgröße = 40 × 1 Byte (char) = 40 Byte, nicht 41.\n2. ✗ sizeof liefert IMMER Bytes (hier 40 × 1 = 40), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n3. ✓ sizeof liefert die Größe in Bytes: 40 Elemente × 1 Byte (char) = 40.\n4. ✗ sizeof rechnet in Bytes: 40 × 1 (char) = 40, nicht 160.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -10939,7 +10939,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: Das Array wird vollständig kopiert. · Falsch: Die Funktion kann das Original-Array nicht verändern. · Richtig: Die Elementzahl wird deshalb als Parameter n mitgegeben. · Richtig: Es wird nur die Startadresse des Arrays übergeben.",
+   "explanation": "1. ✗ Nur die Startadresse wird übergeben. Deshalb sind Array-Übergaben billig — und Änderungen wirken auf das Original.\n2. ✗ Arrays werden per STARTADRESSE übergeben (keine Kopie!) — a[i] = … in der Funktion ändert das Original in main.\n3. ✓ In der Funktion ist a nur noch eine Adresse — sizeof(a) liefert dort nicht mehr die Array-Größe. Also muss die Anzahl separat mitgegeben werden.\n4. ✓ Arrays werden nie kopiert: Die Funktion erhält die Adresse des ersten Elements und arbeitet direkt auf dem Original.",
    "source": "T-38 / AT-10",
    "verified": true
   },
@@ -10961,7 +10961,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: Es hat 5 Zeilen und 3 Spalten. · Richtig: Es belegt 60 Byte. · Falsch: m[5][3] ist ein gültiger Zugriff. · Richtig: Es besteht aus 15 Elementen.",
+   "explanation": "1. ✓ Die erste Klammer ist die Zeilenzahl (5), die zweite die Spaltenzahl (3).\n2. ✓ 15 Elemente × 4 Byte (int) = 60 Byte.\n3. ✗ Gültig sind Zeilen 0…4 und Spalten 0…2 — mindestens ein Index ist hier zu groß. C meldet das nicht: undefiniertes Verhalten.\n4. ✓ 5 Zeilen × 3 Spalten = 15 Elemente.",
    "source": "T-39 / AT-10",
    "verified": true
   },
@@ -10981,7 +10981,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: long long a[10]; ist eine korrekte Deklaration. · Falsch: long long [10] a; ist eine korrekte Deklaration. · Falsch: Das letzte Element ist a[10]. · Richtig: Das letzte Element ist a[9].",
+   "explanation": "1. ✓ Passt genau zum Muster Typ Name[Anzahl]; — so deklariert man ein Array in C.\n2. ✗ Falsche Reihenfolge: Die eckigen Klammern gehören HINTER den Namen (long long a[10];), nicht zwischen Typ und Namen.\n3. ✗ Der erste Index ist 0, daher ist der letzte Index Größe−1 = 9 (nicht 10). a[9] ist das letzte Element.\n4. ✓ Die Indizes laufen von 0 bis 10−1 — das letzte der 10 Elemente ist a[9].",
    "source": "T-36 / AT-2",
    "verified": true
   },
@@ -11002,7 +11002,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: a[25] ist ein gültiger Zugriff. · Richtig: Alle Elemente haben denselben Datentyp. · Falsch: C prüft die Indexgrenzen zur Laufzeit automatisch. · Richtig: Gültige Indizes sind 0 bis 24.",
+   "explanation": "1. ✗ Erlaubt sind nur a[0] … a[24]. a[25] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.\n2. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)\n3. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.\n4. ✓ Arrays starten bei Index 0; bei 25 Elementen ist der letzte Index 24.",
    "source": "T-36 / AT-10",
    "verified": true
   },
@@ -11023,7 +11023,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: sizeof(a) liefert 120 (Elementzahl). · Richtig: sizeof(a[0]) liefert 8. · Richtig: sizeof(a) liefert 960 (Bytes). · Falsch: sizeof(a) liefert 480 (Bytes).",
+   "explanation": "1. ✗ sizeof liefert IMMER Bytes (hier 120 × 8 = 960), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n2. ✓ a[0] ist ein einzelnes long long-Element und belegt 8 Byte.\n3. ✓ sizeof liefert die Größe in Bytes: 120 Elemente × 8 Byte (long long) = 960.\n4. ✗ sizeof rechnet in Bytes: 120 × 8 (long long) = 960, nicht 480.",
    "source": "T-37 / AT-10",
    "verified": true
   },
@@ -11042,7 +11042,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Das Array wird vollständig kopiert. · Falsch: sizeof(a) liefert in der Funktion die volle Array-Größe. · Richtig: Es wird nur die Startadresse des Arrays übergeben. · Falsch: Die Funktion kann das Original-Array nicht verändern.",
+   "explanation": "1. ✗ Nur die Startadresse wird übergeben. Deshalb sind Array-Übergaben billig — und Änderungen wirken auf das Original.\n2. ✗ Im Parameter \"zerfällt\" das Array zur Adresse — sizeof misst dort nur noch die Adresse (typisch 8 Byte), nicht das Array. Genau deshalb übergibt man n mit.\n3. ✓ Arrays werden nie kopiert: Die Funktion erhält die Adresse des ersten Elements und arbeitet direkt auf dem Original.\n4. ✗ Arrays werden per STARTADRESSE übergeben (keine Kopie!) — a[i] = … in der Funktion ändert das Original in main.",
    "source": "T-38 / AT-10",
    "verified": true
   },
@@ -11061,7 +11061,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: double quadrat(double, double); · Falsch: quadrat double(double, double); · Falsch: double quadrat(double, double) · Falsch: double quadrat(2 double);",
+   "explanation": "1. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.\n2. ✗ Der Rückgabetyp muss VOR dem Funktionsnamen stehen: double quadrat(double, double); — nicht dahinter.\n3. ✗ Es fehlt das abschließende Semikolon — ohne ; ist das kein Prototyp, sondern ein Funktionskopf, dem der Körper { } folgen müsste.\n4. ✗ Jeder Parameter wird einzeln mit Typ aufgezählt: (double, double). Eine Anzahl wie \"2 double\" gibt es in C nicht.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11082,7 +11082,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Jeder Funktionsname muss in C eindeutig sein. · Falsch: Groß-/Kleinschreibung spielt bei Funktionsnamen keine Rolle. · Richtig: Funktionsüberladung ist ein C++-Konzept. · Richtig: int volumen(int); und double volumen(int); dürfen nicht gemeinsam existieren.",
+   "explanation": "1. ✓ C kennt keine Überladung (das ist C++) — gleicher Name mit anderer Parameterliste ist verboten.\n2. ✗ C ist case-sensitiv: quadrat und Quadrat sind ZWEI verschiedene Namen — beliebte Fehlerquelle bei Funktionsaufrufen.\n3. ✓ In C++ darf derselbe Name mehrfach mit verschiedenen Signaturen existieren — in C nicht: jeder Funktionsname muss eindeutig sein.\n4. ✓ Stimmt — in C muss jeder Funktionsname EINDEUTIG sein. Überladung (gleicher Name, andere Signatur) gibt es nur in C++.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -11102,7 +11102,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: Eine void-Funktion kann mehrere Werte zurückgeben. · Richtig: Eine void-Funktion darf printf-Ausgaben machen. · Falsch: x = f(); ist mit einer void-Funktion f erlaubt. · Richtig: return; (ohne Wert) ist in einer void-Funktion erlaubt.",
+   "explanation": "1. ✗ Eine void-Funktion gibt GAR KEINEN Wert zurück — und auch sonst liefert return immer genau einen Wert.\n2. ✓ void heißt nur \"kein RÜCKGABEWERT\" — tun darf die Funktion alles, auch Ausgaben (Typ \"Aktion ohne Ergebnis\").\n3. ✗ Eine void-Funktion liefert nichts — es gibt keinen Wert, den man x zuweisen könnte. Compilerfehler.\n4. ✓ return; beendet die void-Funktion vorzeitig — ohne Wert, denn es gibt keinen Rückgabetyp.",
    "source": "T-32 / AT-11",
    "verified": true
   },
@@ -11120,7 +11120,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: Der eigene Header wird mit #include <...> eingebunden. · Richtig: Der eigene Header wird mit #include \"...\" eingebunden. · Falsch: Die .h-Datei muss die vollständigen Funktionskörper enthalten.",
+   "explanation": "1. ✗ Spitze Klammern sind für STANDARD-Header. Eigene Header bindet man mit #include \"meinheader.h\" ein.\n2. ✓ Anführungszeichen = Suche im Projektordner (eigene Header); spitze Klammern = Standard-Suchpfad.\n3. ✗ In den Header gehören nur die PROTOTYPEN. Die Funktionskörper stehen in der .c/.cpp-Datei — sonst gäbe es beim Einbinden in mehrere Dateien Mehrfach-Definitionen.",
    "source": "T-34 / AT-11",
    "verified": true
   },
@@ -11141,7 +11141,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: Prototyp und Definition dürfen unterschiedliche Parametertypen haben. · Richtig: Der Prototyp (Deklaration) endet mit einem Semikolon. · Richtig: Die Definition enthält den Funktionskörper in { }. · Richtig: Ohne Prototyp darf die Funktion erst nach ihrer Definition aufgerufen werden.",
+   "explanation": "1. ✗ Beide müssen exakt zusammenpassen (gleiche Signatur) — sonst Compiler-/Linkerfehler.\n2. ✓ double f(double, double); — das Semikolon statt eines Körpers unterscheidet den Prototyp von der Definition.\n3. ✓ Definition = Kopf + Körper { … }. Die Deklaration (Prototyp) endet stattdessen mit einem Semikolon.\n4. ✓ Der Compiler liest von oben nach unten — beim Aufruf muss die Funktion bekannt sein: Definition vorher oder Prototyp am Dateianfang.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11160,7 +11160,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: double umfang(double, double); · Falsch: umfang double(double, double); · Falsch: double umfang(2 double); · Falsch: double umfang(double, double)",
+   "explanation": "1. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.\n2. ✗ Der Rückgabetyp muss VOR dem Funktionsnamen stehen: double umfang(double, double); — nicht dahinter.\n3. ✗ Jeder Parameter wird einzeln mit Typ aufgezählt: (double, double). Eine Anzahl wie \"2 double\" gibt es in C nicht.\n4. ✗ Es fehlt das abschließende Semikolon — ohne ; ist das kein Prototyp, sondern ein Funktionskopf, dem der Körper { } folgen müsste.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11180,7 +11180,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: Gleicher Name mit anderer Parameterliste ist in C erlaubt (Überladung). · Falsch: Groß-/Kleinschreibung spielt bei Funktionsnamen keine Rolle. · Richtig: Jeder Funktionsname muss in C eindeutig sein. · Richtig: Funktionsüberladung ist ein C++-Konzept.",
+   "explanation": "1. ✗ Überladung ist ein C++-Konzept. In C muss jeder Funktionsname eindeutig sein.\n2. ✗ C ist case-sensitiv: quadrat und Quadrat sind ZWEI verschiedene Namen — beliebte Fehlerquelle bei Funktionsaufrufen.\n3. ✓ C kennt keine Überladung (das ist C++) — gleicher Name mit anderer Parameterliste ist verboten.\n4. ✓ In C++ darf derselbe Name mehrfach mit verschiedenen Signaturen existieren — in C nicht: jeder Funktionsname muss eindeutig sein.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -11200,7 +11200,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: Eine void-Funktion gibt keinen Wert zurück. · Richtig: return; (ohne Wert) ist in einer void-Funktion erlaubt. · Falsch: Eine void-Funktion kann mehrere Werte zurückgeben. · Falsch: x = f(); ist mit einer void-Funktion f erlaubt.",
+   "explanation": "1. ✓ void = \"nichts\": Es gibt keinen Rückgabewert. return; (ohne Wert) ist erlaubt, x = f(); dagegen nicht.\n2. ✓ return; beendet die void-Funktion vorzeitig — ohne Wert, denn es gibt keinen Rückgabetyp.\n3. ✗ Eine void-Funktion gibt GAR KEINEN Wert zurück — und auch sonst liefert return immer genau einen Wert.\n4. ✗ Eine void-Funktion liefert nichts — es gibt keinen Wert, den man x zuweisen könnte. Compilerfehler.",
    "source": "T-32 / AT-11",
    "verified": true
   },
@@ -11220,7 +11220,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: #pragma once verhindert mehrfaches Einbinden des Headers. · Falsch: Der eigene Header wird mit #include <...> eingebunden. · Richtig: Die Prototypen stehen üblicherweise in der .h-Datei. · Falsch: Die .h-Datei muss die vollständigen Funktionskörper enthalten.",
+   "explanation": "1. ✓ Steht #pragma once am Anfang eines Headers, wird er pro Übersetzung nur einmal eingefügt — schützt vor Mehrfach-Definitionen.\n2. ✗ Spitze Klammern sind für STANDARD-Header. Eigene Header bindet man mit #include \"meinheader.h\" ein.\n3. ✓ So können andere Quelldateien den Header einbinden und die Funktionen aufrufen, ohne deren Implementierung zu kennen.\n4. ✗ In den Header gehören nur die PROTOTYPEN. Die Funktionskörper stehen in der .c/.cpp-Datei — sonst gäbe es beim Einbinden in mehrere Dateien Mehrfach-Definitionen.",
    "source": "T-34 / AT-11",
    "verified": true
   },
@@ -11238,7 +11238,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Prototyp und Definition dürfen unterschiedliche Parametertypen haben. · Falsch: Der Compiler kennt Funktionsnamen unabhängig von ihrer Position im Quelltext. · Richtig: Die Definition enthält den Funktionskörper in { }.",
+   "explanation": "1. ✗ Beide müssen exakt zusammenpassen (gleiche Signatur) — sonst Compiler-/Linkerfehler.\n2. ✗ Der Compiler liest von OBEN nach UNTEN: Beim Aufruf muss die Funktion schon deklariert oder definiert sein — sonst \"Nutzung vor Definition\"-Fehler.\n3. ✓ Definition = Kopf + Körper { … }. Die Deklaration (Prototyp) endet stattdessen mit einem Semikolon.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11258,7 +11258,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: double summe(double, double) · Falsch: summe double(double, double); · Richtig: double summe(double a, double b); · Richtig: double summe(double, double);",
+   "explanation": "1. ✗ Es fehlt das abschließende Semikolon — ohne ; ist das kein Prototyp, sondern ein Funktionskopf, dem der Körper { } folgen müsste.\n2. ✗ Der Rückgabetyp muss VOR dem Funktionsnamen stehen: double summe(double, double); — nicht dahinter.\n3. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.\n4. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11278,7 +11278,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: x = f(); ist mit einer void-Funktion f erlaubt. · Richtig: return; (ohne Wert) ist in einer void-Funktion erlaubt. · Falsch: Eine void-Funktion kann mehrere Werte zurückgeben. · Richtig: void f(void) ist ein gültiger Funktionskopf.",
+   "explanation": "1. ✗ Eine void-Funktion liefert nichts — es gibt keinen Wert, den man x zuweisen könnte. Compilerfehler.\n2. ✓ return; beendet die void-Funktion vorzeitig — ohne Wert, denn es gibt keinen Rückgabetyp.\n3. ✗ Eine void-Funktion gibt GAR KEINEN Wert zurück — und auch sonst liefert return immer genau einen Wert.\n4. ✓ void vorn = kein Rückgabewert, void in der Klammer = keine Parameter. Beides zusammen ist völlig legal.",
    "source": "T-32 / AT-11",
    "verified": true
   },
@@ -11298,7 +11298,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: Der Prototyp (Deklaration) endet mit einem Semikolon. · Falsch: Prototyp und Definition dürfen unterschiedliche Parametertypen haben. · Falsch: Der Compiler kennt Funktionsnamen unabhängig von ihrer Position im Quelltext. · Richtig: Ohne Prototyp darf die Funktion erst nach ihrer Definition aufgerufen werden.",
+   "explanation": "1. ✓ double f(double, double); — das Semikolon statt eines Körpers unterscheidet den Prototyp von der Definition.\n2. ✗ Beide müssen exakt zusammenpassen (gleiche Signatur) — sonst Compiler-/Linkerfehler.\n3. ✗ Der Compiler liest von OBEN nach UNTEN: Beim Aufruf muss die Funktion schon deklariert oder definiert sein — sonst \"Nutzung vor Definition\"-Fehler.\n4. ✓ Der Compiler liest von oben nach unten — beim Aufruf muss die Funktion bekannt sein: Definition vorher oder Prototyp am Dateianfang.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11317,7 +11317,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: quadrat double(double, double); · Richtig: double quadrat(double a, double b); · Falsch: double quadrat(2 double); · Falsch: double quadrat(double, double)",
+   "explanation": "1. ✗ Der Rückgabetyp muss VOR dem Funktionsnamen stehen: double quadrat(double, double); — nicht dahinter.\n2. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.\n3. ✗ Jeder Parameter wird einzeln mit Typ aufgezählt: (double, double). Eine Anzahl wie \"2 double\" gibt es in C nicht.\n4. ✗ Es fehlt das abschließende Semikolon — ohne ; ist das kein Prototyp, sondern ein Funktionskopf, dem der Körper { } folgen müsste.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11337,7 +11337,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: Gleicher Name mit anderer Parameterliste ist in C erlaubt (Überladung). · Falsch: Groß-/Kleinschreibung spielt bei Funktionsnamen keine Rolle. · Richtig: Funktionsüberladung ist ein C++-Konzept. · Richtig: int oberflaeche(int); und double oberflaeche(int); dürfen nicht gemeinsam existieren.",
+   "explanation": "1. ✗ Überladung ist ein C++-Konzept. In C muss jeder Funktionsname eindeutig sein.\n2. ✗ C ist case-sensitiv: quadrat und Quadrat sind ZWEI verschiedene Namen — beliebte Fehlerquelle bei Funktionsaufrufen.\n3. ✓ In C++ darf derselbe Name mehrfach mit verschiedenen Signaturen existieren — in C nicht: jeder Funktionsname muss eindeutig sein.\n4. ✓ Stimmt — in C muss jeder Funktionsname EINDEUTIG sein. Überladung (gleicher Name, andere Signatur) gibt es nur in C++.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -11357,7 +11357,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: x = f(); ist mit einer void-Funktion f erlaubt. · Richtig: Eine void-Funktion darf printf-Ausgaben machen. · Richtig: void f(void) ist ein gültiger Funktionskopf. · Falsch: Eine void-Funktion kann mehrere Werte zurückgeben.",
+   "explanation": "1. ✗ Eine void-Funktion liefert nichts — es gibt keinen Wert, den man x zuweisen könnte. Compilerfehler.\n2. ✓ void heißt nur \"kein RÜCKGABEWERT\" — tun darf die Funktion alles, auch Ausgaben (Typ \"Aktion ohne Ergebnis\").\n3. ✓ void vorn = kein Rückgabewert, void in der Klammer = keine Parameter. Beides zusammen ist völlig legal.\n4. ✗ Eine void-Funktion gibt GAR KEINEN Wert zurück — und auch sonst liefert return immer genau einen Wert.",
    "source": "T-32 / AT-11",
    "verified": true
   },
@@ -11375,7 +11375,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: Der eigene Header wird mit #include <...> eingebunden. · Richtig: #pragma once verhindert mehrfaches Einbinden des Headers. · Falsch: Die .h-Datei muss die vollständigen Funktionskörper enthalten.",
+   "explanation": "1. ✗ Spitze Klammern sind für STANDARD-Header. Eigene Header bindet man mit #include \"meinheader.h\" ein.\n2. ✓ Steht #pragma once am Anfang eines Headers, wird er pro Übersetzung nur einmal eingefügt — schützt vor Mehrfach-Definitionen.\n3. ✗ In den Header gehören nur die PROTOTYPEN. Die Funktionskörper stehen in der .c/.cpp-Datei — sonst gäbe es beim Einbinden in mehrere Dateien Mehrfach-Definitionen.",
    "source": "T-34 / AT-11",
    "verified": true
   },
@@ -11395,7 +11395,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: Groß-/Kleinschreibung spielt bei Funktionsnamen keine Rolle. · Richtig: int umfang(int); und double umfang(int); dürfen nicht gemeinsam existieren. · Richtig: Jeder Funktionsname muss in C eindeutig sein. · Falsch: Gleicher Name mit anderer Parameterliste ist in C erlaubt (Überladung).",
+   "explanation": "1. ✗ C ist case-sensitiv: quadrat und Quadrat sind ZWEI verschiedene Namen — beliebte Fehlerquelle bei Funktionsaufrufen.\n2. ✓ Stimmt — in C muss jeder Funktionsname EINDEUTIG sein. Überladung (gleicher Name, andere Signatur) gibt es nur in C++.\n3. ✓ C kennt keine Überladung (das ist C++) — gleicher Name mit anderer Parameterliste ist verboten.\n4. ✗ Überladung ist ein C++-Konzept. In C muss jeder Funktionsname eindeutig sein.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -11416,7 +11416,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: void f(void) ist ein gültiger Funktionskopf. · Richtig: Eine void-Funktion gibt keinen Wert zurück. · Falsch: x = f(); ist mit einer void-Funktion f erlaubt. · Richtig: Eine void-Funktion darf printf-Ausgaben machen.",
+   "explanation": "1. ✓ void vorn = kein Rückgabewert, void in der Klammer = keine Parameter. Beides zusammen ist völlig legal.\n2. ✓ void = \"nichts\": Es gibt keinen Rückgabewert. return; (ohne Wert) ist erlaubt, x = f(); dagegen nicht.\n3. ✗ Eine void-Funktion liefert nichts — es gibt keinen Wert, den man x zuweisen könnte. Compilerfehler.\n4. ✓ void heißt nur \"kein RÜCKGABEWERT\" — tun darf die Funktion alles, auch Ausgaben (Typ \"Aktion ohne Ergebnis\").",
    "source": "T-32 / AT-11",
    "verified": true
   },
@@ -11437,7 +11437,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: Der eigene Header wird mit #include <...> eingebunden. · Richtig: #pragma once verhindert mehrfaches Einbinden des Headers. · Richtig: Die Prototypen stehen üblicherweise in der .h-Datei. · Richtig: Die Funktionsdefinitionen stehen in der Quelldatei.",
+   "explanation": "1. ✗ Spitze Klammern sind für STANDARD-Header. Eigene Header bindet man mit #include \"meinheader.h\" ein.\n2. ✓ Steht #pragma once am Anfang eines Headers, wird er pro Übersetzung nur einmal eingefügt — schützt vor Mehrfach-Definitionen.\n3. ✓ So können andere Quelldateien den Header einbinden und die Funktionen aufrufen, ohne deren Implementierung zu kennen.\n4. ✓ .c/.cpp = Definitionen (mit Körper), .h = Deklarationen (Prototypen).",
    "source": "T-34 / AT-11",
    "verified": true
   },
@@ -11457,7 +11457,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: double mittelwert(double, double); · Falsch: double mittelwert(double, double) · Falsch: double mittelwert(2 double); · Richtig: double mittelwert(double a, double b);",
+   "explanation": "1. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.\n2. ✗ Es fehlt das abschließende Semikolon — ohne ; ist das kein Prototyp, sondern ein Funktionskopf, dem der Körper { } folgen müsste.\n3. ✗ Jeder Parameter wird einzeln mit Typ aufgezählt: (double, double). Eine Anzahl wie \"2 double\" gibt es in C nicht.\n4. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11475,7 +11475,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Gleicher Name mit anderer Parameterliste ist in C erlaubt (Überladung). · Falsch: Groß-/Kleinschreibung spielt bei Funktionsnamen keine Rolle. · Richtig: Jeder Funktionsname muss in C eindeutig sein.",
+   "explanation": "1. ✗ Überladung ist ein C++-Konzept. In C muss jeder Funktionsname eindeutig sein.\n2. ✗ C ist case-sensitiv: quadrat und Quadrat sind ZWEI verschiedene Namen — beliebte Fehlerquelle bei Funktionsaufrufen.\n3. ✓ C kennt keine Überladung (das ist C++) — gleicher Name mit anderer Parameterliste ist verboten.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -11496,7 +11496,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: x = f(); ist mit einer void-Funktion f erlaubt. · Richtig: return; (ohne Wert) ist in einer void-Funktion erlaubt. · Richtig: void f(void) ist ein gültiger Funktionskopf. · Richtig: Eine void-Funktion gibt keinen Wert zurück.",
+   "explanation": "1. ✗ Eine void-Funktion liefert nichts — es gibt keinen Wert, den man x zuweisen könnte. Compilerfehler.\n2. ✓ return; beendet die void-Funktion vorzeitig — ohne Wert, denn es gibt keinen Rückgabetyp.\n3. ✓ void vorn = kein Rückgabewert, void in der Klammer = keine Parameter. Beides zusammen ist völlig legal.\n4. ✓ void = \"nichts\": Es gibt keinen Rückgabewert. return; (ohne Wert) ist erlaubt, x = f(); dagegen nicht.",
    "source": "T-32 / AT-11",
    "verified": true
   },
@@ -11516,7 +11516,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: Die .h-Datei muss die vollständigen Funktionskörper enthalten. · Richtig: Der eigene Header wird mit #include \"...\" eingebunden. · Falsch: Der eigene Header wird mit #include <...> eingebunden. · Richtig: #pragma once verhindert mehrfaches Einbinden des Headers.",
+   "explanation": "1. ✗ In den Header gehören nur die PROTOTYPEN. Die Funktionskörper stehen in der .c/.cpp-Datei — sonst gäbe es beim Einbinden in mehrere Dateien Mehrfach-Definitionen.\n2. ✓ Anführungszeichen = Suche im Projektordner (eigene Header); spitze Klammern = Standard-Suchpfad.\n3. ✗ Spitze Klammern sind für STANDARD-Header. Eigene Header bindet man mit #include \"meinheader.h\" ein.\n4. ✓ Steht #pragma once am Anfang eines Headers, wird er pro Übersetzung nur einmal eingefügt — schützt vor Mehrfach-Definitionen.",
    "source": "T-34 / AT-11",
    "verified": true
   },
@@ -11536,7 +11536,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: Der Prototyp (Deklaration) endet mit einem Semikolon. · Richtig: Die Definition enthält den Funktionskörper in { }. · Falsch: Prototyp und Definition dürfen unterschiedliche Parametertypen haben. · Falsch: Der Compiler kennt Funktionsnamen unabhängig von ihrer Position im Quelltext.",
+   "explanation": "1. ✓ double f(double, double); — das Semikolon statt eines Körpers unterscheidet den Prototyp von der Definition.\n2. ✓ Definition = Kopf + Körper { … }. Die Deklaration (Prototyp) endet stattdessen mit einem Semikolon.\n3. ✗ Beide müssen exakt zusammenpassen (gleiche Signatur) — sonst Compiler-/Linkerfehler.\n4. ✗ Der Compiler liest von OBEN nach UNTEN: Beim Aufruf muss die Funktion schon deklariert oder definiert sein — sonst \"Nutzung vor Definition\"-Fehler.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11556,7 +11556,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: double summe(double, double); · Falsch: double summe(2 double); · Falsch: summe double(double, double); · Richtig: double summe(double a, double b);",
+   "explanation": "1. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.\n2. ✗ Jeder Parameter wird einzeln mit Typ aufgezählt: (double, double). Eine Anzahl wie \"2 double\" gibt es in C nicht.\n3. ✗ Der Rückgabetyp muss VOR dem Funktionsnamen stehen: double summe(double, double); — nicht dahinter.\n4. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11574,7 +11574,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Gleicher Name mit anderer Parameterliste ist in C erlaubt (Überladung). · Falsch: Groß-/Kleinschreibung spielt bei Funktionsnamen keine Rolle. · Richtig: int zinsen(int); und double zinsen(int); dürfen nicht gemeinsam existieren.",
+   "explanation": "1. ✗ Überladung ist ein C++-Konzept. In C muss jeder Funktionsname eindeutig sein.\n2. ✗ C ist case-sensitiv: quadrat und Quadrat sind ZWEI verschiedene Namen — beliebte Fehlerquelle bei Funktionsaufrufen.\n3. ✓ Stimmt — in C muss jeder Funktionsname EINDEUTIG sein. Überladung (gleicher Name, andere Signatur) gibt es nur in C++.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -11595,7 +11595,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: void f(void) ist ein gültiger Funktionskopf. · Richtig: return; (ohne Wert) ist in einer void-Funktion erlaubt. · Richtig: Eine void-Funktion darf printf-Ausgaben machen. · Falsch: Eine void-Funktion kann mehrere Werte zurückgeben.",
+   "explanation": "1. ✓ void vorn = kein Rückgabewert, void in der Klammer = keine Parameter. Beides zusammen ist völlig legal.\n2. ✓ return; beendet die void-Funktion vorzeitig — ohne Wert, denn es gibt keinen Rückgabetyp.\n3. ✓ void heißt nur \"kein RÜCKGABEWERT\" — tun darf die Funktion alles, auch Ausgaben (Typ \"Aktion ohne Ergebnis\").\n4. ✗ Eine void-Funktion gibt GAR KEINEN Wert zurück — und auch sonst liefert return immer genau einen Wert.",
    "source": "T-32 / AT-11",
    "verified": true
   },
@@ -11613,7 +11613,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: Die Prototypen stehen üblicherweise in der .h-Datei. · Falsch: Die .h-Datei muss die vollständigen Funktionskörper enthalten. · Falsch: Der eigene Header wird mit #include <...> eingebunden.",
+   "explanation": "1. ✓ So können andere Quelldateien den Header einbinden und die Funktionen aufrufen, ohne deren Implementierung zu kennen.\n2. ✗ In den Header gehören nur die PROTOTYPEN. Die Funktionskörper stehen in der .c/.cpp-Datei — sonst gäbe es beim Einbinden in mehrere Dateien Mehrfach-Definitionen.\n3. ✗ Spitze Klammern sind für STANDARD-Header. Eigene Header bindet man mit #include \"meinheader.h\" ein.",
    "source": "T-34 / AT-11",
    "verified": true
   },
@@ -11632,7 +11632,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: double volumen(double a, double b); · Falsch: double volumen(double, double) · Falsch: volumen double(double, double); · Falsch: double volumen(2 double);",
+   "explanation": "1. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.\n2. ✗ Es fehlt das abschließende Semikolon — ohne ; ist das kein Prototyp, sondern ein Funktionskopf, dem der Körper { } folgen müsste.\n3. ✗ Der Rückgabetyp muss VOR dem Funktionsnamen stehen: double volumen(double, double); — nicht dahinter.\n4. ✗ Jeder Parameter wird einzeln mit Typ aufgezählt: (double, double). Eine Anzahl wie \"2 double\" gibt es in C nicht.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11650,7 +11650,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: void f(void) ist ein gültiger Funktionskopf. · Falsch: Eine void-Funktion kann mehrere Werte zurückgeben. · Falsch: x = f(); ist mit einer void-Funktion f erlaubt.",
+   "explanation": "1. ✓ void vorn = kein Rückgabewert, void in der Klammer = keine Parameter. Beides zusammen ist völlig legal.\n2. ✗ Eine void-Funktion gibt GAR KEINEN Wert zurück — und auch sonst liefert return immer genau einen Wert.\n3. ✗ Eine void-Funktion liefert nichts — es gibt keinen Wert, den man x zuweisen könnte. Compilerfehler.",
    "source": "T-32 / AT-11",
    "verified": true
   },
@@ -11668,7 +11668,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: Prototyp und Definition dürfen unterschiedliche Parametertypen haben. · Richtig: Ohne Prototyp darf die Funktion erst nach ihrer Definition aufgerufen werden. · Falsch: Der Compiler kennt Funktionsnamen unabhängig von ihrer Position im Quelltext.",
+   "explanation": "1. ✗ Beide müssen exakt zusammenpassen (gleiche Signatur) — sonst Compiler-/Linkerfehler.\n2. ✓ Der Compiler liest von oben nach unten — beim Aufruf muss die Funktion bekannt sein: Definition vorher oder Prototyp am Dateianfang.\n3. ✗ Der Compiler liest von OBEN nach UNTEN: Beim Aufruf muss die Funktion schon deklariert oder definiert sein — sonst \"Nutzung vor Definition\"-Fehler.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11687,7 +11687,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: double maximum(double a, double b); · Falsch: double maximum(double, double) · Falsch: double maximum(2 double); · Falsch: maximum double(double, double);",
+   "explanation": "1. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.\n2. ✗ Es fehlt das abschließende Semikolon — ohne ; ist das kein Prototyp, sondern ein Funktionskopf, dem der Körper { } folgen müsste.\n3. ✗ Jeder Parameter wird einzeln mit Typ aufgezählt: (double, double). Eine Anzahl wie \"2 double\" gibt es in C nicht.\n4. ✗ Der Rückgabetyp muss VOR dem Funktionsnamen stehen: double maximum(double, double); — nicht dahinter.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11708,7 +11708,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Funktionsüberladung ist ein C++-Konzept. · Falsch: Groß-/Kleinschreibung spielt bei Funktionsnamen keine Rolle. · Richtig: Jeder Funktionsname muss in C eindeutig sein. · Richtig: int flaeche(int); und double flaeche(int); dürfen nicht gemeinsam existieren.",
+   "explanation": "1. ✓ In C++ darf derselbe Name mehrfach mit verschiedenen Signaturen existieren — in C nicht: jeder Funktionsname muss eindeutig sein.\n2. ✗ C ist case-sensitiv: quadrat und Quadrat sind ZWEI verschiedene Namen — beliebte Fehlerquelle bei Funktionsaufrufen.\n3. ✓ C kennt keine Überladung (das ist C++) — gleicher Name mit anderer Parameterliste ist verboten.\n4. ✓ Stimmt — in C muss jeder Funktionsname EINDEUTIG sein. Überladung (gleicher Name, andere Signatur) gibt es nur in C++.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -11726,7 +11726,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: Eine void-Funktion kann mehrere Werte zurückgeben. · Richtig: return; (ohne Wert) ist in einer void-Funktion erlaubt. · Falsch: x = f(); ist mit einer void-Funktion f erlaubt.",
+   "explanation": "1. ✗ Eine void-Funktion gibt GAR KEINEN Wert zurück — und auch sonst liefert return immer genau einen Wert.\n2. ✓ return; beendet die void-Funktion vorzeitig — ohne Wert, denn es gibt keinen Rückgabetyp.\n3. ✗ Eine void-Funktion liefert nichts — es gibt keinen Wert, den man x zuweisen könnte. Compilerfehler.",
    "source": "T-32 / AT-11",
    "verified": true
   },
@@ -11747,7 +11747,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: Der Prototyp (Deklaration) endet mit einem Semikolon. · Richtig: Die Definition enthält den Funktionskörper in { }. · Falsch: Der Compiler kennt Funktionsnamen unabhängig von ihrer Position im Quelltext. · Richtig: Ohne Prototyp darf die Funktion erst nach ihrer Definition aufgerufen werden.",
+   "explanation": "1. ✓ double f(double, double); — das Semikolon statt eines Körpers unterscheidet den Prototyp von der Definition.\n2. ✓ Definition = Kopf + Körper { … }. Die Deklaration (Prototyp) endet stattdessen mit einem Semikolon.\n3. ✗ Der Compiler liest von OBEN nach UNTEN: Beim Aufruf muss die Funktion schon deklariert oder definiert sein — sonst \"Nutzung vor Definition\"-Fehler.\n4. ✓ Der Compiler liest von oben nach unten — beim Aufruf muss die Funktion bekannt sein: Definition vorher oder Prototyp am Dateianfang.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11768,7 +11768,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Jeder Funktionsname muss in C eindeutig sein. · Falsch: Gleicher Name mit anderer Parameterliste ist in C erlaubt (Überladung). · Richtig: Funktionsüberladung ist ein C++-Konzept. · Richtig: int flaeche(int); und double flaeche(int); dürfen nicht gemeinsam existieren.",
+   "explanation": "1. ✓ C kennt keine Überladung (das ist C++) — gleicher Name mit anderer Parameterliste ist verboten.\n2. ✗ Überladung ist ein C++-Konzept. In C muss jeder Funktionsname eindeutig sein.\n3. ✓ In C++ darf derselbe Name mehrfach mit verschiedenen Signaturen existieren — in C nicht: jeder Funktionsname muss eindeutig sein.\n4. ✓ Stimmt — in C muss jeder Funktionsname EINDEUTIG sein. Überladung (gleicher Name, andere Signatur) gibt es nur in C++.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -11789,7 +11789,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Der eigene Header wird mit #include \"...\" eingebunden. · Falsch: Die .h-Datei muss die vollständigen Funktionskörper enthalten. · Richtig: Die Prototypen stehen üblicherweise in der .h-Datei. · Richtig: Die Funktionsdefinitionen stehen in der Quelldatei.",
+   "explanation": "1. ✓ Anführungszeichen = Suche im Projektordner (eigene Header); spitze Klammern = Standard-Suchpfad.\n2. ✗ In den Header gehören nur die PROTOTYPEN. Die Funktionskörper stehen in der .c/.cpp-Datei — sonst gäbe es beim Einbinden in mehrere Dateien Mehrfach-Definitionen.\n3. ✓ So können andere Quelldateien den Header einbinden und die Funktionen aufrufen, ohne deren Implementierung zu kennen.\n4. ✓ .c/.cpp = Definitionen (mit Körper), .h = Deklarationen (Prototypen).",
    "source": "T-34 / AT-11",
    "verified": true
   },
@@ -11808,7 +11808,7 @@
    "answerIndices": [
     3
    ],
-   "explanation": "Falsch: double umfang(double, double) · Falsch: umfang double(double, double); · Falsch: double umfang(2 double); · Richtig: double umfang(double a, double b);",
+   "explanation": "1. ✗ Es fehlt das abschließende Semikolon — ohne ; ist das kein Prototyp, sondern ein Funktionskopf, dem der Körper { } folgen müsste.\n2. ✗ Der Rückgabetyp muss VOR dem Funktionsnamen stehen: double umfang(double, double); — nicht dahinter.\n3. ✗ Jeder Parameter wird einzeln mit Typ aufgezählt: (double, double). Eine Anzahl wie \"2 double\" gibt es in C nicht.\n4. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11828,7 +11828,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: Gleicher Name mit anderer Parameterliste ist in C erlaubt (Überladung). · Falsch: Groß-/Kleinschreibung spielt bei Funktionsnamen keine Rolle. · Richtig: int flaeche(int); und double flaeche(int); dürfen nicht gemeinsam existieren. · Richtig: Funktionsüberladung ist ein C++-Konzept.",
+   "explanation": "1. ✗ Überladung ist ein C++-Konzept. In C muss jeder Funktionsname eindeutig sein.\n2. ✗ C ist case-sensitiv: quadrat und Quadrat sind ZWEI verschiedene Namen — beliebte Fehlerquelle bei Funktionsaufrufen.\n3. ✓ Stimmt — in C muss jeder Funktionsname EINDEUTIG sein. Überladung (gleicher Name, andere Signatur) gibt es nur in C++.\n4. ✓ In C++ darf derselbe Name mehrfach mit verschiedenen Signaturen existieren — in C nicht: jeder Funktionsname muss eindeutig sein.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -11848,7 +11848,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: Die .h-Datei muss die vollständigen Funktionskörper enthalten. · Richtig: Der eigene Header wird mit #include \"...\" eingebunden. · Falsch: Der eigene Header wird mit #include <...> eingebunden. · Richtig: Die Prototypen stehen üblicherweise in der .h-Datei.",
+   "explanation": "1. ✗ In den Header gehören nur die PROTOTYPEN. Die Funktionskörper stehen in der .c/.cpp-Datei — sonst gäbe es beim Einbinden in mehrere Dateien Mehrfach-Definitionen.\n2. ✓ Anführungszeichen = Suche im Projektordner (eigene Header); spitze Klammern = Standard-Suchpfad.\n3. ✗ Spitze Klammern sind für STANDARD-Header. Eigene Header bindet man mit #include \"meinheader.h\" ein.\n4. ✓ So können andere Quelldateien den Header einbinden und die Funktionen aufrufen, ohne deren Implementierung zu kennen.",
    "source": "T-34 / AT-11",
    "verified": true
   },
@@ -11866,7 +11866,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Prototyp und Definition dürfen unterschiedliche Parametertypen haben. · Falsch: Der Compiler kennt Funktionsnamen unabhängig von ihrer Position im Quelltext. · Richtig: Der Prototyp (Deklaration) endet mit einem Semikolon.",
+   "explanation": "1. ✗ Beide müssen exakt zusammenpassen (gleiche Signatur) — sonst Compiler-/Linkerfehler.\n2. ✗ Der Compiler liest von OBEN nach UNTEN: Beim Aufruf muss die Funktion schon deklariert oder definiert sein — sonst \"Nutzung vor Definition\"-Fehler.\n3. ✓ double f(double, double); — das Semikolon statt eines Körpers unterscheidet den Prototyp von der Definition.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11887,7 +11887,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: Funktionsüberladung ist ein C++-Konzept. · Richtig: Jeder Funktionsname muss in C eindeutig sein. · Richtig: int umfang(int); und double umfang(int); dürfen nicht gemeinsam existieren. · Falsch: Gleicher Name mit anderer Parameterliste ist in C erlaubt (Überladung).",
+   "explanation": "1. ✓ In C++ darf derselbe Name mehrfach mit verschiedenen Signaturen existieren — in C nicht: jeder Funktionsname muss eindeutig sein.\n2. ✓ C kennt keine Überladung (das ist C++) — gleicher Name mit anderer Parameterliste ist verboten.\n3. ✓ Stimmt — in C muss jeder Funktionsname EINDEUTIG sein. Überladung (gleicher Name, andere Signatur) gibt es nur in C++.\n4. ✗ Überladung ist ein C++-Konzept. In C muss jeder Funktionsname eindeutig sein.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -11905,7 +11905,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: Die Funktionsdefinitionen stehen in der Quelldatei. · Falsch: Die .h-Datei muss die vollständigen Funktionskörper enthalten. · Falsch: Der eigene Header wird mit #include <...> eingebunden.",
+   "explanation": "1. ✓ .c/.cpp = Definitionen (mit Körper), .h = Deklarationen (Prototypen).\n2. ✗ In den Header gehören nur die PROTOTYPEN. Die Funktionskörper stehen in der .c/.cpp-Datei — sonst gäbe es beim Einbinden in mehrere Dateien Mehrfach-Definitionen.\n3. ✗ Spitze Klammern sind für STANDARD-Header. Eigene Header bindet man mit #include \"meinheader.h\" ein.",
    "source": "T-34 / AT-11",
    "verified": true
   },
@@ -11924,7 +11924,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: oberflaeche double(double, double); · Falsch: double oberflaeche(double, double) · Richtig: double oberflaeche(double a, double b); · Falsch: double oberflaeche(2 double);",
+   "explanation": "1. ✗ Der Rückgabetyp muss VOR dem Funktionsnamen stehen: double oberflaeche(double, double); — nicht dahinter.\n2. ✗ Es fehlt das abschließende Semikolon — ohne ; ist das kein Prototyp, sondern ein Funktionskopf, dem der Körper { } folgen müsste.\n3. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.\n4. ✗ Jeder Parameter wird einzeln mit Typ aufgezählt: (double, double). Eine Anzahl wie \"2 double\" gibt es in C nicht.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -11942,7 +11942,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Groß-/Kleinschreibung spielt bei Funktionsnamen keine Rolle. · Falsch: Gleicher Name mit anderer Parameterliste ist in C erlaubt (Überladung). · Richtig: Funktionsüberladung ist ein C++-Konzept.",
+   "explanation": "1. ✗ C ist case-sensitiv: quadrat und Quadrat sind ZWEI verschiedene Namen — beliebte Fehlerquelle bei Funktionsaufrufen.\n2. ✗ Überladung ist ein C++-Konzept. In C muss jeder Funktionsname eindeutig sein.\n3. ✓ In C++ darf derselbe Name mehrfach mit verschiedenen Signaturen existieren — in C nicht: jeder Funktionsname muss eindeutig sein.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -11963,7 +11963,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: x = f(); ist mit einer void-Funktion f erlaubt. · Richtig: Eine void-Funktion darf printf-Ausgaben machen. · Richtig: return; (ohne Wert) ist in einer void-Funktion erlaubt. · Richtig: void f(void) ist ein gültiger Funktionskopf.",
+   "explanation": "1. ✗ Eine void-Funktion liefert nichts — es gibt keinen Wert, den man x zuweisen könnte. Compilerfehler.\n2. ✓ void heißt nur \"kein RÜCKGABEWERT\" — tun darf die Funktion alles, auch Ausgaben (Typ \"Aktion ohne Ergebnis\").\n3. ✓ return; beendet die void-Funktion vorzeitig — ohne Wert, denn es gibt keinen Rückgabetyp.\n4. ✓ void vorn = kein Rückgabewert, void in der Klammer = keine Parameter. Beides zusammen ist völlig legal.",
    "source": "T-32 / AT-11",
    "verified": true
   },
@@ -11983,7 +11983,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: Die .h-Datei muss die vollständigen Funktionskörper enthalten. · Richtig: Die Funktionsdefinitionen stehen in der Quelldatei. · Falsch: Der eigene Header wird mit #include <...> eingebunden. · Richtig: #pragma once verhindert mehrfaches Einbinden des Headers.",
+   "explanation": "1. ✗ In den Header gehören nur die PROTOTYPEN. Die Funktionskörper stehen in der .c/.cpp-Datei — sonst gäbe es beim Einbinden in mehrere Dateien Mehrfach-Definitionen.\n2. ✓ .c/.cpp = Definitionen (mit Körper), .h = Deklarationen (Prototypen).\n3. ✗ Spitze Klammern sind für STANDARD-Header. Eigene Header bindet man mit #include \"meinheader.h\" ein.\n4. ✓ Steht #pragma once am Anfang eines Headers, wird er pro Übersetzung nur einmal eingefügt — schützt vor Mehrfach-Definitionen.",
    "source": "T-34 / AT-11",
    "verified": true
   },
@@ -12002,7 +12002,7 @@
    "answerIndices": [
     3
    ],
-   "explanation": "Falsch: double flaeche(2 double); · Falsch: double flaeche(double, double) · Falsch: flaeche double(double, double); · Richtig: double flaeche(double a, double b);",
+   "explanation": "1. ✗ Jeder Parameter wird einzeln mit Typ aufgezählt: (double, double). Eine Anzahl wie \"2 double\" gibt es in C nicht.\n2. ✗ Es fehlt das abschließende Semikolon — ohne ; ist das kein Prototyp, sondern ein Funktionskopf, dem der Körper { } folgen müsste.\n3. ✗ Der Rückgabetyp muss VOR dem Funktionsnamen stehen: double flaeche(double, double); — nicht dahinter.\n4. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -12023,7 +12023,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: Jeder Funktionsname muss in C eindeutig sein. · Richtig: Funktionsüberladung ist ein C++-Konzept. · Richtig: int mittelwert(int); und double mittelwert(int); dürfen nicht gemeinsam existieren. · Falsch: Gleicher Name mit anderer Parameterliste ist in C erlaubt (Überladung).",
+   "explanation": "1. ✓ C kennt keine Überladung (das ist C++) — gleicher Name mit anderer Parameterliste ist verboten.\n2. ✓ In C++ darf derselbe Name mehrfach mit verschiedenen Signaturen existieren — in C nicht: jeder Funktionsname muss eindeutig sein.\n3. ✓ Stimmt — in C muss jeder Funktionsname EINDEUTIG sein. Überladung (gleicher Name, andere Signatur) gibt es nur in C++.\n4. ✗ Überladung ist ein C++-Konzept. In C muss jeder Funktionsname eindeutig sein.",
    "source": "T-35 / AT-11",
    "verified": true
   },
@@ -12043,7 +12043,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: double oberflaeche(double, double); · Falsch: double oberflaeche(2 double); · Richtig: double oberflaeche(double a, double b); · Falsch: oberflaeche double(double, double);",
+   "explanation": "1. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.\n2. ✗ Jeder Parameter wird einzeln mit Typ aufgezählt: (double, double). Eine Anzahl wie \"2 double\" gibt es in C nicht.\n3. ✓ Korrektes Muster: Rückgabetyp Name(Parametertypen); — Parameternamen sind im Prototyp optional, das Semikolon am Ende ist Pflicht.\n4. ✗ Der Rückgabetyp muss VOR dem Funktionsnamen stehen: double oberflaeche(double, double); — nicht dahinter.",
    "source": "T-33 / AT-11",
    "verified": true
   },
@@ -12063,7 +12063,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: string str = \"Programm\"; ist korrekt. · Falsch: char[] str = \"Programm\"; ist korrekt. · Richtig: char str[20]; strcpy(str, \"Programm\"); ist korrekt (string.h eingebunden). · Richtig: char str[20] = \"Programm\"; ist korrekt.",
+   "explanation": "1. ✗ Den Datentyp string gibt es in C nicht — das ist C++. In C sind Strings char-Arrays.\n2. ✗ Die eckigen Klammern gehören hinter den NAMEN: char str[] = \"…\"; — nicht hinter den Typ (das ist Java/C#-Syntax).\n3. ✓ Der zweite Standard-Weg: erst deklarieren, dann mit strcpy hineinkopieren. (Direkte Zuweisung str = \"…\" wäre NACH der Deklaration nicht erlaubt.)\n4. ✓ Gültig: char-Array mit Literal initialisiert. 20 ≥ 9 — genug Platz für den Text samt '\\0'.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12082,7 +12082,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: sizeof(str) liefert 50. · Falsch: strlen(str) liefert 8. · Falsch: sizeof(str) liefert 7.",
+   "explanation": "1. ✓ str ist als char str[50] deklariert — sizeof liefert die volle ARRAY-Größe (50), egal wie lang der Text darin ist.\n2. ✗ strlen zählt nur die sichtbaren Zeichen (ohne '\\0'): \"Klausur\" → 7, nicht 8.\n3. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 50 (Deklaration mit [50]), nicht 7.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12102,7 +12102,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: Der Null-Terminator hat den Zahlenwert 0. · Falsch: \"Informatik\" belegt im Speicher 10 Byte. · Falsch: Der Terminator ist eine binäre 5. · Richtig: Ein String ist ein char-Array mit '\\0' am Ende.",
+   "explanation": "1. ✓ '\\0' ist das Zeichen mit Code 0 — daran erkennen strlen, printf(%s) & Co. das String-Ende.\n2. ✗ Ein String belegt Textlänge + 1 Byte ('\\0'): \"Informatik\" → 10 + 1 = 11 Byte, nicht 10.\n3. ✗ Der Null-Terminator hat den ZAHLENWERT 0 ('\\0'), nicht 5 — eine klassische Klausur-Fangaussage.\n4. ✓ Genau die Definition: Zeichen als char-Array, abgeschlossen mit dem Null-Terminator '\\0' (Zahlenwert 0).",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12122,7 +12122,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: %s stoppt die Ausgabe am Null-Terminator. · Falsch: ziel = \"Text\"; ist nach der Deklaration erlaubt. · Falsch: strcpy benötigt #include <math.h>. · Richtig: Eine Funktion kann einen übergebenen String verändern.",
+   "explanation": "1. ✓ printf(\"%s\", str) gibt Zeichen aus, bis es '\\0' trifft. Ohne Terminator würde %s unkontrolliert weiterlesen.\n2. ✗ Einem Array kann man nachträglich nichts als Ganzes zuweisen. Nach der Deklaration kopiert man mit strcpy(ziel, \"Text\").\n3. ✗ strcpy ist eine String-Funktion → string.h. math.h enthält sqrt, pow, sin, …\n4. ✓ Ein String ist ein char-Array und wird per Adresse übergeben — Änderungen wie s[0] = 'X' wirken auf das Original.",
    "source": "T-42 / AT-12",
    "verified": true
   },
@@ -12140,7 +12140,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: char str[] = \"Hallo THM!\"; ist korrekt. · Falsch: char[] str = \"Hallo THM!\"; ist korrekt. · Falsch: string str = \"Hallo THM!\"; ist korrekt.",
+   "explanation": "1. ✓ Bei Initialisierung mit einem Literal darf die Größe leer bleiben — der Compiler reserviert automatisch 10 + 1 Byte (Text + '\\0').\n2. ✗ Die eckigen Klammern gehören hinter den NAMEN: char str[] = \"…\"; — nicht hinter den Typ (das ist Java/C#-Syntax).\n3. ✗ Den Datentyp string gibt es in C nicht — das ist C++. In C sind Strings char-Arrays.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12161,7 +12161,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: strlen(str) liefert 10. · Richtig: sizeof(str) liefert 100. · Falsch: strlen(str) liefert 11. · Falsch: sizeof(str) liefert 10.",
+   "explanation": "1. ✓ strlen zählt die sichtbaren Zeichen bis zum '\\0': \"Informatik\" hat 10 Zeichen. Der Terminator zählt NICHT mit.\n2. ✓ str ist als char str[100] deklariert — sizeof liefert die volle ARRAY-Größe (100), egal wie lang der Text darin ist.\n3. ✗ strlen zählt nur die sichtbaren Zeichen (ohne '\\0'): \"Informatik\" → 10, nicht 11.\n4. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 100 (Deklaration mit [100]), nicht 10.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12181,7 +12181,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: Der Terminator ist eine binäre 5. · Richtig: \"Hallo THM!\" belegt im Speicher 11 Byte. · Richtig: Ein String ist ein char-Array mit '\\0' am Ende. · Falsch: Die Elemente einer Zeichenkette sind vom Typ double.",
+   "explanation": "1. ✗ Der Null-Terminator hat den ZAHLENWERT 0 ('\\0'), nicht 5 — eine klassische Klausur-Fangaussage.\n2. ✓ 10 sichtbare Zeichen + 1 Byte für den Null-Terminator '\\0' = 11 Byte.\n3. ✓ Genau die Definition: Zeichen als char-Array, abgeschlossen mit dem Null-Terminator '\\0' (Zahlenwert 0).\n4. ✗ String-Elemente sind char (je 1 Byte mit dem Zeichencode). double ist ein Gleitkommatyp.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12202,7 +12202,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Eine Funktion kann einen übergebenen String verändern. · Falsch: ziel = \"Text\"; ist nach der Deklaration erlaubt. · Richtig: Nach der Deklaration kopiert man Text mit strcpy in das Array. · Richtig: gets_s liest eine Zeile inklusive Leerzeichen ein.",
+   "explanation": "1. ✓ Ein String ist ein char-Array und wird per Adresse übergeben — Änderungen wie s[0] = 'X' wirken auf das Original.\n2. ✗ Einem Array kann man nachträglich nichts als Ganzes zuweisen. Nach der Deklaration kopiert man mit strcpy(ziel, \"Text\").\n3. ✓ char str[50]; strcpy(str, \"Text\"); — die direkte Zuweisung str = \"Text\"; wäre nach der Deklaration nicht erlaubt.\n4. ✓ Anders als scanf(\"%s\"), das am ersten Leerzeichen stoppt, liest gets_s die komplette Zeile bis zum Enter.",
    "source": "T-42 / AT-12",
    "verified": true
   },
@@ -12222,7 +12222,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: string str = \"Sommer\"; ist korrekt. · Richtig: char str[20] = \"Sommer\"; ist korrekt. · Richtig: char str[20]; strcpy(str, \"Sommer\"); ist korrekt (string.h eingebunden). · Falsch: char[] str = \"Sommer\"; ist korrekt.",
+   "explanation": "1. ✗ Den Datentyp string gibt es in C nicht — das ist C++. In C sind Strings char-Arrays.\n2. ✓ Gültig: char-Array mit Literal initialisiert. 20 ≥ 7 — genug Platz für den Text samt '\\0'.\n3. ✓ Der zweite Standard-Weg: erst deklarieren, dann mit strcpy hineinkopieren. (Direkte Zuweisung str = \"…\" wäre NACH der Deklaration nicht erlaubt.)\n4. ✗ Die eckigen Klammern gehören hinter den NAMEN: char str[] = \"…\"; — nicht hinter den Typ (das ist Java/C#-Syntax).",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12244,7 +12244,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: sizeof(str) liefert 30. · Falsch: sizeof(str) liefert 8. · Richtig: strlen benötigt #include <string.h>. · Richtig: strlen(str) liefert 8.",
+   "explanation": "1. ✓ str ist als char str[30] deklariert — sizeof liefert die volle ARRAY-Größe (30), egal wie lang der Text darin ist.\n2. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 30 (Deklaration mit [30]), nicht 8.\n3. ✓ Alle str…-Funktionen (strlen, strcpy, strcmp, …) sind in string.h deklariert.\n4. ✓ strlen zählt die sichtbaren Zeichen bis zum '\\0': \"Programm\" hat 8 Zeichen. Der Terminator zählt NICHT mit.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12265,7 +12265,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Ein String ist ein char-Array mit '\\0' am Ende. · Falsch: Die Elemente einer Zeichenkette sind vom Typ double. · Richtig: \"Yes\" belegt im Speicher 4 Byte. · Richtig: Der Null-Terminator hat den Zahlenwert 0.",
+   "explanation": "1. ✓ Genau die Definition: Zeichen als char-Array, abgeschlossen mit dem Null-Terminator '\\0' (Zahlenwert 0).\n2. ✗ String-Elemente sind char (je 1 Byte mit dem Zeichencode). double ist ein Gleitkommatyp.\n3. ✓ 3 sichtbare Zeichen + 1 Byte für den Null-Terminator '\\0' = 4 Byte.\n4. ✓ '\\0' ist das Zeichen mit Code 0 — daran erkennen strlen, printf(%s) & Co. das String-Ende.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12283,7 +12283,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: strcpy benötigt #include <math.h>. · Falsch: ziel = \"Text\"; ist nach der Deklaration erlaubt. · Richtig: Nach der Deklaration kopiert man Text mit strcpy in das Array.",
+   "explanation": "1. ✗ strcpy ist eine String-Funktion → string.h. math.h enthält sqrt, pow, sin, …\n2. ✗ Einem Array kann man nachträglich nichts als Ganzes zuweisen. Nach der Deklaration kopiert man mit strcpy(ziel, \"Text\").\n3. ✓ char str[50]; strcpy(str, \"Text\"); — die direkte Zuweisung str = \"Text\"; wäre nach der Deklaration nicht erlaubt.",
    "source": "T-42 / AT-12",
    "verified": true
   },
@@ -12301,7 +12301,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: char[] str = \"Sommer\"; ist korrekt. · Richtig: char str[] = \"Sommer\"; ist korrekt. · Falsch: string str = \"Sommer\"; ist korrekt.",
+   "explanation": "1. ✗ Die eckigen Klammern gehören hinter den NAMEN: char str[] = \"…\"; — nicht hinter den Typ (das ist Java/C#-Syntax).\n2. ✓ Bei Initialisierung mit einem Literal darf die Größe leer bleiben — der Compiler reserviert automatisch 6 + 1 Byte (Text + '\\0').\n3. ✗ Den Datentyp string gibt es in C nicht — das ist C++. In C sind Strings char-Arrays.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12322,7 +12322,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: strlen benötigt #include <string.h>. · Falsch: strlen(str) liefert 4. · Richtig: sizeof(str) liefert 100. · Falsch: sizeof(str) liefert 3.",
+   "explanation": "1. ✓ Alle str…-Funktionen (strlen, strcpy, strcmp, …) sind in string.h deklariert.\n2. ✗ strlen zählt nur die sichtbaren Zeichen (ohne '\\0'): \"Hey\" → 3, nicht 4.\n3. ✓ str ist als char str[100] deklariert — sizeof liefert die volle ARRAY-Größe (100), egal wie lang der Text darin ist.\n4. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 100 (Deklaration mit [100]), nicht 3.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12343,7 +12343,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: Der Terminator ist eine binäre 5. · Richtig: Ein String ist ein char-Array mit '\\0' am Ende. · Richtig: \"Chickpeas\" belegt im Speicher 10 Byte. · Richtig: Der Null-Terminator hat den Zahlenwert 0.",
+   "explanation": "1. ✗ Der Null-Terminator hat den ZAHLENWERT 0 ('\\0'), nicht 5 — eine klassische Klausur-Fangaussage.\n2. ✓ Genau die Definition: Zeichen als char-Array, abgeschlossen mit dem Null-Terminator '\\0' (Zahlenwert 0).\n3. ✓ 9 sichtbare Zeichen + 1 Byte für den Null-Terminator '\\0' = 10 Byte.\n4. ✓ '\\0' ist das Zeichen mit Code 0 — daran erkennen strlen, printf(%s) & Co. das String-Ende.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12363,7 +12363,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: strcpy benötigt #include <math.h>. · Falsch: ziel = \"Text\"; ist nach der Deklaration erlaubt. · Richtig: gets_s liest eine Zeile inklusive Leerzeichen ein. · Richtig: Eine Funktion kann einen übergebenen String verändern.",
+   "explanation": "1. ✗ strcpy ist eine String-Funktion → string.h. math.h enthält sqrt, pow, sin, …\n2. ✗ Einem Array kann man nachträglich nichts als Ganzes zuweisen. Nach der Deklaration kopiert man mit strcpy(ziel, \"Text\").\n3. ✓ Anders als scanf(\"%s\"), das am ersten Leerzeichen stoppt, liest gets_s die komplette Zeile bis zum Enter.\n4. ✓ Ein String ist ein char-Array und wird per Adresse übergeben — Änderungen wie s[0] = 'X' wirken auf das Original.",
    "source": "T-42 / AT-12",
    "verified": true
   },
@@ -12384,7 +12384,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: sizeof(str) liefert 6. · Richtig: sizeof(str) liefert 30. · Falsch: strlen(str) liefert 7. · Richtig: strlen benötigt #include <string.h>.",
+   "explanation": "1. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 30 (Deklaration mit [30]), nicht 6.\n2. ✓ str ist als char str[30] deklariert — sizeof liefert die volle ARRAY-Größe (30), egal wie lang der Text darin ist.\n3. ✗ strlen zählt nur die sichtbaren Zeichen (ohne '\\0'): \"Sommer\" → 6, nicht 7.\n4. ✓ Alle str…-Funktionen (strlen, strcpy, strcmp, …) sind in string.h deklariert.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12404,7 +12404,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: Ein String ist ein char-Array mit '\\0' am Ende. · Falsch: Der Terminator ist eine binäre 5. · Falsch: Die Elemente einer Zeichenkette sind vom Typ double. · Richtig: Der Null-Terminator hat den Zahlenwert 0.",
+   "explanation": "1. ✓ Genau die Definition: Zeichen als char-Array, abgeschlossen mit dem Null-Terminator '\\0' (Zahlenwert 0).\n2. ✗ Der Null-Terminator hat den ZAHLENWERT 0 ('\\0'), nicht 5 — eine klassische Klausur-Fangaussage.\n3. ✗ String-Elemente sind char (je 1 Byte mit dem Zeichencode). double ist ein Gleitkommatyp.\n4. ✓ '\\0' ist das Zeichen mit Code 0 — daran erkennen strlen, printf(%s) & Co. das String-Ende.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12425,7 +12425,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: Eine Funktion kann einen übergebenen String verändern. · Richtig: %s stoppt die Ausgabe am Null-Terminator. · Richtig: gets_s liest eine Zeile inklusive Leerzeichen ein. · Falsch: ziel = \"Text\"; ist nach der Deklaration erlaubt.",
+   "explanation": "1. ✓ Ein String ist ein char-Array und wird per Adresse übergeben — Änderungen wie s[0] = 'X' wirken auf das Original.\n2. ✓ printf(\"%s\", str) gibt Zeichen aus, bis es '\\0' trifft. Ohne Terminator würde %s unkontrolliert weiterlesen.\n3. ✓ Anders als scanf(\"%s\"), das am ersten Leerzeichen stoppt, liest gets_s die komplette Zeile bis zum Enter.\n4. ✗ Einem Array kann man nachträglich nichts als Ganzes zuweisen. Nach der Deklaration kopiert man mit strcpy(ziel, \"Text\").",
    "source": "T-42 / AT-12",
    "verified": true
   },
@@ -12446,7 +12446,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: char str[] = \"Informatik\"; ist korrekt. · Richtig: char str[30] = \"Informatik\"; ist korrekt. · Richtig: char str[30]; strcpy(str, \"Informatik\"); ist korrekt (string.h eingebunden). · Falsch: char[] str = \"Informatik\"; ist korrekt.",
+   "explanation": "1. ✓ Bei Initialisierung mit einem Literal darf die Größe leer bleiben — der Compiler reserviert automatisch 10 + 1 Byte (Text + '\\0').\n2. ✓ Gültig: char-Array mit Literal initialisiert. 30 ≥ 11 — genug Platz für den Text samt '\\0'.\n3. ✓ Der zweite Standard-Weg: erst deklarieren, dann mit strcpy hineinkopieren. (Direkte Zuweisung str = \"…\" wäre NACH der Deklaration nicht erlaubt.)\n4. ✗ Die eckigen Klammern gehören hinter den NAMEN: char str[] = \"…\"; — nicht hinter den Typ (das ist Java/C#-Syntax).",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12465,7 +12465,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: strlen(str) liefert 9. · Richtig: strlen benötigt #include <string.h>. · Falsch: sizeof(str) liefert 8.",
+   "explanation": "1. ✗ strlen zählt nur die sichtbaren Zeichen (ohne '\\0'): \"Programm\" → 8, nicht 9.\n2. ✓ Alle str…-Funktionen (strlen, strcpy, strcmp, …) sind in string.h deklariert.\n3. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 20 (Deklaration mit [20]), nicht 8.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12485,7 +12485,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: \"Programm\" belegt im Speicher 9 Byte. · Falsch: Der Terminator ist eine binäre 5. · Richtig: Der Null-Terminator hat den Zahlenwert 0. · Falsch: Die Elemente einer Zeichenkette sind vom Typ double.",
+   "explanation": "1. ✓ 8 sichtbare Zeichen + 1 Byte für den Null-Terminator '\\0' = 9 Byte.\n2. ✗ Der Null-Terminator hat den ZAHLENWERT 0 ('\\0'), nicht 5 — eine klassische Klausur-Fangaussage.\n3. ✓ '\\0' ist das Zeichen mit Code 0 — daran erkennen strlen, printf(%s) & Co. das String-Ende.\n4. ✗ String-Elemente sind char (je 1 Byte mit dem Zeichencode). double ist ein Gleitkommatyp.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12503,7 +12503,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: %s stoppt die Ausgabe am Null-Terminator. · Falsch: strcpy benötigt #include <math.h>. · Falsch: ziel = \"Text\"; ist nach der Deklaration erlaubt.",
+   "explanation": "1. ✓ printf(\"%s\", str) gibt Zeichen aus, bis es '\\0' trifft. Ohne Terminator würde %s unkontrolliert weiterlesen.\n2. ✗ strcpy ist eine String-Funktion → string.h. math.h enthält sqrt, pow, sin, …\n3. ✗ Einem Array kann man nachträglich nichts als Ganzes zuweisen. Nach der Deklaration kopiert man mit strcpy(ziel, \"Text\").",
    "source": "T-42 / AT-12",
    "verified": true
   },
@@ -12523,7 +12523,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: char[] str = \"Sommer\"; ist korrekt. · Falsch: string str = \"Sommer\"; ist korrekt. · Richtig: char str[100] = \"Sommer\"; ist korrekt. · Richtig: char str[100]; strcpy(str, \"Sommer\"); ist korrekt (string.h eingebunden).",
+   "explanation": "1. ✗ Die eckigen Klammern gehören hinter den NAMEN: char str[] = \"…\"; — nicht hinter den Typ (das ist Java/C#-Syntax).\n2. ✗ Den Datentyp string gibt es in C nicht — das ist C++. In C sind Strings char-Arrays.\n3. ✓ Gültig: char-Array mit Literal initialisiert. 100 ≥ 7 — genug Platz für den Text samt '\\0'.\n4. ✓ Der zweite Standard-Weg: erst deklarieren, dann mit strcpy hineinkopieren. (Direkte Zuweisung str = \"…\" wäre NACH der Deklaration nicht erlaubt.)",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12542,7 +12542,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: strlen benötigt #include <string.h>. · Falsch: strlen(str) liefert 10. · Falsch: sizeof(str) liefert 9.",
+   "explanation": "1. ✓ Alle str…-Funktionen (strlen, strcpy, strcmp, …) sind in string.h deklariert.\n2. ✗ strlen zählt nur die sichtbaren Zeichen (ohne '\\0'): \"Chickpeas\" → 9, nicht 10.\n3. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 30 (Deklaration mit [30]), nicht 9.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12563,7 +12563,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: Eine Funktion kann einen übergebenen String verändern. · Richtig: Nach der Deklaration kopiert man Text mit strcpy in das Array. · Richtig: %s stoppt die Ausgabe am Null-Terminator. · Falsch: ziel = \"Text\"; ist nach der Deklaration erlaubt.",
+   "explanation": "1. ✓ Ein String ist ein char-Array und wird per Adresse übergeben — Änderungen wie s[0] = 'X' wirken auf das Original.\n2. ✓ char str[50]; strcpy(str, \"Text\"); — die direkte Zuweisung str = \"Text\"; wäre nach der Deklaration nicht erlaubt.\n3. ✓ printf(\"%s\", str) gibt Zeichen aus, bis es '\\0' trifft. Ohne Terminator würde %s unkontrolliert weiterlesen.\n4. ✗ Einem Array kann man nachträglich nichts als Ganzes zuweisen. Nach der Deklaration kopiert man mit strcpy(ziel, \"Text\").",
    "source": "T-42 / AT-12",
    "verified": true
   },
@@ -12581,7 +12581,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: char str[100] = \"Hey\"; ist korrekt. · Falsch: char[] str = \"Hey\"; ist korrekt. · Falsch: string str = \"Hey\"; ist korrekt.",
+   "explanation": "1. ✓ Gültig: char-Array mit Literal initialisiert. 100 ≥ 4 — genug Platz für den Text samt '\\0'.\n2. ✗ Die eckigen Klammern gehören hinter den NAMEN: char str[] = \"…\"; — nicht hinter den Typ (das ist Java/C#-Syntax).\n3. ✗ Den Datentyp string gibt es in C nicht — das ist C++. In C sind Strings char-Arrays.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12603,7 +12603,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: strlen benötigt #include <string.h>. · Falsch: strlen(str) liefert 4. · Richtig: sizeof(str) liefert 100. · Richtig: strlen(str) liefert 3.",
+   "explanation": "1. ✓ Alle str…-Funktionen (strlen, strcpy, strcmp, …) sind in string.h deklariert.\n2. ✗ strlen zählt nur die sichtbaren Zeichen (ohne '\\0'): \"Hey\" → 3, nicht 4.\n3. ✓ str ist als char str[100] deklariert — sizeof liefert die volle ARRAY-Größe (100), egal wie lang der Text darin ist.\n4. ✓ strlen zählt die sichtbaren Zeichen bis zum '\\0': \"Hey\" hat 3 Zeichen. Der Terminator zählt NICHT mit.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12623,7 +12623,7 @@
     1,
     2
    ],
-   "explanation": "Falsch: Der Terminator ist eine binäre 5. · Richtig: Ein String ist ein char-Array mit '\\0' am Ende. · Richtig: \"Hey\" belegt im Speicher 4 Byte. · Falsch: Die Elemente einer Zeichenkette sind vom Typ double.",
+   "explanation": "1. ✗ Der Null-Terminator hat den ZAHLENWERT 0 ('\\0'), nicht 5 — eine klassische Klausur-Fangaussage.\n2. ✓ Genau die Definition: Zeichen als char-Array, abgeschlossen mit dem Null-Terminator '\\0' (Zahlenwert 0).\n3. ✓ 3 sichtbare Zeichen + 1 Byte für den Null-Terminator '\\0' = 4 Byte.\n4. ✗ String-Elemente sind char (je 1 Byte mit dem Zeichencode). double ist ein Gleitkommatyp.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12643,7 +12643,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: char[] str = \"Klausur\"; ist korrekt. · Falsch: string str = \"Klausur\"; ist korrekt. · Richtig: char str[30] = \"Klausur\"; ist korrekt. · Richtig: char str[30]; strcpy(str, \"Klausur\"); ist korrekt (string.h eingebunden).",
+   "explanation": "1. ✗ Die eckigen Klammern gehören hinter den NAMEN: char str[] = \"…\"; — nicht hinter den Typ (das ist Java/C#-Syntax).\n2. ✗ Den Datentyp string gibt es in C nicht — das ist C++. In C sind Strings char-Arrays.\n3. ✓ Gültig: char-Array mit Literal initialisiert. 30 ≥ 8 — genug Platz für den Text samt '\\0'.\n4. ✓ Der zweite Standard-Weg: erst deklarieren, dann mit strcpy hineinkopieren. (Direkte Zuweisung str = \"…\" wäre NACH der Deklaration nicht erlaubt.)",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12662,7 +12662,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: sizeof(str) liefert 6. · Falsch: strlen(str) liefert 7. · Richtig: strlen benötigt #include <string.h>.",
+   "explanation": "1. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 50 (Deklaration mit [50]), nicht 6.\n2. ✗ strlen zählt nur die sichtbaren Zeichen (ohne '\\0'): \"Sommer\" → 6, nicht 7.\n3. ✓ Alle str…-Funktionen (strlen, strcpy, strcmp, …) sind in string.h deklariert.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12681,7 +12681,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: \"Klausur\" belegt im Speicher 8 Byte. · Falsch: Der Terminator ist eine binäre 5. · Falsch: Die Elemente einer Zeichenkette sind vom Typ double. · Falsch: \"Klausur\" belegt im Speicher 7 Byte.",
+   "explanation": "1. ✓ 7 sichtbare Zeichen + 1 Byte für den Null-Terminator '\\0' = 8 Byte.\n2. ✗ Der Null-Terminator hat den ZAHLENWERT 0 ('\\0'), nicht 5 — eine klassische Klausur-Fangaussage.\n3. ✗ String-Elemente sind char (je 1 Byte mit dem Zeichencode). double ist ein Gleitkommatyp.\n4. ✗ Ein String belegt Textlänge + 1 Byte ('\\0'): \"Klausur\" → 7 + 1 = 8 Byte, nicht 7.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12699,7 +12699,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: strcpy benötigt #include <math.h>. · Richtig: Eine Funktion kann einen übergebenen String verändern. · Falsch: ziel = \"Text\"; ist nach der Deklaration erlaubt.",
+   "explanation": "1. ✗ strcpy ist eine String-Funktion → string.h. math.h enthält sqrt, pow, sin, …\n2. ✓ Ein String ist ein char-Array und wird per Adresse übergeben — Änderungen wie s[0] = 'X' wirken auf das Original.\n3. ✗ Einem Array kann man nachträglich nichts als Ganzes zuweisen. Nach der Deklaration kopiert man mit strcpy(ziel, \"Text\").",
    "source": "T-42 / AT-12",
    "verified": true
   },
@@ -12717,7 +12717,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: string str = \"Sommer\"; ist korrekt. · Falsch: char[] str = \"Sommer\"; ist korrekt. · Richtig: char str[20] = \"Sommer\"; ist korrekt.",
+   "explanation": "1. ✗ Den Datentyp string gibt es in C nicht — das ist C++. In C sind Strings char-Arrays.\n2. ✗ Die eckigen Klammern gehören hinter den NAMEN: char str[] = \"…\"; — nicht hinter den Typ (das ist Java/C#-Syntax).\n3. ✓ Gültig: char-Array mit Literal initialisiert. 20 ≥ 7 — genug Platz für den Text samt '\\0'.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12738,7 +12738,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: strlen(str) liefert 8. · Falsch: strlen(str) liefert 9. · Falsch: sizeof(str) liefert 8. · Richtig: sizeof(str) liefert 100.",
+   "explanation": "1. ✓ strlen zählt die sichtbaren Zeichen bis zum '\\0': \"Programm\" hat 8 Zeichen. Der Terminator zählt NICHT mit.\n2. ✗ strlen zählt nur die sichtbaren Zeichen (ohne '\\0'): \"Programm\" → 8, nicht 9.\n3. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 100 (Deklaration mit [100]), nicht 8.\n4. ✓ str ist als char str[100] deklariert — sizeof liefert die volle ARRAY-Größe (100), egal wie lang der Text darin ist.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12759,7 +12759,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Ein String ist ein char-Array mit '\\0' am Ende. · Falsch: \"Klausur\" belegt im Speicher 7 Byte. · Richtig: \"Klausur\" belegt im Speicher 8 Byte. · Richtig: Der Null-Terminator hat den Zahlenwert 0.",
+   "explanation": "1. ✓ Genau die Definition: Zeichen als char-Array, abgeschlossen mit dem Null-Terminator '\\0' (Zahlenwert 0).\n2. ✗ Ein String belegt Textlänge + 1 Byte ('\\0'): \"Klausur\" → 7 + 1 = 8 Byte, nicht 7.\n3. ✓ 7 sichtbare Zeichen + 1 Byte für den Null-Terminator '\\0' = 8 Byte.\n4. ✓ '\\0' ist das Zeichen mit Code 0 — daran erkennen strlen, printf(%s) & Co. das String-Ende.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12780,7 +12780,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: char str[] = \"Hallo THM!\"; ist korrekt. · Richtig: char str[20] = \"Hallo THM!\"; ist korrekt. · Falsch: string str = \"Hallo THM!\"; ist korrekt. · Richtig: char str[20]; strcpy(str, \"Hallo THM!\"); ist korrekt (string.h eingebunden).",
+   "explanation": "1. ✓ Bei Initialisierung mit einem Literal darf die Größe leer bleiben — der Compiler reserviert automatisch 10 + 1 Byte (Text + '\\0').\n2. ✓ Gültig: char-Array mit Literal initialisiert. 20 ≥ 11 — genug Platz für den Text samt '\\0'.\n3. ✗ Den Datentyp string gibt es in C nicht — das ist C++. In C sind Strings char-Arrays.\n4. ✓ Der zweite Standard-Weg: erst deklarieren, dann mit strcpy hineinkopieren. (Direkte Zuweisung str = \"…\" wäre NACH der Deklaration nicht erlaubt.)",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12799,7 +12799,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: sizeof(str) liefert 3. · Richtig: strlen benötigt #include <string.h>. · Falsch: strlen(str) liefert 4.",
+   "explanation": "1. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 100 (Deklaration mit [100]), nicht 3.\n2. ✓ Alle str…-Funktionen (strlen, strcpy, strcmp, …) sind in string.h deklariert.\n3. ✗ strlen zählt nur die sichtbaren Zeichen (ohne '\\0'): \"Yes\" → 3, nicht 4.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12819,7 +12819,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: Der Terminator ist eine binäre 5. · Falsch: \"Sommer\" belegt im Speicher 6 Byte. · Richtig: Ein String ist ein char-Array mit '\\0' am Ende. · Richtig: \"Sommer\" belegt im Speicher 7 Byte.",
+   "explanation": "1. ✗ Der Null-Terminator hat den ZAHLENWERT 0 ('\\0'), nicht 5 — eine klassische Klausur-Fangaussage.\n2. ✗ Ein String belegt Textlänge + 1 Byte ('\\0'): \"Sommer\" → 6 + 1 = 7 Byte, nicht 6.\n3. ✓ Genau die Definition: Zeichen als char-Array, abgeschlossen mit dem Null-Terminator '\\0' (Zahlenwert 0).\n4. ✓ 6 sichtbare Zeichen + 1 Byte für den Null-Terminator '\\0' = 7 Byte.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12837,7 +12837,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: strcpy benötigt #include <math.h>. · Richtig: gets_s liest eine Zeile inklusive Leerzeichen ein. · Falsch: ziel = \"Text\"; ist nach der Deklaration erlaubt.",
+   "explanation": "1. ✗ strcpy ist eine String-Funktion → string.h. math.h enthält sqrt, pow, sin, …\n2. ✓ Anders als scanf(\"%s\"), das am ersten Leerzeichen stoppt, liest gets_s die komplette Zeile bis zum Enter.\n3. ✗ Einem Array kann man nachträglich nichts als Ganzes zuweisen. Nach der Deklaration kopiert man mit strcpy(ziel, \"Text\").",
    "source": "T-42 / AT-12",
    "verified": true
   },
@@ -12855,7 +12855,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: string str = \"Chickpeas\"; ist korrekt. · Richtig: char str[20] = \"Chickpeas\"; ist korrekt. · Falsch: char[] str = \"Chickpeas\"; ist korrekt.",
+   "explanation": "1. ✗ Den Datentyp string gibt es in C nicht — das ist C++. In C sind Strings char-Arrays.\n2. ✓ Gültig: char-Array mit Literal initialisiert. 20 ≥ 10 — genug Platz für den Text samt '\\0'.\n3. ✗ Die eckigen Klammern gehören hinter den NAMEN: char str[] = \"…\"; — nicht hinter den Typ (das ist Java/C#-Syntax).",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12876,7 +12876,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: strlen(str) liefert 8. · Falsch: sizeof(str) liefert 7. · Richtig: strlen(str) liefert 7. · Richtig: strlen benötigt #include <string.h>.",
+   "explanation": "1. ✗ strlen zählt nur die sichtbaren Zeichen (ohne '\\0'): \"Klausur\" → 7, nicht 8.\n2. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 100 (Deklaration mit [100]), nicht 7.\n3. ✓ strlen zählt die sichtbaren Zeichen bis zum '\\0': \"Klausur\" hat 7 Zeichen. Der Terminator zählt NICHT mit.\n4. ✓ Alle str…-Funktionen (strlen, strcpy, strcmp, …) sind in string.h deklariert.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12897,7 +12897,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: Der Null-Terminator hat den Zahlenwert 0. · Richtig: \"Klausur\" belegt im Speicher 8 Byte. · Richtig: Ein String ist ein char-Array mit '\\0' am Ende. · Falsch: Die Elemente einer Zeichenkette sind vom Typ double.",
+   "explanation": "1. ✓ '\\0' ist das Zeichen mit Code 0 — daran erkennen strlen, printf(%s) & Co. das String-Ende.\n2. ✓ 7 sichtbare Zeichen + 1 Byte für den Null-Terminator '\\0' = 8 Byte.\n3. ✓ Genau die Definition: Zeichen als char-Array, abgeschlossen mit dem Null-Terminator '\\0' (Zahlenwert 0).\n4. ✗ String-Elemente sind char (je 1 Byte mit dem Zeichencode). double ist ein Gleitkommatyp.",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12917,7 +12917,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: string str = \"Klausur\"; ist korrekt. · Richtig: char str[50] = \"Klausur\"; ist korrekt. · Falsch: char[] str = \"Klausur\"; ist korrekt. · Richtig: char str[] = \"Klausur\"; ist korrekt.",
+   "explanation": "1. ✗ Den Datentyp string gibt es in C nicht — das ist C++. In C sind Strings char-Arrays.\n2. ✓ Gültig: char-Array mit Literal initialisiert. 50 ≥ 8 — genug Platz für den Text samt '\\0'.\n3. ✗ Die eckigen Klammern gehören hinter den NAMEN: char str[] = \"…\"; — nicht hinter den Typ (das ist Java/C#-Syntax).\n4. ✓ Bei Initialisierung mit einem Literal darf die Größe leer bleiben — der Compiler reserviert automatisch 7 + 1 Byte (Text + '\\0').",
    "source": "T-40 / AT-12",
    "verified": true
   },
@@ -12939,7 +12939,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: strlen benötigt #include <string.h>. · Richtig: sizeof(str) liefert 50. · Falsch: sizeof(str) liefert 3. · Richtig: strlen(str) liefert 3.",
+   "explanation": "1. ✓ Alle str…-Funktionen (strlen, strcpy, strcmp, …) sind in string.h deklariert.\n2. ✓ str ist als char str[50] deklariert — sizeof liefert die volle ARRAY-Größe (50), egal wie lang der Text darin ist.\n3. ✗ sizeof misst die ARRAY-Größe, nicht die Textlänge: hier 50 (Deklaration mit [50]), nicht 3.\n4. ✓ strlen zählt die sichtbaren Zeichen bis zum '\\0': \"Yes\" hat 3 Zeichen. Der Terminator zählt NICHT mit.",
    "source": "T-41 / AT-12",
    "verified": true
   },
@@ -12959,7 +12959,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: struct konto { double x, double y }; ist korrekt. · Falsch: Alle Struct-Elemente müssen denselben Typ haben. · Richtig: struct konto { double x; double y; }; ist eine korrekte Definition. · Richtig: Ein Struct darf Elemente verschiedener Typen enthalten.",
+   "explanation": "1. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n2. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n3. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).\n4. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -12978,7 +12978,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: p->x = 7; ist die im Kurs übliche Zugriffsart auf p. · Falsch: Auf Struct-Elemente greift man mit eckigen Klammern zu. · Richtig: Der Punkt-Operator verbindet Variable und Elementname.",
+   "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -12996,7 +12996,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: typedef erzeugt zur Laufzeit einen neuen Datentyp. · Richtig: typedef struct { double x, y; } punkt; erlaubt danach 'punkt p;'. · Falsch: Structs dürfen nicht verschachtelt werden.",
+   "explanation": "1. ✗ typedef vergibt nur zur ÜBERSETZUNGSZEIT einen neuen Namen für einen bestehenden Typ — zur Laufzeit passiert gar nichts.\n2. ✓ typedef vergibt den Kurznamen punkt — ohne typedef müsste man jedes Mal struct punkt p; schreiben.\n3. ✗ Ein struct darf selbst structs enthalten (z. B. ein punkt im kreis). Zugriff dann mit doppeltem Punkt: k.mittelpunkt.x.",
    "source": "T-44 / AT-11",
    "verified": true
   },
@@ -13014,7 +13014,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: Structs werden wie Arrays automatisch per Adresse übergeben. · Richtig: sizeof liefert die Gesamtgröße des Structs in Bytes. · Falsch: Änderungen in der Funktion wirken auf das Original.",
+   "explanation": "1. ✗ Structs werden als KOPIE übergeben (call by value) — anders als Arrays! Änderungen am Parameter bleiben in der Funktion.\n2. ✓ sizeof funktioniert für jeden Typ — beim struct (mindestens) die Summe der Elementgrößen.\n3. ✗ Der Struct-Parameter ist eine KOPIE — das Original in main bleibt unverändert. (Bei Arrays wäre es genau andersherum.)",
    "source": "T-45 / AT-11",
    "verified": true
   },
@@ -13035,7 +13035,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: Nach der schließenden Klammer der Definition steht ein Semikolon. · Richtig: struct punkt { double x; double y; }; ist eine korrekte Definition. · Falsch: struct punkt { double x, double y }; ist korrekt. · Richtig: Ein Struct darf Elemente verschiedener Typen enthalten.",
+   "explanation": "1. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n2. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).\n3. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n4. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13057,7 +13057,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: p.x = 17; setzt das Element x. · Richtig: Der Punkt-Operator verbindet Variable und Elementname. · Richtig: p.y = 16; setzt das Element y. · Falsch: Auf Struct-Elemente greift man mit eckigen Klammern zu.",
+   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n3. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n4. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13075,7 +13075,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: typedef erzeugt zur Laufzeit einen neuen Datentyp. · Falsch: Structs dürfen nicht verschachtelt werden. · Richtig: Ein typedef-Name kann Rückgabetyp einer Funktion sein.",
+   "explanation": "1. ✗ typedef vergibt nur zur ÜBERSETZUNGSZEIT einen neuen Namen für einen bestehenden Typ — zur Laufzeit passiert gar nichts.\n2. ✗ Ein struct darf selbst structs enthalten (z. B. ein punkt im kreis). Zugriff dann mit doppeltem Punkt: k.mittelpunkt.x.\n3. ✓ Ein typedef-Name ist ein vollwertiger Typ und überall einsetzbar — auch als Rückgabe- oder Parametertyp.",
    "source": "T-44 / AT-11",
    "verified": true
   },
@@ -13096,7 +13096,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: sizeof liefert die Gesamtgröße des Structs in Bytes. · Falsch: Änderungen in der Funktion wirken auf das Original. · Richtig: Der Struct wird als Kopie übergeben. · Richtig: Eine Funktion kann einen ganzen Struct zurückgeben.",
+   "explanation": "1. ✓ sizeof funktioniert für jeden Typ — beim struct (mindestens) die Summe der Elementgrößen.\n2. ✗ Der Struct-Parameter ist eine KOPIE — das Original in main bleibt unverändert. (Bei Arrays wäre es genau andersherum.)\n3. ✓ Structs sind call-by-value: Die Funktion erhält eine Kopie, das Original bleibt unverändert (anders als bei Arrays!).\n4. ✓ Structs sind als Rückgabetyp erlaubt: struct punkt erzeuge(void) { …; return p; }.",
    "source": "T-45 / AT-11",
    "verified": true
   },
@@ -13116,7 +13116,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: Ein Struct darf Elemente verschiedener Typen enthalten. · Falsch: struct artikel { double x, double y }; ist korrekt. · Falsch: Alle Struct-Elemente müssen denselben Typ haben. · Richtig: Nach der schließenden Klammer der Definition steht ein Semikolon.",
+   "explanation": "1. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n2. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n3. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n4. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13138,7 +13138,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: p.x = 1; setzt das Element x. · Richtig: Der Punkt-Operator verbindet Variable und Elementname. · Falsch: Auf Struct-Elemente greift man mit eckigen Klammern zu. · Richtig: p.y = 9; setzt das Element y.",
+   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13158,7 +13158,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: sizeof liefert die Gesamtgröße des Structs in Bytes. · Falsch: Structs werden wie Arrays automatisch per Adresse übergeben. · Richtig: Der Struct wird als Kopie übergeben. · Falsch: Änderungen in der Funktion wirken auf das Original.",
+   "explanation": "1. ✓ sizeof funktioniert für jeden Typ — beim struct (mindestens) die Summe der Elementgrößen.\n2. ✗ Structs werden als KOPIE übergeben (call by value) — anders als Arrays! Änderungen am Parameter bleiben in der Funktion.\n3. ✓ Structs sind call-by-value: Die Funktion erhält eine Kopie, das Original bleibt unverändert (anders als bei Arrays!).\n4. ✗ Der Struct-Parameter ist eine KOPIE — das Original in main bleibt unverändert. (Bei Arrays wäre es genau andersherum.)",
    "source": "T-45 / AT-11",
    "verified": true
   },
@@ -13176,7 +13176,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Alle Struct-Elemente müssen denselben Typ haben. · Falsch: struct messung { double x, double y }; ist korrekt. · Richtig: Ein Struct darf Elemente verschiedener Typen enthalten.",
+   "explanation": "1. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n2. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n3. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13195,7 +13195,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: p->x = 2; ist die im Kurs übliche Zugriffsart auf p. · Richtig: p.x = 2; setzt das Element x. · Falsch: Auf Struct-Elemente greift man mit eckigen Klammern zu.",
+   "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13213,7 +13213,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Änderungen in der Funktion wirken auf das Original. · Falsch: Structs werden wie Arrays automatisch per Adresse übergeben. · Richtig: Der Struct wird als Kopie übergeben.",
+   "explanation": "1. ✗ Der Struct-Parameter ist eine KOPIE — das Original in main bleibt unverändert. (Bei Arrays wäre es genau andersherum.)\n2. ✗ Structs werden als KOPIE übergeben (call by value) — anders als Arrays! Änderungen am Parameter bleiben in der Funktion.\n3. ✓ Structs sind call-by-value: Die Funktion erhält eine Kopie, das Original bleibt unverändert (anders als bei Arrays!).",
    "source": "T-45 / AT-11",
    "verified": true
   },
@@ -13231,7 +13231,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: Nach der schließenden Klammer der Definition steht ein Semikolon. · Falsch: Alle Struct-Elemente müssen denselben Typ haben. · Falsch: struct konto { double x, double y }; ist korrekt.",
+   "explanation": "1. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n2. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n3. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13253,7 +13253,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: p.x = 5; setzt das Element x. · Richtig: p.y = 18; setzt das Element y. · Falsch: Auf Struct-Elemente greift man mit eckigen Klammern zu. · Richtig: Der Punkt-Operator verbindet Variable und Elementname.",
+   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13273,7 +13273,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: Ohne typedef muss man 'struct punkt p;' schreiben. · Falsch: Structs dürfen nicht verschachtelt werden. · Richtig: typedef struct { double x, y; } punkt; erlaubt danach 'punkt p;'. · Falsch: typedef erzeugt zur Laufzeit einen neuen Datentyp.",
+   "explanation": "1. ✓ Der vollständige Typname ist struct punkt. Erst ein typedef macht daraus den Kurznamen punkt.\n2. ✗ Ein struct darf selbst structs enthalten (z. B. ein punkt im kreis). Zugriff dann mit doppeltem Punkt: k.mittelpunkt.x.\n3. ✓ typedef vergibt den Kurznamen punkt — ohne typedef müsste man jedes Mal struct punkt p; schreiben.\n4. ✗ typedef vergibt nur zur ÜBERSETZUNGSZEIT einen neuen Namen für einen bestehenden Typ — zur Laufzeit passiert gar nichts.",
    "source": "T-44 / AT-11",
    "verified": true
   },
@@ -13294,7 +13294,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: Ein Struct darf Elemente verschiedener Typen enthalten. · Richtig: struct messung { double x; double y; }; ist eine korrekte Definition. · Falsch: Alle Struct-Elemente müssen denselben Typ haben. · Richtig: Nach der schließenden Klammer der Definition steht ein Semikolon.",
+   "explanation": "1. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n2. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).\n3. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n4. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13316,7 +13316,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: p.y = 11; setzt das Element y. · Falsch: p->x = 11; ist die im Kurs übliche Zugriffsart auf p. · Richtig: Der Punkt-Operator verbindet Variable und Elementname. · Richtig: p.x = 11; setzt das Element x.",
+   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13337,7 +13337,7 @@
     1,
     3
    ],
-   "explanation": "Richtig: typedef struct { double x, y; } punkt; erlaubt danach 'punkt p;'. · Richtig: Ohne typedef muss man 'struct punkt p;' schreiben. · Falsch: typedef erzeugt zur Laufzeit einen neuen Datentyp. · Richtig: Ein typedef-Name kann Rückgabetyp einer Funktion sein.",
+   "explanation": "1. ✓ typedef vergibt den Kurznamen punkt — ohne typedef müsste man jedes Mal struct punkt p; schreiben.\n2. ✓ Der vollständige Typname ist struct punkt. Erst ein typedef macht daraus den Kurznamen punkt.\n3. ✗ typedef vergibt nur zur ÜBERSETZUNGSZEIT einen neuen Namen für einen bestehenden Typ — zur Laufzeit passiert gar nichts.\n4. ✓ Ein typedef-Name ist ein vollwertiger Typ und überall einsetzbar — auch als Rückgabe- oder Parametertyp.",
    "source": "T-44 / AT-11",
    "verified": true
   },
@@ -13358,7 +13358,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: Nach der schließenden Klammer der Definition steht ein Semikolon. · Richtig: Ein Struct darf Elemente verschiedener Typen enthalten. · Richtig: struct artikel { double x; double y; }; ist eine korrekte Definition. · Falsch: Alle Struct-Elemente müssen denselben Typ haben.",
+   "explanation": "1. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n2. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n3. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).\n4. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13377,7 +13377,7 @@
    "answerIndices": [
     1
    ],
-   "explanation": "Falsch: p->x = 11; ist die im Kurs übliche Zugriffsart auf p. · Richtig: Der Punkt-Operator verbindet Variable und Elementname. · Falsch: Auf Struct-Elemente greift man mit eckigen Klammern zu.",
+   "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13395,7 +13395,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Änderungen in der Funktion wirken auf das Original. · Falsch: Structs werden wie Arrays automatisch per Adresse übergeben. · Richtig: Eine Funktion kann einen ganzen Struct zurückgeben.",
+   "explanation": "1. ✗ Der Struct-Parameter ist eine KOPIE — das Original in main bleibt unverändert. (Bei Arrays wäre es genau andersherum.)\n2. ✗ Structs werden als KOPIE übergeben (call by value) — anders als Arrays! Änderungen am Parameter bleiben in der Funktion.\n3. ✓ Structs sind als Rückgabetyp erlaubt: struct punkt erzeuge(void) { …; return p; }.",
    "source": "T-45 / AT-11",
    "verified": true
   },
@@ -13413,7 +13413,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: Alle Struct-Elemente müssen denselben Typ haben. · Falsch: struct punkt { double x, double y }; ist korrekt. · Richtig: Ein Struct darf Elemente verschiedener Typen enthalten.",
+   "explanation": "1. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n2. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n3. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13435,7 +13435,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: p.x = 10; setzt das Element x. · Falsch: Auf Struct-Elemente greift man mit eckigen Klammern zu. · Richtig: Der Punkt-Operator verbindet Variable und Elementname. · Richtig: p.y = 1; setzt das Element y.",
+   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13456,7 +13456,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Der Struct wird als Kopie übergeben. · Falsch: Structs werden wie Arrays automatisch per Adresse übergeben. · Richtig: Eine Funktion kann einen ganzen Struct zurückgeben. · Richtig: sizeof liefert die Gesamtgröße des Structs in Bytes.",
+   "explanation": "1. ✓ Structs sind call-by-value: Die Funktion erhält eine Kopie, das Original bleibt unverändert (anders als bei Arrays!).\n2. ✗ Structs werden als KOPIE übergeben (call by value) — anders als Arrays! Änderungen am Parameter bleiben in der Funktion.\n3. ✓ Structs sind als Rückgabetyp erlaubt: struct punkt erzeuge(void) { …; return p; }.\n4. ✓ sizeof funktioniert für jeden Typ — beim struct (mindestens) die Summe der Elementgrößen.",
    "source": "T-45 / AT-11",
    "verified": true
   },
@@ -13476,7 +13476,7 @@
     0,
     2
    ],
-   "explanation": "Richtig: Ein Struct darf Elemente verschiedener Typen enthalten. · Falsch: struct konto { double x, double y }; ist korrekt. · Richtig: Nach der schließenden Klammer der Definition steht ein Semikolon. · Falsch: Alle Struct-Elemente müssen denselben Typ haben.",
+   "explanation": "1. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n2. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n3. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n4. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13497,7 +13497,7 @@
     0,
     3
    ],
-   "explanation": "Richtig: p.y = 13; setzt das Element y. · Falsch: p->x = 6; ist die im Kurs übliche Zugriffsart auf p. · Falsch: Auf Struct-Elemente greift man mit eckigen Klammern zu. · Richtig: p.x = 6; setzt das Element x.",
+   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13518,7 +13518,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: struct artikel { double x, double y }; ist korrekt. · Richtig: Nach der schließenden Klammer der Definition steht ein Semikolon. · Richtig: Ein Struct darf Elemente verschiedener Typen enthalten. · Richtig: struct artikel { double x; double y; }; ist eine korrekte Definition.",
+   "explanation": "1. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n2. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n3. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n4. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13540,7 +13540,7 @@
     1,
     2
    ],
-   "explanation": "Richtig: p.x = 2; setzt das Element x. · Richtig: p.y = 13; setzt das Element y. · Richtig: Der Punkt-Operator verbindet Variable und Elementname. · Falsch: p->x = 2; ist die im Kurs übliche Zugriffsart auf p.",
+   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n4. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13558,7 +13558,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: Ohne typedef muss man 'struct punkt p;' schreiben. · Falsch: typedef erzeugt zur Laufzeit einen neuen Datentyp. · Falsch: Structs dürfen nicht verschachtelt werden.",
+   "explanation": "1. ✓ Der vollständige Typname ist struct punkt. Erst ein typedef macht daraus den Kurznamen punkt.\n2. ✗ typedef vergibt nur zur ÜBERSETZUNGSZEIT einen neuen Namen für einen bestehenden Typ — zur Laufzeit passiert gar nichts.\n3. ✗ Ein struct darf selbst structs enthalten (z. B. ein punkt im kreis). Zugriff dann mit doppeltem Punkt: k.mittelpunkt.x.",
    "source": "T-44 / AT-11",
    "verified": true
   },
@@ -13576,7 +13576,7 @@
    "answerIndices": [
     2
    ],
-   "explanation": "Falsch: struct artikel { double x, double y }; ist korrekt. · Falsch: Alle Struct-Elemente müssen denselben Typ haben. · Richtig: Nach der schließenden Klammer der Definition steht ein Semikolon.",
+   "explanation": "1. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n2. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n3. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13598,7 +13598,7 @@
     2,
     3
    ],
-   "explanation": "Falsch: Auf Struct-Elemente greift man mit eckigen Klammern zu. · Richtig: p.x = 17; setzt das Element x. · Richtig: p.y = 19; setzt das Element y. · Richtig: Der Punkt-Operator verbindet Variable und Elementname.",
+   "explanation": "1. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n4. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13618,7 +13618,7 @@
     0,
     1
    ],
-   "explanation": "Richtig: Ein Struct darf Elemente verschiedener Typen enthalten. · Richtig: struct punkt { double x; double y; }; ist eine korrekte Definition. · Falsch: struct punkt { double x, double y }; ist korrekt. · Falsch: Alle Struct-Elemente müssen denselben Typ haben.",
+   "explanation": "1. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n2. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).\n3. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n4. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13640,7 +13640,7 @@
     2,
     3
    ],
-   "explanation": "Richtig: Der Punkt-Operator verbindet Variable und Elementname. · Falsch: Auf Struct-Elemente greift man mit eckigen Klammern zu. · Richtig: p.y = 1; setzt das Element y. · Richtig: p.x = 12; setzt das Element x.",
+   "explanation": "1. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n2. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n3. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13658,7 +13658,7 @@
    "answerIndices": [
     0
    ],
-   "explanation": "Richtig: Nach der schließenden Klammer der Definition steht ein Semikolon. · Falsch: struct punkt { double x, double y }; ist korrekt. · Falsch: Alle Struct-Elemente müssen denselben Typ haben.",
+   "explanation": "1. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n2. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n3. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13679,7 +13679,7 @@
     1,
     3
    ],
-   "explanation": "Falsch: p->x = 3; ist die im Kurs übliche Zugriffsart auf p. · Richtig: p.y = 10; setzt das Element y. · Falsch: Auf Struct-Elemente greift man mit eckigen Klammern zu. · Richtig: p.x = 3; setzt das Element x.",
+   "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
    "verified": true
   },
@@ -13696,7 +13696,7 @@
     "<stdlib.h>"
    ],
    "answerIndex": 0,
-   "explanation": "printf ist in <stdio.h> deklariert.",
+   "explanation": "printf ist in stdio.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -13730,7 +13730,7 @@
     "32"
    ],
    "answerIndex": 3,
-   "explanation": "2 hoch 5 = 32.",
+   "explanation": "pow(a, b) = a hoch b: 2^5 = 32. (pow kommt aus math.h und liefert double.)",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -13764,7 +13764,7 @@
     "<stdio.h>"
    ],
    "answerIndex": 2,
-   "explanation": "sqrt ist in <math.h> deklariert.",
+   "explanation": "sqrt ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -13798,7 +13798,7 @@
     "3.5"
    ],
    "answerIndex": 1,
-   "explanation": "floor rundet ab: 3.",
+   "explanation": "floor (\"Boden\") rundet immer AB: floor(3.7) = 3. Aufrunden macht ceil (→ 4). Rückgabetyp ist double.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -13815,7 +13815,7 @@
     "2 * acos(0.5)"
    ],
    "answerIndex": 1,
-   "explanation": "atan(1) = π/4, also 4·atan(1) = π.",
+   "explanation": "atan(1) = π/4, denn tan(45°) = 1 → 4 · atan(1) = π in voller double-Genauigkeit. 2·acos(0.5) = 2·(π/3) = 2π/3 ≠ π; sqrt(10) ≈ 3,162 und 180/57 ≈ 3,158 sind nur grobe Näherungen.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -13832,7 +13832,7 @@
     "<math.h>"
    ],
    "answerIndex": 3,
-   "explanation": "sin ist in <math.h> deklariert.",
+   "explanation": "sin ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -13865,7 +13865,7 @@
     "1.5"
    ],
    "answerIndex": 2,
-   "explanation": "7.5 = 3·2 + 1.5 → Rest 1.5.",
+   "explanation": "fmod ist der Divisionsrest für Gleitkommazahlen (das %-Gegenstück für double): 7.5 = 3·2 + 1.5 → Rest 1.5.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -13899,7 +13899,7 @@
     "<math.h>"
    ],
    "answerIndex": 3,
-   "explanation": "acos ist in <math.h> deklariert.",
+   "explanation": "1. ✗ stdlib.h enthält u. a. malloc und rand — acos steht dort nicht.\n2. ✗ string.h enthält die String-Funktionen (strcpy, strlen, …) — acos steht dort nicht.\n3. ✗ stdio.h enthält die Ein-/Ausgabe (printf, scanf, …) — acos steht dort nicht.\n4. ✓ acos ist in math.h deklariert.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -13933,7 +13933,7 @@
     "<stdio.h>"
    ],
    "answerIndex": 1,
-   "explanation": "floor ist in <math.h> deklariert.",
+   "explanation": "floor ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -13967,7 +13967,7 @@
     "4.5"
    ],
    "answerIndex": 3,
-   "explanation": "fabs liefert den Betrag: 4.5.",
+   "explanation": "fabs liefert den BETRAG einer Gleitkommazahl: |-4.5| = 4.5.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -13984,7 +13984,7 @@
     "<math.h>"
    ],
    "answerIndex": 1,
-   "explanation": "scanf ist in <stdio.h> deklariert.",
+   "explanation": "scanf ist in stdio.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -14018,7 +14018,7 @@
     "5"
    ],
    "answerIndex": 0,
-   "explanation": "ceil rundet auf: 4.",
+   "explanation": "ceil (\"Decke\") rundet immer AUF: ceil(3.2) = 4. Abrunden macht floor (→ 3). Rückgabetyp ist double.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -14035,7 +14035,7 @@
     "<math.h>"
    ],
    "answerIndex": 3,
-   "explanation": "pow ist in <math.h> deklariert.",
+   "explanation": "pow ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -14069,7 +14069,7 @@
     "2"
    ],
    "answerIndex": 1,
-   "explanation": "10 hoch 3 = 1000 → log10(1000) = 3.",
+   "explanation": "log10 ist der Zehnerlogarithmus: 10^3 = 1000, also log10(1000) = 3. (Achtung: log ohne \"10\" wäre der natürliche Logarithmus zur Basis e.)",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -14086,7 +14086,7 @@
     "<math.h>"
    ],
    "answerIndex": 3,
-   "explanation": "cos ist in <math.h> deklariert.",
+   "explanation": "cos ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -14103,7 +14103,7 @@
     "<stdlib.h>"
    ],
    "answerIndex": 0,
-   "explanation": "log ist in <math.h> deklariert.",
+   "explanation": "1. ✓ log ist in math.h deklariert.\n2. ✗ string.h enthält die String-Funktionen (strcpy, strlen, …) — log steht dort nicht.\n3. ✗ stdio.h enthält die Ein-/Ausgabe (printf, scanf, …) — log steht dort nicht.\n4. ✗ stdlib.h enthält u. a. malloc und rand — log steht dort nicht.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -14120,7 +14120,7 @@
     "<stdlib.h>"
    ],
    "answerIndex": 1,
-   "explanation": "strlen ist in <string.h> deklariert.",
+   "explanation": "strlen ist in string.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -14137,7 +14137,7 @@
     "<string.h>"
    ],
    "answerIndex": 1,
-   "explanation": "getchar ist in <stdio.h> deklariert.",
+   "explanation": "1. ✗ math.h enthält die Mathematik-Funktionen (sqrt, pow, sin, …) — getchar steht dort nicht.\n2. ✓ getchar ist in stdio.h deklariert.\n3. ✗ stdlib.h enthält u. a. malloc und rand — getchar steht dort nicht.\n4. ✗ string.h enthält die String-Funktionen (strcpy, strlen, …) — getchar steht dort nicht.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -14154,7 +14154,7 @@
     "<stdio.h>"
    ],
    "answerIndex": 2,
-   "explanation": "fabs ist in <math.h> deklariert.",
+   "explanation": "fabs ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
    "verified": true
   },
@@ -15982,7 +15982,7 @@
     "15"
    ],
    "answerIndex": 2,
-   "explanation": "a += 3 → 7; a *= 3 → 7·3 = 21.",
+   "explanation": "Zusammengesetzte Zuweisungen sind Kurzformen: a += x bedeutet a = a + x, a *= y bedeutet a = a * y. Schrittweise: a += 3 → 7; a *= 3 → 7·3 = 21.",
    "source": "T-18 / AT-3",
    "verified": true
   },
@@ -16000,7 +16000,7 @@
     "36"
    ],
    "answerIndex": 3,
-   "explanation": "a += 4 → 12; a *= 3 → 12·3 = 36.",
+   "explanation": "Zusammengesetzte Zuweisungen sind Kurzformen: a += x bedeutet a = a + x, a *= y bedeutet a = a * y. Schrittweise: a += 4 → 12; a *= 3 → 12·3 = 36.",
    "source": "T-18 / AT-3",
    "verified": true
   },
@@ -16018,7 +16018,7 @@
     "24"
    ],
    "answerIndex": 3,
-   "explanation": "a += 6 → 8; a *= 3 → 8·3 = 24.",
+   "explanation": "Zusammengesetzte Zuweisungen sind Kurzformen: a += x bedeutet a = a + x, a *= y bedeutet a = a * y. Schrittweise: a += 6 → 8; a *= 3 → 8·3 = 24.",
    "source": "T-18 / AT-3",
    "verified": true
   },
@@ -16036,7 +16036,7 @@
     "14"
    ],
    "answerIndex": 1,
-   "explanation": "a += 4 → 12; a *= 2 → 12·2 = 24.",
+   "explanation": "Zusammengesetzte Zuweisungen sind Kurzformen: a += x bedeutet a = a + x, a *= y bedeutet a = a * y. Schrittweise: a += 4 → 12; a *= 2 → 12·2 = 24.",
    "source": "T-18 / AT-3",
    "verified": true
   },
@@ -16054,7 +16054,7 @@
     "30"
    ],
    "answerIndex": 2,
-   "explanation": "a += 7 → 16; a *= 3 → 16·3 = 48.",
+   "explanation": "Zusammengesetzte Zuweisungen sind Kurzformen: a += x bedeutet a = a + x, a *= y bedeutet a = a * y. Schrittweise: a += 7 → 16; a *= 3 → 16·3 = 48.",
    "source": "T-18 / AT-3",
    "verified": true
   },
@@ -16071,7 +16071,7 @@
     "18"
    ],
    "answerIndex": 2,
-   "explanation": "a += 7 → 9; a *= 2 → 9·2 = 18.",
+   "explanation": "Zusammengesetzte Zuweisungen sind Kurzformen: a += x bedeutet a = a + x, a *= y bedeutet a = a * y. Schrittweise: a += 7 → 9; a *= 2 → 9·2 = 18.",
    "source": "T-18 / AT-3",
    "verified": true
   },
@@ -16809,7 +16809,7 @@
    "answerIndex": 0,
    "group": "snip-001",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 1 + 2 + 3 + 4 = 10.",
+   "explanation": "Richtig: Die Schleife addiert alle Eingabewerte: 1 + 2 + 3 + 4 = 10.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -16989,7 +16989,7 @@
    "answerIndex": 0,
    "group": "snip-002",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 4 + 8 + 5 + 7 + 7 = 31.",
+   "explanation": "Richtig: Die Schleife addiert alle Eingabewerte: 4 + 8 + 5 + 7 + 7 = 31.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -17169,7 +17169,7 @@
    "answerIndex": 0,
    "group": "snip-003",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 10 + 20 + 30 + 40 + 55 + 12 = 167.",
+   "explanation": "Richtig: Die Schleife addiert alle Eingabewerte: 10 + 20 + 30 + 40 + 55 + 12 = 167.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -17349,7 +17349,7 @@
    "answerIndex": 0,
    "group": "snip-004",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 3 + 3 + 4 + 9 + 2 + 5 + 8 = 34.",
+   "explanation": "Richtig: Die Schleife addiert alle Eingabewerte: 3 + 3 + 4 + 9 + 2 + 5 + 8 = 34.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -17385,7 +17385,7 @@
    "answerIndex": 1,
    "group": "snip-005",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Es sind genau 3 gerade Werte.",
+   "explanation": "Falsch: zaehle_gerade zählt Werte mit a[i] % 2 == 0. Gerade sind in {3, 8, 5, 12, 7, 4} nur 8, 12 und 4 → Ausgabe 3, nicht 4.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -17529,7 +17529,7 @@
    "answerIndex": 0,
    "group": "snip-005",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft von 0 bis 5.",
+   "explanation": "Richtig: n = sizeof(a)/sizeof(a[0]) = 6 Elemente; for (i = 0; i < 6; i++) läuft für i = 0…5 — genau 6-mal.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -17565,7 +17565,7 @@
    "answerIndex": 1,
    "group": "snip-006",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Es sind genau 3 gerade Werte.",
+   "explanation": "Falsch: zaehle_gerade zählt Werte mit a[i] % 2 == 0. Gerade sind in {3, 8, 5, 12, 7, 4} nur 8, 12 und 4 → Ausgabe 3, nicht 4.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -17709,7 +17709,7 @@
    "answerIndex": 0,
    "group": "snip-006",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft von 0 bis 4.",
+   "explanation": "Richtig: Das Array {2, 9, 6, 6, 11} hat 5 Elemente → n = 5; die Schleife läuft für i = 0…4 genau 5-mal.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -17745,7 +17745,7 @@
    "answerIndex": 1,
    "group": "snip-007",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Es sind genau 0 gerade Werte.",
+   "explanation": "Falsch: {1, 3, 5, 7} enthält NUR ungerade Zahlen — kein Element erfüllt a[i] % 2 == 0 → Ausgabe 0.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -17889,7 +17889,7 @@
    "answerIndex": 0,
    "group": "snip-007",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft von 0 bis 3.",
+   "explanation": "Richtig: {1, 3, 5, 7} hat 4 Elemente → n = 4 → Durchläufe i = 0…3, also 4.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -17925,7 +17925,7 @@
    "answerIndex": 1,
    "group": "snip-008",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Es sind genau 5 gerade Werte.",
+   "explanation": "Falsch: Gerade sind 10, −4, 0, 8 und 2 — auch 0 und negative gerade Zahlen erfüllen a[i] % 2 == 0! Das ergibt 5, nicht 6.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -18069,7 +18069,7 @@
    "answerIndex": 0,
    "group": "snip-008",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft von 0 bis 6.",
+   "explanation": "Richtig: Das Array hat 7 Elemente → n = 7 → Durchläufe i = 0…6, also 7.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -18177,7 +18177,7 @@
    "answerIndex": 1,
    "group": "snip-009",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: 3 kommt genau 2-mal vor.",
+   "explanation": "Falsch: Das Minimum von {7, 3, 9, 3, 8} ist 3, aber es kommt nur 2-mal vor → Ausgabe \"3 2\".",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -18357,7 +18357,7 @@
    "answerIndex": 1,
    "group": "snip-010",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: 5 kommt genau 2-mal vor.",
+   "explanation": "Falsch: Minimum von {5, 5, 6, 12} ist 5, und es kommt 2-mal vor → Ausgabe \"5 2\".",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -18537,7 +18537,7 @@
    "answerIndex": 1,
    "group": "snip-011",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: 2 kommt genau 3-mal vor.",
+   "explanation": "Falsch: Minimum von {4, 2, 2, 2, 10, 6} ist 2, und es kommt 3-mal vor → Ausgabe \"2 3\".",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -18717,7 +18717,7 @@
    "answerIndex": 1,
    "group": "snip-012",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: 11 kommt genau 2-mal vor.",
+   "explanation": "Falsch: Minimum von {15, 11, 11, 20, 13} ist 11, und es kommt 2-mal vor → Ausgabe \"11 2\".",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -18843,7 +18843,7 @@
    "answerIndex": 0,
    "group": "snip-013",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 9 ist das größte Element.",
+   "explanation": "Richtig: mx startet bei a[0] = 4 und wird bei jedem größeren Wert aktualisiert → Maximum von {4, 9, 1, 6} ist 9.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -18861,7 +18861,7 @@
    "answerIndex": 0,
    "group": "snip-013",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 1 ist das kleinste Element.",
+   "explanation": "Richtig: mn hält das Minimum: In {4, 9, 1, 6} ist das 1.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -18897,7 +18897,7 @@
    "answerIndex": 1,
    "group": "snip-013",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Die Differenz beträgt 8.",
+   "explanation": "Falsch: Die Funktion liefert die DIFFERENZ mx − mn = 9 − 1 = 8 — nicht das Maximum selbst.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19023,7 +19023,7 @@
    "answerIndex": 0,
    "group": "snip-014",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 15 ist das größte Element.",
+   "explanation": "Richtig: Maximum von {12, 3, 8, 15, 7} ist 15.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19041,7 +19041,7 @@
    "answerIndex": 0,
    "group": "snip-014",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 3 ist das kleinste Element.",
+   "explanation": "Richtig: Minimum von {12, 3, 8, 15, 7} ist 3.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19077,7 +19077,7 @@
    "answerIndex": 1,
    "group": "snip-014",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Die Differenz beträgt 12.",
+   "explanation": "Falsch: Rückgabe ist mx − mn = 15 − 3 = 12, nicht 13.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19203,7 +19203,7 @@
    "answerIndex": 0,
    "group": "snip-015",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 5 ist das größte Element.",
+   "explanation": "Richtig: Alle Werte sind 5 → das Maximum ist 5. Keine if-Bedingung greift, mx bleibt a[0].",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19221,7 +19221,7 @@
    "answerIndex": 0,
    "group": "snip-015",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 5 ist das kleinste Element.",
+   "explanation": "Richtig: Alle Werte gleich → Minimum ebenfalls 5; die Funktion gibt 5 − 5 = 0 zurück.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19257,7 +19257,7 @@
    "answerIndex": 1,
    "group": "snip-015",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Die Differenz beträgt 0.",
+   "explanation": "Falsch: {1, 3, 5, 7} enthält NUR ungerade Zahlen — kein Element erfüllt a[i] % 2 == 0 → Ausgabe 0.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19383,7 +19383,7 @@
    "answerIndex": 0,
    "group": "snip-016",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 20 ist das größte Element.",
+   "explanation": "Richtig: Maximum von {2, 20, 11, 4, 18} ist 20.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19401,7 +19401,7 @@
    "answerIndex": 0,
    "group": "snip-016",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 2 ist das kleinste Element.",
+   "explanation": "Richtig: Minimum von {2, 20, 11, 4, 18} ist 2.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19437,7 +19437,7 @@
    "answerIndex": 1,
    "group": "snip-016",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Die Differenz beträgt 18.",
+   "explanation": "Falsch: Ausgegeben wird mx − mn = 20 − 2 = 18, nicht 19.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19617,7 +19617,7 @@
    "answerIndex": 0,
    "group": "snip-017",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft von 0 bis 4.",
+   "explanation": "Richtig: Die Schleife läuft über i = 0…n−1 und PRÜFT jedes Element — addiert werden aber nur die positiven (a[i] > 0).",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19689,7 +19689,7 @@
    "answerIndex": 0,
    "group": "snip-017",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Die Schleife beginnt bei i = 0.",
+   "explanation": "Richtig: i startet bei 0 — Arrays beginnen in C bei Index 0.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19797,7 +19797,7 @@
    "answerIndex": 0,
    "group": "snip-018",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft von 0 bis 3.",
+   "explanation": "Richtig: n = 4 → i = 0…3: Jedes der 4 Elemente wird geprüft (addiert nur, wenn > 0).",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19869,7 +19869,7 @@
    "answerIndex": 0,
    "group": "snip-018",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Die Schleife beginnt bei i = 0.",
+   "explanation": "Richtig: i startet bei 0 — Arrays beginnen in C bei Index 0.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -19977,7 +19977,7 @@
    "answerIndex": 0,
    "group": "snip-019",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft von 0 bis 4.",
+   "explanation": "Richtig: Die Schleife läuft über i = 0…n−1 und PRÜFT jedes Element — addiert werden aber nur die positiven (a[i] > 0).",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -20049,7 +20049,7 @@
    "answerIndex": 0,
    "group": "snip-019",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Die Schleife beginnt bei i = 0.",
+   "explanation": "Richtig: i startet bei 0 — Arrays beginnen in C bei Index 0.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -20157,7 +20157,7 @@
    "answerIndex": 0,
    "group": "snip-020",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft von 0 bis 3.",
+   "explanation": "Richtig: n = 4 → i = 0…3: Jedes der 4 Elemente wird geprüft (addiert nur, wenn > 0).",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -20229,7 +20229,7 @@
    "answerIndex": 0,
    "group": "snip-020",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Die Schleife beginnt bei i = 0.",
+   "explanation": "Richtig: i startet bei 0 — Arrays beginnen in C bei Index 0.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -20355,7 +20355,7 @@
    "answerIndex": 0,
    "group": "snip-021",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: k ist der Index des Maximums.",
+   "explanation": "Richtig: max_index liefert den INDEX des größten Werts; a[k] holt dann den Wert selbst. (Bei mehreren gleich großen Maxima bleibt es wegen des strikten > beim ersten.)",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -20391,7 +20391,7 @@
    "answerIndex": 1,
    "group": "snip-021",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Es wird nur gelesen.",
+   "explanation": "Falsch: Sie LIEST nur (Vergleich a[i] > a[idx]) und schreibt nie in a[…] — trotz Übergabe per Adresse bleibt das Array unverändert.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -20535,7 +20535,7 @@
    "answerIndex": 0,
    "group": "snip-022",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: k ist der Index des Maximums.",
+   "explanation": "Richtig: max_index liefert den INDEX des größten Werts; a[k] holt dann den Wert selbst. (Bei mehreren gleich großen Maxima bleibt es wegen des strikten > beim ersten.)",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -20571,7 +20571,7 @@
    "answerIndex": 1,
    "group": "snip-022",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Es wird nur gelesen.",
+   "explanation": "Falsch: Sie LIEST nur (Vergleich a[i] > a[idx]) und schreibt nie in a[…] — trotz Übergabe per Adresse bleibt das Array unverändert.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -20715,7 +20715,7 @@
    "answerIndex": 0,
    "group": "snip-023",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: k ist der Index des Maximums.",
+   "explanation": "Richtig: max_index liefert den INDEX des größten Werts; a[k] holt dann den Wert selbst. (Bei mehreren gleich großen Maxima bleibt es wegen des strikten > beim ersten.)",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -20751,7 +20751,7 @@
    "answerIndex": 1,
    "group": "snip-023",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Es wird nur gelesen.",
+   "explanation": "Falsch: Sie LIEST nur (Vergleich a[i] > a[idx]) und schreibt nie in a[…] — trotz Übergabe per Adresse bleibt das Array unverändert.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -20895,7 +20895,7 @@
    "answerIndex": 0,
    "group": "snip-024",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: k ist der Index des Maximums.",
+   "explanation": "Richtig: max_index liefert den INDEX des größten Werts; a[k] holt dann den Wert selbst. (Bei mehreren gleich großen Maxima bleibt es wegen des strikten > beim ersten.)",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -20931,7 +20931,7 @@
    "answerIndex": 1,
    "group": "snip-024",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Es wird nur gelesen.",
+   "explanation": "Falsch: Sie LIEST nur (Vergleich a[i] > a[idx]) und schreibt nie in a[…] — trotz Übergabe per Adresse bleibt das Array unverändert.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21057,7 +21057,7 @@
    "answerIndex": 0,
    "group": "snip-025",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 10 Zeichen plus '\\0' = 11 Byte.",
+   "explanation": "Richtig: \"Informatik\" hat 10 Zeichen + '\\0' = 11 Byte. In main ist text noch das echte Array, daher liefert sizeof die volle Größe.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21129,7 +21129,7 @@
    "answerIndex": 0,
    "group": "snip-025",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Ein String ist ein char-Array.",
+   "explanation": "Richtig: Ein String ist ein char-Array; jedes Zeichen (inklusive '\\0') ist ein char.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21237,7 +21237,7 @@
    "answerIndex": 0,
    "group": "snip-026",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 13 Zeichen plus '\\0' = 14 Byte.",
+   "explanation": "Richtig: \"Programmieren\" hat 13 Zeichen + Terminator '\\0' = 14 Byte.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21309,7 +21309,7 @@
    "answerIndex": 0,
    "group": "snip-026",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Ein String ist ein char-Array.",
+   "explanation": "Richtig: Ein String ist ein char-Array; jedes Zeichen (inklusive '\\0') ist ein char.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21417,7 +21417,7 @@
    "answerIndex": 0,
    "group": "snip-027",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 14 Zeichen plus '\\0' = 15 Byte.",
+   "explanation": "Richtig: \"Sommersemester\" hat 14 Zeichen + '\\0' = 15 Byte.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21489,7 +21489,7 @@
    "answerIndex": 0,
    "group": "snip-027",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Ein String ist ein char-Array.",
+   "explanation": "Richtig: Ein String ist ein char-Array; jedes Zeichen (inklusive '\\0') ist ein char.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21597,7 +21597,7 @@
    "answerIndex": 0,
    "group": "snip-028",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 8 Zeichen plus '\\0' = 9 Byte.",
+   "explanation": "Richtig: \"Erdbeere\" hat 8 Zeichen + '\\0' = 9 Byte.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21669,7 +21669,7 @@
    "answerIndex": 0,
    "group": "snip-028",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Ein String ist ein char-Array.",
+   "explanation": "Richtig: Ein String ist ein char-Array; jedes Zeichen (inklusive '\\0') ist ein char.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21723,7 +21723,7 @@
    "answerIndex": 0,
    "group": "snip-029",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 1 · 2 = 2.",
+   "explanation": "Richtig: Das Array wird per Adresse übergeben — a[i] *= 2 verändert das ORIGINAL: a[0] = 1 → 2.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21813,7 +21813,7 @@
    "answerIndex": 0,
    "group": "snip-029",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft je von 0 bis 2.",
+   "explanation": "Richtig: Beide laufen mit i < 3 über die 3 Elemente (i = 0, 1, 2).",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21903,7 +21903,7 @@
    "answerIndex": 0,
    "group": "snip-030",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 4 · 2 = 8.",
+   "explanation": "Richtig: Arrays werden per Adresse übergeben: a[0] = 4 wird in der Funktion verdoppelt → 8, auch in main sichtbar.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -21993,7 +21993,7 @@
    "answerIndex": 0,
    "group": "snip-030",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft je von 0 bis 3.",
+   "explanation": "Richtig: n = 4 bzw. i < 4 → jeweils 4 Durchläufe (i = 0…3).",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22083,7 +22083,7 @@
    "answerIndex": 0,
    "group": "snip-031",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 10 · 2 = 20.",
+   "explanation": "Richtig: a[0] = 10 wird verdoppelt → 20. Die Änderung wirkt aufs Original, weil nur die Startadresse übergeben wird.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22173,7 +22173,7 @@
    "answerIndex": 0,
    "group": "snip-031",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft je von 0 bis 2.",
+   "explanation": "Richtig: Beide laufen mit i < 3 über die 3 Elemente (i = 0, 1, 2).",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22263,7 +22263,7 @@
    "answerIndex": 0,
    "group": "snip-032",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 3 · 2 = 6.",
+   "explanation": "Richtig: a[0] = 3 → verdoppelt 6. Das Original ändert sich, weil das Array per Adresse übergeben wird.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22353,7 +22353,7 @@
    "answerIndex": 0,
    "group": "snip-032",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i läuft je von 0 bis 3.",
+   "explanation": "Richtig: n = 4 bzw. i < 4 → jeweils 4 Durchläufe (i = 0…3).",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22443,7 +22443,7 @@
    "answerIndex": 0,
    "group": "snip-033",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Beide Operanden sind int.",
+   "explanation": "Richtig: Beide Operanden sind int → int/int schneidet die Nachkommastellen ab. Für den echten Durchschnitt bräuchte es einen Cast: (double)summe / n.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22479,7 +22479,7 @@
    "answerIndex": 0,
    "group": "snip-033",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: 1 + 2 + 2 + 4 = 9.",
+   "explanation": "Richtig: Die Schleife addiert alle Noten: 1 + 2 + 2 + 4 = 9.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22497,7 +22497,7 @@
    "answerIndex": 0,
    "group": "snip-033",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i = 0 bis 3.",
+   "explanation": "Richtig: for (i = 0; i < 4; i++) → i = 0, 1, 2, 3: genau 4 Durchläufe.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22515,7 +22515,7 @@
    "answerIndex": 0,
    "group": "snip-033",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: schnitt ist int.",
+   "explanation": "Richtig: schnitt ist als int deklariert, und %d ist genau der Specifier für int.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22623,7 +22623,7 @@
    "answerIndex": 0,
    "group": "snip-034",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Beide Operanden sind int.",
+   "explanation": "Richtig: Beide Operanden sind int → int/int schneidet die Nachkommastellen ab. Für den echten Durchschnitt bräuchte es einen Cast: (double)summe / n.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22677,7 +22677,7 @@
    "answerIndex": 0,
    "group": "snip-034",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i = 0 bis 4.",
+   "explanation": "Richtig: for (i = 0; i < 5; i++) → i = 0…4: genau 5 Durchläufe.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22695,7 +22695,7 @@
    "answerIndex": 0,
    "group": "snip-034",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: schnitt ist int.",
+   "explanation": "Richtig: schnitt ist als int deklariert, und %d ist genau der Specifier für int.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22803,7 +22803,7 @@
    "answerIndex": 0,
    "group": "snip-035",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Beide Operanden sind int.",
+   "explanation": "Richtig: Beide Operanden sind int → int/int schneidet die Nachkommastellen ab. Für den echten Durchschnitt bräuchte es einen Cast: (double)summe / n.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22857,7 +22857,7 @@
    "answerIndex": 0,
    "group": "snip-035",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i = 0 bis 2.",
+   "explanation": "Richtig: for (i = 0; i < 3; i++) → i = 0, 1, 2: genau 3 Durchläufe.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22875,7 +22875,7 @@
    "answerIndex": 0,
    "group": "snip-035",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: schnitt ist int.",
+   "explanation": "Richtig: schnitt ist als int deklariert, und %d ist genau der Specifier für int.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -22983,7 +22983,7 @@
    "answerIndex": 0,
    "group": "snip-036",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Beide Operanden sind int.",
+   "explanation": "Richtig: Beide Operanden sind int → int/int schneidet die Nachkommastellen ab. Für den echten Durchschnitt bräuchte es einen Cast: (double)summe / n.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23037,7 +23037,7 @@
    "answerIndex": 0,
    "group": "snip-036",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: i = 0 bis 3.",
+   "explanation": "Richtig: for (i = 0; i < 4; i++) → i = 0, 1, 2, 3: genau 4 Durchläufe.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23055,7 +23055,7 @@
    "answerIndex": 0,
    "group": "snip-036",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: schnitt ist int.",
+   "explanation": "Richtig: schnitt ist als int deklariert, und %d ist genau der Specifier für int.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23181,7 +23181,7 @@
    "answerIndex": 0,
    "group": "snip-037",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Logisches UND.",
+   "explanation": "Richtig: Logisches UND: a[i] >= lo UND a[i] <= hi müssen beide erfüllt sein — so wird \"liegt im Bereich\" geprüft.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23217,7 +23217,7 @@
    "answerIndex": 0,
    "group": "snip-037",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: a[i] <= 16 schließt 16 ein.",
+   "explanation": "Richtig: Die Vergleiche sind mit >= und <= INKLUSIVE — die Obergrenze hi = 16 zählt mit.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23235,7 +23235,7 @@
    "answerIndex": 1,
    "group": "snip-037",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: 7 < 8 erfüllt a[i] >= 8 nicht.",
+   "explanation": "Falsch: Der Bereich ist 8…16 (lo = 8): 7 liegt darunter und fällt raus.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23271,7 +23271,7 @@
    "answerIndex": 0,
    "group": "snip-037",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Die Schleife läuft 0-mal.",
+   "explanation": "Richtig: Mit n = 0 startet die Schleife gar nicht (0 < 0 ist falsch) und z bleibt 0 — sauberer Randfall, kein Fehler.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23361,7 +23361,7 @@
    "answerIndex": 0,
    "group": "snip-038",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Logisches UND.",
+   "explanation": "Richtig: Logisches UND: a[i] >= lo UND a[i] <= hi müssen beide erfüllt sein — so wird \"liegt im Bereich\" geprüft.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23397,7 +23397,7 @@
    "answerIndex": 0,
    "group": "snip-038",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: a[i] <= 9 schließt 9 ein.",
+   "explanation": "Richtig: Die Grenzen sind inklusive (a[i] <= hi): Bereich 3…9 — die 9 zählt mit.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23415,7 +23415,7 @@
    "answerIndex": 1,
    "group": "snip-038",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: 2 < 3 erfüllt a[i] >= 3 nicht.",
+   "explanation": "Falsch: Der Bereich ist 3…9 (lo = 3): 2 liegt unter der Untergrenze.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23451,7 +23451,7 @@
    "answerIndex": 0,
    "group": "snip-038",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Die Schleife läuft 0-mal.",
+   "explanation": "Richtig: Mit n = 0 startet die Schleife gar nicht (0 < 0 ist falsch) und z bleibt 0 — sauberer Randfall, kein Fehler.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23541,7 +23541,7 @@
    "answerIndex": 0,
    "group": "snip-039",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Logisches UND.",
+   "explanation": "Richtig: Logisches UND: a[i] >= lo UND a[i] <= hi müssen beide erfüllt sein — so wird \"liegt im Bereich\" geprüft.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23577,7 +23577,7 @@
    "answerIndex": 0,
    "group": "snip-039",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: a[i] <= 25 schließt 25 ein.",
+   "explanation": "Richtig: Der Vergleich a[i] <= hi ist inklusiv — die Obergrenze 25 gehört zum Bereich.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23595,7 +23595,7 @@
    "answerIndex": 1,
    "group": "snip-039",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: 9 < 10 erfüllt a[i] >= 10 nicht.",
+   "explanation": "Falsch: Der Bereich ist 10…25 (lo = 10): 9 liegt UNTER der Untergrenze und wird nicht mitgezählt.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23631,7 +23631,7 @@
    "answerIndex": 0,
    "group": "snip-039",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Die Schleife läuft 0-mal.",
+   "explanation": "Richtig: Mit n = 0 startet die Schleife gar nicht (0 < 0 ist falsch) und z bleibt 0 — sauberer Randfall, kein Fehler.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23721,7 +23721,7 @@
    "answerIndex": 0,
    "group": "snip-040",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Logisches UND.",
+   "explanation": "Richtig: Logisches UND: a[i] >= lo UND a[i] <= hi müssen beide erfüllt sein — so wird \"liegt im Bereich\" geprüft.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23757,7 +23757,7 @@
    "answerIndex": 0,
    "group": "snip-040",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: a[i] <= 10 schließt 10 ein.",
+   "explanation": "Richtig: Bereich 5…10 mit >= lo und <= hi: Die Grenzen zählen mit, also auch 10.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23775,7 +23775,7 @@
    "answerIndex": 1,
    "group": "snip-040",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: 4 < 5 erfüllt a[i] >= 5 nicht.",
+   "explanation": "Falsch: Der Bereich ist 5…10 (lo = 5): 4 liegt unter der Untergrenze.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23811,7 +23811,7 @@
    "answerIndex": 0,
    "group": "snip-040",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Die Schleife läuft 0-mal.",
+   "explanation": "Richtig: Mit n = 0 startet die Schleife gar nicht (0 < 0 ist falsch) und z bleibt 0 — sauberer Randfall, kein Fehler.",
    "source": "T-47 / AT-13",
    "verified": true
   },
@@ -23855,7 +23855,7 @@
     5,
     6
    ],
-   "explanation": "Tatsächliche Fehler: Nach dem Funktionskopf fehlt die öffnende geschweifte Klammer {. · Nach return ergebnis fehlt das Semikolon. · Bei scanf fehlt der Adress-Operator & vor zahl. · Der Aufruf Quadrat(...) passt nicht zum definierten Namen quadrat (Groß-/Kleinschreibung).. Keine Fehler: Der Funktionsname darf keinen Kleinbuchstaben enthalten. · Ein Programm darf höchstens eine Funktion neben main enthalten. · printf benötigt die Bibliothek math.h..",
+   "explanation": "1. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n2. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n3. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n4. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.\n5. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n6. ✓ C ist case-sensitiv: Groß-/Kleinschreibung erzeugt VERSCHIEDENE Namen — der Aufruf findet die definierte Funktion nicht (Linker-/Compilerfehler).\n7. ✓ Der Funktionskörper muss mit { beginnen — ohne öffnende Klammer ist der Funktionskopf unvollständig und alles Folgende wird falsch geparst.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -23881,7 +23881,7 @@
     4,
     6
    ],
-   "explanation": "Tatsächliche Fehler: Nach dem Funktionskopf fehlt die öffnende geschweifte Klammer {. · Nach return ergebnis fehlt das Semikolon. · Bei scanf fehlt der Adress-Operator & vor wert. · Der Aufruf Kubik(...) passt nicht zum definierten Namen kubik (Groß-/Kleinschreibung).. Keine Fehler: Der Funktionsname darf keinen Kleinbuchstaben enthalten. · printf benötigt die Bibliothek math.h. · Vor return 0; muss immer ein printf stehen..",
+   "explanation": "1. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n2. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.\n3. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n4. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n5. ✓ C ist case-sensitiv: Groß-/Kleinschreibung erzeugt VERSCHIEDENE Namen — der Aufruf findet die definierte Funktion nicht (Linker-/Compilerfehler).\n6. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n7. ✓ Der Funktionskörper muss mit { beginnen — ohne öffnende Klammer ist der Funktionskopf unvollständig und alles Folgende wird falsch geparst.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -23907,7 +23907,7 @@
     5,
     6
    ],
-   "explanation": "Tatsächliche Fehler: Nach dem Funktionskopf fehlt die öffnende geschweifte Klammer {. · Nach return ergebnis fehlt das Semikolon. · Bei scanf fehlt der Adress-Operator & vor x. · Der Aufruf Doppelt(...) passt nicht zum definierten Namen doppelt (Groß-/Kleinschreibung).. Keine Fehler: printf benötigt die Bibliothek math.h. · Die Funktion müsste vor #include stehen. · Ein Programm darf höchstens eine Funktion neben main enthalten..",
+   "explanation": "1. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n2. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n3. ✓ Der Funktionskörper muss mit { beginnen — ohne öffnende Klammer ist der Funktionskopf unvollständig und alles Folgende wird falsch geparst.\n4. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n6. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.\n7. ✓ C ist case-sensitiv: Groß-/Kleinschreibung erzeugt VERSCHIEDENE Namen — der Aufruf findet die definierte Funktion nicht (Linker-/Compilerfehler).",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -23931,7 +23931,7 @@
     4,
     5
    ],
-   "explanation": "Tatsächliche Fehler: Nach int a = 3 fehlt das Semikolon. · Nach dem printf-Aufruf fehlt das Semikolon. · Die schließende geschweifte Klammer von main fehlt.. Keine Fehler: Die Funktion müsste vor #include stehen. · Ein Programm darf höchstens eine Funktion neben main enthalten. · printf benötigt die Bibliothek math.h..",
+   "explanation": "1. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n2. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n3. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n4. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n6. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -23955,7 +23955,7 @@
     2,
     4
    ],
-   "explanation": "Tatsächliche Fehler: Nach int a = 7 fehlt das Semikolon. · Nach dem printf-Aufruf fehlt das Semikolon. · Die schließende geschweifte Klammer von main fehlt.. Keine Fehler: Die Funktion müsste vor #include stehen. · Die Variable darf nicht in main deklariert werden. · Ein Programm darf höchstens eine Funktion neben main enthalten..",
+   "explanation": "1. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.\n2. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n3. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n4. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n6. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -23979,7 +23979,7 @@
     1,
     4
    ],
-   "explanation": "Tatsächliche Fehler: Nach int a = 5 fehlt das Semikolon. · Nach dem printf-Aufruf fehlt das Semikolon. · Die schließende geschweifte Klammer von main fehlt.. Keine Fehler: Ein Programm darf höchstens eine Funktion neben main enthalten. · Die Variable darf nicht in main deklariert werden. · Der Funktionsname darf keinen Kleinbuchstaben enthalten..",
+   "explanation": "1. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n4. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n6. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24001,7 +24001,7 @@
     1,
     2
    ],
-   "explanation": "Tatsächliche Fehler: In der if-Bedingung steht die Zuweisung x = 5 statt des Vergleichs x == 5. · Nach printf(\"gleich\") fehlt das Semikolon.. Keine Fehler: Ein Programm darf höchstens eine Funktion neben main enthalten. · printf benötigt die Bibliothek math.h. · Der Formatstring müsste einfach statt doppelt angeführt sein..",
+   "explanation": "1. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n2. ✓ = weist zu, == vergleicht! Die Zuweisung ist syntaktisch gültig (ihr Wert dient als Bedingung), tut aber nicht das Gewollte — der Klassiker unter den C-Fehlern.\n3. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n4. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n5. ✗ Strings stehen in C IMMER in doppelten Anführungszeichen. Einfache Anführungszeichen sind für einzelne Zeichen: 'a'.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24023,7 +24023,7 @@
     1,
     3
    ],
-   "explanation": "Tatsächliche Fehler: In der if-Bedingung steht die Zuweisung x = 3 statt des Vergleichs x == 3. · Nach printf(\"gleich\") fehlt das Semikolon.. Keine Fehler: printf benötigt die Bibliothek math.h. · Vor return 0; muss immer ein printf stehen. · Die Variable darf nicht in main deklariert werden..",
+   "explanation": "1. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n4. ✓ = weist zu, == vergleicht! Die Zuweisung ist syntaktisch gültig (ihr Wert dient als Bedingung), tut aber nicht das Gewollte — der Klassiker unter den C-Fehlern.\n5. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24045,7 +24045,7 @@
     0,
     2
    ],
-   "explanation": "Tatsächliche Fehler: In der if-Bedingung steht die Zuweisung x = 12 statt des Vergleichs x == 12. · Nach printf(\"gleich\") fehlt das Semikolon.. Keine Fehler: Vor return 0; muss immer ein printf stehen. · printf benötigt die Bibliothek math.h. · Die Funktion müsste vor #include stehen..",
+   "explanation": "1. ✓ = weist zu, == vergleicht! Die Zuweisung ist syntaktisch gültig (ihr Wert dient als Bedingung), tut aber nicht das Gewollte — der Klassiker unter den C-Fehlern.\n2. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n3. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n4. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n5. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24067,7 +24067,7 @@
     0,
     4
    ],
-   "explanation": "Tatsächliche Fehler: Beim ersten scanf fehlt der Adress-Operator & vor alter. · Beim zweiten scanf muss für double der Specifier %lf statt %d stehen.. Keine Fehler: Vor return 0; muss immer ein printf stehen. · Der Formatstring müsste einfach statt doppelt angeführt sein. · Ein Programm darf höchstens eine Funktion neben main enthalten..",
+   "explanation": "1. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n2. ✗ Strings stehen in C IMMER in doppelten Anführungszeichen. Einfache Anführungszeichen sind für einzelne Zeichen: 'a'.\n3. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n4. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n5. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24089,7 +24089,7 @@
     0,
     3
    ],
-   "explanation": "Tatsächliche Fehler: Beim ersten scanf fehlt der Adress-Operator & vor anzahl. · Beim zweiten scanf muss für double der Specifier %lf statt %d stehen.. Keine Fehler: printf benötigt die Bibliothek math.h. · Die Funktion müsste vor #include stehen. · Vor return 0; muss immer ein printf stehen..",
+   "explanation": "1. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n2. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n3. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n4. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.\n5. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24111,7 +24111,7 @@
     0,
     3
    ],
-   "explanation": "Tatsächliche Fehler: Beim ersten scanf fehlt der Adress-Operator & vor punkte. · Beim zweiten scanf muss für double der Specifier %lf statt %d stehen.. Keine Fehler: Die Variable darf nicht in main deklariert werden. · Vor return 0; muss immer ein printf stehen. · int ist als Rückgabetyp grundsätzlich verboten..",
+   "explanation": "1. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.\n2. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n3. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.\n4. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n5. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24133,7 +24133,7 @@
     0,
     1
    ],
-   "explanation": "Tatsächliche Fehler: flaeche wird in main aufgerufen, bevor die Funktion bekannt ist – es fehlt der Prototyp (oder die Definition müsste vor main stehen). · Nach return s * s fehlt das Semikolon.. Keine Fehler: Vor return 0; muss immer ein printf stehen. · Der Funktionsname darf keinen Kleinbuchstaben enthalten. · Ein Programm darf höchstens eine Funktion neben main enthalten..",
+   "explanation": "1. ✓ Der Compiler liest von oben nach unten: Beim Aufruf muss die Funktion bekannt sein. Lösung: Prototyp an den Dateianfang oder die Definition vor main ziehen.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n4. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n5. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24155,7 +24155,7 @@
     0,
     2
    ],
-   "explanation": "Tatsächliche Fehler: umfang wird in main aufgerufen, bevor die Funktion bekannt ist – es fehlt der Prototyp (oder die Definition müsste vor main stehen). · Nach return 4 * s fehlt das Semikolon.. Keine Fehler: Die Variable darf nicht in main deklariert werden. · printf benötigt die Bibliothek math.h. · Die Funktion müsste vor #include stehen..",
+   "explanation": "1. ✓ Der Compiler liest von oben nach unten: Beim Aufruf muss die Funktion bekannt sein. Lösung: Prototyp an den Dateianfang oder die Definition vor main ziehen.\n2. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n3. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n4. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n5. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24177,7 +24177,7 @@
     0,
     4
    ],
-   "explanation": "Tatsächliche Fehler: volumen wird in main aufgerufen, bevor die Funktion bekannt ist – es fehlt der Prototyp (oder die Definition müsste vor main stehen). · Nach return s * s * s fehlt das Semikolon.. Keine Fehler: Ein Programm darf höchstens eine Funktion neben main enthalten. · Der Formatstring müsste einfach statt doppelt angeführt sein. · printf benötigt die Bibliothek math.h..",
+   "explanation": "1. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n2. ✗ Strings stehen in C IMMER in doppelten Anführungszeichen. Einfache Anführungszeichen sind für einzelne Zeichen: 'a'.\n3. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n4. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n5. ✓ Der Compiler liest von oben nach unten: Beim Aufruf muss die Funktion bekannt sein. Lösung: Prototyp an den Dateianfang oder die Definition vor main ziehen.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24199,7 +24199,7 @@
     1,
     2
    ],
-   "explanation": "Tatsächliche Fehler: Der Rückgabetyp void passt nicht: Die Funktion gibt mit return einen Wert zurück (und main verwendet ihn) – korrekt wäre int. · Nach dem printf-Aufruf fehlt das Semikolon.. Keine Fehler: Vor return 0; muss immer ein printf stehen. · Der Funktionsname darf keinen Kleinbuchstaben enthalten. · printf benötigt die Bibliothek math.h..",
+   "explanation": "1. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✓ Eine void-Funktion darf keinen Wert zurückgeben. Da hier return mit Wert benutzt (und das Ergebnis in main verwendet) wird, muss der Rückgabetyp int sein.\n4. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n5. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24221,7 +24221,7 @@
     0,
     4
    ],
-   "explanation": "Tatsächliche Fehler: Der Rückgabetyp void passt nicht: Die Funktion gibt mit return einen Wert zurück (und main verwendet ihn) – korrekt wäre int. · Nach dem printf-Aufruf fehlt das Semikolon.. Keine Fehler: Vor return 0; muss immer ein printf stehen. · Die Funktion müsste vor #include stehen. · Die Variable darf nicht in main deklariert werden..",
+   "explanation": "1. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n2. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n3. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n4. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n5. ✓ Eine void-Funktion darf keinen Wert zurückgeben. Da hier return mit Wert benutzt (und das Ergebnis in main verwendet) wird, muss der Rückgabetyp int sein.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24243,7 +24243,7 @@
     1,
     2
    ],
-   "explanation": "Tatsächliche Fehler: Der Rückgabetyp void passt nicht: Die Funktion gibt mit return einen Wert zurück (und main verwendet ihn) – korrekt wäre int. · Nach dem printf-Aufruf fehlt das Semikolon.. Keine Fehler: Der Funktionsname darf keinen Kleinbuchstaben enthalten. · Vor return 0; muss immer ein printf stehen. · printf benötigt die Bibliothek math.h..",
+   "explanation": "1. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✓ Eine void-Funktion darf keinen Wert zurückgeben. Da hier return mit Wert benutzt (und das Ergebnis in main verwendet) wird, muss der Rückgabetyp int sein.\n4. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n5. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24265,7 +24265,7 @@
     1,
     3
    ],
-   "explanation": "Tatsächliche Fehler: Summe ist nicht deklariert – die Variable heißt summe (Groß-/Kleinschreibung). · Die schließende geschweifte Klammer der for-Schleife fehlt.. Keine Fehler: printf benötigt die Bibliothek math.h. · Der Funktionsname darf keinen Kleinbuchstaben enthalten. · Vor return 0; muss immer ein printf stehen..",
+   "explanation": "1. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n2. ✓ C ist case-sensitiv: Die großgeschriebene Variante wurde nie deklariert — Compilerfehler \"undeclared identifier\".\n3. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n4. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.\n5. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24287,7 +24287,7 @@
     0,
     2
    ],
-   "explanation": "Tatsächliche Fehler: Produkt ist nicht deklariert – die Variable heißt produkt (Groß-/Kleinschreibung). · Die schließende geschweifte Klammer der for-Schleife fehlt.. Keine Fehler: int ist als Rückgabetyp grundsätzlich verboten. · Die Variable darf nicht in main deklariert werden. · printf benötigt die Bibliothek math.h..",
+   "explanation": "1. ✓ C ist case-sensitiv: Die großgeschriebene Variante wurde nie deklariert — Compilerfehler \"undeclared identifier\".\n2. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.\n3. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.\n4. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n5. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24309,7 +24309,7 @@
     0,
     2
    ],
-   "explanation": "Tatsächliche Fehler: Zaehler ist nicht deklariert – die Variable heißt zaehler (Groß-/Kleinschreibung). · Die schließende geschweifte Klammer der for-Schleife fehlt.. Keine Fehler: Vor return 0; muss immer ein printf stehen. · printf benötigt die Bibliothek math.h. · Ein Programm darf höchstens eine Funktion neben main enthalten..",
+   "explanation": "1. ✓ C ist case-sensitiv: Die großgeschriebene Variante wurde nie deklariert — Compilerfehler \"undeclared identifier\".\n2. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n3. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.\n4. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n5. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24331,7 +24331,7 @@
     1,
     3
    ],
-   "explanation": "Tatsächliche Fehler: Für atan und pow fehlt #include <math.h>. · Der const-Variablen pi wird nach der Initialisierung ein neuer Wert zugewiesen – Compilerfehler.. Keine Fehler: Vor return 0; muss immer ein printf stehen. · Die Funktion müsste vor #include stehen. · Die Variable darf nicht in main deklariert werden..",
+   "explanation": "1. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n2. ✓ Mathe-Funktionen wie atan und pow sind in math.h deklariert — ohne den Header kennt der Compiler sie nicht.\n3. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n4. ✓ const bedeutet unveränderlich: Nach der Initialisierung ist jede weitere Zuweisung ein COMPILERfehler (keine Laufzeit-Meldung!).\n5. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24353,7 +24353,7 @@
     1,
     4
    ],
-   "explanation": "Tatsächliche Fehler: Für atan und pow fehlt #include <math.h>. · Der const-Variablen pi wird nach der Initialisierung ein neuer Wert zugewiesen – Compilerfehler.. Keine Fehler: int ist als Rückgabetyp grundsätzlich verboten. · Die Funktion müsste vor #include stehen. · Der Formatstring müsste einfach statt doppelt angeführt sein..",
+   "explanation": "1. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.\n2. ✓ const bedeutet unveränderlich: Nach der Initialisierung ist jede weitere Zuweisung ein COMPILERfehler (keine Laufzeit-Meldung!).\n3. ✗ Strings stehen in C IMMER in doppelten Anführungszeichen. Einfache Anführungszeichen sind für einzelne Zeichen: 'a'.\n4. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n5. ✓ Mathe-Funktionen wie atan und pow sind in math.h deklariert — ohne den Header kennt der Compiler sie nicht.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24375,7 +24375,7 @@
     1,
     3
    ],
-   "explanation": "Tatsächliche Fehler: Für atan und pow fehlt #include <math.h>. · Der const-Variablen pi wird nach der Initialisierung ein neuer Wert zugewiesen – Compilerfehler.. Keine Fehler: Vor return 0; muss immer ein printf stehen. · printf benötigt die Bibliothek math.h. · int ist als Rückgabetyp grundsätzlich verboten..",
+   "explanation": "1. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.\n2. ✓ const bedeutet unveränderlich: Nach der Initialisierung ist jede weitere Zuweisung ein COMPILERfehler (keine Laufzeit-Meldung!).\n3. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n4. ✓ Mathe-Funktionen wie atan und pow sind in math.h deklariert — ohne den Header kennt der Compiler sie nicht.\n5. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24397,7 +24397,7 @@
     1,
     3
    ],
-   "explanation": "Tatsächliche Fehler: Nach double a = 7.5, b = 2.0 fehlt das Semikolon. · Der Specifier %d passt nicht zum double-Wert q – korrekt wäre %lf.. Keine Fehler: Der Funktionsname darf keinen Kleinbuchstaben enthalten. · int ist als Rückgabetyp grundsätzlich verboten. · Die Variable darf nicht in main deklariert werden..",
+   "explanation": "1. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n2. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n3. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.\n4. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n5. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24419,7 +24419,7 @@
     2,
     4
    ],
-   "explanation": "Tatsächliche Fehler: Nach double a = 9.0, b = 4.0 fehlt das Semikolon. · Der Specifier %d passt nicht zum double-Wert q – korrekt wäre %lf.. Keine Fehler: Vor return 0; muss immer ein printf stehen. · Die Variable darf nicht in main deklariert werden. · Ein Programm darf höchstens eine Funktion neben main enthalten..",
+   "explanation": "1. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n2. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n3. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n4. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24441,7 +24441,7 @@
     3,
     4
    ],
-   "explanation": "Tatsächliche Fehler: Nach double a = 5.5, b = 1.5 fehlt das Semikolon. · Der Specifier %d passt nicht zum double-Wert q – korrekt wäre %lf.. Keine Fehler: Ein Programm darf höchstens eine Funktion neben main enthalten. · Die Variable darf nicht in main deklariert werden. · printf benötigt die Bibliothek math.h..",
+   "explanation": "1. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n2. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n3. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n4. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24463,7 +24463,7 @@
     1,
     3
    ],
-   "explanation": "Tatsächliche Fehler: Im for-Kopf müssen die drei Teile durch Semikolons getrennt werden, nicht durch Kommas. · Nach dem printf-Aufruf fehlt das Semikolon.. Keine Fehler: Vor return 0; muss immer ein printf stehen. · Die Funktion müsste vor #include stehen. · printf benötigt die Bibliothek math.h..",
+   "explanation": "1. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n4. ✓ Der for-Kopf hat drei Teile — Start, Bedingung, Schritt — und sie werden durch SEMIKOLONS getrennt: for (i = 0; i < n; i++).\n5. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24485,7 +24485,7 @@
     1,
     4
    ],
-   "explanation": "Tatsächliche Fehler: Im for-Kopf müssen die drei Teile durch Semikolons getrennt werden, nicht durch Kommas. · Nach dem printf-Aufruf fehlt das Semikolon.. Keine Fehler: Die Variable darf nicht in main deklariert werden. · Die Funktion müsste vor #include stehen. · Der Formatstring müsste einfach statt doppelt angeführt sein..",
+   "explanation": "1. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n4. ✗ Strings stehen in C IMMER in doppelten Anführungszeichen. Einfache Anführungszeichen sind für einzelne Zeichen: 'a'.\n5. ✓ Der for-Kopf hat drei Teile — Start, Bedingung, Schritt — und sie werden durch SEMIKOLONS getrennt: for (i = 0; i < n; i++).",
    "source": "T-48 / AT-14",
    "verified": true
   },
@@ -24507,7 +24507,7 @@
     1,
     3
    ],
-   "explanation": "Tatsächliche Fehler: Im for-Kopf müssen die drei Teile durch Semikolons getrennt werden, nicht durch Kommas. · Nach dem printf-Aufruf fehlt das Semikolon.. Keine Fehler: Vor return 0; muss immer ein printf stehen. · Die Funktion müsste vor #include stehen. · int ist als Rückgabetyp grundsätzlich verboten..",
+   "explanation": "1. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n2. ✓ Der for-Kopf hat drei Teile — Start, Bedingung, Schritt — und sie werden durch SEMIKOLONS getrennt: for (i = 0; i < n; i++).\n3. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n4. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n5. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.",
    "source": "T-48 / AT-14",
    "verified": true
   }
