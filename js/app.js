@@ -664,6 +664,11 @@
     ));
 
     setView(view, '');
+
+    // Neuerungen einmalig zeigen. Bewusst hier und nicht nur direkt nach dem
+    // Login: Wer eingeloggt bleibt (Cookie, 180 Tage), sieht den Login-Screen
+    // sonst nie wieder und würde den Hinweis nie bekommen.
+    maybeShowNews();
   }
 
   // ===========================================================================
@@ -1417,6 +1422,77 @@
 
     setView(view, '');
     setTimeout(() => input.focus(), 50);
+  }
+
+  // ===========================================================================
+  // "Was ist neu?" — einmalig pro Nutzer
+  // ===========================================================================
+
+  /*
+   * NEWS_VERSION hochzählen und NEWS_ITEMS austauschen, wenn es wieder etwas
+   * zu verkünden gibt — dann sieht jeder Nutzer den Hinweis erneut genau einmal.
+   * Der Bestätigungs-Stand liegt im synchronisierten Fortschritt (storage),
+   * damit der Dialog nicht auf jedem Gerät neu aufpoppt.
+   */
+  const NEWS_VERSION = 1;
+
+  const NEWS_ITEMS = [
+    {
+      icon: '🎯',
+      title: 'Dein Lernfortschritt zählt jetzt',
+      text: 'Beim Üben verschwinden Fragen, die du richtig hattest — Schluss mit Fragen, die du längst kannst. Ein Balken zeigt, wie viele noch offen sind. Sind alle einmal richtig, ist der Durchlauf geschafft und startet neu.',
+    },
+    {
+      icon: '🔁',
+      title: '„Fehler wiederholen" räumt schneller auf',
+      text: 'Eine falsche Frage fliegt jetzt schon bei der ersten richtigen Antwort aus dem Fehler-Pool — vorher brauchte es vier.',
+    },
+    {
+      icon: '💡',
+      title: 'Deutlich bessere Erklärungen',
+      text: 'Bei 434 Fragen stand vorher nur „Antwort 1 richtig, 2 falsch". Jetzt wird jede Antwortmöglichkeit einzeln begründet — mit Rechenweg und dem C-Konzept dahinter.',
+    },
+  ];
+
+  function dismissNews(overlay) {
+    CKT.storage.setNewsSeen(NEWS_VERSION);
+    overlay.classList.add('closing');
+    window.setTimeout(() => overlay.remove(), 200);
+    document.removeEventListener('keydown', overlay._esc, true);
+  }
+
+  /** Zeigt den Hinweis, falls dieser Nutzer die aktuelle Version noch nicht bestätigt hat. */
+  function maybeShowNews() {
+    if (CKT.storage.getNewsSeen() >= NEWS_VERSION) return;
+    if (document.getElementById('newsModal')) return; // läuft bereits
+
+    const list = el('ul', { className: 'news-list' });
+    for (const item of NEWS_ITEMS) {
+      list.appendChild(el('li', { className: 'news-item' },
+        el('span', { className: 'news-icon', text: item.icon }),
+        el('div', {},
+          el('strong', { className: 'news-title', text: item.title }),
+          el('p', { className: 'news-text', text: item.text }))));
+    }
+
+    const okBtn = el('button', { className: 'btn btn-primary btn-block', type: 'button', text: 'Alles klar, los geht’s' });
+    const card = el('div', { className: 'modal-card', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'newsTitle' },
+      el('span', { className: 'modal-badge', text: 'Neu' }),
+      el('h2', { className: 'modal-title', id: 'newsTitle', text: 'Was ist neu?' }),
+      el('p', { className: 'modal-sub', text: 'Zwei größere Verbesserungen — kurz erklärt, damit du sie auch nutzt:' }),
+      list,
+      el('div', { className: 'btn-row' }, okBtn));
+
+    const overlay = el('div', { className: 'modal-overlay', id: 'newsModal' }, card);
+    okBtn.addEventListener('click', () => dismissNews(overlay));
+
+    // Nur der Button (oder Escape) schließt — kein Klick daneben, damit der
+    // Hinweis nicht versehentlich weggeklickt und nie wieder gezeigt wird.
+    overlay._esc = (e) => { if (e.key === 'Escape') { e.preventDefault(); dismissNews(overlay); } };
+    document.addEventListener('keydown', overlay._esc, true);
+
+    document.body.appendChild(overlay);
+    setTimeout(() => okBtn.focus(), 60);
   }
 
   // ---- Freiwillige Unterstützung (Kaffeekasse) ------------------------------

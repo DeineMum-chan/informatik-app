@@ -219,10 +219,16 @@ function handleStatic(req, res, pathname) {
   fs.readFile(file, (err, buf) => {
     if (err) { res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' }); return res.end('404 Not Found'); }
     const ext = path.extname(file).toLowerCase();
+    // 'no-cache' heißt NICHT "nicht cachen", sondern "vor Nutzung beim Server
+    // rückfragen" (billiges 304, wenn unverändert). Wichtig: Sonst könnte der
+    // Browser nach einem Deploy bis zu einer Stunde alte JS/CSS liefern — und
+    // der Service Worker würde diese veralteten Dateien beim Neuinstallieren
+    // sogar in seinen Offline-Cache übernehmen. Das echte Offline-Caching
+    // macht ohnehin der Service Worker, nicht der HTTP-Cache.
+    const longLived = ext === '.woff2' || ext === '.png'; // Fonts/Icons ändern sich praktisch nie
     res.writeHead(200, {
       'Content-Type': MIME[ext] || 'application/octet-stream',
-      // HTML/SW immer frisch; alles andere cached ohnehin der Service Worker
-      'Cache-Control': (ext === '.html' || base === 'service-worker.js') ? 'no-cache' : 'public, max-age=3600',
+      'Cache-Control': longLived ? 'public, max-age=86400' : 'no-cache',
     });
     res.end(req.method === 'HEAD' ? undefined : buf);
   });

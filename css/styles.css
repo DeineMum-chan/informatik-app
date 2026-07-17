@@ -1150,6 +1150,129 @@ button { font-family: inherit; color: inherit; }
   margin: 0.9rem 0 0;
 }
 
+/* ---- Modal / „Was ist neu?" -------------------------------------------------- */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+  background: color-mix(in srgb, #000 45%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: overlayIn 0.25s var(--ease);
+}
+
+.modal-overlay.closing { animation: overlayOut 0.2s var(--ease) forwards; }
+
+@keyframes overlayIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes overlayOut { to { opacity: 0; } }
+
+.modal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: clamp(1.3rem, 4vw, 1.8rem);
+  width: 100%;
+  max-width: 30rem;
+  margin: auto;
+  animation: modalIn 0.35s var(--ease);
+  /* Höhe begrenzen und intern scrollen, damit der Bestätigen-Button auch auf
+     kleinen Displays IMMER sichtbar bleibt. */
+  max-height: calc(100dvh - 2rem);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.modal-card > .btn-row { flex-shrink: 0; margin-top: 1.2rem; }
+
+.modal-overlay.closing .modal-card { animation: modalOut 0.2s var(--ease) forwards; }
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes modalOut { to { opacity: 0; transform: translateY(10px) scale(0.98); } }
+
+.modal-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-radius: 999px;
+  padding: 0.16rem 0.7rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.7rem;
+}
+
+.modal-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.modal-sub {
+  margin: 0 0 1.3rem;
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;      /* nur die Liste scrollt … */
+  flex: 1 1 auto;
+  min-height: 0;         /* … dafür muss min-height weg (Flexbox-Falle) */
+  -webkit-overflow-scrolling: touch;
+}
+
+.news-item { display: flex; gap: 0.9rem; align-items: flex-start; }
+
+.news-icon {
+  flex-shrink: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.news-title {
+  display: block;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.15rem;
+}
+
+.news-text {
+  margin: 0;
+  font-size: 0.87rem;
+  font-weight: 500;
+  color: var(--ink-dim);
+  line-height: 1.5;
+}
+
 /* ---- Kaffeekasse / Unterstützung (Login-Screen) ----------------------------- */
 
 .support-card { text-align: center; }

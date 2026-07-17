@@ -54,6 +54,7 @@
       perQuestion: {},
       global: { answered: 0, correct: 0, streak: 0, bestStreak: 0, lastPracticed: null },
       exams: [],
+      newsSeen: 0,   // zuletzt bestätigte Neuerungs-Version (siehe NEWS_VERSION in app.js)
       savedAt: 0,
     };
   }
@@ -87,6 +88,7 @@
       perQuestion,
       global: Object.assign(base.global, parsed.global),
       exams: Array.isArray(parsed.exams) ? parsed.exams : base.exams,
+      newsSeen: Number(parsed.newsSeen) || 0,
       savedAt: Number(parsed.savedAt) || 0,
     };
   }
@@ -326,9 +328,20 @@
   }
 
   function resetAll() {
+    const seen = state.newsSeen; // Neuerungs-Hinweis nicht erneut zeigen
     state = emptyState();
+    state.newsSeen = seen;
     try { localStorage.removeItem(storageKey()); } catch (err) { /* egal */ }
     save(); // schreibt den leeren Stand lokal & (falls angemeldet) zum Server
+  }
+
+  // ---- Neuerungs-Hinweis ("Was ist neu?") -----------------------------------
+
+  function getNewsSeen() { return state.newsSeen || 0; }
+
+  function setNewsSeen(version) {
+    state.newsSeen = version;
+    save();
   }
 
   // ---- Farbschema -------------------------------------------------------------
@@ -366,6 +379,8 @@
     addExamResult,
     examHistory,
     resetAll,
+    getNewsSeen,
+    setNewsSeen,
     getTheme,
     setTheme,
   };

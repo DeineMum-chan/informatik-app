@@ -12,7 +12,7 @@
  * damit alte Caches aufgeräumt und alle Assets neu geladen werden.
  */
 
-const VERSION = 'ckt-v7';
+const VERSION = 'ckt-v8';
 const CACHE_NAME = `c-klausurtrainer-${VERSION}`;
 
 const APP_SHELL = [
@@ -38,7 +38,13 @@ const APP_SHELL = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(APP_SHELL))
+      // cache: 'reload' erzwingt frische Netz-Antworten und umgeht den
+      // HTTP-Cache des Browsers. Ohne das könnte eine neue Version veraltete
+      // Dateien aus dem Browser-Cache in den Offline-Cache übernehmen und
+      // sie dort bis zur nächsten Version festschreiben.
+      .then((cache) => Promise.all(
+        APP_SHELL.map((url) => cache.add(new Request(url, { cache: 'reload' })))
+      ))
       .then(() => self.skipWaiting())
   );
 });
