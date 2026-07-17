@@ -577,6 +577,28 @@
         el('div', { className: 'stat-label', text: 'Zuletzt geübt' }))
     ));
 
+    // Gesamt-Lernstand: Wie weit bin ich durch den Pool?
+    const runFill = el('div', { className: 'bar-fill' });
+    runFill.style.width = runAll.total > 0 ? Math.round((runAll.done / runAll.total) * 100) + '%' : '0%';
+    const seenFill = el('div', { className: 'bar-fill' });
+    seenFill.style.width = runAll.total > 0 ? Math.round((runAll.answered / runAll.total) * 100) + '%' : '0%';
+
+    view.appendChild(el('div', { className: 'card progress-card' },
+      el('div', { className: 'progress-row' },
+        el('span', { className: 'progress-label', text: 'Aktueller Durchlauf' }),
+        el('span', { className: 'progress-value', text: `${runAll.done} / ${runAll.total}` })),
+      el('div', { className: 'bar' }, runFill),
+      el('p', { className: 'progress-sub', text: runAll.open > 0
+        ? `Noch ${runAll.open} Fragen offen, bis der Durchlauf komplett ist.`
+        : 'Durchlauf komplett — beim nächsten Üben startet ein neuer.' }),
+      el('div', { className: 'progress-row', style: 'margin-top:1rem' },
+        el('span', { className: 'progress-label', text: 'Schon mal beantwortet' }),
+        el('span', { className: 'progress-value', text: `${runAll.answered} / ${runAll.total}` })),
+      el('div', { className: 'bar' }, seenFill),
+      el('p', { className: 'progress-sub', text: runAll.fresh > 0
+        ? `${runAll.fresh} Fragen hast du noch nie gesehen. Diese Zahl bleibt auch nach einem Durchlauf-Reset erhalten.`
+        : 'Du hast jede Frage aus dem Pool mindestens einmal gesehen.' })));
+
     // Modus-Karten
     const lastExam = CKT.storage.examHistory()[0];
     view.appendChild(el('div', { className: 'mode-grid' },
@@ -1574,9 +1596,28 @@
   function registerServiceWorker() {
     if (!('serviceWorker' in navigator)) return;
     if (!/^https?:$/.test(window.location.protocol)) return; // file:// → kein SW möglich
-    navigator.serviceWorker.register('service-worker.js').catch(() => {
-      /* Offline-Cache nicht verfügbar (z. B. http ohne localhost) — App läuft trotzdem. */
+
+    // Der Service Worker liefert "Cache-first" — ohne die folgende Automatik
+    // würden Nutzer nach einem Update beliebig lange auf altem Code sitzen
+    // bleiben (sie müssten zufällig zweimal neu laden). Sobald eine neue
+    // Version die Kontrolle übernimmt, laden wir die Seite deshalb einmalig neu.
+    const hatteController = !!navigator.serviceWorker.controller;
+    let laedtNeu = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!hatteController || laedtNeu) return; // Erstinstallation: kein Reload nötig
+      laedtNeu = true;
+      window.location.reload();
     });
+
+    navigator.serviceWorker.register('service-worker.js')
+      .then((reg) => {
+        reg.update(); // aktiv nach einer neuen Version fragen (nicht erst irgendwann)
+        // Bei längeren Sitzungen stündlich erneut prüfen.
+        window.setInterval(() => reg.update(), 60 * 60 * 1000);
+      })
+      .catch(() => {
+        /* Offline-Cache nicht verfügbar (z. B. http ohne localhost) — App läuft trotzdem. */
+      });
   }
 
   // ---- Bootstrap ------------------------------------------------------------

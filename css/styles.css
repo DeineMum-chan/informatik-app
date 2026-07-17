@@ -970,6 +970,34 @@ button { font-family: inherit; color: inherit; }
 /* Durchlauf-Fortschritt im Übungsmodus */
 .run-bar { margin-bottom: 1.1rem; }
 
+/* Gesamt-Lernstand auf der Startseite */
+.progress-card { padding: clamp(1rem, 3vw, 1.4rem); }
+
+.progress-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.45rem;
+}
+
+.progress-label { font-size: 0.85rem; font-weight: 600; }
+
+.progress-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.progress-sub {
+  margin: 0.45rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink-faint);
+}
+
 /* ---- Klausurmodus --------------------------------------------------------------------------- */
 
 .exam-bar {

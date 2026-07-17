@@ -266,11 +266,21 @@
     return !!(r && r.d);
   }
 
-  /** Durchlauf-Fortschritt über eine Fragenmenge: { total, done, open }. */
+  /**
+   * Fortschritt über eine Fragenmenge:
+   *   done     = im aktuellen Durchlauf schon richtig beantwortet (wird beim Reset genullt)
+   *   answered = jemals beantwortet (überlebt Durchlauf-Resets → echter Gesamt-Lernstand)
+   *   fresh    = noch nie gesehen
+   */
   function runProgress(questions) {
-    let done = 0;
-    for (const q of questions) if (isDone(q.id)) done += 1;
-    return { total: questions.length, done, open: questions.length - done };
+    let done = 0, answered = 0;
+    for (const q of questions) {
+      const r = state.perQuestion[q.id];
+      if (r && r.d) done += 1;
+      if (r && r.s > 0) answered += 1;
+    }
+    const total = questions.length;
+    return { total, done, open: total - done, answered, fresh: total - answered };
   }
 
   /**
