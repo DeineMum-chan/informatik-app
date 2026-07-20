@@ -244,6 +244,12 @@
     return !!(r && r.m);
   }
 
+  /** Markierung entfernen (z. B. wenn eine Frage im Wiederholen-Modus sitzt). */
+  function clearMark(id) {
+    const r = state.perQuestion[id];
+    if (r && r.m) { r.m = false; save(); }
+  }
+
   function getRecord(id) {
     return state.perQuestion[id] || null;
   }
@@ -386,6 +392,7 @@
     recordAnswer,
     toggleMark,
     isMarked,
+    clearMark,
     getRecord,
     reviewIds,
     isDone,

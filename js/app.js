@@ -966,7 +966,14 @@
       el('span', { text: `Noch ${pool.length} im Fehler-Pool · richtig beantwortet = raus${r && r.m ? ' · ★ gemerkt' : ''}` })));
 
     view.appendChild(renderImmediateQuestion(q, {
-      onDone: (correct) => CKT.storage.recordAnswer(q.id, correct),
+      onDone: (correct) => {
+        CKT.storage.recordAnswer(q.id, correct);
+        // Im Wiederholen-Modus zählt: richtig = ganz raus. Eine falsche Antwort
+        // hat rv gesetzt (→ recordAnswer räumt sie bei richtig wieder ab); eine
+        // ★-Markierung muss hier zusätzlich entfernt werden, sonst bliebe die
+        // Frage trotz richtiger Antwort im Fehler-Pool hängen.
+        if (correct) CKT.storage.clearMark(q.id);
+      },
       onNext: () => renderReview(q.id),
     }));
 
