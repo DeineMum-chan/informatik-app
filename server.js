@@ -34,7 +34,21 @@ const ROOT = __dirname;
 const DATA_DIR = process.env.DATA_DIR || path.join(ROOT, 'data-store');
 const USERS_FILE = path.join(ROOT, 'users.json');
 const COOKIE_NAME = 'ckt_user';
-const COOKIE_MAX_AGE = 60 * 60 * 24 * 180; // 180 Tage
+// Die Anmeldung gilt nur für den KALENDERTAG, an dem man sich einloggt.
+// So sieht jeder täglich wieder den Login-Screen (mit dem Spenden-QR-Code).
+// Das Cookie enthält "name~YYYY-MM-DD"; ist das Datum nicht mehr heute
+// (deutsche Zeit), zählt man als abgemeldet. Max-Age nur als Aufräum-Puffer.
+const COOKIE_MAX_AGE = 60 * 60 * 36; // 36 h — der Kalendertag-Check erzwingt täglich neu
+
+/** Heutiges Datum als YYYY-MM-DD in deutscher Zeit (DST-sicher via Intl). */
+function todayBerlin() {
+  try {
+    return new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Berlin' });
+  } catch (err) {
+    // Sollte Intl/Zeitzonen wider Erwarten fehlen: UTC-Datum als Rückfall.
+    return new Date().toISOString().slice(0, 10);
+  }
+}
 const MAX_BODY = 2 * 1024 * 1024; // 2 MB reichen für den Fortschritts-Blob locker
 
 // Diese Dateien gibt der statische Handler nicht heraus.
@@ -117,10 +131,19 @@ function parseCookies(req) {
   return out;
 }
 
-/** Angemeldeten Nutzer aus dem Cookie lesen und gegen die Allowlist prüfen. */
+/**
+ * Angemeldeten Nutzer aus dem Cookie lesen und gegen die Allowlist prüfen.
+ * Zusätzlich muss der im Cookie hinterlegte Login-Tag der heutige sein —
+ * sonst gilt die Anmeldung als abgelaufen (täglich neuer Login).
+ */
 function currentUser(req) {
-  const name = normalizeName(parseCookies(req)[COOKIE_NAME]);
+  const raw = parseCookies(req)[COOKIE_NAME] || '';
+  const sep = raw.indexOf('~');
+  if (sep < 0) return null; // altes/ungültiges Cookie ohne Datum → neu einloggen
+  const name = normalizeName(raw.slice(0, sep));
+  const day = raw.slice(sep + 1);
   if (!isSafeName(name)) return null;
+  if (day !== todayBerlin()) return null; // gestern eingeloggt → abgelaufen
   return loadUsers().has(name) ? name : null;
 }
 
@@ -152,8 +175,9 @@ async function handleApi(req, res, pathname) {
     if (!isSafeName(name) || !loadUsers().has(name)) {
       return sendJson(res, 403, { error: 'unknown_user' });
     }
+    const value = encodeURIComponent(name + '~' + todayBerlin());
     res.setHeader('Set-Cookie',
-      `${COOKIE_NAME}=${encodeURIComponent(name)}; Path=/; Max-Age=${COOKIE_MAX_AGE}; HttpOnly; SameSite=Lax`);
+      `${COOKIE_NAME}=${value}; Path=/; Max-Age=${COOKIE_MAX_AGE}; HttpOnly; SameSite=Lax`);
     return sendJson(res, 200, { name });
   }
 

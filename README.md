@@ -91,6 +91,13 @@ sich als dieser Nutzer anmelden. Für den Zweck (Lerntrainer im Freundeskreis)
 ist das okay — sensible Daten liegen keine im System, gespeichert wird nur
 der Lernfortschritt.
 
+**Täglicher Login:** Die Anmeldung gilt nur für den Kalendertag (deutsche
+Zeit). Ab Mitternacht ist beim nächsten Öffnen wieder der Login-Screen dran —
+so sieht jeder täglich den Spenden-Hinweis. Umgesetzt über das Cookie
+`name~YYYY-MM-DD` (Login-Tag); ist der Tag nicht mehr heute, zählt man als
+abgemeldet (`currentUser` in `server.js`). Der Lernfortschritt bleibt davon
+unberührt — er liegt serverseitig pro Nutzer.
+
 ### Wie der Sync funktioniert
 
 Der Fortschritt liegt weiterhin als Offline-Cache im `localStorage`
