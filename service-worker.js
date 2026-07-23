@@ -12,7 +12,7 @@
  * damit alte Caches aufgeräumt und alle Assets neu geladen werden.
  */
 
-const VERSION = 'ckt-v11';
+const VERSION = 'ckt-v15';
 const CACHE_NAME = `c-klausurtrainer-${VERSION}`;
 
 const APP_SHELL = [

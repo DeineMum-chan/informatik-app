@@ -114,8 +114,8 @@ erkennt die App das automatisch und läuft wie bisher im Gastmodus ohne Login.
 
 | Modus | Was passiert |
 |---|---|
-| **Üben nach Thema** | Themen/Schwierigkeit wählen, Sofort-Feedback und Erklärung. **Fahrschul-Prinzip in Konzepten:** Der Pool enthält viele Werte-Varianten derselben Vorlage — diese sind zu „Konzepten" gebündelt. Pro Durchlauf kommt je Konzept genau **eine** Variante; im nächsten Durchlauf eine andere (Antworten lassen sich nicht auswendig lernen). Geschaffte Konzepte verschwinden aus dem Strom, falsche kommen wieder; Antwortmöglichkeiten werden bei jeder Anzeige gemischt. Ist der Durchlauf komplett, wird der Stand zurückgesetzt. „☆ merken" markiert schwierige Fragen. |
-| **Klausursimulation** | Realistischer Mix: Teil 1 (~40 Fragen: R/F-Aussagen, „Was trifft zu?", Predict-Output, Zahlensysteme, Einfachauswahl) + Teil 2 (4 Code-Snippets à ~10 Aussagen + 1 Fehler-finden). Optionen: Zeitlimit (Standard 90 min) und Negativ-Marking (unbeantwortet = −0,5 P., wie beim Dozenten). Am Ende: Punkte, Prozent, geschätzte Note, Themen-Schwächen und komplette Durchsicht. |
+| **Üben nach Thema** | Themen/Schwierigkeit wählen, Sofort-Feedback und Erklärung. Standardmäßig ist **Q2** aktiv (`mittel` + `schwer`): 117 Konzeptfamilien decken alle 47 aktiven Themen ab und besitzen jeweils mindestens zwei Varianten. Pro Durchlauf kommt je Konzept eine Variante; der nächste vollständige Durchlauf wechselt zuerst die Perspektive (Regel, Anwendung, Diagnose, Transfer) und danach Zahlen/Namen. Leichte Grundlagen lassen sich freiwillig zuschalten. Geschaffte Konzepte verschwinden, falsche kommen wieder; Antwortoptionen werden gemischt. |
+| **Klausursimulation** | Realistischer Mix: Teil 1 (~40 Fragen: R/F-Aussagen, „Was trifft zu?", Predict-Output, alle sechs Zahlensystem-Richtungen, Einfachauswahl) + Teil 2 (4 Code-Snippets à ~10 Aussagen + 1 Fehler-finden). Einzelfragen sind mittel/schwer. Die Auswahl zieht unterschiedliche Konzeptfamilien und Code-Archetypen, vermeidet die konkreten Varianten der unmittelbar vorherigen Klausur und – außer den sechs verpflichtenden Zahlensystem-Familien – auch deren Familien. Bei der Fehlersuche werden Codezeilen direkt markiert und Korrekturen selbst eingetragen. Optionen: Zeitlimit und Negativ-Marking. |
 | **Fehler wiederholen** | Falsch beantwortete + gemerkte Fragen. Wer eine Frage **einmal richtig** beantwortet, nimmt sie sofort aus dem Pool — so wiederholen sich dieselben Fragen nicht. Gemerkte Fragen bleiben, bis die Markierung entfernt wird. |
 
 **Notenschätzung** (üblicher Hochschulschlüssel, Bestehensgrenze 50 %):
@@ -138,11 +138,17 @@ c-klausurtrainer/
 ├── js/storage.js           # Fortschritt in localStorage + Server-Sync
 ├── data/questions.json     # Fragenpool (Quelle der Wahrheit)
 ├── data/questions.js       # generierte Kopie für den Start per Doppelklick
+├── docs/QUALITAETSKONZEPT.md # verbindliche Q2-Regeln und Abnahmekriterien
 ├── assets/icons/           # PWA-Icons (192/512 px)
 ├── assets/fonts/           # Montserrat (lokal eingebettet, kein CDN)
 ├── manifest.webmanifest    # PWA-Manifest
 ├── service-worker.js       # Offline-Caching aller Dateien
 ├── server.js               # Mini-Backend für den Online-Betrieb (Node, ohne npm)
+├── scripts/
+│   ├── enrich-find-bug.js  # erzeugt strukturierte Fehlerstellen + Offline-Kopie
+│   ├── enrich-question-quality.js # Fachkorrekturen, Familien + Detailfragen
+│   ├── test-find-bug.js    # Regressionstest für Fehlersuche und Klausurbau
+│   └── test-question-quality.js # Q2-Durchläufe + 1500 Klausursimulationen
 ├── users.json              # erlaubte Login-Namen (Allowlist)
 ├── Dockerfile              # Container für Coolify
 └── README.md
@@ -158,20 +164,23 @@ Coolify gemountete Volume `/app/data-store`) — eine JSON-Datei pro Nutzer.
 1. Neue bzw. erweiterte Datei nach `data/questions.json` kopieren
    (Schema unverändert lassen; fehlerhafte Fragen werden beim Laden
    übersprungen und dezent gezählt, die App stürzt nicht ab).
-2. Die Doppelklick-Kopie neu erzeugen — PowerShell im Ordner `c-klausurtrainer`:
-
-   ```powershell
-   "window.CKT_EMBEDDED_DATA = " + (Get-Content -Raw data/questions.json) + ";" |
-     Set-Content -Encoding utf8 data/questions.js
-   ```
-
-   oder mit Python:
+2. Im Ordner `c-klausurtrainer` die redaktionellen Anreicherungen in dieser
+   Reihenfolge ausführen. Beide Skripte sind wiederholbar; das zweite erzeugt
+   am Ende auch die aktuelle Doppelklick-Kopie `data/questions.js`:
 
    ```
-   python -c "open('data/questions.js','w',encoding='utf-8').write('window.CKT_EMBEDDED_DATA = '+open('data/questions.json',encoding='utf-8').read()+';')"
+   node scripts/enrich-find-bug.js
+   node scripts/enrich-question-quality.js
    ```
 
-3. In `service-worker.js` die Konstante `VERSION` hochzählen (z. B. `ckt-v2`),
+3. Beide Regressionstests ausführen:
+
+   ```
+   node scripts/test-find-bug.js
+   node scripts/test-question-quality.js
+   ```
+
+4. In `service-worker.js` die Konstante `VERSION` hochzählen (z. B. `ckt-v16`),
    damit installierte PWAs den neuen Pool übernehmen. Beim Laden über den
    Webserver holt sich die App den Pool ohnehin bevorzugt frisch aus dem Netz
    (Network-first für `questions.json`).
@@ -183,6 +192,37 @@ Coolify gemountete Volume `/app/data-store`) — eine JSON-Datei pro Nutzer.
 führende Nullen; `acceptedAnswers` für Alternativen), `code-explain`
 (Freitext mit Musterlösung zum Selbstabgleich). Fragen mit gleicher `group`
 gehören zu einem Code-Snippet und werden zusammen angezeigt.
+
+Mit `familyId` lassen sich Werte-, Namens- oder Codevarianten ausdrücklich
+derselben semantischen Konzeptfamilie zuordnen. Fehlt das Feld, verwendet die
+Engine weiterhin ihre Textnormalisierung als Rückfall. Übungsdurchläufe und
+Klausuren wählen auf Familienebene und danach zufällig eine konkrete Variante.
+`variantAngle` unterscheidet Regel, Anwendung, Diagnose und Transfer;
+`qualityLevel: 2` kennzeichnet redaktionell geprüfte Q2-Varianten. Die
+vollständige Definition steht in
+[`docs/QUALITAETSKONZEPT.md`](docs/QUALITAETSKONZEPT.md).
+
+`find-bug` unterstützt zusätzlich `bugTargets`: Jede Fehlerstelle enthält eine
+kanonische Zeile, optional alternative zulässige Zeilen sowie akzeptierte
+Korrekturen. Bei alternativen Reparaturwegen lassen sich Korrekturen mit
+`acceptedRepairs` gezielt an bestimmte Zeilen binden. Der Nutzer markiert
+dadurch Fehler direkt im Code, statt aus vorgegebenen Aussagen auszuwählen.
+Für eine vollständig richtige Antwort müssen alle Fehlerstellen passend
+korrigiert sein; zusätzliche Markierungen zählen als falsch. Die bisherigen
+`options`/`answerIndices` bleiben als rückwärtskompatible redaktionelle Quelle
+erhalten.
+
+Nach redaktionellen Änderungen an den 30 Fehlersuche-Aufgaben erzeugt
+`node scripts/enrich-find-bug.js` die strukturierten Fehlerstellen erneut und
+aktualisiert zugleich `data/questions.js`.
+
+`node scripts/enrich-question-quality.js` korrigiert die fachlich geprüften
+Einzelfälle, setzt die expliziten Konzeptfamilien und ergänzt die 28
+Dozenten-Detailfragen sowie 56 zusätzliche Q2-Verständnisvarianten. Danach
+prüfen `node scripts/test-find-bug.js` und
+`node scripts/test-question-quality.js` Datenvertrag, Bewertung,
+Rückwärtskompatibilität, Familienbildung, Variantenrotation und den
+Wiederholungsschutz aufeinanderfolgender Klausuren automatisch.
 
 ---
 

@@ -41,6 +41,28 @@
       v.every((i) => Number.isInteger(i) && i >= 0 && i < optionCount);
   }
 
+  function isStructuredFindBug(q) {
+    return q && q.type === 'find-bug' && Array.isArray(q.bugTargets) && q.bugTargets.length > 0;
+  }
+
+  function hasValidBugTargets(q) {
+    return isNonEmptyString(q.code) && Array.isArray(q.bugTargets) && q.bugTargets.length > 0 &&
+      q.bugTargets.every((target) =>
+        target && isNonEmptyString(target.id) && Number.isInteger(target.line) && target.line > 0 &&
+        isNonEmptyString(target.solution) &&
+        Array.isArray(target.acceptedCorrections) && target.acceptedCorrections.length > 0 &&
+        target.acceptedCorrections.every(isNonEmptyString) &&
+        (!target.acceptedLines ||
+          (Array.isArray(target.acceptedLines) && target.acceptedLines.length > 0 &&
+            target.acceptedLines.every((line) => Number.isInteger(line) && line > 0))) &&
+        (!target.acceptedRepairs ||
+          (Array.isArray(target.acceptedRepairs) && target.acceptedRepairs.length > 0 &&
+            target.acceptedRepairs.every((repair) =>
+              repair && Number.isInteger(repair.line) && repair.line > 0 &&
+              Array.isArray(repair.corrections) && repair.corrections.length > 0 &&
+              repair.corrections.every(isNonEmptyString)))));
+  }
+
   // ---------------------------------------------------------------------------
   // Validierung & Aufbereitung des Pools
   // ---------------------------------------------------------------------------
@@ -62,8 +84,12 @@
         return hasOptions && Number.isInteger(q.answerIndex) &&
           q.answerIndex >= 0 && q.answerIndex < q.options.length;
       case 'mc-multi':
-      case 'find-bug':
         return hasOptions && isIndexArray(q.answerIndices, q.options.length);
+      case 'find-bug':
+        // Neue Aufgaben werden direkt im Code markiert. Die bisherige
+        // Optionsliste bleibt als rückwärtskompatibler Fallback erlaubt.
+        return hasValidBugTargets(q) ||
+          (hasOptions && isIndexArray(q.answerIndices, q.options.length));
       case 'short-answer':
       case 'code-explain':
         return isNonEmptyString(q.answer);
@@ -184,6 +210,10 @@
   }
 
   function familyKeyOf(dataset, q) {
+    // Redaktionell gesetzte Familien-ID hat Vorrang vor der heuristischen
+    // Textnormalisierung. So lassen sich semantisch gleiche Varianten auch
+    // dann bündeln, wenn Variablennamen oder Array-Längen verschieden sind.
+    if (isNonEmptyString(q.familyId)) return 'E|' + q.familyId;
     if (isNonEmptyString(q.group) && dataset.groups[q.group]) {
       const g = dataset.groups[q.group];
       return 'G|' + g.topicId + '|' + normalizeForFamily(g.code, null);
@@ -212,12 +242,12 @@
       const key = familyKeyOf(dataset, q);
       let fam = byKey.get(key);
       if (!fam) {
-        fam = { key, units: [] };
+        fam = { key, units: [], index: dataset.families.length };
         byKey.set(key, fam);
         dataset.families.push(fam);
       }
       fam.units.push(u);
-      dataset.familyByUnitKey[unitKey(u)] = dataset.families.length - 1;
+      dataset.familyByUnitKey[unitKey(u)] = fam.index;
     }
   }
 
@@ -277,6 +307,30 @@
     return unit.kind === 'group' ? 'g:' + unit.group.id : 'q:' + unit.q.id;
   }
 
+  function variantAngleOf(unit) {
+    const q = unit.kind === 'group' ? unit.group.questions[0] : unit.q;
+    return isNonEmptyString(q.variantAngle) ? q.variantAngle : q.type;
+  }
+
+  /**
+   * Rotiert zunächst zwischen fachlich unterschiedlichen Perspektiven und
+   * danach zwischen Werte-/Namensvarianten derselben Perspektive.
+   */
+  function choosePracticeVariant(familyKey, units, seed) {
+    const byAngle = new Map();
+    for (const unit of units) {
+      const angle = variantAngleOf(unit);
+      if (!byAngle.has(angle)) byAngle.set(angle, []);
+      byAngle.get(angle).push(unit);
+    }
+    const angles = [...byAngle.entries()];
+    const position = hashStr(familyKey) + seed;
+    const angleIndex = position % angles.length;
+    const variants = angles[angleIndex][1];
+    const variantRound = Math.floor(position / angles.length);
+    return variants[variantRound % variants.length];
+  }
+
   // ---------------------------------------------------------------------------
   // Übungsmodus: endloser Strom mit Anti-Wiederholung (Shuffle + Rückstell-Queue)
   // ---------------------------------------------------------------------------
@@ -317,8 +371,7 @@
     const families = [...famMap.entries()].map(([fi, units]) => ({
       key: dataset.families[fi].key,
       units,
-      // Varianten-Rotation: pro Durchlauf (seed) eine andere Variante
-      chosen: units[(hashStr(dataset.families[fi].key) + seed) % units.length],
+      chosen: choosePracticeVariant(dataset.families[fi].key, units, seed),
     }));
 
     function familyDone(fam) {
@@ -352,7 +405,12 @@
       stats() {
         let done = 0;
         for (const f of families) if (familyDone(f)) done += 1;
-        return { total: families.length, done, open: families.length - done };
+        return {
+          total: families.length,
+          done,
+          open: families.length - done,
+          singleVariant: families.filter((family) => family.units.length < 2).length,
+        };
       },
       next() {
         const open = openFamilies();
@@ -411,36 +469,143 @@
   ];
   const EXAM_GROUP_COUNT = 4;
   const EXAM_FINDBUG_COUNT = 1;
+  const examPreferredQuestion = (q) => q.difficulty === 'mittel' || q.difficulty === 'schwer';
+
+  /**
+   * Zieht Fragen aus unterschiedlichen Konzeptfamilien. Innerhalb einer
+   * Familie wird eine zufällige Werte-/Namensvariante gewählt.
+   */
+  function sampleQuestionsByFamily(
+    dataset,
+    filter,
+    take,
+    usedFamilies,
+    usedQuestions,
+    selection,
+  ) {
+    const byFamily = new Map();
+    for (const q of dataset.questions) {
+      if (q.group || usedQuestions.has(q.id) || !filter(q)) continue;
+      // Manche Q2-Familien besitzen bewusst verschiedene Fragetypen. Für die
+      // Klausur wird eine Familie einem festen Topf zugeordnet, damit sie nicht
+      // in aufeinanderfolgenden Klausuren über zwei Töpfe ungewollt wiederkehrt.
+      if (isNonEmptyString(q.examFamilyRole) && q.examFamilyRole !== q.type) continue;
+      const familyIndex = dataset.familyByUnitKey['q:' + q.id];
+      if (usedFamilies.has(familyIndex)) continue;
+      if (!byFamily.has(familyIndex)) byFamily.set(familyIndex, []);
+      byFamily.get(familyIndex).push(q);
+    }
+
+    const recentFamilyKeys = selection && selection.recentFamilyKeys
+      ? selection.recentFamilyKeys : new Set();
+    const recentVariantKeys = selection && selection.recentVariantKeys
+      ? selection.recentVariantKeys : new Set();
+    const preferred = selection && selection.preferredQuestion;
+    const entries = [...byFamily.entries()];
+    const pickedFamilies = [];
+
+    function takeFamilyEntries(predicate) {
+      if (pickedFamilies.length >= take) return;
+      const pickedIndexes = new Set(pickedFamilies.map(([index]) => index));
+      const candidates = entries.filter(([familyIndex, variants]) =>
+        !pickedIndexes.has(familyIndex) && predicate(familyIndex, variants));
+      pickedFamilies.push(...sample(candidates, take - pickedFamilies.length));
+    }
+
+    // Anspruch hat Vorrang, danach wird die direkte Vorgängerklausur gemieden.
+    takeFamilyEntries((familyIndex, variants) =>
+      (!preferred || variants.some(preferred)) &&
+      !recentFamilyKeys.has(dataset.families[familyIndex].key));
+    takeFamilyEntries((familyIndex, variants) => !preferred || variants.some(preferred));
+    takeFamilyEntries((familyIndex) =>
+      !recentFamilyKeys.has(dataset.families[familyIndex].key));
+    takeFamilyEntries(() => true);
+
+    const selected = [];
+    for (const [familyIndex, variants] of pickedFamilies) {
+      const preferredVariants = preferred ? variants.filter(preferred) : variants;
+      const primaryPool = preferredVariants.length > 0 ? preferredVariants : variants;
+      const unseenVariants = primaryPool.filter((q) => !recentVariantKeys.has('q:' + q.id));
+      const q = sample(unseenVariants.length > 0 ? unseenVariants : primaryPool, 1)[0];
+      usedFamilies.add(familyIndex);
+      usedQuestions.add(q.id);
+      selected.push(q);
+    }
+    return selected;
+  }
+
+  /** Zieht Snippet-Gruppen aus unterschiedlichen Code-Archetypen. */
+  function sampleGroupsByFamily(dataset, take, selection) {
+    const byFamily = new Map();
+    for (const gid of dataset.groupOrder) {
+      const familyIndex = dataset.familyByUnitKey['g:' + gid];
+      if (!byFamily.has(familyIndex)) byFamily.set(familyIndex, []);
+      byFamily.get(familyIndex).push(dataset.groups[gid]);
+    }
+    const recentFamilyKeys = selection && selection.recentFamilyKeys
+      ? selection.recentFamilyKeys : new Set();
+    const recentVariantKeys = selection && selection.recentVariantKeys
+      ? selection.recentVariantKeys : new Set();
+    const entries = [...byFamily.entries()];
+    const fresh = entries.filter(([familyIndex]) =>
+      !recentFamilyKeys.has(dataset.families[familyIndex].key));
+    const chosen = sample(fresh, take);
+    if (chosen.length < take) {
+      const used = new Set(chosen.map(([familyIndex]) => familyIndex));
+      chosen.push(...sample(
+        entries.filter(([familyIndex]) => !used.has(familyIndex)),
+        take - chosen.length,
+      ));
+    }
+    return chosen.map(([, variants]) => {
+      const unseen = variants.filter((group) => !recentVariantKeys.has('g:' + group.id));
+      return sample(unseen.length > 0 ? unseen : variants, 1)[0];
+    });
+  }
 
   function buildExam(dataset, options) {
-    const used = new Set();
+    const usedQuestions = new Set();
+    const usedFamilies = new Set();
     const part1 = [];
+    const recent = options && options.recentSelection ? options.recentSelection : {};
+    const selection = {
+      recentFamilyKeys: new Set(Array.isArray(recent.familyKeys) ? recent.familyKeys : []),
+      recentVariantKeys: new Set(Array.isArray(recent.variantKeys) ? recent.variantKeys : []),
+      preferredQuestion: examPreferredQuestion,
+    };
 
     for (const bucket of EXAM_PART1) {
-      const pool = dataset.questions.filter((q) => !used.has(q.id) && !q.group && bucket.filter(q));
-      for (const q of sample(pool, bucket.take)) {
-        used.add(q.id);
+      for (const q of sampleQuestionsByFamily(
+        dataset, bucket.filter, bucket.take, usedFamilies, usedQuestions, selection)) {
         part1.push({ kind: 'single', q });
       }
     }
     // Falls ein Topf zu klein war: mit beliebigen Teil-1-tauglichen Fragen auffüllen.
     const target1 = EXAM_PART1.reduce((s, b) => s + b.take, 0);
     if (part1.length < target1) {
-      const fillPool = dataset.questions.filter((q) =>
-        !used.has(q.id) && !q.group && q.type !== 'find-bug' && q.type !== 'code-explain');
-      for (const q of sample(fillPool, target1 - part1.length)) {
-        used.add(q.id);
+      const fill = sampleQuestionsByFamily(
+        dataset,
+        (q) => q.type !== 'find-bug' && q.type !== 'code-explain',
+        target1 - part1.length,
+        usedFamilies,
+        usedQuestions,
+        selection);
+      for (const q of fill) {
         part1.push({ kind: 'single', q });
       }
     }
 
     const part2 = [];
-    const groupIds = sample(dataset.groupOrder, EXAM_GROUP_COUNT);
-    for (const gid of groupIds) {
-      part2.push({ kind: 'group', group: dataset.groups[gid] });
+    for (const group of sampleGroupsByFamily(dataset, EXAM_GROUP_COUNT, selection)) {
+      part2.push({ kind: 'group', group });
     }
-    const bugPool = dataset.questions.filter((q) => q.type === 'find-bug' && !q.group);
-    for (const q of sample(bugPool, EXAM_FINDBUG_COUNT)) {
+    for (const q of sampleQuestionsByFamily(
+      dataset,
+      (candidate) => candidate.type === 'find-bug',
+      EXAM_FINDBUG_COUNT,
+      usedFamilies,
+      usedQuestions,
+      selection)) {
       part2.push({ kind: 'single', q });
     }
 
@@ -457,6 +622,21 @@
         negative: !!(options && options.negative),
       },
       startedAt: Date.now(),
+    };
+  }
+
+  function examSelectionSummary(dataset, exam) {
+    const familyKeys = [];
+    const variantKeys = [];
+    for (const unit of exam.units) {
+      const key = unitKey(unit);
+      const familyIndex = dataset.familyByUnitKey[key];
+      if (Number.isInteger(familyIndex)) familyKeys.push(dataset.families[familyIndex].key);
+      variantKeys.push(key);
+    }
+    return {
+      familyKeys: [...new Set(familyKeys)],
+      variantKeys: [...new Set(variantKeys)],
     };
   }
 
@@ -487,12 +667,94 @@
     return false;
   }
 
+  function normalizeBugCorrection(value, caseSensitive) {
+    let normalized = String(value == null ? '' : value)
+      .trim()
+      .replace(/[„“”]/g, '"')
+      .replace(/[’]/g, "'")
+      .replace(/\s+/g, '');
+    if (!caseSensitive) normalized = normalized.toLowerCase();
+    return normalized;
+  }
+
+  function bugCorrectionMatches(target, correction, line) {
+    const given = normalizeBugCorrection(correction, !!target.caseSensitive);
+    if (!given) return false;
+    const repairs = Array.isArray(target.acceptedRepairs) && Number.isInteger(line)
+      ? target.acceptedRepairs.filter((repair) => repair.line === line)
+      : [];
+    const acceptedCorrections = repairs.length > 0
+      ? repairs.flatMap((repair) => repair.corrections)
+      : (Array.isArray(target.acceptedRepairs) && Number.isInteger(line)
+        ? []
+        : target.acceptedCorrections);
+    return acceptedCorrections.some((accepted) =>
+      given === normalizeBugCorrection(accepted, !!target.caseSensitive));
+  }
+
+  /**
+   * Strukturierte Fehlersuche bewerten.
+   * answer = { marks: [{ line: 3, correction: "{" }, ...] }
+   *
+   * Für "richtig" müssen alle Fehlerkonzepte mit zulässiger Zeile UND
+   * akzeptierter Korrektur getroffen sein; zusätzliche Markierungen sind falsch.
+   * Die Detailzahlen ermöglichen in der UI trotzdem hilfreiches Teilfeedback.
+   */
+  function gradeFindBug(q, answer) {
+    const targets = isStructuredFindBug(q) ? q.bugTargets : [];
+    const rawMarks = answer && typeof answer === 'object' && Array.isArray(answer.marks)
+      ? answer.marks : [];
+    const marks = rawMarks
+      .filter((mark) => mark && Number.isInteger(mark.line) && mark.line > 0)
+      .map((mark) => ({ line: mark.line, correction: String(mark.correction || '') }));
+
+    const usedMarks = new Set();
+    const matchedTargets = [];
+    const locationTargets = [];
+
+    for (const target of targets) {
+      const acceptedLines = Array.isArray(target.acceptedLines) ? target.acceptedLines : [target.line];
+      const locationIndex = marks.findIndex((mark) => acceptedLines.includes(mark.line));
+      if (locationIndex >= 0) locationTargets.push(target.id);
+
+      const exactIndex = marks.findIndex((mark, index) =>
+        !usedMarks.has(index) && acceptedLines.includes(mark.line) &&
+        bugCorrectionMatches(target, mark.correction, mark.line));
+      if (exactIndex >= 0) {
+        usedMarks.add(exactIndex);
+        matchedTargets.push(target.id);
+      }
+    }
+
+    const wrongMarks = marks.filter((_, index) => !usedMarks.has(index));
+    const missingTargets = targets.filter((target) => !matchedTargets.includes(target.id));
+    const answered = marks.length > 0;
+    const correct = answered && matchedTargets.length === targets.length &&
+      marks.length === targets.length && wrongMarks.length === 0;
+
+    return {
+      answered,
+      correct,
+      total: targets.length,
+      marked: marks.length,
+      locationHits: locationTargets.length,
+      correctionHits: matchedTargets.length,
+      matchedTargets,
+      wrongMarks,
+      missingTargets,
+    };
+  }
+
   /** Ist überhaupt eine Antwort abgegeben worden? (relevant fürs Negativ-Marking) */
   function isAnswered(q, answer) {
     if (answer == null) return false;
     switch (q.type) {
       case 'mc-multi':
+        return Array.isArray(answer) && answer.length > 0;
       case 'find-bug':
+        if (isStructuredFindBug(q)) {
+          return typeof answer === 'object' && Array.isArray(answer.marks) && answer.marks.length > 0;
+        }
         return Array.isArray(answer) && answer.length > 0;
       case 'short-answer':
         return normalizeShort(answer).length > 0;
@@ -517,6 +779,7 @@
         return { answered: true, correct: answer === q.answerIndex };
       case 'mc-multi':
       case 'find-bug': {
+        if (isStructuredFindBug(q)) return gradeFindBug(q, answer);
         const want = new Set(q.answerIndices);
         const got = new Set(answer);
         const correct = want.size === got.size && [...want].every((i) => got.has(i));
@@ -606,6 +869,7 @@
     prepare,
     overallProgress,
     validateQuestion,
+    isStructuredFindBug,
     toUnits,
     unitQuestions,
     unitKey,
@@ -613,9 +877,12 @@
     buildReviewPool,
     drawReviewQuestion,
     buildExam,
+    examSelectionSummary,
     gradeSingle,
     isAnswered,
     shortAnswerMatches,
+    bugCorrectionMatches,
+    gradeFindBug,
     normalizeShort,
     estimateGrade,
     gradeExam,

@@ -14,6 +14,7 @@
  *   perQuestion: { "Q-000001": { s, c, w, last, m, d, rv } },
  *   global: { answered, correct, streak, bestStreak, lastPracticed },
  *   exams:  [ { ts, points, max, percent, grade, negative, timed } ],
+ *   lastExamSelection: { familyKeys: string[], variantKeys: string[] },
  *   savedAt: Zeitstempel des letzten save()
  * }
  *
@@ -54,6 +55,7 @@
       perQuestion: {},
       global: { answered: 0, correct: 0, streak: 0, bestStreak: 0, lastPracticed: null },
       exams: [],
+      lastExamSelection: { familyKeys: [], variantKeys: [] },
       newsSeen: 0,   // zuletzt bestätigte Neuerungs-Version (siehe NEWS_VERSION in app.js)
       runSeed: 0,    // rotiert die Varianten-Auswahl pro Übungs-Durchlauf
       savedAt: 0,
@@ -85,10 +87,19 @@
     if (!parsed || typeof parsed !== 'object') return base;
     const perQuestion = (typeof parsed.perQuestion === 'object' && parsed.perQuestion) || base.perQuestion;
     for (const id of Object.keys(perQuestion)) migrateRecord(perQuestion[id]);
+    const selection = parsed.lastExamSelection && typeof parsed.lastExamSelection === 'object'
+      ? parsed.lastExamSelection : base.lastExamSelection;
+    const familyKeys = Array.isArray(selection.familyKeys)
+      ? selection.familyKeys.filter((key) => typeof key === 'string').slice(0, 100)
+      : [];
+    const variantKeys = Array.isArray(selection.variantKeys)
+      ? selection.variantKeys.filter((key) => typeof key === 'string').slice(0, 100)
+      : [];
     return {
       perQuestion,
       global: Object.assign(base.global, parsed.global),
       exams: Array.isArray(parsed.exams) ? parsed.exams : base.exams,
+      lastExamSelection: { familyKeys, variantKeys },
       newsSeen: Number(parsed.newsSeen) || 0,
       runSeed: Number(parsed.runSeed) || 0,
       savedAt: Number(parsed.savedAt) || 0,
@@ -350,6 +361,29 @@
     return state.exams.slice();
   }
 
+  /**
+   * Unmittelbar vorherige Klausurauswahl für den Wiederholungsschutz.
+   * Es werden nur technische Familien-/Varianten-Schlüssel gespeichert,
+   * keine Antworten oder Klausurinhalte.
+   */
+  function rememberExamSelection(selection) {
+    const familyKeys = selection && Array.isArray(selection.familyKeys)
+      ? selection.familyKeys.filter((key) => typeof key === 'string').slice(0, 100)
+      : [];
+    const variantKeys = selection && Array.isArray(selection.variantKeys)
+      ? selection.variantKeys.filter((key) => typeof key === 'string').slice(0, 100)
+      : [];
+    state.lastExamSelection = { familyKeys, variantKeys };
+    save();
+  }
+
+  function getLastExamSelection() {
+    return {
+      familyKeys: state.lastExamSelection.familyKeys.slice(),
+      variantKeys: state.lastExamSelection.variantKeys.slice(),
+    };
+  }
+
   function resetAll() {
     const seen = state.newsSeen; // Neuerungs-Hinweis nicht erneut zeigen
     state = emptyState();
@@ -403,6 +437,8 @@
     topicStats,
     addExamResult,
     examHistory,
+    rememberExamSelection,
+    getLastExamSelection,
     resetAll,
     getNewsSeen,
     setNewsSeen,

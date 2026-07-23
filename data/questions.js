@@ -1,6 +1,6 @@
 ﻿window.CKT_EMBEDDED_DATA = {
  "meta": {
-  "version": "1.0",
+  "version": "1.3",
   "course": "Informatik 1 – C (THM StudiumPlus)",
   "language": "de"
  },
@@ -261,7 +261,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 2816 (dez) = 1011 0000 0000 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000002",
@@ -277,7 +278,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 1706 (dez) = 0110 1010 1010 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000003",
@@ -293,7 +295,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 2153 (dez) = 1000 0110 1001 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000004",
@@ -309,7 +312,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 507 (dez) = 0001 1111 1011 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000005",
@@ -325,7 +329,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 1982 (dez) = 0111 1011 1110 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000006",
@@ -341,7 +346,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 1822 (dez) = 0111 0001 1110 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000007",
@@ -357,7 +363,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 2478 (dez) = 1001 1010 1110 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000008",
@@ -373,7 +380,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 816 (dez) = 0011 0011 0000 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000009",
@@ -389,7 +397,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 1567 (dez) = 0110 0001 1111 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000010",
@@ -405,7 +414,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 1716 (dez) = 0110 1011 0100 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000011",
@@ -421,7 +431,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 845 (dez) = 0011 0100 1101 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000012",
@@ -437,7 +448,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 2612 (dez) = 1010 0011 0100 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000013",
@@ -453,7 +465,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 438 (dez) = 0001 1011 0110 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000014",
@@ -469,7 +482,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 2364 (dez) = 1001 0011 1100 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000015",
@@ -485,7 +499,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 259 (dez) = 0001 0000 0011 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000016",
@@ -501,7 +516,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 2881 (dez) = 1011 0100 0001 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000017",
@@ -517,7 +533,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 787 (dez) = 0011 0001 0011 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000018",
@@ -533,7 +550,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 2704 (dez) = 1010 1001 0000 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000019",
@@ -549,7 +567,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 2380 (dez) = 1001 0100 1100 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000020",
@@ -565,7 +584,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 244 (dez) = 1111 0100 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000021",
@@ -581,7 +601,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 1257 (dez) = 0100 1110 1001 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000022",
@@ -597,7 +618,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 1534 (dez) = 0101 1111 1110 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000023",
@@ -613,7 +635,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 500 (dez) = 0001 1111 0100 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000024",
@@ -629,7 +652,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 2404 (dez) = 1001 0110 0100 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000025",
@@ -645,7 +669,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 301 (dez) = 0001 0010 1101 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000026",
@@ -661,7 +686,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 2, Reste von unten nach oben lesen: 1764 (dez) = 0110 1110 0100 (bin).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-bin"
   },
   {
    "id": "Q-000027",
@@ -675,7 +701,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 100001110100 (bin) = 2164 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000028",
@@ -689,7 +716,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 101101010101 (bin) = 2901 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000029",
@@ -703,7 +731,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 101000010011 (bin) = 2579 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000030",
@@ -717,7 +746,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 110100001010 (bin) = 3338 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000031",
@@ -731,7 +761,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 111101111110 (bin) = 3966 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000032",
@@ -745,7 +776,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 10100111011 (bin) = 1339 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000033",
@@ -759,7 +791,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 101001010010 (bin) = 2642 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000034",
@@ -773,7 +806,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 101010111101 (bin) = 2749 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000035",
@@ -787,7 +821,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 1000000100 (bin) = 516 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000036",
@@ -801,7 +836,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 100111000010 (bin) = 2498 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000037",
@@ -815,7 +851,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 100101 (bin) = 37 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000038",
@@ -829,7 +866,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 1011011001 (bin) = 729 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000039",
@@ -843,7 +881,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 10011101010 (bin) = 1258 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000040",
@@ -857,7 +896,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 111110100111 (bin) = 4007 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000041",
@@ -871,7 +911,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 110010001 (bin) = 401 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000042",
@@ -885,7 +926,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 110110001001 (bin) = 3465 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000043",
@@ -899,7 +941,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 110100100010 (bin) = 3362 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000044",
@@ -913,7 +956,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 11111000 (bin) = 248 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000045",
@@ -927,7 +971,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 101010110 (bin) = 342 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000046",
@@ -941,7 +986,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 11010100111 (bin) = 1703 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000047",
@@ -955,7 +1001,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 110110111111 (bin) = 3519 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000048",
@@ -969,7 +1016,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 111010000100 (bin) = 3716 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000049",
@@ -983,7 +1031,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 10011100000 (bin) = 1248 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000050",
@@ -997,7 +1046,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 110001110101 (bin) = 3189 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000051",
@@ -1011,7 +1061,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 10101110100 (bin) = 1396 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000052",
@@ -1025,7 +1076,8 @@
    ],
    "explanation": "Stellenwerte (Zweierpotenzen) der 1-Bits addieren: 111100000100 (bin) = 3844 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-dec"
   },
   {
    "id": "Q-000053",
@@ -1042,7 +1094,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 18223 (dez) = 0x472F.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000054",
@@ -1059,7 +1112,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 47170 (dez) = 0xB842.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000055",
@@ -1076,7 +1130,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 12362 (dez) = 0x304A.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000056",
@@ -1093,7 +1148,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 26440 (dez) = 0x6748.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000057",
@@ -1110,7 +1166,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 29118 (dez) = 0x71BE.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000058",
@@ -1127,7 +1184,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 39992 (dez) = 0x9C38.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000059",
@@ -1144,7 +1202,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 29076 (dez) = 0x7194.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000060",
@@ -1161,7 +1220,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 38356 (dez) = 0x95D4.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000061",
@@ -1178,7 +1238,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 7862 (dez) = 0x1EB6.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000062",
@@ -1195,7 +1256,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 39323 (dez) = 0x999B.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000063",
@@ -1212,7 +1274,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 57170 (dez) = 0xDF52.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000064",
@@ -1229,7 +1292,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 13294 (dez) = 0x33EE.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000065",
@@ -1246,7 +1310,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 35022 (dez) = 0x88CE.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000066",
@@ -1263,7 +1328,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 594 (dez) = 0x252.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000067",
@@ -1280,7 +1346,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 42136 (dez) = 0xA498.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000068",
@@ -1297,7 +1364,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 24952 (dez) = 0x6178.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000069",
@@ -1314,7 +1382,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 56050 (dez) = 0xDAF2.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000070",
@@ -1331,7 +1400,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 42500 (dez) = 0xA604.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000071",
@@ -1348,7 +1418,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 2084 (dez) = 0x824.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000072",
@@ -1365,7 +1436,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 8381 (dez) = 0x20BD.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000073",
@@ -1382,7 +1454,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 17128 (dez) = 0x42E8.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000074",
@@ -1399,7 +1472,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 48257 (dez) = 0xBC81.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000075",
@@ -1416,7 +1490,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 16904 (dez) = 0x4208.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000076",
@@ -1433,7 +1508,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 42705 (dez) = 0xA6D1.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000077",
@@ -1450,7 +1526,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 28848 (dez) = 0x70B0.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000078",
@@ -1467,7 +1544,8 @@
    ],
    "explanation": "Fortgesetzte Division durch 16, Reste (0–15 → 0–F) von unten nach oben lesen: 3938 (dez) = 0xF62.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-dec-to-hex"
   },
   {
    "id": "Q-000079",
@@ -1481,7 +1559,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x1FD8 = 8152 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000080",
@@ -1495,7 +1574,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x3E3D = 15933 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000081",
@@ -1509,7 +1589,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0xE1B9 = 57785 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000082",
@@ -1523,7 +1604,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x9291 = 37521 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000083",
@@ -1537,7 +1619,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0xF97B = 63867 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000084",
@@ -1551,7 +1634,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0xA243 = 41539 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000085",
@@ -1565,7 +1649,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x374B = 14155 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000086",
@@ -1579,7 +1664,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0xBBB0 = 48048 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000087",
@@ -1593,7 +1679,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0xFA1B = 64027 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000088",
@@ -1607,7 +1694,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x67BB = 26555 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000089",
@@ -1621,7 +1709,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x4286 = 17030 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000090",
@@ -1635,7 +1724,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0xEFEA = 61418 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000091",
@@ -1649,7 +1739,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x6BE9 = 27625 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000092",
@@ -1663,7 +1754,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x8A96 = 35478 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000093",
@@ -1677,7 +1769,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x3510 = 13584 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000094",
@@ -1691,7 +1784,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x4F44 = 20292 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000095",
@@ -1705,7 +1799,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x90A2 = 37026 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000096",
@@ -1719,7 +1814,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x7F58 = 32600 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000097",
@@ -1733,7 +1829,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0xE38A = 58250 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000098",
@@ -1747,7 +1844,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x4796 = 18326 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000099",
@@ -1761,7 +1859,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x64BC = 25788 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000100",
@@ -1775,7 +1874,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x874E = 34638 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000101",
@@ -1789,7 +1889,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0xAD0A = 44298 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000102",
@@ -1803,7 +1904,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x63D8 = 25560 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000103",
@@ -1817,7 +1919,8 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x4BA7 = 19367 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000104",
@@ -1831,13 +1934,14 @@
    ],
    "explanation": "Stellenwerte (16er-Potenzen) mit den Ziffernwerten multiplizieren und addieren: 0x8C4A = 35914 (dez).",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-dec"
   },
   {
    "id": "Q-000105",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 101010100000 in eine Hexadezimalzahl um.",
    "answer": "0xAA0",
    "acceptedAnswers": [
@@ -1848,13 +1952,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (1010 1010 0000), jede Gruppe als Hex-Ziffer lesen: 0xAA0.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000106",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 11110011000 in eine Hexadezimalzahl um.",
    "answer": "0x798",
    "acceptedAnswers": [
@@ -1865,13 +1970,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0111 1001 1000), jede Gruppe als Hex-Ziffer lesen: 0x798.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000107",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 10011110110 in eine Hexadezimalzahl um.",
    "answer": "0x4F6",
    "acceptedAnswers": [
@@ -1882,13 +1988,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0100 1111 0110), jede Gruppe als Hex-Ziffer lesen: 0x4F6.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000108",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 110101100111 in eine Hexadezimalzahl um.",
    "answer": "0xD67",
    "acceptedAnswers": [
@@ -1899,13 +2006,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (1101 0110 0111), jede Gruppe als Hex-Ziffer lesen: 0xD67.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000109",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 100000110110 in eine Hexadezimalzahl um.",
    "answer": "0x836",
    "acceptedAnswers": [
@@ -1916,13 +2024,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (1000 0011 0110), jede Gruppe als Hex-Ziffer lesen: 0x836.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000110",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 111101011101 in eine Hexadezimalzahl um.",
    "answer": "0xF5D",
    "acceptedAnswers": [
@@ -1933,13 +2042,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (1111 0101 1101), jede Gruppe als Hex-Ziffer lesen: 0xF5D.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000111",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 1111000 in eine Hexadezimalzahl um.",
    "answer": "0x78",
    "acceptedAnswers": [
@@ -1950,13 +2060,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0111 1000), jede Gruppe als Hex-Ziffer lesen: 0x78.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000112",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 1110001000 in eine Hexadezimalzahl um.",
    "answer": "0x388",
    "acceptedAnswers": [
@@ -1967,13 +2078,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0011 1000 1000), jede Gruppe als Hex-Ziffer lesen: 0x388.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000113",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 11001101011 in eine Hexadezimalzahl um.",
    "answer": "0x66B",
    "acceptedAnswers": [
@@ -1984,13 +2096,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0110 0110 1011), jede Gruppe als Hex-Ziffer lesen: 0x66B.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000114",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 10110011001 in eine Hexadezimalzahl um.",
    "answer": "0x599",
    "acceptedAnswers": [
@@ -2001,13 +2114,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0101 1001 1001), jede Gruppe als Hex-Ziffer lesen: 0x599.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000115",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 100010110011 in eine Hexadezimalzahl um.",
    "answer": "0x8B3",
    "acceptedAnswers": [
@@ -2018,13 +2132,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (1000 1011 0011), jede Gruppe als Hex-Ziffer lesen: 0x8B3.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000116",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 101101101 in eine Hexadezimalzahl um.",
    "answer": "0x16D",
    "acceptedAnswers": [
@@ -2035,13 +2150,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0001 0110 1101), jede Gruppe als Hex-Ziffer lesen: 0x16D.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000117",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 10000010110 in eine Hexadezimalzahl um.",
    "answer": "0x416",
    "acceptedAnswers": [
@@ -2052,13 +2168,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0100 0001 0110), jede Gruppe als Hex-Ziffer lesen: 0x416.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000118",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 10010110010 in eine Hexadezimalzahl um.",
    "answer": "0x4B2",
    "acceptedAnswers": [
@@ -2069,13 +2186,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0100 1011 0010), jede Gruppe als Hex-Ziffer lesen: 0x4B2.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000119",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 10111101110 in eine Hexadezimalzahl um.",
    "answer": "0x5EE",
    "acceptedAnswers": [
@@ -2086,13 +2204,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0101 1110 1110), jede Gruppe als Hex-Ziffer lesen: 0x5EE.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000120",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 101011011110 in eine Hexadezimalzahl um.",
    "answer": "0xADE",
    "acceptedAnswers": [
@@ -2103,13 +2222,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (1010 1101 1110), jede Gruppe als Hex-Ziffer lesen: 0xADE.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000121",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 1001101100 in eine Hexadezimalzahl um.",
    "answer": "0x26C",
    "acceptedAnswers": [
@@ -2120,13 +2240,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0010 0110 1100), jede Gruppe als Hex-Ziffer lesen: 0x26C.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000122",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 11001011000 in eine Hexadezimalzahl um.",
    "answer": "0x658",
    "acceptedAnswers": [
@@ -2137,13 +2258,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0110 0101 1000), jede Gruppe als Hex-Ziffer lesen: 0x658.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000123",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 100001111000 in eine Hexadezimalzahl um.",
    "answer": "0x878",
    "acceptedAnswers": [
@@ -2154,13 +2276,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (1000 0111 1000), jede Gruppe als Hex-Ziffer lesen: 0x878.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000124",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 111011110 in eine Hexadezimalzahl um.",
    "answer": "0x1DE",
    "acceptedAnswers": [
@@ -2171,13 +2294,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0001 1101 1110), jede Gruppe als Hex-Ziffer lesen: 0x1DE.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000125",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 110100110000 in eine Hexadezimalzahl um.",
    "answer": "0xD30",
    "acceptedAnswers": [
@@ -2188,13 +2312,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (1101 0011 0000), jede Gruppe als Hex-Ziffer lesen: 0xD30.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000126",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 110010111100 in eine Hexadezimalzahl um.",
    "answer": "0xCBC",
    "acceptedAnswers": [
@@ -2205,13 +2330,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (1100 1011 1100), jede Gruppe als Hex-Ziffer lesen: 0xCBC.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000127",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 100010011101 in eine Hexadezimalzahl um.",
    "answer": "0x89D",
    "acceptedAnswers": [
@@ -2222,13 +2348,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (1000 1001 1101), jede Gruppe als Hex-Ziffer lesen: 0x89D.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000128",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 10111000011 in eine Hexadezimalzahl um.",
    "answer": "0x5C3",
    "acceptedAnswers": [
@@ -2239,13 +2366,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0101 1100 0011), jede Gruppe als Hex-Ziffer lesen: 0x5C3.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000129",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 110111111000 in eine Hexadezimalzahl um.",
    "answer": "0xDF8",
    "acceptedAnswers": [
@@ -2256,13 +2384,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (1101 1111 1000), jede Gruppe als Hex-Ziffer lesen: 0xDF8.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000130",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Binärzahl 100010101 in eine Hexadezimalzahl um.",
    "answer": "0x115",
    "acceptedAnswers": [
@@ -2273,13 +2402,14 @@
    ],
    "explanation": "Von rechts in 4er-Gruppen teilen (0001 0001 0101), jede Gruppe als Hex-Ziffer lesen: 0x115.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-bin-to-hex"
   },
   {
    "id": "Q-000131",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x3067 in eine Binärzahl um.",
    "answer": "11000001100111",
    "acceptedAnswers": [
@@ -2289,13 +2419,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x3067 = 0011 0000 0110 0111.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000132",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x6CC5 in eine Binärzahl um.",
    "answer": "110110011000101",
    "acceptedAnswers": [
@@ -2305,13 +2436,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x6CC5 = 0110 1100 1100 0101.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000133",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x87B3 in eine Binärzahl um.",
    "answer": "1000011110110011",
    "acceptedAnswers": [
@@ -2321,13 +2453,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x87B3 = 1000 0111 1011 0011.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000134",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x3A1F in eine Binärzahl um.",
    "answer": "11101000011111",
    "acceptedAnswers": [
@@ -2337,13 +2470,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x3A1F = 0011 1010 0001 1111.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000135",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x8B1B in eine Binärzahl um.",
    "answer": "1000101100011011",
    "acceptedAnswers": [
@@ -2353,13 +2487,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x8B1B = 1000 1011 0001 1011.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000136",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x8F50 in eine Binärzahl um.",
    "answer": "1000111101010000",
    "acceptedAnswers": [
@@ -2369,13 +2504,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x8F50 = 1000 1111 0101 0000.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000137",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x8816 in eine Binärzahl um.",
    "answer": "1000100000010110",
    "acceptedAnswers": [
@@ -2385,13 +2521,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x8816 = 1000 1000 0001 0110.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000138",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0xD137 in eine Binärzahl um.",
    "answer": "1101000100110111",
    "acceptedAnswers": [
@@ -2401,13 +2538,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0xD137 = 1101 0001 0011 0111.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000139",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x3C26 in eine Binärzahl um.",
    "answer": "11110000100110",
    "acceptedAnswers": [
@@ -2417,13 +2555,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x3C26 = 0011 1100 0010 0110.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000140",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x4D65 in eine Binärzahl um.",
    "answer": "100110101100101",
    "acceptedAnswers": [
@@ -2433,13 +2572,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x4D65 = 0100 1101 0110 0101.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000141",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0xA4EF in eine Binärzahl um.",
    "answer": "1010010011101111",
    "acceptedAnswers": [
@@ -2449,13 +2589,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0xA4EF = 1010 0100 1110 1111.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000142",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0xE0AF in eine Binärzahl um.",
    "answer": "1110000010101111",
    "acceptedAnswers": [
@@ -2465,13 +2606,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0xE0AF = 1110 0000 1010 1111.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000143",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0xEFD8 in eine Binärzahl um.",
    "answer": "1110111111011000",
    "acceptedAnswers": [
@@ -2481,13 +2623,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0xEFD8 = 1110 1111 1101 1000.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000144",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0xFCEF in eine Binärzahl um.",
    "answer": "1111110011101111",
    "acceptedAnswers": [
@@ -2497,13 +2640,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0xFCEF = 1111 1100 1110 1111.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000145",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x95A0 in eine Binärzahl um.",
    "answer": "1001010110100000",
    "acceptedAnswers": [
@@ -2513,13 +2657,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x95A0 = 1001 0101 1010 0000.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000146",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x2808 in eine Binärzahl um.",
    "answer": "10100000001000",
    "acceptedAnswers": [
@@ -2529,13 +2674,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x2808 = 0010 1000 0000 1000.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000147",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0xE019 in eine Binärzahl um.",
    "answer": "1110000000011001",
    "acceptedAnswers": [
@@ -2545,13 +2691,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0xE019 = 1110 0000 0001 1001.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000148",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x3D50 in eine Binärzahl um.",
    "answer": "11110101010000",
    "acceptedAnswers": [
@@ -2561,13 +2708,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x3D50 = 0011 1101 0101 0000.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000149",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x43AC in eine Binärzahl um.",
    "answer": "100001110101100",
    "acceptedAnswers": [
@@ -2577,13 +2725,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x43AC = 0100 0011 1010 1100.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000150",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0xF8ED in eine Binärzahl um.",
    "answer": "1111100011101101",
    "acceptedAnswers": [
@@ -2593,13 +2742,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0xF8ED = 1111 1000 1110 1101.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000151",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x3A56 in eine Binärzahl um.",
    "answer": "11101001010110",
    "acceptedAnswers": [
@@ -2609,13 +2759,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x3A56 = 0011 1010 0101 0110.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000152",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x8A23 in eine Binärzahl um.",
    "answer": "1000101000100011",
    "acceptedAnswers": [
@@ -2625,13 +2776,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x8A23 = 1000 1010 0010 0011.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000153",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x5605 in eine Binärzahl um.",
    "answer": "101011000000101",
    "acceptedAnswers": [
@@ -2641,13 +2793,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x5605 = 0101 0110 0000 0101.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000154",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x6AA1 in eine Binärzahl um.",
    "answer": "110101010100001",
    "acceptedAnswers": [
@@ -2657,13 +2810,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x6AA1 = 0110 1010 1010 0001.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000155",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x4AA8 in eine Binärzahl um.",
    "answer": "100101010101000",
    "acceptedAnswers": [
@@ -2673,13 +2827,14 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x4AA8 = 0100 1010 1010 1000.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000156",
    "topicId": "T-20",
    "type": "short-answer",
-   "difficulty": "leicht",
+   "difficulty": "mittel",
    "prompt": "Rechnen Sie die vorzeichenlose Hexadezimalzahl 0x83D4 in eine Binärzahl um.",
    "answer": "1000001111010100",
    "acceptedAnswers": [
@@ -2689,7 +2844,8 @@
    ],
    "explanation": "Jede Hex-Ziffer einzeln in ihre 4-Bit-Gruppe umwandeln: 0x83D4 = 1000 0011 1101 0100.",
    "source": "T-20 / AT-7",
-   "verified": true
+   "verified": true,
+   "familyId": "T20-hex-to-bin"
   },
   {
    "id": "Q-000157",
@@ -5803,7 +5959,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: %s gibt einen String bis zum Null-Terminator aus.",
    "source": "T-06 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T06-text-formats"
   },
   {
    "id": "Q-000345",
@@ -5818,7 +5975,8 @@
    "answerIndex": 1,
    "explanation": "Falsch: Der Specifier für Strings ist %s.",
    "source": "T-06 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T06-text-formats"
   },
   {
    "id": "Q-000346",
@@ -5833,7 +5991,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: %d (\"decimal\") ist der Specifier für int. Zum Vergleich: %lf für double, %c für char, %s für Strings.",
    "source": "T-06 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T06-signed-integer-formats"
   },
   {
    "id": "Q-000347",
@@ -5848,7 +6007,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: float → %f (double kann mit %lf oder %f ausgegeben werden).",
    "source": "T-06 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T06-floating-formats"
   },
   {
    "id": "Q-000348",
@@ -5863,7 +6023,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Das h (\"half\") verkleinert das d: %hd = short. Analog vergrößert l: %ld = long, %lld = long long.",
    "source": "T-06 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T06-signed-integer-formats"
   },
   {
    "id": "Q-000349",
@@ -5878,7 +6039,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Jedes l steht für ein \"long\": %lld = long long. Gegenstück: %hd = short.",
    "source": "T-06 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T06-signed-integer-formats"
   },
   {
    "id": "Q-000350",
@@ -5893,7 +6055,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: u = \"unsigned\". Für vorzeichenlose Ganzzahlen nimmt man %u — mit %d würden sehr große Werte falsch (negativ) angezeigt.",
    "source": "T-06 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T06-unsigned-formats"
   },
   {
    "id": "Q-000351",
@@ -5908,7 +6071,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Kombination aus ll (long long) und u (unsigned) → %llu.",
    "source": "T-06 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T06-unsigned-formats"
   },
   {
    "id": "Q-000352",
@@ -5923,7 +6087,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: sizeof liefert einen size_t-Wert, der mit %zu ausgegeben wird.",
    "source": "T-06 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T06-size-format"
   },
   {
    "id": "Q-000353",
@@ -5938,7 +6103,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Bei printf gehen %f und %lf, bei scanf ist %lf für double Pflicht.",
    "source": "T-06 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T06-floating-formats"
   },
   {
    "id": "Q-000354",
@@ -5953,7 +6119,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: %c = \"character\": genau ein Zeichen. Ganze Zeichenketten gibt %s aus.",
    "source": "T-06 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T06-text-formats"
   },
   {
    "id": "Q-000355",
@@ -6148,7 +6315,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: char=1, short=2, int=4, long long=8 Byte.",
    "source": "T-10 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-integer-sizes"
   },
   {
    "id": "Q-000368",
@@ -6163,7 +6331,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: char ist der kleinste Basisdatentyp (1 Byte).",
    "source": "T-10 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-integer-sizes"
   },
   {
    "id": "Q-000369",
@@ -6178,7 +6347,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Merktabelle: char 1, short 2, int/float 4, double/long long 8 Byte. Durch die 8 Byte hat double ca. 15 Nachkommastellen Genauigkeit (float nur ~7).",
    "source": "T-10 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-floating-sizes"
   },
   {
    "id": "Q-000370",
@@ -6193,7 +6363,8 @@
    "answerIndex": 1,
    "explanation": "Falsch: float belegt 4 Byte, double belegt 8 Byte.",
    "source": "T-10 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-floating-sizes"
   },
   {
    "id": "Q-000371",
@@ -6208,7 +6379,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Merktabelle: char 1, short 2, int/float 4, double/long long 8 Byte. Wertebereich von short: −32.768 … 32.767.",
    "source": "T-10 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-integer-sizes"
   },
   {
    "id": "Q-000372",
@@ -6223,7 +6395,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Merktabelle: char 1, short 2, int/float 4, double/long long 8 Byte.",
    "source": "T-10 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-integer-sizes"
   },
   {
    "id": "Q-000373",
@@ -7048,7 +7221,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Wie in der Mathematik: 2 + 3 * 4 = 14, nicht 20. % zählt zur Punktrechnung, denn es ist eine Division (Rest).",
    "source": "T-25 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-rules"
   },
   {
    "id": "Q-000428",
@@ -7063,7 +7237,8 @@
    "answerIndex": 1,
    "explanation": "Falsch: Erst wird gerechnet, dann verglichen – deshalb ist a == b + c gleich a == (b + c).",
    "source": "T-25 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-rules"
   },
   {
    "id": "Q-000429",
@@ -7078,7 +7253,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: a || b && c wird als a || (b && c) ausgewertet — \"und vor oder\", analog zu Punkt vor Strich. Im Zweifel: Klammern setzen.",
    "source": "T-25 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-rules"
   },
   {
    "id": "Q-000430",
@@ -7093,7 +7269,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Deshalb wird bei d = a == b + c zuerst gerechnet, dann verglichen, dann zugewiesen.",
    "source": "T-25 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-rules"
   },
   {
    "id": "Q-000431",
@@ -7108,7 +7285,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: ! steht in der Vorrangliste ganz oben.",
    "source": "T-25 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-rules"
   },
   {
    "id": "Q-000432",
@@ -7123,7 +7301,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Alle behandelten math.h-Funktionen liefern double.",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-return-types"
   },
   {
    "id": "Q-000433",
@@ -7138,7 +7317,8 @@
    "answerIndex": 1,
    "explanation": "Falsch: cos liefert double – wie alle behandelten math.h-Funktionen.",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-return-types"
   },
   {
    "id": "Q-000434",
@@ -7153,7 +7333,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Dafür wird #include <math.h> benötigt.",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-headers"
   },
   {
    "id": "Q-000435",
@@ -7168,7 +7349,8 @@
    "answerIndex": 1,
    "explanation": "Falsch: strcpy ist eine String-Funktion → string.h. In math.h stehen sqrt, pow, sin, …",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-headers"
   },
   {
    "id": "Q-000436",
@@ -7183,7 +7365,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Unter Visual Studio zusätzlich #define _USE_MATH_DEFINES vor dem Include.",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-pi"
   },
   {
    "id": "Q-000437",
@@ -7198,7 +7381,8 @@
    "answerIndex": 1,
    "explanation": "Falsch: Sie rechnen in Radiant – Umrechnung: grad = rad·180/π.",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-angle-unit"
   },
   {
    "id": "Q-000438",
@@ -7213,7 +7397,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Für Grad muss vorher umgerechnet werden.",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-angle-unit"
   },
   {
    "id": "Q-000439",
@@ -7228,7 +7413,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: ceil (\"Decke\") rundet immer auf, floor (\"Boden\") immer ab: ceil(3.2) = 4, floor(3.9) = 3. Beide aus math.h, Rückgabetyp double.",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-rounding"
   },
   {
    "id": "Q-000440",
@@ -7243,7 +7429,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: pow(basis, exponent), Ergebnis 1024 (als double).",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-powers-roots"
   },
   {
    "id": "Q-000441",
@@ -7258,7 +7445,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: fabs (\"floating-point absolute value\") aus math.h: fabs(-4.5) = 4.5.",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-absolute-modulo"
   },
   {
    "id": "Q-000442",
@@ -7273,7 +7461,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: log10(100) = 2. Achtung: log (ohne 10) ist in C der NATÜRLICHE Logarithmus zur Basis e.",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-logarithms"
   },
   {
    "id": "Q-000443",
@@ -7288,7 +7477,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: grad = rad·180/π bzw. rad = grad·π/180.",
    "source": "T-14 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-pi"
   },
   {
    "id": "Q-000444",
@@ -8083,7 +8273,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Elementzahl × Typgröße, z. B. double ary[250] → 2000.",
    "source": "T-37 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-sizeof-rules"
   },
   {
    "id": "Q-000497",
@@ -8098,7 +8289,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Gesamtbytes geteilt durch Bytes eines Elements.",
    "source": "T-37 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-sizeof-rules"
   },
   {
    "id": "Q-000498",
@@ -8458,7 +8650,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Genau das unterscheidet Structs von Arrays.",
    "source": "T-43 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-basics"
   },
   {
    "id": "Q-000522",
@@ -8473,7 +8666,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: variable.element, z. B. p.x = 3; — eckige Klammern sind für Arrays, -> nur für Zeiger auf Structs.",
    "source": "T-43 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-basics"
   },
   {
    "id": "Q-000523",
@@ -8488,7 +8682,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Ein struct ist ein normaler Datentyp — Arrays davon sind erlaubt: struct punkt liste[10]; Zugriff: liste[0].x.",
    "source": "T-43 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-basics"
   },
   {
    "id": "Q-000524",
@@ -8548,7 +8743,8 @@
    "answerIndex": 1,
    "explanation": "Falsch: Structs werden als Kopie übergeben – Änderungen wirken nicht auf das Original (anders als bei Arrays).",
    "source": "T-45 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T45-pass-by-value"
   },
   {
    "id": "Q-000528",
@@ -8563,7 +8759,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Das ist der zentrale Unterschied zur Array-Übergabe.",
    "source": "T-45 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T45-pass-by-value"
   },
   {
    "id": "Q-000529",
@@ -8578,7 +8775,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: z. B. gerade liesGeradeEin(...) { ...; return g; }",
    "source": "T-45 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T45-struct-return"
   },
   {
    "id": "Q-000530",
@@ -8593,7 +8791,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Im Wesentlichen die Summe der Element-Größen.",
    "source": "T-45 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T45-struct-size"
   },
   {
    "id": "Q-000531",
@@ -8608,7 +8807,8 @@
    "answerIndex": 0,
    "explanation": "Richtig: Struct-Größe = (mindestens) Summe der Elementgrößen: 2 × double = 2 × 8 = 16 Byte.",
    "source": "T-45 / AT-1",
-   "verified": true
+   "verified": true,
+   "familyId": "T45-struct-size"
   },
   {
    "id": "Q-000532",
@@ -9766,7 +9966,8 @@
    ],
    "explanation": "1. ✓ Gesamtbytes ÷ Bytes pro Element = 200 / 8 = 25 — DIE Standardformel für die Elementanzahl.\n2. ✓ sizeof liefert die Größe in Bytes: 25 Elemente × 8 Byte (double) = 200.\n3. ✓ a[0] ist ein einzelnes double-Element und belegt 8 Byte.\n4. ✗ sizeof liefert IMMER Bytes (hier 25 × 8 = 200), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000591",
@@ -9868,7 +10069,8 @@
    ],
    "explanation": "1. ✗ Größe = Elementanzahl × Typgröße = 40 × 8 Byte (double) = 320 Byte, nicht 328.\n2. ✗ sizeof rechnet in Bytes: 40 × 8 (double) = 320, nicht 160.\n3. ✓ a[0] ist ein einzelnes double-Element und belegt 8 Byte.\n4. ✓ Gesamtbytes ÷ Bytes pro Element = 320 / 8 = 40 — DIE Standardformel für die Elementanzahl.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000596",
@@ -9970,7 +10172,8 @@
    ],
    "explanation": "1. ✓ Gesamtbytes ÷ Bytes pro Element = 20 / 2 = 10 — DIE Standardformel für die Elementanzahl.\n2. ✗ sizeof rechnet in Bytes: 10 × 2 (short) = 20, nicht 40.\n3. ✓ sizeof liefert die Größe in Bytes: 10 Elemente × 2 Byte (short) = 20.\n4. ✗ Größe = Elementanzahl × Typgröße = 10 × 2 Byte (short) = 20 Byte, nicht 22.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000601",
@@ -10073,7 +10276,8 @@
    ],
    "explanation": "1. ✗ Größe = Elementanzahl × Typgröße = 120 × 2 Byte (short) = 240 Byte, nicht 242.\n2. ✓ sizeof liefert die Größe in Bytes: 120 Elemente × 2 Byte (short) = 240.\n3. ✗ sizeof liefert IMMER Bytes (hier 120 × 2 = 240), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n4. ✓ a[0] ist ein einzelnes short-Element und belegt 2 Byte.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000606",
@@ -10154,7 +10358,8 @@
    ],
    "explanation": "1. ✗ Größe = Elementanzahl × Typgröße = 40 × 4 Byte (float) = 160 Byte, nicht 164.\n2. ✗ sizeof liefert IMMER Bytes (hier 40 × 4 = 160), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n3. ✓ sizeof liefert die Größe in Bytes: 40 Elemente × 4 Byte (float) = 160.\n4. ✗ sizeof rechnet in Bytes: 40 × 4 (float) = 160, nicht 320.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000610",
@@ -10258,7 +10463,8 @@
    ],
    "explanation": "1. ✓ sizeof liefert die Größe in Bytes: 200 Elemente × 2 Byte (short) = 400.\n2. ✓ Gesamtbytes ÷ Bytes pro Element = 400 / 2 = 200 — DIE Standardformel für die Elementanzahl.\n3. ✗ sizeof rechnet in Bytes: 200 × 2 (short) = 400, nicht 800.\n4. ✓ a[0] ist ein einzelnes short-Element und belegt 2 Byte.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000615",
@@ -10339,7 +10545,8 @@
    ],
    "explanation": "1. ✓ sizeof liefert die Größe in Bytes: 80 Elemente × 4 Byte (float) = 320.\n2. ✗ sizeof liefert IMMER Bytes (hier 80 × 4 = 320), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n3. ✗ sizeof rechnet in Bytes: 80 × 4 (float) = 320, nicht 640.\n4. ✓ Gesamtbytes ÷ Bytes pro Element = 320 / 4 = 80 — DIE Standardformel für die Elementanzahl.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000619",
@@ -10424,7 +10631,8 @@
    ],
    "explanation": "1. ✓ Gesamtbytes ÷ Bytes pro Element = 20 / 2 = 10 — DIE Standardformel für die Elementanzahl.\n2. ✓ a[0] ist ein einzelnes short-Element und belegt 2 Byte.\n3. ✗ sizeof liefert IMMER Bytes (hier 10 × 2 = 20), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n4. ✗ sizeof rechnet in Bytes: 10 × 2 (short) = 20, nicht 40.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000623",
@@ -10529,7 +10737,8 @@
    ],
    "explanation": "1. ✗ Größe = Elementanzahl × Typgröße = 120 × 4 Byte (float) = 480 Byte, nicht 484.\n2. ✗ sizeof rechnet in Bytes: 120 × 4 (float) = 480, nicht 960.\n3. ✗ sizeof liefert IMMER Bytes (hier 120 × 4 = 480), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n4. ✓ a[0] ist ein einzelnes float-Element und belegt 4 Byte.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000628",
@@ -10569,7 +10778,10 @@
    ],
    "explanation": "1. ✗ Erlaubt sind nur a[0] … a[24]. a[25] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.\n2. ✗ Arrays starten in C bei 0, nicht bei 1: gültig sind die Indizes 0 bis 24.\n3. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.\n4. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)",
    "source": "T-36 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "MASTER-T36-array-init-size",
+   "variantAngle": "application",
+   "examFamilyRole": "true-false"
   },
   {
    "id": "Q-000630",
@@ -10591,7 +10803,8 @@
    ],
    "explanation": "1. ✓ Gesamtbytes ÷ Bytes pro Element = 250 / 1 = 250 — DIE Standardformel für die Elementanzahl.\n2. ✗ sizeof rechnet in Bytes: 250 × 1 (char) = 250, nicht 1000.\n3. ✓ sizeof liefert die Größe in Bytes: 250 Elemente × 1 Byte (char) = 250.\n4. ✓ a[0] ist ein einzelnes char-Element und belegt 1 Byte.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000631",
@@ -10675,7 +10888,8 @@
    ],
    "explanation": "1. ✓ Gesamtbytes ÷ Bytes pro Element = 20 / 1 = 20 — DIE Standardformel für die Elementanzahl.\n2. ✓ sizeof liefert die Größe in Bytes: 20 Elemente × 1 Byte (char) = 20.\n3. ✗ sizeof rechnet in Bytes: 20 × 1 (char) = 20, nicht 80.\n4. ✗ sizeof liefert IMMER Bytes (hier 20 × 1 = 20), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000635",
@@ -10737,7 +10951,10 @@
    ],
    "explanation": "1. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.\n2. ✗ Arrays starten in C bei 0, nicht bei 1: gültig sind die Indizes 0 bis 39.\n3. ✓ Die Zahl in den eckigen Klammern ist die Elementanzahl: 40.\n4. ✗ Erlaubt sind nur a[0] … a[39]. a[40] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.",
    "source": "T-36 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "MASTER-T36-array-init-size",
+   "variantAngle": "application",
+   "examFamilyRole": "true-false"
   },
   {
    "id": "Q-000638",
@@ -10758,7 +10975,8 @@
    ],
    "explanation": "1. ✗ sizeof liefert IMMER Bytes (hier 120 × 4 = 480), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n2. ✓ Gesamtbytes ÷ Bytes pro Element = 480 / 4 = 120 — DIE Standardformel für die Elementanzahl.\n3. ✗ Größe = Elementanzahl × Typgröße = 120 × 4 Byte (float) = 480 Byte, nicht 484.\n4. ✓ sizeof liefert die Größe in Bytes: 120 Elemente × 4 Byte (float) = 480.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000639",
@@ -10819,7 +11037,10 @@
    ],
    "explanation": "1. ✗ C prüft zur Laufzeit NICHTS — ein Zugriff hinter dem Array-Ende ist undefiniertes Verhalten. Die Grenzen einzuhalten ist allein Aufgabe des Programmierers.\n2. ✓ Arrays starten bei Index 0; bei 10 Elementen ist der letzte Index 9.\n3. ✗ Erlaubt sind nur a[0] … a[9]. a[10] liegt dahinter — C prüft das NICHT zur Laufzeit, der Zugriff wäre undefiniertes Verhalten.\n4. ✓ Ein Array ist eine Sammlung gleichartiger Elemente — der Typ steht einmal vorn. (Verschiedene Typen bündelt ein struct.)",
    "source": "T-36 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "MASTER-T36-array-init-size",
+   "variantAngle": "application",
+   "examFamilyRole": "true-false"
   },
   {
    "id": "Q-000642",
@@ -10840,7 +11061,8 @@
    ],
    "explanation": "1. ✓ a[0] ist ein einzelnes float-Element und belegt 4 Byte.\n2. ✗ Größe = Elementanzahl × Typgröße = 80 × 4 Byte (float) = 320 Byte, nicht 324.\n3. ✓ Gesamtbytes ÷ Bytes pro Element = 320 / 4 = 80 — DIE Standardformel für die Elementanzahl.\n4. ✗ sizeof liefert IMMER Bytes (hier 80 × 4 = 320), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000643",
@@ -10921,7 +11143,8 @@
    ],
    "explanation": "1. ✗ Größe = Elementanzahl × Typgröße = 40 × 1 Byte (char) = 40 Byte, nicht 41.\n2. ✗ sizeof liefert IMMER Bytes (hier 40 × 1 = 40), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n3. ✓ sizeof liefert die Größe in Bytes: 40 Elemente × 1 Byte (char) = 40.\n4. ✗ sizeof rechnet in Bytes: 40 × 1 (char) = 40, nicht 160.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000647",
@@ -11025,7 +11248,8 @@
    ],
    "explanation": "1. ✗ sizeof liefert IMMER Bytes (hier 120 × 8 = 960), nie die Elementzahl. Die bekommt man mit sizeof(a) / sizeof(a[0]).\n2. ✓ a[0] ist ein einzelnes long long-Element und belegt 8 Byte.\n3. ✓ sizeof liefert die Größe in Bytes: 120 Elemente × 8 Byte (long long) = 960.\n4. ✗ sizeof rechnet in Bytes: 120 × 8 (long long) = 960, nicht 480.",
    "source": "T-37 / AT-10",
-   "verified": true
+   "verified": true,
+   "familyId": "T37-array-size-calculation"
   },
   {
    "id": "Q-000652",
@@ -12961,7 +13185,8 @@
    ],
    "explanation": "1. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n2. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n3. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).\n4. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000750",
@@ -12980,7 +13205,8 @@
    ],
    "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000751",
@@ -13016,7 +13242,8 @@
    ],
    "explanation": "1. ✗ Structs werden als KOPIE übergeben (call by value) — anders als Arrays! Änderungen am Parameter bleiben in der Funktion.\n2. ✓ sizeof funktioniert für jeden Typ — beim struct (mindestens) die Summe der Elementgrößen.\n3. ✗ Der Struct-Parameter ist eine KOPIE — das Original in main bleibt unverändert. (Bei Arrays wäre es genau andersherum.)",
    "source": "T-45 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T45-combined"
   },
   {
    "id": "Q-000753",
@@ -13037,7 +13264,8 @@
    ],
    "explanation": "1. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n2. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).\n3. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n4. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000754",
@@ -13059,7 +13287,8 @@
    ],
    "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n3. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n4. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000755",
@@ -13098,7 +13327,8 @@
    ],
    "explanation": "1. ✓ sizeof funktioniert für jeden Typ — beim struct (mindestens) die Summe der Elementgrößen.\n2. ✗ Der Struct-Parameter ist eine KOPIE — das Original in main bleibt unverändert. (Bei Arrays wäre es genau andersherum.)\n3. ✓ Structs sind call-by-value: Die Funktion erhält eine Kopie, das Original bleibt unverändert (anders als bei Arrays!).\n4. ✓ Structs sind als Rückgabetyp erlaubt: struct punkt erzeuge(void) { …; return p; }.",
    "source": "T-45 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T45-combined"
   },
   {
    "id": "Q-000757",
@@ -13118,7 +13348,8 @@
    ],
    "explanation": "1. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n2. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n3. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n4. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000758",
@@ -13140,7 +13371,8 @@
    ],
    "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000759",
@@ -13160,7 +13392,8 @@
    ],
    "explanation": "1. ✓ sizeof funktioniert für jeden Typ — beim struct (mindestens) die Summe der Elementgrößen.\n2. ✗ Structs werden als KOPIE übergeben (call by value) — anders als Arrays! Änderungen am Parameter bleiben in der Funktion.\n3. ✓ Structs sind call-by-value: Die Funktion erhält eine Kopie, das Original bleibt unverändert (anders als bei Arrays!).\n4. ✗ Der Struct-Parameter ist eine KOPIE — das Original in main bleibt unverändert. (Bei Arrays wäre es genau andersherum.)",
    "source": "T-45 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T45-combined"
   },
   {
    "id": "Q-000760",
@@ -13178,7 +13411,8 @@
    ],
    "explanation": "1. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n2. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n3. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000761",
@@ -13197,7 +13431,8 @@
    ],
    "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000762",
@@ -13215,7 +13450,8 @@
    ],
    "explanation": "1. ✗ Der Struct-Parameter ist eine KOPIE — das Original in main bleibt unverändert. (Bei Arrays wäre es genau andersherum.)\n2. ✗ Structs werden als KOPIE übergeben (call by value) — anders als Arrays! Änderungen am Parameter bleiben in der Funktion.\n3. ✓ Structs sind call-by-value: Die Funktion erhält eine Kopie, das Original bleibt unverändert (anders als bei Arrays!).",
    "source": "T-45 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T45-combined"
   },
   {
    "id": "Q-000763",
@@ -13233,7 +13469,8 @@
    ],
    "explanation": "1. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n2. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n3. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000764",
@@ -13255,7 +13492,8 @@
    ],
    "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000765",
@@ -13296,7 +13534,8 @@
    ],
    "explanation": "1. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n2. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).\n3. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n4. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000767",
@@ -13318,7 +13557,8 @@
    ],
    "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000768",
@@ -13360,7 +13600,8 @@
    ],
    "explanation": "1. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n2. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n3. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).\n4. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000770",
@@ -13379,7 +13620,8 @@
    ],
    "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000771",
@@ -13397,7 +13639,8 @@
    ],
    "explanation": "1. ✗ Der Struct-Parameter ist eine KOPIE — das Original in main bleibt unverändert. (Bei Arrays wäre es genau andersherum.)\n2. ✗ Structs werden als KOPIE übergeben (call by value) — anders als Arrays! Änderungen am Parameter bleiben in der Funktion.\n3. ✓ Structs sind als Rückgabetyp erlaubt: struct punkt erzeuge(void) { …; return p; }.",
    "source": "T-45 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T45-combined"
   },
   {
    "id": "Q-000772",
@@ -13415,7 +13658,8 @@
    ],
    "explanation": "1. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n2. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n3. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000773",
@@ -13437,7 +13681,8 @@
    ],
    "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000774",
@@ -13458,7 +13703,8 @@
    ],
    "explanation": "1. ✓ Structs sind call-by-value: Die Funktion erhält eine Kopie, das Original bleibt unverändert (anders als bei Arrays!).\n2. ✗ Structs werden als KOPIE übergeben (call by value) — anders als Arrays! Änderungen am Parameter bleiben in der Funktion.\n3. ✓ Structs sind als Rückgabetyp erlaubt: struct punkt erzeuge(void) { …; return p; }.\n4. ✓ sizeof funktioniert für jeden Typ — beim struct (mindestens) die Summe der Elementgrößen.",
    "source": "T-45 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T45-combined"
   },
   {
    "id": "Q-000775",
@@ -13478,7 +13724,8 @@
    ],
    "explanation": "1. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n2. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n3. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n4. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000776",
@@ -13499,7 +13746,8 @@
    ],
    "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000777",
@@ -13520,7 +13768,8 @@
    ],
    "explanation": "1. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n2. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n3. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n4. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000778",
@@ -13542,7 +13791,8 @@
    ],
    "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n4. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000779",
@@ -13578,7 +13828,8 @@
    ],
    "explanation": "1. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n2. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.\n3. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000781",
@@ -13600,7 +13851,8 @@
    ],
    "explanation": "1. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n4. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000782",
@@ -13620,7 +13872,8 @@
    ],
    "explanation": "1. ✓ Genau dafür sind structs da: verschiedene Typen unter einem Namen bündeln (z. B. int nummer; double saldo;).\n2. ✓ Korrekt: jedes Element endet mit Semikolon, und nach der schließenden geschweiften Klammer steht ebenfalls ein Semikolon (wird gern vergessen!).\n3. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n4. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000783",
@@ -13642,7 +13895,8 @@
    ],
    "explanation": "1. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n2. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n3. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000784",
@@ -13660,7 +13914,8 @@
    ],
    "explanation": "1. ✓ struct name { … }; — das Semikolon nach der geschweiften Klammer gehört zur Definition und wird gern vergessen.\n2. ✗ Ungültig: Struct-Elemente werden einzeln mit SEMIKOLON abgeschlossen — { double x; double y; }. Das Komma zwischen zwei vollständigen Deklarationen ist ein Syntaxfehler.\n3. ✗ Gerade das Mischen verschiedener Typen ist der Zweck eines structs (z. B. int nummer; double saldo;). Gleiche Typen wären ein Array.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-struct-definition"
   },
   {
    "id": "Q-000785",
@@ -13681,7 +13936,8 @@
    ],
    "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
-   "verified": true
+   "verified": true,
+   "familyId": "T43-member-access"
   },
   {
    "id": "Q-000786",
@@ -13715,7 +13971,8 @@
    "answerIndex": 0,
    "explanation": "Alle behandelten math.h-Funktionen – auch tan – liefern double.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-return-types"
   },
   {
    "id": "Q-000788",
@@ -13732,7 +13989,8 @@
    "answerIndex": 3,
    "explanation": "pow(a, b) = a hoch b: 2^5 = 32. (pow kommt aus math.h und liefert double.)",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-powers-roots"
   },
   {
    "id": "Q-000789",
@@ -13749,7 +14007,8 @@
    "answerIndex": 1,
    "explanation": "M_PI ist in math.h definiert (unter Visual Studio zusätzlich _USE_MATH_DEFINES).",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-pi"
   },
   {
    "id": "Q-000790",
@@ -13766,7 +14025,8 @@
    "answerIndex": 2,
    "explanation": "sqrt ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-headers"
   },
   {
    "id": "Q-000791",
@@ -13783,7 +14043,8 @@
    "answerIndex": 2,
    "explanation": "Alle behandelten math.h-Funktionen – auch sqrt – liefern double.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-return-types"
   },
   {
    "id": "Q-000792",
@@ -13800,7 +14061,8 @@
    "answerIndex": 1,
    "explanation": "floor (\"Boden\") rundet immer AB: floor(3.7) = 3. Aufrunden macht ceil (→ 4). Rückgabetyp ist double.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-rounding"
   },
   {
    "id": "Q-000793",
@@ -13817,7 +14079,10 @@
    "answerIndex": 1,
    "explanation": "atan(1) = π/4, denn tan(45°) = 1 → 4 · atan(1) = π in voller double-Genauigkeit. 2·acos(0.5) = 2·(π/3) = 2π/3 ≠ π; sqrt(10) ≈ 3,162 und 180/57 ≈ 3,158 sind nur grobe Näherungen.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "MASTER-T14-angle-and-pi",
+   "variantAngle": "rule",
+   "examFamilyRole": "mc-single"
   },
   {
    "id": "Q-000794",
@@ -13834,7 +14099,8 @@
    "answerIndex": 3,
    "explanation": "sin ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-headers"
   },
   {
    "id": "Q-000795",
@@ -13851,7 +14117,8 @@
    "answerIndex": 0,
    "explanation": "Alle behandelten math.h-Funktionen – auch pow – liefern double.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-return-types"
   },
   {
    "id": "Q-000796",
@@ -13867,7 +14134,8 @@
    "answerIndex": 2,
    "explanation": "fmod ist der Divisionsrest für Gleitkommazahlen (das %-Gegenstück für double): 7.5 = 3·2 + 1.5 → Rest 1.5.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-absolute-modulo"
   },
   {
    "id": "Q-000797",
@@ -13884,7 +14152,8 @@
    "answerIndex": 3,
    "explanation": "Trigonometrische Funktionen in C rechnen in Radiant; grad = rad·180/π.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-angle-unit"
   },
   {
    "id": "Q-000798",
@@ -13901,7 +14170,8 @@
    "answerIndex": 3,
    "explanation": "1. ✗ stdlib.h enthält u. a. malloc und rand — acos steht dort nicht.\n2. ✗ string.h enthält die String-Funktionen (strcpy, strlen, …) — acos steht dort nicht.\n3. ✗ stdio.h enthält die Ein-/Ausgabe (printf, scanf, …) — acos steht dort nicht.\n4. ✓ acos ist in math.h deklariert.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-headers"
   },
   {
    "id": "Q-000799",
@@ -13918,7 +14188,8 @@
    "answerIndex": 1,
    "explanation": "Die Wurzel aus 49 ist 7; Rückgabetyp double.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-powers-roots"
   },
   {
    "id": "Q-000800",
@@ -13935,7 +14206,8 @@
    "answerIndex": 1,
    "explanation": "floor ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-headers"
   },
   {
    "id": "Q-000801",
@@ -13952,7 +14224,8 @@
    "answerIndex": 1,
    "explanation": "Alle behandelten math.h-Funktionen – auch ceil – liefern double.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-return-types"
   },
   {
    "id": "Q-000802",
@@ -13969,7 +14242,8 @@
    "answerIndex": 3,
    "explanation": "fabs liefert den BETRAG einer Gleitkommazahl: |-4.5| = 4.5.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-absolute-modulo"
   },
   {
    "id": "Q-000803",
@@ -14003,7 +14277,8 @@
    "answerIndex": 1,
    "explanation": "Alle behandelten math.h-Funktionen – auch floor – liefern double.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-return-types"
   },
   {
    "id": "Q-000805",
@@ -14020,7 +14295,8 @@
    "answerIndex": 0,
    "explanation": "ceil (\"Decke\") rundet immer AUF: ceil(3.2) = 4. Abrunden macht floor (→ 3). Rückgabetyp ist double.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-rounding"
   },
   {
    "id": "Q-000806",
@@ -14037,7 +14313,8 @@
    "answerIndex": 3,
    "explanation": "pow ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-headers"
   },
   {
    "id": "Q-000807",
@@ -14054,7 +14331,8 @@
    "answerIndex": 0,
    "explanation": "Alle behandelten math.h-Funktionen – auch cos – liefern double.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-return-types"
   },
   {
    "id": "Q-000808",
@@ -14071,7 +14349,8 @@
    "answerIndex": 1,
    "explanation": "log10 ist der Zehnerlogarithmus: 10^3 = 1000, also log10(1000) = 3. (Achtung: log ohne \"10\" wäre der natürliche Logarithmus zur Basis e.)",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-logarithms"
   },
   {
    "id": "Q-000809",
@@ -14088,7 +14367,8 @@
    "answerIndex": 3,
    "explanation": "cos ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-headers"
   },
   {
    "id": "Q-000810",
@@ -14105,7 +14385,8 @@
    "answerIndex": 0,
    "explanation": "1. ✓ log ist in math.h deklariert.\n2. ✗ string.h enthält die String-Funktionen (strcpy, strlen, …) — log steht dort nicht.\n3. ✗ stdio.h enthält die Ein-/Ausgabe (printf, scanf, …) — log steht dort nicht.\n4. ✗ stdlib.h enthält u. a. malloc und rand — log steht dort nicht.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-headers"
   },
   {
    "id": "Q-000811",
@@ -14156,7 +14437,8 @@
    "answerIndex": 2,
    "explanation": "fabs ist in math.h deklariert. Merkhilfe: stdio.h = Ein-/Ausgabe (printf, scanf), math.h = Mathematik (sqrt, pow, …), string.h = Strings (strcpy, strlen, …), stdlib.h = u. a. malloc/rand.",
    "source": "T-14 / AT-8",
-   "verified": true
+   "verified": true,
+   "familyId": "T14-headers"
   },
   {
    "id": "Q-000814",
@@ -14782,7 +15064,8 @@
    "answerIndex": 3,
    "explanation": "Vorrang: erst b + c = 21, dann der Vergleich a == 21 → 1, zuletzt die Zuweisung an d (niedrigster Vorrang).",
    "source": "T-25 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-evaluation"
   },
   {
    "id": "Q-000849",
@@ -14800,7 +15083,8 @@
    "answerIndex": 1,
    "explanation": "Vorrang: erst b + c = 18, dann der Vergleich a == 18 → 0, zuletzt die Zuweisung an d (niedrigster Vorrang).",
    "source": "T-25 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-evaluation"
   },
   {
    "id": "Q-000850",
@@ -14818,7 +15102,8 @@
    "answerIndex": 0,
    "explanation": "Vorrang: erst b + c = 23, dann der Vergleich a == 23 → 0, zuletzt die Zuweisung an d (niedrigster Vorrang).",
    "source": "T-25 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-evaluation"
   },
   {
    "id": "Q-000851",
@@ -14836,7 +15121,8 @@
    "answerIndex": 1,
    "explanation": "Vorrang: erst b + c = 25, dann der Vergleich a == 25 → 1, zuletzt die Zuweisung an d (niedrigster Vorrang).",
    "source": "T-25 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-evaluation"
   },
   {
    "id": "Q-000852",
@@ -14854,7 +15140,8 @@
    "answerIndex": 3,
    "explanation": "Vorrang: erst b + c = 15, dann der Vergleich a == 15 → 1, zuletzt die Zuweisung an d (niedrigster Vorrang).",
    "source": "T-25 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-evaluation"
   },
   {
    "id": "Q-000853",
@@ -14872,7 +15159,8 @@
    "answerIndex": 0,
    "explanation": "Vorrang: erst b + c = 24, dann der Vergleich a == 24 → 0, zuletzt die Zuweisung an d (niedrigster Vorrang).",
    "source": "T-25 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-evaluation"
   },
   {
    "id": "Q-000854",
@@ -14890,7 +15178,8 @@
    "answerIndex": 0,
    "explanation": "Vorrang: erst b + c = 9, dann der Vergleich a == 9 → 0, zuletzt die Zuweisung an d (niedrigster Vorrang).",
    "source": "T-25 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-evaluation"
   },
   {
    "id": "Q-000855",
@@ -14908,7 +15197,8 @@
    "answerIndex": 2,
    "explanation": "Vorrang: erst b + c = 18, dann der Vergleich a == 18 → 0, zuletzt die Zuweisung an d (niedrigster Vorrang).",
    "source": "T-25 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T25-precedence-evaluation"
   },
   {
    "id": "Q-000856",
@@ -15392,7 +15682,10 @@
    "answerIndex": 1,
    "explanation": "%d gibt den Zahlenwert aus: 'C' hat den ASCII-Code 67, plus 4 ergibt 71.",
    "source": "T-21 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "MASTER-T21-char-arithmetic",
+   "variantAngle": "application",
+   "examFamilyRole": "true-false"
   },
   {
    "id": "Q-000883",
@@ -15410,7 +15703,10 @@
    "answerIndex": 2,
    "explanation": "%d gibt den Zahlenwert aus: 'M' hat den ASCII-Code 77, plus 2 ergibt 79.",
    "source": "T-21 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "MASTER-T21-char-arithmetic",
+   "variantAngle": "application",
+   "examFamilyRole": "true-false"
   },
   {
    "id": "Q-000884",
@@ -15464,7 +15760,10 @@
    "answerIndex": 3,
    "explanation": "Zeichen sind Zahlen: 'C' (67) + 2 = 69 = 'E'. %c gibt das Zeichen aus.",
    "source": "T-21 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "MASTER-T21-char-arithmetic",
+   "variantAngle": "application",
+   "examFamilyRole": "true-false"
   },
   {
    "id": "Q-000887",
@@ -15500,7 +15799,10 @@
    "answerIndex": 1,
    "explanation": "Zeichen sind Zahlen: 'E' (69) + 5 = 74 = 'J'. %c gibt das Zeichen aus.",
    "source": "T-21 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "MASTER-T21-char-arithmetic",
+   "variantAngle": "application",
+   "examFamilyRole": "true-false"
   },
   {
    "id": "Q-000889",
@@ -15822,7 +16124,10 @@
    "answerIndex": 0,
    "explanation": "Fall-through: Ohne break läuft die Ausführung ab case 2 in die folgenden cases weiter, bis ein break kommt → \"BC\".",
    "source": "T-27 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "MASTER-T27-switch-flow",
+   "variantAngle": "application",
+   "examFamilyRole": "true-false"
   },
   {
    "id": "Q-000907",
@@ -16091,7 +16396,8 @@
    "answerIndex": 3,
    "explanation": "In der Kurskonvention belegt int 4 Byte – sizeof liefert die Größe in Bytes.",
    "source": "T-10 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-integer-sizes"
   },
   {
    "id": "Q-000922",
@@ -16109,7 +16415,8 @@
    "answerIndex": 1,
    "explanation": "In der Kurskonvention belegt double 8 Byte – sizeof liefert die Größe in Bytes.",
    "source": "T-10 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-floating-sizes"
   },
   {
    "id": "Q-000923",
@@ -16127,7 +16434,8 @@
    "answerIndex": 0,
    "explanation": "In der Kurskonvention belegt char 1 Byte – sizeof liefert die Größe in Bytes.",
    "source": "T-10 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-integer-sizes"
   },
   {
    "id": "Q-000924",
@@ -16145,7 +16453,8 @@
    "answerIndex": 3,
    "explanation": "In der Kurskonvention belegt short 2 Byte – sizeof liefert die Größe in Bytes.",
    "source": "T-10 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-integer-sizes"
   },
   {
    "id": "Q-000925",
@@ -16163,7 +16472,8 @@
    "answerIndex": 1,
    "explanation": "In der Kurskonvention belegt long long 8 Byte – sizeof liefert die Größe in Bytes.",
    "source": "T-10 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-integer-sizes"
   },
   {
    "id": "Q-000926",
@@ -16181,7 +16491,8 @@
    "answerIndex": 0,
    "explanation": "In der Kurskonvention belegt float 4 Byte – sizeof liefert die Größe in Bytes.",
    "source": "T-10 / AT-3",
-   "verified": true
+   "verified": true,
+   "familyId": "T10-floating-sizes"
   },
   {
    "id": "Q-000927",
@@ -16649,7 +16960,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ein Operand wird float, damit wird nicht ganzzahlig dividiert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000953",
@@ -16667,7 +16979,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft für i = 0 bis 3, also 4-mal scanf.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000954",
@@ -16685,7 +16998,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Bei 4 Elementen sind nur die Indizes 0 bis 3 gültig.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000955",
@@ -16703,7 +17017,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Summe 10, geteilt durch 4 (Gleitkomma) = 2.50 – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000956",
@@ -16721,7 +17036,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Durch den Cast wird gleitkommadividiert; 10/4 = 2.5. 2.00 wäre das Ergebnis der reinen Ganzzahldivision.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000957",
@@ -16739,7 +17055,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es wird nur die Startadresse übergeben – die Funktion arbeitet auf dem Original.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000958",
@@ -16757,7 +17074,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Divisor n wird nicht geprüft – bei n == 0 wird durch 0 geteilt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000959",
@@ -16775,7 +17093,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Funktionskopf lautet float berechne_durchschnitt(...).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000960",
@@ -16793,7 +17112,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: int/int bleibt int – Nachkommastellen würden abgeschnitten.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000961",
@@ -16811,7 +17131,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife addiert alle Eingabewerte: 1 + 2 + 3 + 4 = 10.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000962",
@@ -16829,7 +17150,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ein Operand wird float, damit wird nicht ganzzahlig dividiert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000963",
@@ -16847,7 +17169,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft für i = 0 bis 4, also 5-mal scanf.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000964",
@@ -16865,7 +17188,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Bei 5 Elementen sind nur die Indizes 0 bis 4 gültig.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000965",
@@ -16883,7 +17207,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Summe 31, geteilt durch 5 (Gleitkomma) = 6.20 – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000966",
@@ -16901,7 +17226,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Durch den Cast wird gleitkommadividiert; 31/5 = 6.2. 6.00 wäre das Ergebnis der reinen Ganzzahldivision.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000967",
@@ -16919,7 +17245,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es wird nur die Startadresse übergeben – die Funktion arbeitet auf dem Original.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000968",
@@ -16937,7 +17264,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Divisor n wird nicht geprüft – bei n == 0 wird durch 0 geteilt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000969",
@@ -16955,7 +17283,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Funktionskopf lautet float berechne_durchschnitt(...).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000970",
@@ -16973,7 +17302,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: int/int bleibt int – Nachkommastellen würden abgeschnitten.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000971",
@@ -16991,7 +17321,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife addiert alle Eingabewerte: 4 + 8 + 5 + 7 + 7 = 31.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000972",
@@ -17009,7 +17340,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ein Operand wird float, damit wird nicht ganzzahlig dividiert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000973",
@@ -17027,7 +17359,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft für i = 0 bis 5, also 6-mal scanf.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000974",
@@ -17045,7 +17378,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Bei 6 Elementen sind nur die Indizes 0 bis 5 gültig.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000975",
@@ -17063,7 +17397,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Summe 167, geteilt durch 6 (Gleitkomma) = 27.83 – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000976",
@@ -17081,7 +17416,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Durch den Cast wird gleitkommadividiert; 167/6 = 27.8333. 27.00 wäre das Ergebnis der reinen Ganzzahldivision.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000977",
@@ -17099,7 +17435,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es wird nur die Startadresse übergeben – die Funktion arbeitet auf dem Original.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000978",
@@ -17117,7 +17454,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Divisor n wird nicht geprüft – bei n == 0 wird durch 0 geteilt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000979",
@@ -17135,7 +17473,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Funktionskopf lautet float berechne_durchschnitt(...).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000980",
@@ -17153,7 +17492,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: int/int bleibt int – Nachkommastellen würden abgeschnitten.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000981",
@@ -17171,7 +17511,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife addiert alle Eingabewerte: 10 + 20 + 30 + 40 + 55 + 12 = 167.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000982",
@@ -17189,7 +17530,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ein Operand wird float, damit wird nicht ganzzahlig dividiert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000983",
@@ -17207,7 +17549,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft für i = 0 bis 6, also 7-mal scanf.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000984",
@@ -17225,7 +17568,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Bei 7 Elementen sind nur die Indizes 0 bis 6 gültig.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000985",
@@ -17243,7 +17587,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Summe 34, geteilt durch 7 (Gleitkomma) = 4.86 – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000986",
@@ -17261,7 +17606,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Durch den Cast wird gleitkommadividiert; 34/7 = 4.85714. 4.00 wäre das Ergebnis der reinen Ganzzahldivision.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000987",
@@ -17279,7 +17625,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es wird nur die Startadresse übergeben – die Funktion arbeitet auf dem Original.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000988",
@@ -17297,7 +17644,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Divisor n wird nicht geprüft – bei n == 0 wird durch 0 geteilt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000989",
@@ -17315,7 +17663,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Funktionskopf lautet float berechne_durchschnitt(...).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000990",
@@ -17333,7 +17682,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: int/int bleibt int – Nachkommastellen würden abgeschnitten.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000991",
@@ -17351,7 +17701,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife addiert alle Eingabewerte: 3 + 3 + 4 + 9 + 2 + 5 + 8 = 34.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-01"
   },
   {
    "id": "Q-000992",
@@ -17369,7 +17720,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 3 der 6 Werte sind gerade – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-000993",
@@ -17387,7 +17739,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: zaehle_gerade zählt Werte mit a[i] % 2 == 0. Gerade sind in {3, 8, 5, 12, 7, 4} nur 8, 12 und 4 → Ausgabe 3, nicht 4.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-000994",
@@ -17405,7 +17758,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Gerade Zahlen haben beim Teilen durch 2 den Rest 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-000995",
@@ -17423,7 +17777,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Modulo-Operator arbeitet auf Ganzzahlen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-000996",
@@ -17441,7 +17796,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: sizeof(a) = 24 Byte, geteilt durch sizeof(a[0]) = 4 → 6.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-000997",
@@ -17459,7 +17815,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: sizeof(a) liefert die Byte-Größe 24; erst die Division durch sizeof(a[0]) ergibt 6.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-000998",
@@ -17477,7 +17834,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Die Schleife beginnt bei i = 0, also mit a[0].",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-000999",
@@ -17495,7 +17853,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie liest nur – es wird nichts zugewiesen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001000",
@@ -17513,7 +17872,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft dann 0-mal und z bleibt 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001001",
@@ -17531,7 +17891,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: n = sizeof(a)/sizeof(a[0]) = 6 Elemente; for (i = 0; i < 6; i++) läuft für i = 0…5 — genau 6-mal.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001002",
@@ -17549,7 +17910,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 3 der 5 Werte sind gerade – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001003",
@@ -17567,7 +17929,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: zaehle_gerade zählt Werte mit a[i] % 2 == 0. Gerade sind in {3, 8, 5, 12, 7, 4} nur 8, 12 und 4 → Ausgabe 3, nicht 4.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001004",
@@ -17585,7 +17948,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Gerade Zahlen haben beim Teilen durch 2 den Rest 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001005",
@@ -17603,7 +17967,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Modulo-Operator arbeitet auf Ganzzahlen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001006",
@@ -17621,7 +17986,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: sizeof(a) = 20 Byte, geteilt durch sizeof(a[0]) = 4 → 5.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001007",
@@ -17639,7 +18005,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: sizeof(a) liefert die Byte-Größe 20; erst die Division durch sizeof(a[0]) ergibt 5.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001008",
@@ -17657,7 +18024,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Die Schleife beginnt bei i = 0, also mit a[0].",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001009",
@@ -17675,7 +18043,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie liest nur – es wird nichts zugewiesen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001010",
@@ -17693,7 +18062,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft dann 0-mal und z bleibt 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001011",
@@ -17711,7 +18081,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Array {2, 9, 6, 6, 11} hat 5 Elemente → n = 5; die Schleife läuft für i = 0…4 genau 5-mal.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001012",
@@ -17729,7 +18100,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 0 der 4 Werte sind gerade – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001013",
@@ -17747,7 +18119,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: {1, 3, 5, 7} enthält NUR ungerade Zahlen — kein Element erfüllt a[i] % 2 == 0 → Ausgabe 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001014",
@@ -17765,7 +18138,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Gerade Zahlen haben beim Teilen durch 2 den Rest 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001015",
@@ -17783,7 +18157,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Modulo-Operator arbeitet auf Ganzzahlen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001016",
@@ -17801,7 +18176,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: sizeof(a) = 16 Byte, geteilt durch sizeof(a[0]) = 4 → 4.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001017",
@@ -17819,7 +18195,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: sizeof(a) liefert die Byte-Größe 16; erst die Division durch sizeof(a[0]) ergibt 4.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001018",
@@ -17837,7 +18214,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Die Schleife beginnt bei i = 0, also mit a[0].",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001019",
@@ -17855,7 +18233,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie liest nur – es wird nichts zugewiesen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001020",
@@ -17873,7 +18252,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft dann 0-mal und z bleibt 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001021",
@@ -17891,7 +18271,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: {1, 3, 5, 7} hat 4 Elemente → n = 4 → Durchläufe i = 0…3, also 4.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001022",
@@ -17909,7 +18290,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 5 der 7 Werte sind gerade – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001023",
@@ -17927,7 +18309,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Gerade sind 10, −4, 0, 8 und 2 — auch 0 und negative gerade Zahlen erfüllen a[i] % 2 == 0! Das ergibt 5, nicht 6.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001024",
@@ -17945,7 +18328,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Gerade Zahlen haben beim Teilen durch 2 den Rest 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001025",
@@ -17963,7 +18347,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Modulo-Operator arbeitet auf Ganzzahlen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001026",
@@ -17981,7 +18366,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: sizeof(a) = 28 Byte, geteilt durch sizeof(a[0]) = 4 → 7.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001027",
@@ -17999,7 +18385,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: sizeof(a) liefert die Byte-Größe 28; erst die Division durch sizeof(a[0]) ergibt 7.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001028",
@@ -18017,7 +18404,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Die Schleife beginnt bei i = 0, also mit a[0].",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001029",
@@ -18035,7 +18423,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie liest nur – es wird nichts zugewiesen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001030",
@@ -18053,7 +18442,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft dann 0-mal und z bleibt 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001031",
@@ -18071,7 +18461,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Array hat 7 Elemente → n = 7 → Durchläufe i = 0…6, also 7.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-02"
   },
   {
    "id": "Q-001032",
@@ -18089,7 +18480,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Minimum ist 3 und kommt 2-mal vor – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001033",
@@ -18107,7 +18499,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: m = a[0] ist der Startwert; der Vergleich beginnt beim zweiten Element.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001034",
@@ -18125,7 +18518,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der strikte Vergleich lässt m beim ersten gefundenen Minimum.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001035",
@@ -18143,7 +18537,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: m = a[0] passiert vor jeder Prüfung – bei leerem Array ein unzulässiger Zugriff.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001036",
@@ -18161,7 +18556,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Bei jedem a[i] == w wird z erhöht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001037",
@@ -18179,7 +18575,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Das Minimum von {7, 3, 9, 3, 8} ist 3, aber es kommt nur 2-mal vor → Ausgabe \"3 2\".",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001038",
@@ -18197,7 +18594,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es steht korrekt == (Vergleich) im Code.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001039",
@@ -18215,7 +18613,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Arrays werden per Adresse übergeben, nicht kopiert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001040",
@@ -18233,7 +18632,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Bei 5 Elementen ist 4 der letzte gültige Index.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001041",
@@ -18251,7 +18651,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Funktionsköpfe beginnen mit int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001042",
@@ -18269,7 +18670,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Minimum ist 5 und kommt 2-mal vor – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001043",
@@ -18287,7 +18689,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: m = a[0] ist der Startwert; der Vergleich beginnt beim zweiten Element.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001044",
@@ -18305,7 +18708,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der strikte Vergleich lässt m beim ersten gefundenen Minimum.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001045",
@@ -18323,7 +18727,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: m = a[0] passiert vor jeder Prüfung – bei leerem Array ein unzulässiger Zugriff.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001046",
@@ -18341,7 +18746,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Bei jedem a[i] == w wird z erhöht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001047",
@@ -18359,7 +18765,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Minimum von {5, 5, 6, 12} ist 5, und es kommt 2-mal vor → Ausgabe \"5 2\".",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001048",
@@ -18377,7 +18784,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es steht korrekt == (Vergleich) im Code.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001049",
@@ -18395,7 +18803,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Arrays werden per Adresse übergeben, nicht kopiert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001050",
@@ -18413,7 +18822,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Bei 4 Elementen ist 3 der letzte gültige Index.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001051",
@@ -18431,7 +18841,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Funktionsköpfe beginnen mit int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001052",
@@ -18449,7 +18860,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Minimum ist 2 und kommt 3-mal vor – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001053",
@@ -18467,7 +18879,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: m = a[0] ist der Startwert; der Vergleich beginnt beim zweiten Element.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001054",
@@ -18485,7 +18898,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der strikte Vergleich lässt m beim ersten gefundenen Minimum.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001055",
@@ -18503,7 +18917,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: m = a[0] passiert vor jeder Prüfung – bei leerem Array ein unzulässiger Zugriff.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001056",
@@ -18521,7 +18936,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Bei jedem a[i] == w wird z erhöht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001057",
@@ -18539,7 +18955,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Minimum von {4, 2, 2, 2, 10, 6} ist 2, und es kommt 3-mal vor → Ausgabe \"2 3\".",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001058",
@@ -18557,7 +18974,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es steht korrekt == (Vergleich) im Code.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001059",
@@ -18575,7 +18993,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Arrays werden per Adresse übergeben, nicht kopiert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001060",
@@ -18593,7 +19012,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Bei 6 Elementen ist 5 der letzte gültige Index.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001061",
@@ -18611,7 +19031,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Funktionsköpfe beginnen mit int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001062",
@@ -18629,7 +19050,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Minimum ist 11 und kommt 2-mal vor – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001063",
@@ -18647,7 +19069,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: m = a[0] ist der Startwert; der Vergleich beginnt beim zweiten Element.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001064",
@@ -18665,7 +19088,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der strikte Vergleich lässt m beim ersten gefundenen Minimum.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001065",
@@ -18683,7 +19107,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: m = a[0] passiert vor jeder Prüfung – bei leerem Array ein unzulässiger Zugriff.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001066",
@@ -18701,7 +19126,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Bei jedem a[i] == w wird z erhöht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001067",
@@ -18719,7 +19145,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Minimum von {15, 11, 11, 20, 13} ist 11, und es kommt 2-mal vor → Ausgabe \"11 2\".",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001068",
@@ -18737,7 +19164,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es steht korrekt == (Vergleich) im Code.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001069",
@@ -18755,7 +19183,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Arrays werden per Adresse übergeben, nicht kopiert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001070",
@@ -18773,7 +19202,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Bei 5 Elementen ist 4 der letzte gültige Index.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001071",
@@ -18791,7 +19221,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Funktionsköpfe beginnen mit int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-03"
   },
   {
    "id": "Q-001072",
@@ -18809,7 +19240,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Maximum 9 minus Minimum 1 = 8 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001073",
@@ -18827,7 +19259,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide if-Abfragen stehen im selben Durchlauf.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001074",
@@ -18845,7 +19278,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: mx startet bei a[0] = 4 und wird bei jedem größeren Wert aktualisiert → Maximum von {4, 9, 1, 6} ist 9.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001075",
@@ -18863,7 +19297,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: mn hält das Minimum: In {4, 9, 1, 6} ist das 1.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001076",
@@ -18881,7 +19316,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Dann bleiben mx und mn beim Startwert a[0] und mx − mn = 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001077",
@@ -18899,7 +19335,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Die Funktion liefert die DIFFERENZ mx − mn = 9 − 1 = 8 — nicht das Maximum selbst.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001078",
@@ -18917,7 +19354,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es sind zwei unabhängige Prüfungen – ein else ist nicht nötig.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001079",
@@ -18935,7 +19373,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie startet bei i = 1 und läuft bis 3, also 3-mal.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001080",
@@ -18953,7 +19392,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Nur die Startadresse wird übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001081",
@@ -18971,7 +19411,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: return mx - mn; liefert die Spannweite.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001082",
@@ -18989,7 +19430,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Maximum 15 minus Minimum 3 = 12 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001083",
@@ -19007,7 +19449,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide if-Abfragen stehen im selben Durchlauf.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001084",
@@ -19025,7 +19468,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Maximum von {12, 3, 8, 15, 7} ist 15.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001085",
@@ -19043,7 +19487,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Minimum von {12, 3, 8, 15, 7} ist 3.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001086",
@@ -19061,7 +19506,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Dann bleiben mx und mn beim Startwert a[0] und mx − mn = 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001087",
@@ -19079,7 +19525,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Rückgabe ist mx − mn = 15 − 3 = 12, nicht 13.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001088",
@@ -19097,7 +19544,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es sind zwei unabhängige Prüfungen – ein else ist nicht nötig.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001089",
@@ -19115,7 +19563,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie startet bei i = 1 und läuft bis 4, also 4-mal.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001090",
@@ -19133,7 +19582,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Nur die Startadresse wird übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001091",
@@ -19151,7 +19601,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: return mx - mn; liefert die Spannweite.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001092",
@@ -19169,7 +19620,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Maximum 5 minus Minimum 5 = 0 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001093",
@@ -19187,7 +19639,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide if-Abfragen stehen im selben Durchlauf.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001094",
@@ -19205,7 +19658,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Alle Werte sind 5 → das Maximum ist 5. Keine if-Bedingung greift, mx bleibt a[0].",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001095",
@@ -19223,7 +19677,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Alle Werte gleich → Minimum ebenfalls 5; die Funktion gibt 5 − 5 = 0 zurück.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001096",
@@ -19241,7 +19696,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Dann bleiben mx und mn beim Startwert a[0] und mx − mn = 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001097",
@@ -19259,7 +19715,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: {1, 3, 5, 7} enthält NUR ungerade Zahlen — kein Element erfüllt a[i] % 2 == 0 → Ausgabe 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001098",
@@ -19277,7 +19734,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es sind zwei unabhängige Prüfungen – ein else ist nicht nötig.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001099",
@@ -19295,7 +19753,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie startet bei i = 1 und läuft bis 2, also 2-mal.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001100",
@@ -19313,7 +19772,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Nur die Startadresse wird übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001101",
@@ -19331,7 +19791,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: return mx - mn; liefert die Spannweite.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001102",
@@ -19349,7 +19810,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Maximum 20 minus Minimum 2 = 18 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001103",
@@ -19367,7 +19829,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide if-Abfragen stehen im selben Durchlauf.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001104",
@@ -19385,7 +19848,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Maximum von {2, 20, 11, 4, 18} ist 20.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001105",
@@ -19403,7 +19867,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Minimum von {2, 20, 11, 4, 18} ist 2.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001106",
@@ -19421,7 +19886,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Dann bleiben mx und mn beim Startwert a[0] und mx − mn = 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001107",
@@ -19439,7 +19905,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Ausgegeben wird mx − mn = 20 − 2 = 18, nicht 19.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001108",
@@ -19457,7 +19924,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es sind zwei unabhängige Prüfungen – ein else ist nicht nötig.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001109",
@@ -19475,7 +19943,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie startet bei i = 1 und läuft bis 4, also 4-mal.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001110",
@@ -19493,7 +19962,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Nur die Startadresse wird übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001111",
@@ -19511,7 +19981,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: return mx - mn; liefert die Spannweite.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-04"
   },
   {
    "id": "Q-001112",
@@ -19529,7 +20000,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Summe der positiven Werte = 15 – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001113",
@@ -19547,7 +20019,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: > 0 schließt die 0 aus; für 'ab 0' müsste >= 0 stehen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001114",
@@ -19565,7 +20038,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Sie erfüllen die if-Bedingung nicht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001115",
@@ -19583,7 +20057,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Die Gesamtsumme aller Werte ist 13, addiert werden aber nur positive Werte (15).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001116",
@@ -19601,7 +20076,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zusammengesetzte Zuweisung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001117",
@@ -19619,7 +20095,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft über i = 0…n−1 und PRÜFT jedes Element — addiert werden aber nur die positiven (a[i] > 0).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001118",
@@ -19637,7 +20114,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft 0-mal, s bleibt 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001119",
@@ -19655,7 +20133,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie gibt deren Summe zurück, nicht die Anzahl.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001120",
@@ -19673,7 +20152,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Es wird nur die Startadresse übergeben (hier wird allerdings nichts geändert).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001121",
@@ -19691,7 +20171,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: i startet bei 0 — Arrays beginnen in C bei Index 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001122",
@@ -19709,7 +20190,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Summe der positiven Werte = 13 – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001123",
@@ -19727,7 +20209,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: > 0 schließt die 0 aus; für 'ab 0' müsste >= 0 stehen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001124",
@@ -19745,7 +20228,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Sie erfüllen die if-Bedingung nicht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001125",
@@ -19763,7 +20247,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Die Gesamtsumme aller Werte ist 7, addiert werden aber nur positive Werte (13).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001126",
@@ -19781,7 +20266,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zusammengesetzte Zuweisung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001127",
@@ -19799,7 +20285,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: n = 4 → i = 0…3: Jedes der 4 Elemente wird geprüft (addiert nur, wenn > 0).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001128",
@@ -19817,7 +20304,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft 0-mal, s bleibt 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001129",
@@ -19835,7 +20323,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie gibt deren Summe zurück, nicht die Anzahl.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001130",
@@ -19853,7 +20342,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Es wird nur die Startadresse übergeben (hier wird allerdings nichts geändert).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001131",
@@ -19871,7 +20361,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: i startet bei 0 — Arrays beginnen in C bei Index 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001132",
@@ -19889,7 +20380,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Summe der positiven Werte = 10 – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001133",
@@ -19907,7 +20399,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: > 0 schließt die 0 aus; für 'ab 0' müsste >= 0 stehen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001134",
@@ -19925,7 +20418,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Sie erfüllen die if-Bedingung nicht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001135",
@@ -19943,7 +20437,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Die Gesamtsumme aller Werte ist 7, addiert werden aber nur positive Werte (10).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001136",
@@ -19961,7 +20456,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zusammengesetzte Zuweisung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001137",
@@ -19979,7 +20475,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft über i = 0…n−1 und PRÜFT jedes Element — addiert werden aber nur die positiven (a[i] > 0).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001138",
@@ -19997,7 +20494,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft 0-mal, s bleibt 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001139",
@@ -20015,7 +20513,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie gibt deren Summe zurück, nicht die Anzahl.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001140",
@@ -20033,7 +20532,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Es wird nur die Startadresse übergeben (hier wird allerdings nichts geändert).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001141",
@@ -20051,7 +20551,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: i startet bei 0 — Arrays beginnen in C bei Index 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001142",
@@ -20069,7 +20570,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Summe der positiven Werte = 11 – programmatisch verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001143",
@@ -20087,7 +20589,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: > 0 schließt die 0 aus; für 'ab 0' müsste >= 0 stehen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001144",
@@ -20105,7 +20608,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Sie erfüllen die if-Bedingung nicht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001145",
@@ -20123,7 +20627,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Die Gesamtsumme aller Werte ist 1, addiert werden aber nur positive Werte (11).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001146",
@@ -20141,7 +20646,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zusammengesetzte Zuweisung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001147",
@@ -20159,7 +20665,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: n = 4 → i = 0…3: Jedes der 4 Elemente wird geprüft (addiert nur, wenn > 0).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001148",
@@ -20177,7 +20684,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife läuft 0-mal, s bleibt 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001149",
@@ -20195,7 +20703,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie gibt deren Summe zurück, nicht die Anzahl.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001150",
@@ -20213,7 +20722,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Es wird nur die Startadresse übergeben (hier wird allerdings nichts geändert).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001151",
@@ -20231,7 +20741,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: i startet bei 0 — Arrays beginnen in C bei Index 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-05"
   },
   {
    "id": "Q-001152",
@@ -20249,7 +20760,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Maximum 9 steht (zuerst) an Index 1 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001153",
@@ -20267,7 +20779,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: return idx; – erst main gibt zusätzlich a[k] aus.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001154",
@@ -20285,7 +20798,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Bei Gleichheit ist die Bedingung falsch, idx bleibt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001155",
@@ -20303,7 +20817,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: >= würde idx bei jedem gleich großen Wert weiterschieben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001156",
@@ -20321,7 +20836,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx startet bei 0 und wird nur auf gültige i gesetzt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001157",
@@ -20339,7 +20855,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Arrays starten bei Index 0 – das Maximum steht an Index 1.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001158",
@@ -20357,7 +20874,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: max_index liefert den INDEX des größten Werts; a[k] holt dann den Wert selbst. (Bei mehreren gleich großen Maxima bleibt es wegen des strikten > beim ersten.)",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001159",
@@ -20375,7 +20893,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx = 0 ist die Anfangsannahme.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001160",
@@ -20393,7 +20912,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie LIEST nur (Vergleich a[i] > a[idx]) und schreibt nie in a[…] — trotz Übergabe per Adresse bleibt das Array unverändert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001161",
@@ -20411,7 +20931,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx bleibt 0 – bei leerem Array ein unzulässiger Zugriff.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001162",
@@ -20429,7 +20950,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Maximum 12 steht (zuerst) an Index 2 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001163",
@@ -20447,7 +20969,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: return idx; – erst main gibt zusätzlich a[k] aus.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001164",
@@ -20465,7 +20988,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Bei Gleichheit ist die Bedingung falsch, idx bleibt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001165",
@@ -20483,7 +21007,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: >= würde idx bei jedem gleich großen Wert weiterschieben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001166",
@@ -20501,7 +21026,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx startet bei 0 und wird nur auf gültige i gesetzt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001167",
@@ -20519,7 +21045,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Arrays starten bei Index 0 – das Maximum steht an Index 2.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001168",
@@ -20537,7 +21064,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: max_index liefert den INDEX des größten Werts; a[k] holt dann den Wert selbst. (Bei mehreren gleich großen Maxima bleibt es wegen des strikten > beim ersten.)",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001169",
@@ -20555,7 +21083,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx = 0 ist die Anfangsannahme.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001170",
@@ -20573,7 +21102,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie LIEST nur (Vergleich a[i] > a[idx]) und schreibt nie in a[…] — trotz Übergabe per Adresse bleibt das Array unverändert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001171",
@@ -20591,7 +21121,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx bleibt 0 – bei leerem Array ein unzulässiger Zugriff.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001172",
@@ -20609,7 +21140,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Maximum 4 steht (zuerst) an Index 3 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001173",
@@ -20627,7 +21159,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: return idx; – erst main gibt zusätzlich a[k] aus.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001174",
@@ -20645,7 +21178,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Bei Gleichheit ist die Bedingung falsch, idx bleibt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001175",
@@ -20663,7 +21197,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: >= würde idx bei jedem gleich großen Wert weiterschieben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001176",
@@ -20681,7 +21216,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx startet bei 0 und wird nur auf gültige i gesetzt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001177",
@@ -20699,7 +21235,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Arrays starten bei Index 0 – das Maximum steht an Index 3.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001178",
@@ -20717,7 +21254,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: max_index liefert den INDEX des größten Werts; a[k] holt dann den Wert selbst. (Bei mehreren gleich großen Maxima bleibt es wegen des strikten > beim ersten.)",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001179",
@@ -20735,7 +21273,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx = 0 ist die Anfangsannahme.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001180",
@@ -20753,7 +21292,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie LIEST nur (Vergleich a[i] > a[idx]) und schreibt nie in a[…] — trotz Übergabe per Adresse bleibt das Array unverändert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001181",
@@ -20771,7 +21311,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx bleibt 0 – bei leerem Array ein unzulässiger Zugriff.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001182",
@@ -20789,7 +21330,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Maximum 20 steht (zuerst) an Index 0 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001183",
@@ -20807,7 +21349,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: return idx; – erst main gibt zusätzlich a[k] aus.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001184",
@@ -20825,7 +21368,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Bei Gleichheit ist die Bedingung falsch, idx bleibt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001185",
@@ -20843,7 +21387,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: >= würde idx bei jedem gleich großen Wert weiterschieben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001186",
@@ -20861,7 +21406,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx startet bei 0 und wird nur auf gültige i gesetzt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001187",
@@ -20879,7 +21425,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Arrays starten bei Index 0 – das Maximum steht an Index 0.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001188",
@@ -20897,7 +21444,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: max_index liefert den INDEX des größten Werts; a[k] holt dann den Wert selbst. (Bei mehreren gleich großen Maxima bleibt es wegen des strikten > beim ersten.)",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001189",
@@ -20915,7 +21463,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx = 0 ist die Anfangsannahme.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001190",
@@ -20933,7 +21482,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie LIEST nur (Vergleich a[i] > a[idx]) und schreibt nie in a[…] — trotz Übergabe per Adresse bleibt das Array unverändert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001191",
@@ -20951,7 +21501,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: idx bleibt 0 – bei leerem Array ein unzulässiger Zugriff.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-06"
   },
   {
    "id": "Q-001192",
@@ -20969,7 +21520,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 'i' kommt in \"Informatik\" 1-mal vor – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001193",
@@ -20987,7 +21539,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: '\\0' hat den Zahlenwert 0 und beendet die Schleife.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001194",
@@ -21005,7 +21558,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 'I' und 'i' haben verschiedene ASCII-Codes.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001195",
@@ -21023,7 +21577,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Der Vergleich s[i] == c ist case-sensitiv; gezählt werden nur exakte 'i'.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001196",
@@ -21041,7 +21596,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Terminator-Muster ersetzt die Längenermittlung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001197",
@@ -21059,7 +21615,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: \"Informatik\" hat 10 Zeichen + '\\0' = 11 Byte. In main ist text noch das echte Array, daher liefert sizeof die volle Größe.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001198",
@@ -21077,7 +21634,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: strlen zählt ohne Terminator – es wären 10.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001199",
@@ -21095,7 +21653,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Einfache Anführungszeichen kennzeichnen ein char-Literal.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001200",
@@ -21113,7 +21672,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es wird die Startadresse des char-Arrays übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001201",
@@ -21131,7 +21691,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ein String ist ein char-Array; jedes Zeichen (inklusive '\\0') ist ein char.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001202",
@@ -21149,7 +21710,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 'r' kommt in \"Programmieren\" 3-mal vor – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001203",
@@ -21167,7 +21729,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: '\\0' hat den Zahlenwert 0 und beendet die Schleife.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001204",
@@ -21185,7 +21748,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 'R' und 'r' haben verschiedene ASCII-Codes.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001205",
@@ -21198,12 +21762,13 @@
     "Richtig",
     "Falsch"
    ],
-   "answerIndex": 0,
+   "answerIndex": 1,
    "group": "snip-026",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig – hier zufällig identisch: Der Vergleich s[i] == c ist case-sensitiv; gezählt werden nur exakte 'r'.",
+   "explanation": "Falsch: Die Begründung ist falsch. Der Vergleich s[i] == c ist case-sensitiv; dass der genannte Zahlenwert zufällig stimmt, macht die gesamte Aussage nicht richtig.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001206",
@@ -21221,7 +21786,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Terminator-Muster ersetzt die Längenermittlung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001207",
@@ -21239,7 +21805,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: \"Programmieren\" hat 13 Zeichen + Terminator '\\0' = 14 Byte.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001208",
@@ -21257,7 +21824,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: strlen zählt ohne Terminator – es wären 13.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001209",
@@ -21275,7 +21843,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Einfache Anführungszeichen kennzeichnen ein char-Literal.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001210",
@@ -21293,7 +21862,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es wird die Startadresse des char-Arrays übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001211",
@@ -21311,7 +21881,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ein String ist ein char-Array; jedes Zeichen (inklusive '\\0') ist ein char.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001212",
@@ -21329,7 +21900,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 'e' kommt in \"Sommersemester\" 4-mal vor – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001213",
@@ -21347,7 +21919,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: '\\0' hat den Zahlenwert 0 und beendet die Schleife.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001214",
@@ -21365,7 +21938,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 'E' und 'e' haben verschiedene ASCII-Codes.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001215",
@@ -21378,12 +21952,13 @@
     "Richtig",
     "Falsch"
    ],
-   "answerIndex": 0,
+   "answerIndex": 1,
    "group": "snip-027",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig – hier zufällig identisch: Der Vergleich s[i] == c ist case-sensitiv; gezählt werden nur exakte 'e'.",
+   "explanation": "Falsch: Die Begründung ist falsch. Der Vergleich s[i] == c ist case-sensitiv; dass der genannte Zahlenwert zufällig stimmt, macht die gesamte Aussage nicht richtig.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001216",
@@ -21401,7 +21976,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Terminator-Muster ersetzt die Längenermittlung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001217",
@@ -21419,7 +21995,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: \"Sommersemester\" hat 14 Zeichen + '\\0' = 15 Byte.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001218",
@@ -21437,7 +22014,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: strlen zählt ohne Terminator – es wären 14.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001219",
@@ -21455,7 +22033,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Einfache Anführungszeichen kennzeichnen ein char-Literal.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001220",
@@ -21473,7 +22052,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es wird die Startadresse des char-Arrays übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001221",
@@ -21491,7 +22071,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ein String ist ein char-Array; jedes Zeichen (inklusive '\\0') ist ein char.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001222",
@@ -21509,7 +22090,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 'e' kommt in \"Erdbeere\" 3-mal vor – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001223",
@@ -21527,7 +22109,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: '\\0' hat den Zahlenwert 0 und beendet die Schleife.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001224",
@@ -21545,7 +22128,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 'E' und 'e' haben verschiedene ASCII-Codes.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001225",
@@ -21563,7 +22147,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Der Vergleich s[i] == c ist case-sensitiv; gezählt werden nur exakte 'e'.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001226",
@@ -21581,7 +22166,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Terminator-Muster ersetzt die Längenermittlung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001227",
@@ -21599,7 +22185,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: \"Erdbeere\" hat 8 Zeichen + '\\0' = 9 Byte.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001228",
@@ -21617,7 +22204,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: strlen zählt ohne Terminator – es wären 8.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001229",
@@ -21635,7 +22223,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Einfache Anführungszeichen kennzeichnen ein char-Literal.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001230",
@@ -21653,7 +22242,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Es wird die Startadresse des char-Arrays übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001231",
@@ -21671,7 +22261,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ein String ist ein char-Array; jedes Zeichen (inklusive '\\0') ist ein char.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-07"
   },
   {
    "id": "Q-001232",
@@ -21689,7 +22280,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Funktion verdoppelt jedes Element im Original-Array – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001233",
@@ -21707,7 +22299,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Arrays werden per Startadresse übergeben – main sieht die verdoppelten Werte.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001234",
@@ -21725,7 +22318,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Das Array wird per Adresse übergeben — a[i] *= 2 verändert das ORIGINAL: a[0] = 1 → 2.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001235",
@@ -21743,7 +22337,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zusammengesetzte Zuweisung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001236",
@@ -21761,7 +22356,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ihr Effekt entsteht über das per Adresse übergebene Array.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001237",
@@ -21779,7 +22375,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Eine void-Funktion liefert keinen Wert, der zugewiesen werden könnte.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001238",
@@ -21797,7 +22394,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Das wären die unveränderten Werte – das Array wird aber im Original geändert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001239",
@@ -21815,7 +22413,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide laufen mit i < 3 über die 3 Elemente (i = 0, 1, 2).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001240",
@@ -21833,7 +22432,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Structs werden – anders als Arrays – als Kopie übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001241",
@@ -21851,7 +22451,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Zeigergröße.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001242",
@@ -21869,7 +22470,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Funktion verdoppelt jedes Element im Original-Array – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001243",
@@ -21887,7 +22489,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Arrays werden per Startadresse übergeben – main sieht die verdoppelten Werte.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001244",
@@ -21905,7 +22508,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Arrays werden per Adresse übergeben: a[0] = 4 wird in der Funktion verdoppelt → 8, auch in main sichtbar.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001245",
@@ -21923,7 +22527,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zusammengesetzte Zuweisung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001246",
@@ -21941,7 +22546,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ihr Effekt entsteht über das per Adresse übergebene Array.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001247",
@@ -21959,7 +22565,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Eine void-Funktion liefert keinen Wert, der zugewiesen werden könnte.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001248",
@@ -21977,7 +22584,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Das wären die unveränderten Werte – das Array wird aber im Original geändert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001249",
@@ -21995,7 +22603,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: n = 4 bzw. i < 4 → jeweils 4 Durchläufe (i = 0…3).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001250",
@@ -22013,7 +22622,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Structs werden – anders als Arrays – als Kopie übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001251",
@@ -22031,7 +22641,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Zeigergröße.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001252",
@@ -22049,7 +22660,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Funktion verdoppelt jedes Element im Original-Array – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001253",
@@ -22067,7 +22679,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Arrays werden per Startadresse übergeben – main sieht die verdoppelten Werte.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001254",
@@ -22085,7 +22698,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: a[0] = 10 wird verdoppelt → 20. Die Änderung wirkt aufs Original, weil nur die Startadresse übergeben wird.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001255",
@@ -22103,7 +22717,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zusammengesetzte Zuweisung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001256",
@@ -22121,7 +22736,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ihr Effekt entsteht über das per Adresse übergebene Array.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001257",
@@ -22139,7 +22755,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Eine void-Funktion liefert keinen Wert, der zugewiesen werden könnte.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001258",
@@ -22157,7 +22774,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Das wären die unveränderten Werte – das Array wird aber im Original geändert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001259",
@@ -22175,7 +22793,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide laufen mit i < 3 über die 3 Elemente (i = 0, 1, 2).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001260",
@@ -22193,7 +22812,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Structs werden – anders als Arrays – als Kopie übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001261",
@@ -22211,7 +22831,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Zeigergröße.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001262",
@@ -22229,7 +22850,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Funktion verdoppelt jedes Element im Original-Array – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001263",
@@ -22247,7 +22869,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Arrays werden per Startadresse übergeben – main sieht die verdoppelten Werte.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001264",
@@ -22265,7 +22888,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: a[0] = 3 → verdoppelt 6. Das Original ändert sich, weil das Array per Adresse übergeben wird.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001265",
@@ -22283,7 +22907,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zusammengesetzte Zuweisung.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001266",
@@ -22301,7 +22926,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Ihr Effekt entsteht über das per Adresse übergebene Array.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001267",
@@ -22319,7 +22945,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Eine void-Funktion liefert keinen Wert, der zugewiesen werden könnte.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001268",
@@ -22337,7 +22964,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Das wären die unveränderten Werte – das Array wird aber im Original geändert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001269",
@@ -22355,7 +22983,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: n = 4 bzw. i < 4 → jeweils 4 Durchläufe (i = 0…3).",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001270",
@@ -22373,7 +23002,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Structs werden – anders als Arrays – als Kopie übergeben.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001271",
@@ -22391,7 +23021,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Zeigergröße.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-08"
   },
   {
    "id": "Q-001272",
@@ -22409,7 +23040,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 9/4 ist eine Ganzzahldivision → 2 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001273",
@@ -22427,7 +23059,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: summe und 4 sind int – die Division schneidet ab (2); der exakte Schnitt wäre 2.25.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001274",
@@ -22445,7 +23078,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Operanden sind int → int/int schneidet die Nachkommastellen ab. Für den echten Durchschnitt bräuchte es einen Cast: (double)summe / n.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001275",
@@ -22463,7 +23097,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Cast erzwingt die Gleitkomma-Division.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001276",
@@ -22481,7 +23116,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Schleife addiert alle Noten: 1 + 2 + 2 + 4 = 9.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001277",
@@ -22499,7 +23135,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: for (i = 0; i < 4; i++) → i = 0, 1, 2, 3: genau 4 Durchläufe.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001278",
@@ -22517,7 +23154,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: schnitt ist als int deklariert, und %d ist genau der Specifier für int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001279",
@@ -22535,7 +23173,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Gültig sind nur noten[0] bis noten[3].",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001280",
@@ -22553,7 +23192,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Der Typ steht zur Compile-Zeit fest – int bleibt int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001281",
@@ -22571,7 +23211,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Entscheidend sind die Operanden-Typen der Division, nicht der Zieltyp.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001282",
@@ -22589,7 +23230,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 16/5 ist eine Ganzzahldivision → 3 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001283",
@@ -22607,7 +23249,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: summe und 5 sind int – die Division schneidet ab (3); der exakte Schnitt wäre 3.2.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001284",
@@ -22625,7 +23268,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Operanden sind int → int/int schneidet die Nachkommastellen ab. Für den echten Durchschnitt bräuchte es einen Cast: (double)summe / n.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001285",
@@ -22643,7 +23287,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Cast erzwingt die Gleitkomma-Division.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001286",
@@ -22661,7 +23306,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 2 + 3 + 5 + 1 + 5 = 16.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001287",
@@ -22679,7 +23325,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: for (i = 0; i < 5; i++) → i = 0…4: genau 5 Durchläufe.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001288",
@@ -22697,7 +23344,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: schnitt ist als int deklariert, und %d ist genau der Specifier für int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001289",
@@ -22715,7 +23363,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Gültig sind nur noten[0] bis noten[4].",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001290",
@@ -22733,7 +23382,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Der Typ steht zur Compile-Zeit fest – int bleibt int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001291",
@@ -22751,7 +23401,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Entscheidend sind die Operanden-Typen der Division, nicht der Zieltyp.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001292",
@@ -22769,7 +23420,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 4/3 ist eine Ganzzahldivision → 1 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001293",
@@ -22787,7 +23439,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: summe und 3 sind int – die Division schneidet ab (1); der exakte Schnitt wäre 1.33333.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001294",
@@ -22805,7 +23458,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Operanden sind int → int/int schneidet die Nachkommastellen ab. Für den echten Durchschnitt bräuchte es einen Cast: (double)summe / n.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001295",
@@ -22823,7 +23477,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Cast erzwingt die Gleitkomma-Division.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001296",
@@ -22841,7 +23496,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 1 + 1 + 2 = 4.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001297",
@@ -22859,7 +23515,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: for (i = 0; i < 3; i++) → i = 0, 1, 2: genau 3 Durchläufe.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001298",
@@ -22877,7 +23534,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: schnitt ist als int deklariert, und %d ist genau der Specifier für int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001299",
@@ -22895,7 +23553,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Gültig sind nur noten[0] bis noten[2].",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001300",
@@ -22913,7 +23572,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Der Typ steht zur Compile-Zeit fest – int bleibt int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001301",
@@ -22931,7 +23591,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Entscheidend sind die Operanden-Typen der Division, nicht der Zieltyp.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001302",
@@ -22949,7 +23610,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 13/4 ist eine Ganzzahldivision → 3 – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001303",
@@ -22967,7 +23629,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: summe und 4 sind int – die Division schneidet ab (3); der exakte Schnitt wäre 3.25.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001304",
@@ -22985,7 +23648,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Operanden sind int → int/int schneidet die Nachkommastellen ab. Für den echten Durchschnitt bräuchte es einen Cast: (double)summe / n.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001305",
@@ -23003,7 +23667,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Cast erzwingt die Gleitkomma-Division.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001306",
@@ -23021,7 +23686,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 4 + 3 + 3 + 3 = 13.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001307",
@@ -23039,7 +23705,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: for (i = 0; i < 4; i++) → i = 0, 1, 2, 3: genau 4 Durchläufe.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001308",
@@ -23057,7 +23724,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: schnitt ist als int deklariert, und %d ist genau der Specifier für int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001309",
@@ -23075,7 +23743,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Gültig sind nur noten[0] bis noten[3].",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001310",
@@ -23093,7 +23762,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Der Typ steht zur Compile-Zeit fest – int bleibt int.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001311",
@@ -23111,7 +23781,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Entscheidend sind die Operanden-Typen der Division, nicht der Zieltyp.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-09"
   },
   {
    "id": "Q-001312",
@@ -23129,7 +23800,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 3 Werte liegen zwischen 8 und 16 (einschließlich) – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001313",
@@ -23147,7 +23819,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Vergleiche sind einschließend.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001314",
@@ -23165,7 +23838,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Verkettete Vergleiche funktionieren in C nicht wie in der Mathematik – es braucht zwei Vergleiche mit &&.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001315",
@@ -23183,7 +23857,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Logisches UND: a[i] >= lo UND a[i] <= hi müssen beide erfüllt sein — so wird \"liegt im Bereich\" geprüft.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001316",
@@ -23201,7 +23876,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zwei Zeichen (&&) = logisch; ein Zeichen (&) wäre bitweise.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001317",
@@ -23219,7 +23895,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Vergleiche sind mit >= und <= INKLUSIVE — die Obergrenze hi = 16 zählt mit.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001318",
@@ -23237,7 +23914,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Der Bereich ist 8…16 (lo = 8): 7 liegt darunter und fällt raus.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001319",
@@ -23255,7 +23933,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Array, Länge und die beiden Grenzen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001320",
@@ -23273,7 +23952,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Mit n = 0 startet die Schleife gar nicht (0 < 0 ist falsch) und z bleibt 0 — sauberer Randfall, kein Fehler.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001321",
@@ -23291,7 +23971,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie zählt nur (z++), sie summiert nicht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001322",
@@ -23309,7 +23990,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 2 Werte liegen zwischen 3 und 9 (einschließlich) – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001323",
@@ -23327,7 +24009,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Vergleiche sind einschließend.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001324",
@@ -23345,7 +24028,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Verkettete Vergleiche funktionieren in C nicht wie in der Mathematik – es braucht zwei Vergleiche mit &&.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001325",
@@ -23363,7 +24047,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Logisches UND: a[i] >= lo UND a[i] <= hi müssen beide erfüllt sein — so wird \"liegt im Bereich\" geprüft.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001326",
@@ -23381,7 +24066,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zwei Zeichen (&&) = logisch; ein Zeichen (&) wäre bitweise.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001327",
@@ -23399,7 +24085,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Die Grenzen sind inklusive (a[i] <= hi): Bereich 3…9 — die 9 zählt mit.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001328",
@@ -23417,7 +24104,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Der Bereich ist 3…9 (lo = 3): 2 liegt unter der Untergrenze.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001329",
@@ -23435,7 +24123,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Array, Länge und die beiden Grenzen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001330",
@@ -23453,7 +24142,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Mit n = 0 startet die Schleife gar nicht (0 < 0 ist falsch) und z bleibt 0 — sauberer Randfall, kein Fehler.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001331",
@@ -23471,7 +24161,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie zählt nur (z++), sie summiert nicht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001332",
@@ -23489,7 +24180,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 3 Werte liegen zwischen 10 und 25 (einschließlich) – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001333",
@@ -23507,7 +24199,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Vergleiche sind einschließend.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001334",
@@ -23525,7 +24218,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Verkettete Vergleiche funktionieren in C nicht wie in der Mathematik – es braucht zwei Vergleiche mit &&.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001335",
@@ -23543,7 +24237,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Logisches UND: a[i] >= lo UND a[i] <= hi müssen beide erfüllt sein — so wird \"liegt im Bereich\" geprüft.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001336",
@@ -23561,7 +24256,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zwei Zeichen (&&) = logisch; ein Zeichen (&) wäre bitweise.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001337",
@@ -23579,7 +24275,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Der Vergleich a[i] <= hi ist inklusiv — die Obergrenze 25 gehört zum Bereich.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001338",
@@ -23597,7 +24294,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Der Bereich ist 10…25 (lo = 10): 9 liegt UNTER der Untergrenze und wird nicht mitgezählt.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001339",
@@ -23615,7 +24313,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Array, Länge und die beiden Grenzen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001340",
@@ -23633,7 +24332,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Mit n = 0 startet die Schleife gar nicht (0 < 0 ist falsch) und z bleibt 0 — sauberer Randfall, kein Fehler.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001341",
@@ -23651,7 +24351,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie zählt nur (z++), sie summiert nicht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001342",
@@ -23669,7 +24370,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: 2 Werte liegen zwischen 5 und 10 (einschließlich) – verifiziert.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001343",
@@ -23687,7 +24389,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Beide Vergleiche sind einschließend.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001344",
@@ -23705,7 +24408,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Verkettete Vergleiche funktionieren in C nicht wie in der Mathematik – es braucht zwei Vergleiche mit &&.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001345",
@@ -23723,7 +24427,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Logisches UND: a[i] >= lo UND a[i] <= hi müssen beide erfüllt sein — so wird \"liegt im Bereich\" geprüft.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001346",
@@ -23741,7 +24446,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Zwei Zeichen (&&) = logisch; ein Zeichen (&) wäre bitweise.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001347",
@@ -23759,7 +24465,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Bereich 5…10 mit >= lo und <= hi: Die Grenzen zählen mit, also auch 10.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001348",
@@ -23777,7 +24484,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Der Bereich ist 5…10 (lo = 5): 4 liegt unter der Untergrenze.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001349",
@@ -23795,7 +24503,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Array, Länge und die beiden Grenzen.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001350",
@@ -23813,7 +24522,8 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Richtig: Mit n = 0 startet die Schleife gar nicht (0 < 0 ist falsch) und z bleibt 0 — sauberer Randfall, kein Fehler.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001351",
@@ -23831,14 +24541,15 @@
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
    "explanation": "Falsch: Sie zählt nur (z++), sie summiert nicht.",
    "source": "T-47 / AT-13",
-   "verified": true
+   "verified": true,
+   "familyId": "T47-archetype-10"
   },
   {
    "id": "Q-001352",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint quadrat(int zahl)\n    int ergebnis = zahl * zahl;\n    return ergebnis\n}\n\nint main() {\n    int zahl = 0;\n    scanf(\"%d\", zahl);\n    printf(\"%d\", Quadrat(zahl));\n    return 0;\n}\n",
    "options": [
     "Nach return ergebnis fehlt das Semikolon.",
@@ -23857,14 +24568,61 @@
    ],
    "explanation": "1. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n2. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n3. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n4. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.\n5. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n6. ✓ C ist case-sensitiv: Groß-/Kleinschreibung erzeugt VERSCHIEDENE Namen — der Aufruf findet die definierte Funktion nicht (Linker-/Compilerfehler).\n7. ✓ Der Funktionskörper muss mit { beginnen — ohne öffnende Klammer ist der Funktionskopf unvollständig und alles Folgende wird falsch geparst.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "function-brace",
+     "line": 3,
+     "solution": "{",
+     "acceptedCorrections": [
+      "{",
+      "int quadrat(int zahl) {"
+     ],
+     "description": "Nach dem Funktionskopf fehlt die öffnende geschweifte Klammer {."
+    },
+    {
+     "id": "return-semicolon",
+     "line": 5,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "return ergebnis;"
+     ],
+     "description": "Nach return ergebnis fehlt das Semikolon."
+    },
+    {
+     "id": "scanf-address",
+     "line": 10,
+     "solution": "&zahl",
+     "acceptedCorrections": [
+      "&zahl",
+      "scanf(\"%d\", &zahl);",
+      "scanf(\"%d\",&zahl);"
+     ],
+     "description": "Bei scanf fehlt der Adress-Operator & vor zahl."
+    },
+    {
+     "id": "function-case",
+     "line": 11,
+     "solution": "quadrat(zahl)",
+     "acceptedCorrections": [
+      "quadrat",
+      "quadrat(zahl)",
+      "printf(\"%d\", quadrat(zahl));",
+      "printf(\"%d\",quadrat(zahl));"
+     ],
+     "description": "Der Aufruf Quadrat(...) passt nicht zum definierten Namen quadrat (Groß-/Kleinschreibung).",
+     "caseSensitive": true
+    }
+   ],
+   "familyId": "T48-archetype-01"
   },
   {
    "id": "Q-001353",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint kubik(int wert)\n    int ergebnis = wert * wert * wert;\n    return ergebnis\n}\n\nint main() {\n    int wert = 0;\n    scanf(\"%d\", wert);\n    printf(\"%d\", Kubik(wert));\n    return 0;\n}\n",
    "options": [
     "Vor return 0; muss immer ein printf stehen.",
@@ -23883,14 +24641,61 @@
    ],
    "explanation": "1. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n2. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.\n3. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n4. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n5. ✓ C ist case-sensitiv: Groß-/Kleinschreibung erzeugt VERSCHIEDENE Namen — der Aufruf findet die definierte Funktion nicht (Linker-/Compilerfehler).\n6. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n7. ✓ Der Funktionskörper muss mit { beginnen — ohne öffnende Klammer ist der Funktionskopf unvollständig und alles Folgende wird falsch geparst.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "function-brace",
+     "line": 3,
+     "solution": "{",
+     "acceptedCorrections": [
+      "{",
+      "int kubik(int wert) {"
+     ],
+     "description": "Nach dem Funktionskopf fehlt die öffnende geschweifte Klammer {."
+    },
+    {
+     "id": "return-semicolon",
+     "line": 5,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "return ergebnis;"
+     ],
+     "description": "Nach return ergebnis fehlt das Semikolon."
+    },
+    {
+     "id": "scanf-address",
+     "line": 10,
+     "solution": "&wert",
+     "acceptedCorrections": [
+      "&wert",
+      "scanf(\"%d\", &wert);",
+      "scanf(\"%d\",&wert);"
+     ],
+     "description": "Bei scanf fehlt der Adress-Operator & vor wert."
+    },
+    {
+     "id": "function-case",
+     "line": 11,
+     "solution": "kubik(wert)",
+     "acceptedCorrections": [
+      "kubik",
+      "kubik(wert)",
+      "printf(\"%d\", kubik(wert));",
+      "printf(\"%d\",kubik(wert));"
+     ],
+     "description": "Der Aufruf Kubik(...) passt nicht zum definierten Namen kubik (Groß-/Kleinschreibung).",
+     "caseSensitive": true
+    }
+   ],
+   "familyId": "T48-archetype-01"
   },
   {
    "id": "Q-001354",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint doppelt(int x)\n    int ergebnis = 2 * x;\n    return ergebnis\n}\n\nint main() {\n    int x = 0;\n    scanf(\"%d\", x);\n    printf(\"%d\", Doppelt(x));\n    return 0;\n}\n",
    "options": [
     "printf benötigt die Bibliothek math.h.",
@@ -23909,14 +24714,61 @@
    ],
    "explanation": "1. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n2. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n3. ✓ Der Funktionskörper muss mit { beginnen — ohne öffnende Klammer ist der Funktionskopf unvollständig und alles Folgende wird falsch geparst.\n4. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n6. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.\n7. ✓ C ist case-sensitiv: Groß-/Kleinschreibung erzeugt VERSCHIEDENE Namen — der Aufruf findet die definierte Funktion nicht (Linker-/Compilerfehler).",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "function-brace",
+     "line": 3,
+     "solution": "{",
+     "acceptedCorrections": [
+      "{",
+      "int doppelt(int x) {"
+     ],
+     "description": "Nach dem Funktionskopf fehlt die öffnende geschweifte Klammer {."
+    },
+    {
+     "id": "return-semicolon",
+     "line": 5,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "return ergebnis;"
+     ],
+     "description": "Nach return ergebnis fehlt das Semikolon."
+    },
+    {
+     "id": "scanf-address",
+     "line": 10,
+     "solution": "&x",
+     "acceptedCorrections": [
+      "&x",
+      "scanf(\"%d\", &x);",
+      "scanf(\"%d\",&x);"
+     ],
+     "description": "Bei scanf fehlt der Adress-Operator & vor x."
+    },
+    {
+     "id": "function-case",
+     "line": 11,
+     "solution": "doppelt(x)",
+     "acceptedCorrections": [
+      "doppelt",
+      "doppelt(x)",
+      "printf(\"%d\", doppelt(x));",
+      "printf(\"%d\",doppelt(x));"
+     ],
+     "description": "Der Aufruf Doppelt(...) passt nicht zum definierten Namen doppelt (Groß-/Kleinschreibung).",
+     "caseSensitive": true
+    }
+   ],
+   "familyId": "T48-archetype-01"
   },
   {
    "id": "Q-001355",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int a = 3\n    int b = 4;\n    int summe = a + b;\n    printf(\"%d\", summe)\n    return 0;\n",
    "options": [
     "Nach int a = 3 fehlt das Semikolon.",
@@ -23933,14 +24785,47 @@
    ],
    "explanation": "1. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n2. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n3. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n4. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n6. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "declaration-semicolon",
+     "line": 4,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "int a = 3;"
+     ],
+     "description": "Nach int a = 3 fehlt das Semikolon."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 7,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"%d\", summe);",
+      "printf(\"%d\",summe);"
+     ],
+     "description": "Nach dem printf-Aufruf fehlt das Semikolon."
+    },
+    {
+     "id": "main-closing-brace",
+     "line": 9,
+     "solution": "}",
+     "acceptedCorrections": [
+      "}"
+     ],
+     "description": "Die schließende geschweifte Klammer von main fehlt."
+    }
+   ],
+   "familyId": "T48-archetype-02"
   },
   {
    "id": "Q-001356",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int a = 7\n    int b = 2;\n    int summe = a + b;\n    printf(\"%d\", summe)\n    return 0;\n",
    "options": [
     "Die schließende geschweifte Klammer von main fehlt.",
@@ -23957,14 +24842,47 @@
    ],
    "explanation": "1. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.\n2. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n3. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n4. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n6. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "declaration-semicolon",
+     "line": 4,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "int a = 7;"
+     ],
+     "description": "Nach int a = 7 fehlt das Semikolon."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 7,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"%d\", summe);",
+      "printf(\"%d\",summe);"
+     ],
+     "description": "Nach dem printf-Aufruf fehlt das Semikolon."
+    },
+    {
+     "id": "main-closing-brace",
+     "line": 9,
+     "solution": "}",
+     "acceptedCorrections": [
+      "}"
+     ],
+     "description": "Die schließende geschweifte Klammer von main fehlt."
+    }
+   ],
+   "familyId": "T48-archetype-02"
   },
   {
    "id": "Q-001357",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int a = 5\n    int b = 9;\n    int summe = a + b;\n    printf(\"%d\", summe)\n    return 0;\n",
    "options": [
     "Die schließende geschweifte Klammer von main fehlt.",
@@ -23981,14 +24899,47 @@
    ],
    "explanation": "1. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n4. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n6. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "declaration-semicolon",
+     "line": 4,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "int a = 5;"
+     ],
+     "description": "Nach int a = 5 fehlt das Semikolon."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 7,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"%d\", summe);",
+      "printf(\"%d\",summe);"
+     ],
+     "description": "Nach dem printf-Aufruf fehlt das Semikolon."
+    },
+    {
+     "id": "main-closing-brace",
+     "line": 9,
+     "solution": "}",
+     "acceptedCorrections": [
+      "}"
+     ],
+     "description": "Die schließende geschweifte Klammer von main fehlt."
+    }
+   ],
+   "familyId": "T48-archetype-02"
   },
   {
    "id": "Q-001358",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int x = 5;\n    if (x = 5) {\n        printf(\"gleich\")\n    }\n    else {\n        printf(\"ungleich\");\n    }\n    return 0;\n}\n",
    "options": [
     "printf benötigt die Bibliothek math.h.",
@@ -24003,14 +24954,39 @@
    ],
    "explanation": "1. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n2. ✓ = weist zu, == vergleicht! Die Zuweisung ist syntaktisch gültig (ihr Wert dient als Bedingung), tut aber nicht das Gewollte — der Klassiker unter den C-Fehlern.\n3. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n4. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n5. ✗ Strings stehen in C IMMER in doppelten Anführungszeichen. Einfache Anführungszeichen sind für einzelne Zeichen: 'a'.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "comparison-operator",
+     "line": 5,
+     "solution": "==",
+     "acceptedCorrections": [
+      "==",
+      "x == 5",
+      "if (x == 5) {",
+      "if(x==5){"
+     ],
+     "description": "In der if-Bedingung steht die Zuweisung x = 5 statt des Vergleichs x == 5."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 6,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"gleich\");"
+     ],
+     "description": "Nach printf(\"gleich\") fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-03"
   },
   {
    "id": "Q-001359",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int x = 8;\n    if (x = 3) {\n        printf(\"gleich\")\n    }\n    else {\n        printf(\"ungleich\");\n    }\n    return 0;\n}\n",
    "options": [
     "Die Variable darf nicht in main deklariert werden.",
@@ -24025,14 +25001,39 @@
    ],
    "explanation": "1. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n4. ✓ = weist zu, == vergleicht! Die Zuweisung ist syntaktisch gültig (ihr Wert dient als Bedingung), tut aber nicht das Gewollte — der Klassiker unter den C-Fehlern.\n5. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "comparison-operator",
+     "line": 5,
+     "solution": "==",
+     "acceptedCorrections": [
+      "==",
+      "x == 3",
+      "if (x == 3) {",
+      "if(x==3){"
+     ],
+     "description": "In der if-Bedingung steht die Zuweisung x = 3 statt des Vergleichs x == 3."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 6,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"gleich\");"
+     ],
+     "description": "Nach printf(\"gleich\") fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-03"
   },
   {
    "id": "Q-001360",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int x = 12;\n    if (x = 12) {\n        printf(\"gleich\")\n    }\n    else {\n        printf(\"ungleich\");\n    }\n    return 0;\n}\n",
    "options": [
     "In der if-Bedingung steht die Zuweisung x = 12 statt des Vergleichs x == 12.",
@@ -24047,14 +25048,39 @@
    ],
    "explanation": "1. ✓ = weist zu, == vergleicht! Die Zuweisung ist syntaktisch gültig (ihr Wert dient als Bedingung), tut aber nicht das Gewollte — der Klassiker unter den C-Fehlern.\n2. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n3. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n4. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n5. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "comparison-operator",
+     "line": 5,
+     "solution": "==",
+     "acceptedCorrections": [
+      "==",
+      "x == 12",
+      "if (x == 12) {",
+      "if(x==12){"
+     ],
+     "description": "In der if-Bedingung steht die Zuweisung x = 12 statt des Vergleichs x == 12."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 6,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"gleich\");"
+     ],
+     "description": "Nach printf(\"gleich\") fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-03"
   },
   {
    "id": "Q-001361",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int alter = 0;\n    double preis = 0;\n    scanf(\"%d\", alter);\n    scanf(\"%d\", &preis);\n    printf(\"%d %.2lf\", alter, preis);\n    return 0;\n}\n",
    "options": [
     "Beim zweiten scanf muss für double der Specifier %lf statt %d stehen.",
@@ -24069,14 +25095,39 @@
    ],
    "explanation": "1. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n2. ✗ Strings stehen in C IMMER in doppelten Anführungszeichen. Einfache Anführungszeichen sind für einzelne Zeichen: 'a'.\n3. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n4. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n5. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "scanf-address",
+     "line": 6,
+     "solution": "&alter",
+     "acceptedCorrections": [
+      "&alter",
+      "scanf(\"%d\", &alter);",
+      "scanf(\"%d\",&alter);"
+     ],
+     "description": "Beim ersten scanf fehlt der Adress-Operator & vor alter."
+    },
+    {
+     "id": "double-format",
+     "line": 7,
+     "solution": "%lf",
+     "acceptedCorrections": [
+      "%lf",
+      "scanf(\"%lf\", &preis);",
+      "scanf(\"%lf\",&preis);"
+     ],
+     "description": "Beim zweiten scanf muss für double der Specifier %lf statt %d stehen."
+    }
+   ],
+   "familyId": "T48-archetype-04"
   },
   {
    "id": "Q-001362",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int anzahl = 0;\n    double preis = 0;\n    scanf(\"%d\", anzahl);\n    scanf(\"%d\", &preis);\n    printf(\"%d %.2lf\", anzahl, preis);\n    return 0;\n}\n",
    "options": [
     "Beim zweiten scanf muss für double der Specifier %lf statt %d stehen.",
@@ -24091,14 +25142,39 @@
    ],
    "explanation": "1. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n2. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n3. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n4. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.\n5. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "scanf-address",
+     "line": 6,
+     "solution": "&anzahl",
+     "acceptedCorrections": [
+      "&anzahl",
+      "scanf(\"%d\", &anzahl);",
+      "scanf(\"%d\",&anzahl);"
+     ],
+     "description": "Beim ersten scanf fehlt der Adress-Operator & vor anzahl."
+    },
+    {
+     "id": "double-format",
+     "line": 7,
+     "solution": "%lf",
+     "acceptedCorrections": [
+      "%lf",
+      "scanf(\"%lf\", &preis);",
+      "scanf(\"%lf\",&preis);"
+     ],
+     "description": "Beim zweiten scanf muss für double der Specifier %lf statt %d stehen."
+    }
+   ],
+   "familyId": "T48-archetype-04"
   },
   {
    "id": "Q-001363",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int punkte = 0;\n    double preis = 0;\n    scanf(\"%d\", punkte);\n    scanf(\"%d\", &preis);\n    printf(\"%d %.2lf\", punkte, preis);\n    return 0;\n}\n",
    "options": [
     "Beim ersten scanf fehlt der Adress-Operator & vor punkte.",
@@ -24113,14 +25189,39 @@
    ],
    "explanation": "1. ✓ scanf braucht die ADRESSE der Zielvariablen, um hineinschreiben zu können: scanf(\"%d\", &var). Ohne & landet der Wert \"irgendwo\" — Absturz oder Datenmüll.\n2. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n3. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.\n4. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n5. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "scanf-address",
+     "line": 6,
+     "solution": "&punkte",
+     "acceptedCorrections": [
+      "&punkte",
+      "scanf(\"%d\", &punkte);",
+      "scanf(\"%d\",&punkte);"
+     ],
+     "description": "Beim ersten scanf fehlt der Adress-Operator & vor punkte."
+    },
+    {
+     "id": "double-format",
+     "line": 7,
+     "solution": "%lf",
+     "acceptedCorrections": [
+      "%lf",
+      "scanf(\"%lf\", &preis);",
+      "scanf(\"%lf\",&preis);"
+     ],
+     "description": "Beim zweiten scanf muss für double der Specifier %lf statt %d stehen."
+    }
+   ],
+   "familyId": "T48-archetype-04"
   },
   {
    "id": "Q-001364",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    printf(\"%d\", flaeche(6));\n    return 0;\n}\n\nint flaeche(int s) {\n    return s * s\n}\n",
    "options": [
     "flaeche wird in main aufgerufen, bevor die Funktion bekannt ist – es fehlt der Prototyp (oder die Definition müsste vor main stehen).",
@@ -24135,14 +25236,37 @@
    ],
    "explanation": "1. ✓ Der Compiler liest von oben nach unten: Beim Aufruf muss die Funktion bekannt sein. Lösung: Prototyp an den Dateianfang oder die Definition vor main ziehen.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n4. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n5. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "function-prototype",
+     "line": 2,
+     "solution": "int flaeche(int s);",
+     "acceptedCorrections": [
+      "int flaeche(int s);",
+      "int flaeche(int);"
+     ],
+     "description": "flaeche wird in main aufgerufen, bevor die Funktion bekannt ist – es fehlt der Prototyp (oder die Definition müsste vor main stehen)."
+    },
+    {
+     "id": "return-semicolon",
+     "line": 9,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "return s * s;"
+     ],
+     "description": "Nach return s * s fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-05"
   },
   {
    "id": "Q-001365",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    printf(\"%d\", umfang(4));\n    return 0;\n}\n\nint umfang(int s) {\n    return 4 * s\n}\n",
    "options": [
     "umfang wird in main aufgerufen, bevor die Funktion bekannt ist – es fehlt der Prototyp (oder die Definition müsste vor main stehen).",
@@ -24157,14 +25281,37 @@
    ],
    "explanation": "1. ✓ Der Compiler liest von oben nach unten: Beim Aufruf muss die Funktion bekannt sein. Lösung: Prototyp an den Dateianfang oder die Definition vor main ziehen.\n2. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n3. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n4. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n5. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "function-prototype",
+     "line": 2,
+     "solution": "int umfang(int s);",
+     "acceptedCorrections": [
+      "int umfang(int s);",
+      "int umfang(int);"
+     ],
+     "description": "umfang wird in main aufgerufen, bevor die Funktion bekannt ist – es fehlt der Prototyp (oder die Definition müsste vor main stehen)."
+    },
+    {
+     "id": "return-semicolon",
+     "line": 9,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "return 4 * s;"
+     ],
+     "description": "Nach return 4 * s fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-05"
   },
   {
    "id": "Q-001366",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    printf(\"%d\", volumen(3));\n    return 0;\n}\n\nint volumen(int s) {\n    return s * s * s\n}\n",
    "options": [
     "Nach return s * s * s fehlt das Semikolon.",
@@ -24179,14 +25326,37 @@
    ],
    "explanation": "1. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n2. ✗ Strings stehen in C IMMER in doppelten Anführungszeichen. Einfache Anführungszeichen sind für einzelne Zeichen: 'a'.\n3. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n4. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n5. ✓ Der Compiler liest von oben nach unten: Beim Aufruf muss die Funktion bekannt sein. Lösung: Prototyp an den Dateianfang oder die Definition vor main ziehen.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "function-prototype",
+     "line": 2,
+     "solution": "int volumen(int s);",
+     "acceptedCorrections": [
+      "int volumen(int s);",
+      "int volumen(int);"
+     ],
+     "description": "volumen wird in main aufgerufen, bevor die Funktion bekannt ist – es fehlt der Prototyp (oder die Definition müsste vor main stehen)."
+    },
+    {
+     "id": "return-semicolon",
+     "line": 9,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "return s * s * s;"
+     ],
+     "description": "Nach return s * s * s fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-05"
   },
   {
    "id": "Q-001367",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nvoid maximum(int a, int b) {\n    if (a > b) {\n        return a;\n    }\n    return b;\n}\n\nint main() {\n    printf(\"%d\", maximum(9, 4))\n    return 0;\n}\n",
    "options": [
     "printf benötigt die Bibliothek math.h.",
@@ -24201,14 +25371,38 @@
    ],
    "explanation": "1. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✓ Eine void-Funktion darf keinen Wert zurückgeben. Da hier return mit Wert benutzt (und das Ergebnis in main verwendet) wird, muss der Rückgabetyp int sein.\n4. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n5. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "return-type",
+     "line": 3,
+     "solution": "int",
+     "acceptedCorrections": [
+      "int",
+      "int maximum(int a, int b) {",
+      "int maximum(int a,int b){"
+     ],
+     "description": "Der Rückgabetyp void passt nicht: Die Funktion gibt mit return einen Wert zurück (und main verwendet ihn) – korrekt wäre int."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 11,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"%d\", maximum(9, 4));"
+     ],
+     "description": "Nach dem printf-Aufruf fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-06"
   },
   {
    "id": "Q-001368",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nvoid minimum(int a, int b) {\n    if (a < b) {\n        return a;\n    }\n    return b;\n}\n\nint main() {\n    printf(\"%d\", minimum(2, 8))\n    return 0;\n}\n",
    "options": [
     "Nach dem printf-Aufruf fehlt das Semikolon.",
@@ -24223,14 +25417,38 @@
    ],
    "explanation": "1. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n2. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n3. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n4. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n5. ✓ Eine void-Funktion darf keinen Wert zurückgeben. Da hier return mit Wert benutzt (und das Ergebnis in main verwendet) wird, muss der Rückgabetyp int sein.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "return-type",
+     "line": 3,
+     "solution": "int",
+     "acceptedCorrections": [
+      "int",
+      "int minimum(int a, int b) {",
+      "int minimum(int a,int b){"
+     ],
+     "description": "Der Rückgabetyp void passt nicht: Die Funktion gibt mit return einen Wert zurück (und main verwendet ihn) – korrekt wäre int."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 11,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"%d\", minimum(2, 8));"
+     ],
+     "description": "Nach dem printf-Aufruf fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-06"
   },
   {
    "id": "Q-001369",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nvoid groesser(int a, int b) {\n    if (a > b) {\n        return a;\n    }\n    return b;\n}\n\nint main() {\n    printf(\"%d\", groesser(7, 7))\n    return 0;\n}\n",
    "options": [
     "Vor return 0; muss immer ein printf stehen.",
@@ -24245,14 +25463,38 @@
    ],
    "explanation": "1. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✓ Eine void-Funktion darf keinen Wert zurückgeben. Da hier return mit Wert benutzt (und das Ergebnis in main verwendet) wird, muss der Rückgabetyp int sein.\n4. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n5. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "return-type",
+     "line": 3,
+     "solution": "int",
+     "acceptedCorrections": [
+      "int",
+      "int groesser(int a, int b) {",
+      "int groesser(int a,int b){"
+     ],
+     "description": "Der Rückgabetyp void passt nicht: Die Funktion gibt mit return einen Wert zurück (und main verwendet ihn) – korrekt wäre int."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 11,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"%d\", groesser(7, 7));"
+     ],
+     "description": "Nach dem printf-Aufruf fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-06"
   },
   {
    "id": "Q-001370",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int summe = 0;\n    for (int i = 1; i <= 5; i++) {\n        Summe += i;\n    printf(\"%d\", summe);\n    return 0;\n}\n",
    "options": [
     "Der Funktionsname darf keinen Kleinbuchstaben enthalten.",
@@ -24267,14 +25509,37 @@
    ],
    "explanation": "1. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.\n2. ✓ C ist case-sensitiv: Die großgeschriebene Variante wurde nie deklariert — Compilerfehler \"undeclared identifier\".\n3. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n4. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.\n5. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "identifier-case",
+     "line": 6,
+     "solution": "summe",
+     "acceptedCorrections": [
+      "summe",
+      "summe += i;"
+     ],
+     "description": "Summe ist nicht deklariert – die Variable heißt summe (Groß-/Kleinschreibung).",
+     "caseSensitive": true
+    },
+    {
+     "id": "loop-closing-brace",
+     "line": 7,
+     "solution": "}",
+     "acceptedCorrections": [
+      "}"
+     ],
+     "description": "Die schließende geschweifte Klammer der for-Schleife fehlt."
+    }
+   ],
+   "familyId": "T48-archetype-07"
   },
   {
    "id": "Q-001371",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int produkt = 1;\n    for (int i = 1; i <= 4; i++) {\n        Produkt *= i;\n    printf(\"%d\", produkt);\n    return 0;\n}\n",
    "options": [
     "Produkt ist nicht deklariert – die Variable heißt produkt (Groß-/Kleinschreibung).",
@@ -24289,14 +25554,37 @@
    ],
    "explanation": "1. ✓ C ist case-sensitiv: Die großgeschriebene Variante wurde nie deklariert — Compilerfehler \"undeclared identifier\".\n2. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.\n3. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.\n4. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n5. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "identifier-case",
+     "line": 6,
+     "solution": "produkt",
+     "acceptedCorrections": [
+      "produkt",
+      "produkt *= i;"
+     ],
+     "description": "Produkt ist nicht deklariert – die Variable heißt produkt (Groß-/Kleinschreibung).",
+     "caseSensitive": true
+    },
+    {
+     "id": "loop-closing-brace",
+     "line": 7,
+     "solution": "}",
+     "acceptedCorrections": [
+      "}"
+     ],
+     "description": "Die schließende geschweifte Klammer der for-Schleife fehlt."
+    }
+   ],
+   "familyId": "T48-archetype-07"
   },
   {
    "id": "Q-001372",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    int zaehler = 0;\n    for (int i = 1; i <= 6; i++) {\n        Zaehler += i;\n    printf(\"%d\", zaehler);\n    return 0;\n}\n",
    "options": [
     "Zaehler ist nicht deklariert – die Variable heißt zaehler (Groß-/Kleinschreibung).",
@@ -24311,14 +25599,37 @@
    ],
    "explanation": "1. ✓ C ist case-sensitiv: Die großgeschriebene Variante wurde nie deklariert — Compilerfehler \"undeclared identifier\".\n2. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n3. ✓ Jede geöffnete { braucht ihre schließende } — fehlt sie, meldet der Compiler am Dateiende einen Fehler.\n4. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n5. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "identifier-case",
+     "line": 6,
+     "solution": "zaehler",
+     "acceptedCorrections": [
+      "zaehler",
+      "zaehler += i;"
+     ],
+     "description": "Zaehler ist nicht deklariert – die Variable heißt zaehler (Groß-/Kleinschreibung).",
+     "caseSensitive": true
+    },
+    {
+     "id": "loop-closing-brace",
+     "line": 7,
+     "solution": "}",
+     "acceptedCorrections": [
+      "}"
+     ],
+     "description": "Die schließende geschweifte Klammer der for-Schleife fehlt."
+    }
+   ],
+   "familyId": "T48-archetype-07"
   },
   {
    "id": "Q-001373",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    const double pi = 3.14159;\n    pi = 4 * atan(1);\n    double r = 2.0;\n    printf(\"%.2lf\", pi * pow(r, 2));\n    return 0;\n}\n",
    "options": [
     "Die Funktion müsste vor #include stehen.",
@@ -24333,14 +25644,62 @@
    ],
    "explanation": "1. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n2. ✓ Mathe-Funktionen wie atan und pow sind in math.h deklariert — ohne den Header kennt der Compiler sie nicht.\n3. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n4. ✓ const bedeutet unveränderlich: Nach der Initialisierung ist jede weitere Zuweisung ein COMPILERfehler (keine Laufzeit-Meldung!).\n5. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "math-header",
+     "line": 2,
+     "solution": "#include <math.h>",
+     "acceptedCorrections": [
+      "#include <math.h>"
+     ],
+     "description": "Für atan und pow fehlt #include <math.h>."
+    },
+    {
+     "id": "const-reassignment",
+     "line": 5,
+     "solution": "Zuweisung entfernen oder const entfernen",
+     "acceptedCorrections": [
+      "löschen",
+      "zeile löschen",
+      "entfernen",
+      "zuweisung entfernen",
+      "const entfernen",
+      "double pi = 3.14159;"
+     ],
+     "description": "Der const-Variablen pi wird nach der Initialisierung ein neuer Wert zugewiesen – Compilerfehler.",
+     "acceptedLines": [
+      4,
+      5
+     ],
+     "acceptedRepairs": [
+      {
+       "line": 4,
+       "corrections": [
+        "const entfernen",
+        "double pi = 3.14159;"
+       ]
+      },
+      {
+       "line": 5,
+       "corrections": [
+        "löschen",
+        "zeile löschen",
+        "entfernen",
+        "zuweisung entfernen"
+       ]
+      }
+     ]
+    }
+   ],
+   "familyId": "T48-archetype-08"
   },
   {
    "id": "Q-001374",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    const double pi = 3.14159;\n    pi = 4 * atan(1);\n    double r = 3.5;\n    printf(\"%.2lf\", pi * pow(r, 2));\n    return 0;\n}\n",
    "options": [
     "int ist als Rückgabetyp grundsätzlich verboten.",
@@ -24355,14 +25714,62 @@
    ],
    "explanation": "1. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.\n2. ✓ const bedeutet unveränderlich: Nach der Initialisierung ist jede weitere Zuweisung ein COMPILERfehler (keine Laufzeit-Meldung!).\n3. ✗ Strings stehen in C IMMER in doppelten Anführungszeichen. Einfache Anführungszeichen sind für einzelne Zeichen: 'a'.\n4. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n5. ✓ Mathe-Funktionen wie atan und pow sind in math.h deklariert — ohne den Header kennt der Compiler sie nicht.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "math-header",
+     "line": 2,
+     "solution": "#include <math.h>",
+     "acceptedCorrections": [
+      "#include <math.h>"
+     ],
+     "description": "Für atan und pow fehlt #include <math.h>."
+    },
+    {
+     "id": "const-reassignment",
+     "line": 5,
+     "solution": "Zuweisung entfernen oder const entfernen",
+     "acceptedCorrections": [
+      "löschen",
+      "zeile löschen",
+      "entfernen",
+      "zuweisung entfernen",
+      "const entfernen",
+      "double pi = 3.14159;"
+     ],
+     "description": "Der const-Variablen pi wird nach der Initialisierung ein neuer Wert zugewiesen – Compilerfehler.",
+     "acceptedLines": [
+      4,
+      5
+     ],
+     "acceptedRepairs": [
+      {
+       "line": 4,
+       "corrections": [
+        "const entfernen",
+        "double pi = 3.14159;"
+       ]
+      },
+      {
+       "line": 5,
+       "corrections": [
+        "löschen",
+        "zeile löschen",
+        "entfernen",
+        "zuweisung entfernen"
+       ]
+      }
+     ]
+    }
+   ],
+   "familyId": "T48-archetype-08"
   },
   {
    "id": "Q-001375",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    const double pi = 3.14159;\n    pi = 4 * atan(1);\n    double r = 5.0;\n    printf(\"%.2lf\", pi * pow(r, 2));\n    return 0;\n}\n",
    "options": [
     "int ist als Rückgabetyp grundsätzlich verboten.",
@@ -24377,18 +25784,66 @@
    ],
    "explanation": "1. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.\n2. ✓ const bedeutet unveränderlich: Nach der Initialisierung ist jede weitere Zuweisung ein COMPILERfehler (keine Laufzeit-Meldung!).\n3. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n4. ✓ Mathe-Funktionen wie atan und pow sind in math.h deklariert — ohne den Header kennt der Compiler sie nicht.\n5. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "math-header",
+     "line": 2,
+     "solution": "#include <math.h>",
+     "acceptedCorrections": [
+      "#include <math.h>"
+     ],
+     "description": "Für atan und pow fehlt #include <math.h>."
+    },
+    {
+     "id": "const-reassignment",
+     "line": 5,
+     "solution": "Zuweisung entfernen oder const entfernen",
+     "acceptedCorrections": [
+      "löschen",
+      "zeile löschen",
+      "entfernen",
+      "zuweisung entfernen",
+      "const entfernen",
+      "double pi = 3.14159;"
+     ],
+     "description": "Der const-Variablen pi wird nach der Initialisierung ein neuer Wert zugewiesen – Compilerfehler.",
+     "acceptedLines": [
+      4,
+      5
+     ],
+     "acceptedRepairs": [
+      {
+       "line": 4,
+       "corrections": [
+        "const entfernen",
+        "double pi = 3.14159;"
+       ]
+      },
+      {
+       "line": 5,
+       "corrections": [
+        "löschen",
+        "zeile löschen",
+        "entfernen",
+        "zuweisung entfernen"
+       ]
+      }
+     ]
+    }
+   ],
+   "familyId": "T48-archetype-08"
   },
   {
    "id": "Q-001376",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    double a = 7.5, b = 2.0\n    double q = a / b;\n    printf(\"%d\", q);\n    return 0;\n}\n",
    "options": [
     "Die Variable darf nicht in main deklariert werden.",
-    "Der Specifier %d passt nicht zum double-Wert q – korrekt wäre %lf.",
+    "Der Specifier %d passt nicht zum double-Wert q – bei printf sind %f und %lf korrekt.",
     "int ist als Rückgabetyp grundsätzlich verboten.",
     "Nach double a = 7.5, b = 2.0 fehlt das Semikolon.",
     "Der Funktionsname darf keinen Kleinbuchstaben enthalten."
@@ -24399,19 +25854,50 @@
    ],
    "explanation": "1. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n2. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n3. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.\n4. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n5. ✗ Diese Regel gibt es nicht — üblich ist sogar Kleinschreibung von Funktionsnamen.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "declaration-semicolon",
+     "line": 4,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "double a = 7.5, b = 2.0;"
+     ],
+     "description": "Nach double a = 7.5, b = 2.0 fehlt das Semikolon."
+    },
+    {
+     "id": "double-format",
+     "line": 6,
+     "solution": "%f oder %lf",
+     "acceptedCorrections": [
+      "%f",
+      "%lf",
+      "printf(\"%f\", q);",
+      "printf(\"%.2f\", q);",
+      "printf(\"%lf\", q);",
+      "printf(\"%.2lf\", q);",
+      "printf(\"%f\",q);",
+      "printf(\"%.2f\",q);",
+      "printf(\"%lf\",q);",
+      "printf(\"%.2lf\",q);"
+     ],
+     "description": "Der Specifier %d passt nicht zum double-Wert q – bei printf sind %f und %lf korrekt."
+    }
+   ],
+   "familyId": "T48-archetype-09"
   },
   {
    "id": "Q-001377",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    double a = 9.0, b = 4.0\n    double q = a / b;\n    printf(\"%d\", q);\n    return 0;\n}\n",
    "options": [
     "Ein Programm darf höchstens eine Funktion neben main enthalten.",
     "Die Variable darf nicht in main deklariert werden.",
-    "Der Specifier %d passt nicht zum double-Wert q – korrekt wäre %lf.",
+    "Der Specifier %d passt nicht zum double-Wert q – bei printf sind %f und %lf korrekt.",
     "Vor return 0; muss immer ein printf stehen.",
     "Nach double a = 9.0, b = 4.0 fehlt das Semikolon."
    ],
@@ -24421,20 +25907,51 @@
    ],
    "explanation": "1. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n2. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n3. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n4. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "declaration-semicolon",
+     "line": 4,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "double a = 9.0, b = 4.0;"
+     ],
+     "description": "Nach double a = 9.0, b = 4.0 fehlt das Semikolon."
+    },
+    {
+     "id": "double-format",
+     "line": 6,
+     "solution": "%f oder %lf",
+     "acceptedCorrections": [
+      "%f",
+      "%lf",
+      "printf(\"%f\", q);",
+      "printf(\"%.2f\", q);",
+      "printf(\"%lf\", q);",
+      "printf(\"%.2lf\", q);",
+      "printf(\"%f\",q);",
+      "printf(\"%.2f\",q);",
+      "printf(\"%lf\",q);",
+      "printf(\"%.2lf\",q);"
+     ],
+     "description": "Der Specifier %d passt nicht zum double-Wert q – bei printf sind %f und %lf korrekt."
+    }
+   ],
+   "familyId": "T48-archetype-09"
   },
   {
    "id": "Q-001378",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    double a = 5.5, b = 1.5\n    double q = a / b;\n    printf(\"%d\", q);\n    return 0;\n}\n",
    "options": [
     "Ein Programm darf höchstens eine Funktion neben main enthalten.",
     "Die Variable darf nicht in main deklariert werden.",
     "printf benötigt die Bibliothek math.h.",
-    "Der Specifier %d passt nicht zum double-Wert q – korrekt wäre %lf.",
+    "Der Specifier %d passt nicht zum double-Wert q – bei printf sind %f und %lf korrekt.",
     "Nach double a = 5.5, b = 1.5 fehlt das Semikolon."
    ],
    "answerIndices": [
@@ -24443,14 +25960,45 @@
    ],
    "explanation": "1. ✗ Ein C-Programm darf beliebig viele Funktionen enthalten — Aufteilen in kleine Funktionen ist sogar guter Stil.\n2. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n3. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n4. ✓ Format-Specifier müssen zum Datentyp passen: %d ist für int, für double gehört %lf hin — sonst werden die Bytes falsch interpretiert.\n5. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "declaration-semicolon",
+     "line": 4,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "double a = 5.5, b = 1.5;"
+     ],
+     "description": "Nach double a = 5.5, b = 1.5 fehlt das Semikolon."
+    },
+    {
+     "id": "double-format",
+     "line": 6,
+     "solution": "%f oder %lf",
+     "acceptedCorrections": [
+      "%f",
+      "%lf",
+      "printf(\"%f\", q);",
+      "printf(\"%.2f\", q);",
+      "printf(\"%lf\", q);",
+      "printf(\"%.2lf\", q);",
+      "printf(\"%f\",q);",
+      "printf(\"%.2f\",q);",
+      "printf(\"%lf\",q);",
+      "printf(\"%.2lf\",q);"
+     ],
+     "description": "Der Specifier %d passt nicht zum double-Wert q – bei printf sind %f und %lf korrekt."
+    }
+   ],
+   "familyId": "T48-archetype-09"
   },
   {
    "id": "Q-001379",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    for (int i = 0, i < 5, i++) {\n        printf(\"%d \", i)\n    }\n    return 0;\n}\n",
    "options": [
     "Vor return 0; muss immer ein printf stehen.",
@@ -24465,14 +26013,41 @@
    ],
    "explanation": "1. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✗ printf ist die Standard-AUSGABEFUNKTION und steht in stdio.h. math.h enthält die Mathematik-Funktionen (sqrt, pow, …).\n4. ✓ Der for-Kopf hat drei Teile — Start, Bedingung, Schritt — und sie werden durch SEMIKOLONS getrennt: for (i = 0; i < n; i++).\n5. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "for-separators",
+     "line": 4,
+     "solution": "Semikolons statt Kommas",
+     "acceptedCorrections": [
+      ";;",
+      "; ;",
+      "semikolons statt kommas",
+      "for (int i = 0; i < 5; i++) {",
+      "for(int i=0;i<5;i++){"
+     ],
+     "description": "Im for-Kopf müssen die drei Teile durch Semikolons getrennt werden, nicht durch Kommas."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 5,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"%d \", i);",
+      "printf(\"%d \",i);"
+     ],
+     "description": "Nach dem printf-Aufruf fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-10"
   },
   {
    "id": "Q-001380",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    for (int i = 0, i < 8, i++) {\n        printf(\"%d \", i)\n    }\n    return 0;\n}\n",
    "options": [
     "Die Funktion müsste vor #include stehen.",
@@ -24487,14 +26062,41 @@
    ],
    "explanation": "1. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n2. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n3. ✗ Lokale Variablen in main sind der Normalfall — daran ist nichts falsch.\n4. ✗ Strings stehen in C IMMER in doppelten Anführungszeichen. Einfache Anführungszeichen sind für einzelne Zeichen: 'a'.\n5. ✓ Der for-Kopf hat drei Teile — Start, Bedingung, Schritt — und sie werden durch SEMIKOLONS getrennt: for (i = 0; i < n; i++).",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "for-separators",
+     "line": 4,
+     "solution": "Semikolons statt Kommas",
+     "acceptedCorrections": [
+      ";;",
+      "; ;",
+      "semikolons statt kommas",
+      "for (int i = 0; i < 8; i++) {",
+      "for(int i=0;i<8;i++){"
+     ],
+     "description": "Im for-Kopf müssen die drei Teile durch Semikolons getrennt werden, nicht durch Kommas."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 5,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"%d \", i);",
+      "printf(\"%d \",i);"
+     ],
+     "description": "Nach dem printf-Aufruf fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-10"
   },
   {
    "id": "Q-001381",
    "topicId": "T-48",
    "type": "find-bug",
    "difficulty": "schwer",
-   "prompt": "Der folgende Code enthält Fehler. Welche der folgenden Aussagen treffen zu?",
+   "prompt": "Markieren Sie alle Fehler direkt im Code und tragen Sie jeweils eine Korrektur ein.",
    "code": "#include <stdio.h>\n\nint main() {\n    for (int i = 0, i < 10, i++) {\n        printf(\"%d \", i)\n    }\n    return 0;\n}\n",
    "options": [
     "Vor return 0; muss immer ein printf stehen.",
@@ -24509,7 +26111,1906 @@
    ],
    "explanation": "1. ✗ Diese Regel gibt es nicht — return 0; beendet main unabhängig davon, ob vorher etwas ausgegeben wurde.\n2. ✓ Der for-Kopf hat drei Teile — Start, Bedingung, Schritt — und sie werden durch SEMIKOLONS getrennt: for (i = 0; i < n; i++).\n3. ✗ Im Gegenteil: #include steht ganz oben, damit die Deklarationen der Header (z. B. für printf) bekannt sind, BEVOR der restliche Code kommt.\n4. ✓ In C endet jede Anweisung mit einem Semikolon — auch diese Zeile. Der Compiler meldet den Fehler oft erst in der Folgezeile.\n5. ✗ int ist ein ganz normaler Rückgabetyp — main selbst liefert int.",
    "source": "T-48 / AT-14",
-   "verified": true
+   "verified": true,
+   "bugTargets": [
+    {
+     "id": "for-separators",
+     "line": 4,
+     "solution": "Semikolons statt Kommas",
+     "acceptedCorrections": [
+      ";;",
+      "; ;",
+      "semikolons statt kommas",
+      "for (int i = 0; i < 10; i++) {",
+      "for(int i=0;i<10;i++){"
+     ],
+     "description": "Im for-Kopf müssen die drei Teile durch Semikolons getrennt werden, nicht durch Kommas."
+    },
+    {
+     "id": "printf-semicolon",
+     "line": 5,
+     "solution": ";",
+     "acceptedCorrections": [
+      ";",
+      "printf(\"%d \", i);",
+      "printf(\"%d \",i);"
+     ],
+     "description": "Nach dem printf-Aufruf fehlt das Semikolon."
+    }
+   ],
+   "familyId": "T48-archetype-10"
+  },
+  {
+   "id": "Q-001382",
+   "topicId": "T-04",
+   "type": "mc-multi",
+   "difficulty": "schwer",
+   "prompt": "Was trifft auf dieses Fragment zu?",
+   "code": "#define LIMIT 5\nint a[LIMIT];",
+   "options": [
+    "Der Präprozessor ersetzt LIMIT, bevor der Compiler die Array-Deklaration verarbeitet.",
+    "Hinter #define LIMIT 5 ist kein Semikolon erforderlich.",
+    "Erst der Linker entscheidet, welchen Zahlenwert LIMIT besitzt.",
+    "Das Array besitzt fünf Elemente mit den gültigen Indizes 0 bis 4."
+   ],
+   "answerIndices": [
+    0,
+    1,
+    3
+   ],
+   "explanation": "Makros werden vor dem Compiler textuell ersetzt. Die Direktive endet nicht mit einem Semikolon; nach der Ersetzung sieht der Compiler int a[5].",
+   "familyId": "DETAIL-T04-macro-array",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "transfer",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001383",
+   "topicId": "T-06",
+   "type": "mc-multi",
+   "difficulty": "schwer",
+   "prompt": "Welche Aussagen zu den Format-Specifiern sind korrekt?",
+   "code": "double d;\nscanf(\"%lf\", &d);\nprintf(\"%.2f\", d);",
+   "options": [
+    "%lf ist bei scanf für double erforderlich.",
+    "%f ist bei printf für den übergebenen double-Wert korrekt.",
+    "Bei printf müsste zwingend %.2lf verwendet werden.",
+    "&d ist bei diesem scanf-Aufruf erforderlich."
+   ],
+   "answerIndices": [
+    0,
+    1,
+    3
+   ],
+   "explanation": "Bei scanf unterscheidet %f einen float* von %lf für double*. Bei printf wird ein float ohnehin zu double befördert; %f und %lf sind dort beide zulässig.",
+   "familyId": "DETAIL-T06-printf-vs-scanf",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "transfer",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001384",
+   "topicId": "T-08",
+   "type": "mc-multi",
+   "difficulty": "schwer",
+   "prompt": "Was muss bei diesem Einlesen beachtet werden?",
+   "code": "int n;\ndouble x;\nscanf(\"%d;%lf\", &n, &x);",
+   "options": [
+    "Eine passende Eingabe wäre 3;2.5.",
+    "Das Semikolon im Formatstring muss auch in der Eingabe vorkommen.",
+    "Die Eingabe 3 2.5 passt ohne weitere Änderung zum Formatstring.",
+    "Beide Zielvariablen werden über ihre Adressen übergeben."
+   ],
+   "answerIndices": [
+    0,
+    1,
+    3
+   ],
+   "explanation": "Nicht-Whitespace-Zeichen im scanf-Formatstring müssen wörtlich in der Eingabe stehen. Für die einfachen Variablen werden außerdem die Adressen benötigt.",
+   "familyId": "DETAIL-T08-literal-separator",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "transfer",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001385",
+   "topicId": "T-10",
+   "type": "mc-multi",
+   "difficulty": "mittel",
+   "prompt": "Welche Größen gelten nach der Kurskonvention?",
+   "code": "char c;\nshort s;\nint i;\ndouble d;",
+   "options": [
+    "sizeof(c) ist 1.",
+    "sizeof(s) ist 2.",
+    "sizeof(i) ist 8.",
+    "sizeof(d) ist 8."
+   ],
+   "answerIndices": [
+    0,
+    1,
+    3
+   ],
+   "explanation": "Im Kurs gilt char=1, short=2, int=4 und double=8 Byte.",
+   "familyId": "DETAIL-T10-combined-sizes",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "transfer",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001386",
+   "topicId": "T-12",
+   "type": "predict-output",
+   "difficulty": "schwer",
+   "prompt": "Was gibt das Fragment aus?",
+   "code": "int a = 5, b = 2;\ndouble x = (double)(a / b);\nprintf(\"%.1f\", x);",
+   "options": [
+    "2.0",
+    "2.5",
+    "5.0",
+    "Compilerfehler"
+   ],
+   "answerIndex": 0,
+   "explanation": "a / b wird innerhalb der Klammer zuerst ganzzahlig zu 2 ausgewertet. Der spätere Cast wandelt nur noch diesen Wert in 2.0 um.",
+   "familyId": "DETAIL-T12-cast-after-division",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001387",
+   "topicId": "T-12",
+   "type": "predict-output",
+   "difficulty": "schwer",
+   "prompt": "Was gibt das Fragment aus?",
+   "code": "int a = 5, b = 2;\ndouble x = (double)a / b;\nprintf(\"%.1f\", x);",
+   "options": [
+    "2.0",
+    "2.5",
+    "5.0",
+    "Compilerfehler"
+   ],
+   "answerIndex": 1,
+   "explanation": "Durch den Cast ist bereits der linke Operand ein double. Deshalb wird 5.0 / 2 als Gleitkommadivision ausgeführt.",
+   "familyId": "DETAIL-T12-cast-before-division",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001388",
+   "topicId": "T-14",
+   "type": "predict-output",
+   "difficulty": "mittel",
+   "prompt": "Was gibt das Fragment aus (stdio.h und math.h seien eingebunden)?",
+   "code": "double x = cos(0);\nprintf(\"%.1f\", x);",
+   "options": [
+    "0.0",
+    "1.0",
+    "90.0",
+    "Compilerfehler"
+   ],
+   "answerIndex": 1,
+   "explanation": "Die trigonometrischen Funktionen arbeiten in Radiant. Null Radiant ist zugleich null Grad; cos(0) ist 1.",
+   "familyId": "MASTER-T14-angle-and-pi",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001389",
+   "topicId": "T-15",
+   "type": "predict-output",
+   "difficulty": "mittel",
+   "prompt": "Was passiert bei diesem Programm?",
+   "code": "int main() {\n    const int n = 5;\n    n += 1;\n    return 0;\n}",
+   "options": [
+    "Es gibt 6 aus.",
+    "Compilerfehler",
+    "n bleibt 5.",
+    "Undefiniertes Verhalten ohne Compilerdiagnose"
+   ],
+   "answerIndex": 1,
+   "explanation": "Ein const-Objekt darf nach seiner Initialisierung nicht mehr verändert werden.",
+   "familyId": "DETAIL-T15-const-update",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001390",
+   "topicId": "T-17",
+   "type": "predict-output",
+   "difficulty": "schwer",
+   "prompt": "Was gibt das Programm aus?",
+   "code": "#include <stdio.h>\n\nint x = 10;\n\nint f() {\n    int x = 3;\n    return x;\n}\n\nint main() {\n    int x = 5;\n    printf(\"%d %d\", x, f());\n    return 0;\n}",
+   "options": [
+    "10 10",
+    "5 3",
+    "5 10",
+    "Compilerfehler"
+   ],
+   "answerIndex": 1,
+   "explanation": "Die lokale Variable in main verdeckt dort die globale. In f verdeckt wiederum das lokale x die globale Variable.",
+   "familyId": "DETAIL-T17-nested-shadowing",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001391",
+   "topicId": "T-19",
+   "type": "predict-output",
+   "difficulty": "schwer",
+   "prompt": "Was gibt das eindeutig definierte Fragment aus?",
+   "code": "int i = 3;\nint a = i++;\nint b = ++i;\nprintf(\"%d %d %d\", a, b, i);",
+   "options": [
+    "3 5 5",
+    "4 5 5",
+    "3 4 5",
+    "3 5 4"
+   ],
+   "answerIndex": 0,
+   "explanation": "Post-Inkrement speichert zuerst 3 in a und erhöht i auf 4. Prä-Inkrement erhöht danach auf 5 und speichert 5 in b.",
+   "familyId": "DETAIL-T19-sequenced-increments",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001392",
+   "topicId": "T-21",
+   "type": "predict-output",
+   "difficulty": "mittel",
+   "prompt": "Was gibt das Fragment in ASCII aus?",
+   "code": "char c = 'A';\nc += 3;\nprintf(\"%c %d\", c, c);",
+   "options": [
+    "D 68",
+    "C 67",
+    "D 65",
+    "Compilerfehler"
+   ],
+   "answerIndex": 0,
+   "explanation": "A besitzt den ASCII-Wert 65. Drei Schritte weiter liegt D mit dem Wert 68.",
+   "familyId": "MASTER-T21-char-arithmetic",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001393",
+   "topicId": "T-22",
+   "type": "predict-output",
+   "difficulty": "schwer",
+   "prompt": "Was gibt das Fragment aus?",
+   "code": "int x = 100;\nprintf(\"%d\", 3 < x < 8);",
+   "options": [
+    "0",
+    "1",
+    "Compilerfehler",
+    "100"
+   ],
+   "answerIndex": 1,
+   "explanation": "C kennt keine mathematische Vergleichskette. Zuerst wird 3 < x zu 1, danach wird 1 < 8 ausgewertet – ebenfalls wahr.",
+   "familyId": "DETAIL-T22-chained-comparison",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001394",
+   "topicId": "T-23",
+   "type": "predict-output",
+   "difficulty": "schwer",
+   "prompt": "Was gibt das Fragment wegen der Kurzschlussauswertung aus?",
+   "code": "int x = 0;\nif (0 && ++x) {\n    x = 10;\n}\nprintf(\"%d\", x);",
+   "options": [
+    "0",
+    "1",
+    "10",
+    "Compilerfehler"
+   ],
+   "answerIndex": 0,
+   "explanation": "Bei && wird der rechte Operand nicht ausgewertet, wenn der linke bereits falsch ist. ++x wird daher nicht ausgeführt.",
+   "familyId": "DETAIL-T23-short-circuit",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001395",
+   "topicId": "T-25",
+   "type": "predict-output",
+   "difficulty": "schwer",
+   "prompt": "Was gibt das Fragment unter Beachtung des Operatorvorrangs aus?",
+   "code": "int d = 10 == 5 + 2 * 2;\nprintf(\"%d\", d);",
+   "options": [
+    "0",
+    "1",
+    "9",
+    "10"
+   ],
+   "answerIndex": 0,
+   "explanation": "Zuerst 2*2=4, dann 5+4=9 und zuletzt 10==9. Der Vergleich ist falsch und liefert 0.",
+   "familyId": "DETAIL-T25-combined-precedence",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001396",
+   "topicId": "T-27",
+   "type": "predict-output",
+   "difficulty": "schwer",
+   "prompt": "Was gibt das Fragment aus?",
+   "code": "int x = 0;\nswitch (2) {\ncase 1: x += 1;\ncase 2: x += 2;\ncase 3: x += 3; break;\n}\nprintf(\"%d\", x);",
+   "options": [
+    "2",
+    "3",
+    "5",
+    "6"
+   ],
+   "answerIndex": 2,
+   "explanation": "Der Einstieg erfolgt bei case 2. Wegen des fehlenden break läuft der Code in case 3 weiter: x wird 2+3=5.",
+   "familyId": "MASTER-T27-switch-flow",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001397",
+   "topicId": "T-28",
+   "type": "predict-output",
+   "difficulty": "mittel",
+   "prompt": "Was gibt das Fragment aus?",
+   "code": "int x = 3;\ndo {\n    x++;\n} while (x < 3);\nprintf(\"%d\", x);",
+   "options": [
+    "3",
+    "4",
+    "0",
+    "Die Schleife läuft endlos."
+   ],
+   "answerIndex": 1,
+   "explanation": "Der Körper einer do-while-Schleife wird vor der ersten Prüfung einmal ausgeführt.",
+   "familyId": "DETAIL-T28-do-while-first-run",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001398",
+   "topicId": "T-29",
+   "type": "predict-output",
+   "difficulty": "schwer",
+   "prompt": "Was passiert bei diesem Programm?",
+   "code": "#include <stdio.h>\n\nint main() {\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d\", i);\n    }\n    printf(\"%d\", i);\n    return 0;\n}",
+   "options": [
+    "Es gibt 0123 aus.",
+    "Es gibt 0122 aus.",
+    "Compilerfehler",
+    "Es gibt nur 3 aus."
+   ],
+   "answerIndex": 2,
+   "explanation": "Das im for-Kopf deklarierte i ist nach der Schleife außerhalb seines Gültigkeitsbereichs.",
+   "familyId": "DETAIL-T29-for-scope",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001399",
+   "topicId": "T-30",
+   "type": "predict-output",
+   "difficulty": "mittel",
+   "prompt": "Was gibt das Fragment aus?",
+   "code": "int s = 0;\nfor (int i = 1; i <= 5; i++) {\n    if (i % 2 == 0) continue;\n    s += i;\n}\nprintf(\"%d\", s);",
+   "options": [
+    "6",
+    "9",
+    "15",
+    "Compilerfehler"
+   ],
+   "answerIndex": 1,
+   "explanation": "continue überspringt die geraden Werte. Addiert werden 1+3+5=9.",
+   "familyId": "DETAIL-T30-continue-sum",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001400",
+   "topicId": "T-33",
+   "type": "mc-multi",
+   "difficulty": "schwer",
+   "prompt": "Welche Zeilen sind gültige Prototypen für eine Funktion, die aus einem double-Array und einer int-Länge einen double-Wert berechnet?",
+   "options": [
+    "double mittel(double[], int);",
+    "double mittel(double a[], int n);",
+    "double mittel(double a[], int n)",
+    "void mittel(double[], int);"
+   ],
+   "answerIndices": [
+    0,
+    1
+   ],
+   "explanation": "Parameternamen dürfen im Prototyp fehlen, die Typen und der Rückgabetyp müssen stimmen. Der Prototyp endet mit einem Semikolon.",
+   "familyId": "DETAIL-T33-array-prototype",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "transfer",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001401",
+   "topicId": "T-36",
+   "type": "mc-multi",
+   "difficulty": "schwer",
+   "prompt": "Was trifft nach dieser teilweise angegebenen Initialisierung zu?",
+   "code": "int a[5] = {1, 2};",
+   "options": [
+    "a[0] ist 1 und a[1] ist 2.",
+    "a[2], a[3] und a[4] werden mit 0 initialisiert.",
+    "a[5] ist das letzte gültige Element.",
+    "Nach der Kurskonvention belegt das Array 20 Byte."
+   ],
+   "answerIndices": [
+    0,
+    1,
+    3
+   ],
+   "explanation": "Nicht angegebene Elemente werden mit 0 initialisiert. Die Indizes reichen von 0 bis 4; fünf int-Werte zu je 4 Byte ergeben 20 Byte.",
+   "familyId": "MASTER-T36-array-init-size",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "transfer",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001402",
+   "topicId": "T-37",
+   "type": "mc-multi",
+   "difficulty": "schwer",
+   "prompt": "Welche Aussagen sind nach der Kurskonvention korrekt?",
+   "code": "double ary[250];",
+   "options": [
+    "sizeof(ary) liefert 2000.",
+    "sizeof(ary) / sizeof(ary[0]) liefert 250.",
+    "Der letzte gültige Index ist 250.",
+    "sizeof(ary[0]) liefert 8."
+   ],
+   "answerIndices": [
+    0,
+    1,
+    3
+   ],
+   "explanation": "250 double-Elemente zu je 8 Byte ergeben 2000 Byte. Die Indizes reichen von 0 bis 249.",
+   "familyId": "DETAIL-T37-bytes-elements-index",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "transfer",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001403",
+   "topicId": "T-38",
+   "type": "mc-multi",
+   "difficulty": "schwer",
+   "prompt": "Was trifft auf diese Funktion zu?",
+   "code": "void setze(int a[], int n) {\n    a[0] = n;\n}",
+   "options": [
+    "Die Änderung an a[0] wirkt auf das ursprüngliche Array.",
+    "sizeof(a) liefert in der Funktion zuverlässig die Gesamtgröße des ursprünglichen Arrays.",
+    "Die Länge n muss separat übergeben werden, wenn die Funktion sie benötigt.",
+    "Beim Aufruf wird das vollständige Array kopiert."
+   ],
+   "answerIndices": [
+    0,
+    2
+   ],
+   "explanation": "Der Array-Parameter repräsentiert die Startadresse. Änderungen wirken auf das Original; die ursprüngliche Elementzahl lässt sich dort nicht mit sizeof(a) bestimmen.",
+   "familyId": "DETAIL-T38-array-parameter",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "transfer",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001404",
+   "topicId": "T-41",
+   "type": "mc-multi",
+   "difficulty": "schwer",
+   "prompt": "Welche Aussagen gelten für dieses Array?",
+   "code": "char s[10] = \"Yes\";",
+   "options": [
+    "strlen(s) liefert 3.",
+    "sizeof(s) liefert 10.",
+    "s[3] enthält den Null-Terminator.",
+    "Der letzte gültige Index ist 10."
+   ],
+   "answerIndices": [
+    0,
+    1,
+    2
+   ],
+   "explanation": "Der Text hat drei sichtbare Zeichen und danach den Terminator. Der reservierte Behälter besitzt zehn char-Elemente mit den Indizes 0 bis 9.",
+   "familyId": "DETAIL-T41-sizeof-strlen-terminator",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "transfer",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001405",
+   "topicId": "T-42",
+   "type": "predict-output",
+   "difficulty": "mittel",
+   "prompt": "Was gibt das Programm aus?",
+   "code": "#include <stdio.h>\n\nvoid gross(char s[]) {\n    s[0] = 'X';\n}\n\nint main() {\n    char s[] = \"test\";\n    gross(s);\n    printf(\"%s\", s);\n    return 0;\n}",
+   "options": [
+    "test",
+    "Xest",
+    "X",
+    "Compilerfehler"
+   ],
+   "answerIndex": 1,
+   "explanation": "Das char-Array wird über seine Startadresse übergeben. Die Änderung von s[0] betrifft daher das ursprüngliche Array in main.",
+   "familyId": "DETAIL-T42-string-mutation",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001406",
+   "topicId": "T-43",
+   "type": "mc-multi",
+   "difficulty": "schwer",
+   "prompt": "Was trifft auf diese Struct-Initialisierung zu?",
+   "code": "struct punkt { double x; double y; };\nstruct punkt p = {1.5, 2.5};",
+   "options": [
+    "p.x besitzt den Wert 1.5.",
+    "p.y besitzt den Wert 2.5.",
+    "Auf x wird mit p->x zugegriffen, obwohl p kein Zeiger ist.",
+    "Nach der Kurskonvention belegt p 16 Byte."
+   ],
+   "answerIndices": [
+    0,
+    1,
+    3
+   ],
+   "explanation": "Bei einer normalen Struct-Variablen wird der Punkt-Operator verwendet. Zwei double-Elemente belegen in der Kurskonvention zusammen 16 Byte.",
+   "familyId": "DETAIL-T43-struct-initialization",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "transfer",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001407",
+   "topicId": "T-45",
+   "type": "predict-output",
+   "difficulty": "schwer",
+   "prompt": "Was gibt das Programm aus?",
+   "code": "#include <stdio.h>\n\nstruct wert { int x; };\n\nvoid setze(struct wert w) {\n    w.x = 9;\n}\n\nint main() {\n    struct wert w = {3};\n    setze(w);\n    printf(\"%d\", w.x);\n    return 0;\n}",
+   "options": [
+    "3",
+    "9",
+    "0",
+    "Compilerfehler"
+   ],
+   "answerIndex": 0,
+   "explanation": "Der Struct wird als Kopie übergeben. Die Änderung betrifft nur den lokalen Parameter in setze.",
+   "familyId": "DETAIL-T45-struct-copy-effect",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001408",
+   "topicId": "T-46",
+   "type": "mc-multi",
+   "difficulty": "schwer",
+   "prompt": "Welche Einordnungen sind korrekt?",
+   "options": [
+    "Eine erneute Zuweisung an ein const-Objekt ist ein Compilerfehler.",
+    "scanf(\"%d\", zahl) ohne & muss vom Compiler zwingend abgelehnt werden.",
+    "Ein Zugriff auf a[5] bei int a[5] kann kompilieren, verursacht aber undefiniertes Verhalten.",
+    "Der Aufruf Quadrat(x) bei einer definierten Funktion quadrat(x) führt wegen der Großschreibung zu einem Übersetzungs-/Linkfehler."
+   ],
+   "answerIndices": [
+    0,
+    2,
+    3
+   ],
+   "explanation": "Nicht jeder schwere Laufzeitfehler ist ein Compilerfehler. Ein fehlendes & oder ein Zugriff außerhalb des Arrays kann übersetzt werden, führt aber zu undefiniertem Verhalten.",
+   "familyId": "DETAIL-T46-error-classification",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "transfer",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001409",
+   "topicId": "T-31",
+   "type": "predict-output",
+   "difficulty": "mittel",
+   "prompt": "Was gibt das Programm aus?",
+   "code": "#include <stdio.h>\n\nint erhoehe(int x) {\n    x++;\n    return x;\n}\n\nint main() {\n    int a = 4;\n    int b = erhoehe(a);\n    printf(\"%d %d\", a, b);\n    return 0;\n}",
+   "options": [
+    "4 5",
+    "5 5",
+    "4 4",
+    "Compilerfehler"
+   ],
+   "answerIndex": 0,
+   "explanation": "Der int-Parameter x ist eine Kopie von a. Die Funktion liefert 5 zurück, a selbst bleibt 4.",
+   "familyId": "DETAIL-T31-parameter-copy",
+   "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
+   "verified": true,
+   "qualityLevel": 2,
+   "variantAngle": "application",
+   "qualityTag": "quality-round-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001410",
+   "topicId": "T-04",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T04-macro-array",
+   "variantAngle": "diagnosis",
+   "prompt": "Die Aussage ist richtig: Bei #define LIMIT 5 legt erst der Linker den Wert von LIMIT fest.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 1,
+   "explanation": "Falsch. Der Präprozessor ersetzt LIMIT bereits vor der Übersetzung des C-Codes.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001411",
+   "topicId": "T-06",
+   "type": "mc-single",
+   "difficulty": "schwer",
+   "familyId": "DETAIL-T06-printf-vs-scanf",
+   "variantAngle": "diagnosis",
+   "prompt": "Welche Kombination liest einen double korrekt ein und gibt ihn anschließend korrekt aus?",
+   "code": "double d;",
+   "options": [
+    "scanf(\"%f\", &d); printf(\"%lf\", d);",
+    "scanf(\"%lf\", &d); printf(\"%f\", d);",
+    "scanf(\"%lf\", d); printf(\"%f\", &d);",
+    "scanf(\"%d\", &d); printf(\"%d\", d);"
+   ],
+   "answerIndex": 1,
+   "explanation": "scanf benötigt für double* den Specifier %lf und die Adresse. Bei printf ist %f für den durch die Argumentübergabe vorliegenden double-Wert korrekt.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001412",
+   "topicId": "T-08",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T08-literal-separator",
+   "variantAngle": "diagnosis",
+   "prompt": "Die Eingabe 4 5 passt unverändert zu scanf(\"%d,%d\", &a, &b);.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 1,
+   "explanation": "Falsch. Das Komma ist ein wörtliches Zeichen im Formatstring und muss auch in der Eingabe stehen.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001413",
+   "topicId": "T-10",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T10-combined-sizes",
+   "variantAngle": "application",
+   "prompt": "Welchen Wert hat der Ausdruck nach der Kurskonvention?",
+   "code": "sizeof(char) + sizeof(short) + sizeof(int) + sizeof(double)",
+   "options": [
+    "14",
+    "15",
+    "16",
+    "18"
+   ],
+   "answerIndex": 1,
+   "explanation": "Nach der Kurskonvention gilt 1 + 2 + 4 + 8 = 15 Byte.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001414",
+   "topicId": "T-12",
+   "type": "true-false",
+   "difficulty": "schwer",
+   "familyId": "DETAIL-T12-cast-after-division",
+   "variantAngle": "rule",
+   "prompt": "Der Ausdruck (double)(7 / 2) besitzt den Wert 3.5.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 1,
+   "explanation": "Falsch. Zuerst entsteht durch die Integer-Division der Wert 3; erst dieser wird zu 3.0 gecastet.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001415",
+   "topicId": "T-12",
+   "type": "true-false",
+   "difficulty": "schwer",
+   "familyId": "DETAIL-T12-cast-before-division",
+   "variantAngle": "rule",
+   "prompt": "Der Ausdruck (double)7 / 2 besitzt den Wert 3.5.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Durch den Cast ist ein Operand bereits vor der Division ein double.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001416",
+   "topicId": "T-14",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T14-angle-and-pi",
+   "variantAngle": "application",
+   "prompt": "Welchen Wert liefert der Ausdruck (math.h sei eingebunden)?",
+   "code": "sin(M_PI / 2)",
+   "options": [
+    "-1.0",
+    "0.0",
+    "1.0",
+    "90.0"
+   ],
+   "answerIndex": 2,
+   "explanation": "M_PI/2 entspricht 90 Grad im Bogenmaß. Der Sinus davon ist 1.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001417",
+   "topicId": "T-15",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T15-const-update",
+   "variantAngle": "rule",
+   "prompt": "Welche Zeile ist zulässig?",
+   "options": [
+    "const int n = 5; n++;",
+    "const int n = 5; int m = n + 1;",
+    "const int n = 5; n = 7;",
+    "const double pi = 3.14; pi *= 2;"
+   ],
+   "answerIndex": 1,
+   "explanation": "Ein const-Objekt darf gelesen und in Ausdrücken verwendet, aber nicht erneut beschrieben werden.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001418",
+   "topicId": "T-17",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T17-nested-shadowing",
+   "variantAngle": "rule",
+   "prompt": "Eine lokale Variable mit demselben Namen verdeckt die globale Variable nur in ihrem eigenen Gültigkeitsbereich.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Außerhalb des lokalen Gültigkeitsbereichs ist die globale Variable weiterhin sichtbar.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001419",
+   "topicId": "T-19",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T19-sequenced-increments",
+   "variantAngle": "application",
+   "prompt": "Welche Werte besitzen x und i danach?",
+   "code": "int i = 4;\nint x = ++i;",
+   "options": [
+    "x=4, i=5",
+    "x=5, i=5",
+    "x=4, i=4",
+    "x=5, i=4"
+   ],
+   "answerIndex": 1,
+   "explanation": "Das Prä-Inkrement erhöht i vor der Wertübernahme. Beide Werte sind daher 5.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001420",
+   "topicId": "T-21",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T21-char-arithmetic",
+   "variantAngle": "transfer",
+   "prompt": "Im ASCII-Zeichensatz liefert der Ausdruck '9' - '0' den ganzzahligen Wert 9.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Die Ziffern liegen in ASCII lückenlos aufeinander; ihre Differenz entspricht dem Ziffernwert.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001421",
+   "topicId": "T-22",
+   "type": "true-false",
+   "difficulty": "schwer",
+   "familyId": "DETAIL-T22-chained-comparison",
+   "variantAngle": "diagnosis",
+   "prompt": "Der Ausdruck 0 < x < 10 prüft in C für jeden int-Wert zuverlässig, ob x zwischen 0 und 10 liegt.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 1,
+   "explanation": "Falsch. Zuerst entsteht 0 oder 1; anschließend wird nur noch dieser Wert mit 10 verglichen.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001422",
+   "topicId": "T-23",
+   "type": "mc-single",
+   "difficulty": "schwer",
+   "familyId": "DETAIL-T23-short-circuit",
+   "variantAngle": "application",
+   "prompt": "Welchen Wert besitzt x danach?",
+   "code": "int x = 0;\nint wahr = 1 || ++x;",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "Der Ausdruck ist ungültig."
+   ],
+   "answerIndex": 0,
+   "explanation": "Weil der linke Operand von || bereits wahr ist, wird ++x nicht ausgewertet.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001423",
+   "topicId": "T-25",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T25-combined-precedence",
+   "variantAngle": "rule",
+   "prompt": "Der Ausdruck 2 + 3 * 4 besitzt wegen der üblichen Operatorrangfolge den Wert 20.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 1,
+   "explanation": "Falsch. Die Multiplikation wird zuerst ausgeführt: 2 + 12 = 14.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001424",
+   "topicId": "T-27",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T27-switch-flow",
+   "variantAngle": "rule",
+   "prompt": "Nach einem passenden case werden ohne break auch die folgenden case-Blöcke ausgeführt, bis ein break oder das switch-Ende erreicht ist.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Dieses Weiterlaufen wird als Fall-through bezeichnet.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001425",
+   "topicId": "T-28",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T28-do-while-first-run",
+   "variantAngle": "application",
+   "prompt": "Welchen Wert besitzt n danach?",
+   "code": "int n = 0;\ndo {\n    n++;\n} while (0);",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "Die Schleife ist endlos."
+   ],
+   "answerIndex": 1,
+   "explanation": "Der do-while-Körper wird einmal ausgeführt, bevor die Bedingung geprüft wird.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001426",
+   "topicId": "T-29",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T29-for-scope",
+   "variantAngle": "rule",
+   "prompt": "Eine im for-Kopf mit for (int i = ... deklarierte Variable i ist nach der Schleife weiterhin sichtbar.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 1,
+   "explanation": "Falsch. Ihr Gültigkeitsbereich endet mit der for-Schleife.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001427",
+   "topicId": "T-30",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T30-continue-sum",
+   "variantAngle": "rule",
+   "prompt": "continue überspringt nur den Rest der aktuellen Schleifeniteration; die Schleife selbst wird nicht beendet.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. break würde die Schleife verlassen, continue springt zur nächsten Iteration.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001428",
+   "topicId": "T-33",
+   "type": "mc-single",
+   "difficulty": "schwer",
+   "familyId": "DETAIL-T33-array-prototype",
+   "variantAngle": "diagnosis",
+   "prompt": "Welcher Prototyp passt zu einer Funktion, die ein int-Array und dessen Länge erhält und einen int zurückgibt?",
+   "options": [
+    "int summe(int a[], int n);",
+    "void summe(int a[], int n);",
+    "int summe(int a, int n);",
+    "int summe(int a[], int n)"
+   ],
+   "answerIndex": 0,
+   "explanation": "Rückgabetyp, Array-Parameter und Längenparameter müssen stimmen; ein Prototyp endet mit Semikolon.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001429",
+   "topicId": "T-36",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T36-array-init-size",
+   "variantAngle": "rule",
+   "prompt": "Bei int a[4] = {1}; werden a[1], a[2] und a[3] automatisch mit 0 initialisiert.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Fehlende Initialisierer eines initialisierten Arrays werden mit 0 aufgefüllt.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001430",
+   "topicId": "T-37",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T37-bytes-elements-index",
+   "variantAngle": "application",
+   "prompt": "Welcher Ausdruck liefert für dieses Array die Elementanzahl 6?",
+   "code": "double a[6];",
+   "options": [
+    "sizeof(a)",
+    "sizeof(a[0])",
+    "sizeof(a) / sizeof(a[0])",
+    "sizeof(a) / 6"
+   ],
+   "answerIndex": 2,
+   "explanation": "Gesamtgröße in Byte geteilt durch die Größe eines Elements ergibt die Elementanzahl.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001431",
+   "topicId": "T-38",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T38-array-parameter",
+   "variantAngle": "rule",
+   "prompt": "Schreibt eine Funktion über einen Array-Parameter nach a[0], wird das erste Element des ursprünglichen Arrays verändert.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Der Parameter verweist auf die Elemente des übergebenen Arrays.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001432",
+   "topicId": "T-41",
+   "type": "mc-single",
+   "difficulty": "schwer",
+   "familyId": "DETAIL-T41-sizeof-strlen-terminator",
+   "variantAngle": "transfer",
+   "prompt": "Welche Wertekombination ist korrekt?",
+   "code": "char s[8] = \"Hi\";",
+   "options": [
+    "strlen(s)=2 und sizeof(s)=8",
+    "strlen(s)=3 und sizeof(s)=8",
+    "strlen(s)=8 und sizeof(s)=2",
+    "strlen(s)=2 und sizeof(s)=3"
+   ],
+   "answerIndex": 0,
+   "explanation": "strlen zählt sichtbare Zeichen bis zum Terminator; sizeof misst den gesamten reservierten Array-Speicher.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001433",
+   "topicId": "T-42",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T42-string-mutation",
+   "variantAngle": "rule",
+   "prompt": "Wird ein beschreibbares char-Array an eine Funktion übergeben, kann die Funktion seine Zeichen im ursprünglichen Array verändern.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Der Array-Parameter ermöglicht den Zugriff auf dieselben Elemente wie im Aufrufer.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001434",
+   "topicId": "T-43",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T43-struct-initialization",
+   "variantAngle": "diagnosis",
+   "prompt": "Welcher Zugriff auf x ist korrekt?",
+   "code": "struct punkt { int x; int y; };\nstruct punkt p = {1, 2};",
+   "options": [
+    "p->x",
+    "p.x",
+    "punkt.x",
+    "*p.x"
+   ],
+   "answerIndex": 1,
+   "explanation": "p ist eine normale Struct-Variable und wird deshalb mit dem Punkt-Operator angesprochen.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001435",
+   "topicId": "T-45",
+   "type": "true-false",
+   "difficulty": "schwer",
+   "familyId": "DETAIL-T45-struct-copy-effect",
+   "variantAngle": "rule",
+   "prompt": "Wird ein Struct als normaler Funktionsparameter übergeben, verändert eine Zuweisung an dessen Member nur die lokale Kopie.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Struct-Parameter werden in C ohne Zeiger als Wertkopie übergeben.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001436",
+   "topicId": "T-46",
+   "type": "mc-single",
+   "difficulty": "schwer",
+   "familyId": "DETAIL-T46-error-classification",
+   "variantAngle": "diagnosis",
+   "prompt": "Welcher Fall kann übersetzt werden, führt bei der Ausführung aber zu undefiniertem Verhalten?",
+   "options": [
+    "Erneute Zuweisung an ein const-Objekt",
+    "Zugriff auf a[5] bei int a[5]",
+    "Fehlendes Semikolon nach einer Deklaration",
+    "Zwei Definitionen derselben lokalen Variablen im selben Block"
+   ],
+   "answerIndex": 1,
+   "explanation": "Der Index 5 liegt außerhalb der gültigen Indizes 0 bis 4. Das muss nicht beim Übersetzen erkannt werden.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "mc-single"
+  },
+  {
+   "id": "Q-001437",
+   "topicId": "T-31",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "DETAIL-T31-parameter-copy",
+   "variantAngle": "rule",
+   "prompt": "Erhöht eine Funktion ihren int-Parameter x, ändert sich dadurch nicht automatisch die beim Aufruf verwendete int-Variable.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Ein normaler int-Parameter ist eine Wertkopie.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001438",
+   "topicId": "T-03",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T03-main-contract",
+   "variantAngle": "rule",
+   "prompt": "return 0; in main signalisiert dem aufrufenden System eine erfolgreiche Programmbeendigung.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Der Rückgabewert 0 steht üblicherweise für eine erfolgreiche Beendigung.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001439",
+   "topicId": "T-03",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T03-main-contract",
+   "variantAngle": "diagnosis",
+   "prompt": "Welche Definition ist ein gültiger Programmeinstieg ohne Parameter?",
+   "options": [
+    "void main()",
+    "int main(void)",
+    "main int(void)",
+    "int start(void)"
+   ],
+   "answerIndex": 1,
+   "explanation": "Der standardkonforme Programmeinstieg besitzt den Rückgabetyp int; void kennzeichnet die leere Parameterliste.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001440",
+   "topicId": "T-05",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T05-printf-escapes",
+   "variantAngle": "application",
+   "prompt": "printf(\"A\\nB\"); gibt A und B in zwei verschiedenen Zeilen aus.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Die Escape-Sequenz \\n erzeugt einen Zeilenumbruch.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001441",
+   "topicId": "T-05",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T05-printf-escapes",
+   "variantAngle": "diagnosis",
+   "prompt": "Welcher Aufruf gibt genau ein Prozentzeichen aus?",
+   "options": [
+    "printf(\"%\");",
+    "printf(\"%%\");",
+    "printf(\"\\%\");",
+    "printf(\"%d\", \"%\");"
+   ],
+   "answerIndex": 1,
+   "explanation": "Im printf-Formatstring wird ein wörtliches Prozentzeichen als %% geschrieben.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001442",
+   "topicId": "T-09",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T09-declaration-initialization",
+   "variantAngle": "diagnosis",
+   "prompt": "int 2wert = 5; ist ungültig, weil ein Bezeichner nicht mit einer Ziffer beginnen darf.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Ziffern sind erst nach dem ersten Zeichen eines Bezeichners erlaubt.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001443",
+   "topicId": "T-09",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T09-declaration-initialization",
+   "variantAngle": "application",
+   "prompt": "Welche Zeile deklariert und initialisiert eine double-Variable korrekt?",
+   "options": [
+    "double = x 2.0;",
+    "double x = 2.0;",
+    "x double = 2.0;",
+    "double 2x = 2.0;"
+   ],
+   "answerIndex": 1,
+   "explanation": "Typ, gültiger Bezeichner, Zuweisungsoperator und Initialwert stehen in dieser Reihenfolge.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001444",
+   "topicId": "T-11",
+   "type": "true-false",
+   "difficulty": "schwer",
+   "familyId": "MASTER-T11-unsigned-boundary",
+   "variantAngle": "rule",
+   "prompt": "Ein Überlauf eines unsigned-Integer-Typs ist in C modulo 2 hoch Bitbreite definiert.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Unsigned-Arithmetik läuft am Wertebereichsende definiert wieder von vorn.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001445",
+   "topicId": "T-11",
+   "type": "mc-single",
+   "difficulty": "schwer",
+   "familyId": "MASTER-T11-unsigned-boundary",
+   "variantAngle": "application",
+   "prompt": "Welchen Wert besitzt x danach?",
+   "code": "unsigned int x = 0;\nx--;",
+   "options": [
+    "-1",
+    "0",
+    "UINT_MAX",
+    "Undefiniertes Verhalten"
+   ],
+   "answerIndex": 2,
+   "explanation": "Unsigned-Arithmetik ist modular. Unterhalb von 0 wird daher zum größten darstellbaren Wert gewechselt.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001446",
+   "topicId": "T-13",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T13-modulo-fmod",
+   "variantAngle": "diagnosis",
+   "prompt": "Der Ausdruck 5.5 % 2.0 ist in C eine gültige Gleitkomma-Restberechnung.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 1,
+   "explanation": "Falsch. Der Operator % erwartet ganzzahlige Operanden; für Gleitkommawerte dient fmod aus math.h.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001447",
+   "topicId": "T-13",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T13-modulo-fmod",
+   "variantAngle": "application",
+   "prompt": "Welchen Wert liefert der Ausdruck (math.h sei eingebunden)?",
+   "code": "fmod(7.5, 2.0)",
+   "options": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "3.75"
+   ],
+   "answerIndex": 2,
+   "explanation": "7.5 = 3 * 2.0 + 1.5; der verbleibende Rest ist 1.5.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001448",
+   "topicId": "T-16",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T16-global-local-scope",
+   "variantAngle": "rule",
+   "prompt": "Eine lokale Variable x kann eine globale Variable x verdecken, ohne deren gespeicherten Wert zu verändern.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Es handelt sich um zwei verschiedene Objekte in unterschiedlichen Gültigkeitsbereichen.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001449",
+   "topicId": "T-16",
+   "type": "mc-single",
+   "difficulty": "schwer",
+   "familyId": "MASTER-T16-global-local-scope",
+   "variantAngle": "application",
+   "prompt": "Was gibt das Programm aus?",
+   "code": "#include <stdio.h>\n\nint x = 4;\nvoid f(void) {\n    int x = 9;\n    x++;\n}\nint main(void) {\n    f();\n    printf(\"%d\", x);\n    return 0;\n}",
+   "options": [
+    "4",
+    "5",
+    "9",
+    "10"
+   ],
+   "answerIndex": 0,
+   "explanation": "f verändert nur sein lokales x. Das globale x bleibt 4.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001450",
+   "topicId": "T-18",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T18-compound-assignment",
+   "variantAngle": "transfer",
+   "prompt": "Nach int x = 10; x *= 2 + 1; besitzt x den Wert 30.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Die rechte Seite ist 3; die zusammengesetzte Zuweisung entspricht hier x = x * 3.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001451",
+   "topicId": "T-18",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T18-compound-assignment",
+   "variantAngle": "application",
+   "prompt": "Welchen Wert besitzt x danach?",
+   "code": "int x = 8;\nx /= 2 + 2;",
+   "options": [
+    "1",
+    "2",
+    "4",
+    "6"
+   ],
+   "answerIndex": 1,
+   "explanation": "Zuerst wird die rechte Seite zu 4 ausgewertet, anschließend erfolgt 8 / 4.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001452",
+   "topicId": "T-26",
+   "type": "true-false",
+   "difficulty": "schwer",
+   "familyId": "MASTER-T26-dangling-else",
+   "variantAngle": "rule",
+   "prompt": "Ohne geschweifte Klammern gehört ein else zum nächsten noch nicht zugeordneten if.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Diese Regel erklärt das sogenannte dangling-else-Verhalten.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001453",
+   "topicId": "T-26",
+   "type": "mc-single",
+   "difficulty": "schwer",
+   "familyId": "MASTER-T26-dangling-else",
+   "variantAngle": "application",
+   "prompt": "Welchen Wert besitzt x danach?",
+   "code": "int x = 0;\nif (1)\n    if (0) x = 1;\n    else x = 2;",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "Compilerfehler"
+   ],
+   "answerIndex": 2,
+   "explanation": "Das else gehört zum inneren if. Dessen Bedingung ist falsch, deshalb wird x auf 2 gesetzt.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001454",
+   "topicId": "T-01",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T01-toolchain-stage",
+   "variantAngle": "rule",
+   "prompt": "Der Linker verbindet Objektdateien und löst dabei Verweise auf Funktionen aus anderen Übersetzungseinheiten auf.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Präprozessor und Compiler arbeiten früher; das Zusammenführen der Objektdateien übernimmt der Linker.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001455",
+   "topicId": "T-01",
+   "type": "mc-single",
+   "difficulty": "schwer",
+   "familyId": "MASTER-T01-toolchain-stage",
+   "variantAngle": "diagnosis",
+   "prompt": "Eine Funktion ist deklariert und wird aufgerufen, aber in keiner eingebundenen Objektdatei definiert. Wo scheitert der normale Build?",
+   "options": [
+    "Beim Präprozessor",
+    "Beim Compiler wegen der Deklaration",
+    "Beim Linker",
+    "Erst zwingend zur Laufzeit"
+   ],
+   "answerIndex": 2,
+   "explanation": "Der Aufruf kann anhand der Deklaration übersetzt werden; die fehlende Definition fällt beim Auflösen des Symbols auf.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001456",
+   "topicId": "T-02",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T02-source-object-header",
+   "variantAngle": "rule",
+   "prompt": "Eine Headerdatei enthält typischerweise Deklarationen und wird über #include in eine C-Quelldatei eingebunden.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Die eigentlichen Übersetzungseinheiten entstehen normalerweise aus den C-Quelldateien.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001457",
+   "topicId": "T-02",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T02-source-object-header",
+   "variantAngle": "application",
+   "prompt": "Welche Datei entsteht typischerweise aus der Übersetzung einer einzelnen .c-Datei vor dem Linken?",
+   "options": [
+    "Eine .h-Datei",
+    "Eine Objektdatei (.o/.obj)",
+    "Immer sofort die fertige .exe-Datei",
+    "Eine weitere .c-Datei"
+   ],
+   "answerIndex": 1,
+   "explanation": "Compiler und Assembler erzeugen eine Objektdatei; der Linker verbindet sie später zum Programm.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001458",
+   "topicId": "T-07",
+   "type": "true-false",
+   "difficulty": "schwer",
+   "familyId": "MASTER-T07-width-precision",
+   "variantAngle": "rule",
+   "prompt": "Im Format %08.2f bezeichnet 8 eine Mindestfeldbreite und 2 die Anzahl der Nachkommastellen.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Die 0 fordert eine Auffüllung mit Nullen, soweit die Mindestbreite zusätzlichen Platz erzeugt.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001459",
+   "topicId": "T-07",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T07-width-precision",
+   "variantAngle": "application",
+   "prompt": "Welche Ausgabe erzeugt der Aufruf? Punkte markieren hier Leerzeichen.",
+   "code": "printf(\"%6.2f\", 3.5);",
+   "options": [
+    "..3.50",
+    ".3.500",
+    "3.5000",
+    "...3.5"
+   ],
+   "answerIndex": 0,
+   "explanation": "3.50 benötigt vier Zeichen. Für die Mindestbreite 6 werden links zwei Leerzeichen ergänzt.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001460",
+   "topicId": "T-32",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T32-function-signatures",
+   "variantAngle": "rule",
+   "prompt": "void f(void); deklariert eine Funktion ohne Parameter und ohne Rückgabewert.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Das erste void ist der Rückgabetyp, das zweite kennzeichnet die leere Parameterliste.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001461",
+   "topicId": "T-32",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T32-function-signatures",
+   "variantAngle": "diagnosis",
+   "prompt": "Welcher Prototyp beschreibt eine Funktion mit einem int-Parameter und ohne Rückgabewert?",
+   "options": [
+    "int f(void);",
+    "void f(int x);",
+    "int f(int x);",
+    "void f(void);"
+   ],
+   "answerIndex": 1,
+   "explanation": "void vor dem Funktionsnamen bedeutet kein Rückgabewert; int x ist der einzelne Parameter.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001462",
+   "topicId": "T-34",
+   "type": "true-false",
+   "difficulty": "schwer",
+   "familyId": "MASTER-T34-declaration-definition",
+   "variantAngle": "diagnosis",
+   "prompt": "Eine normale, nicht static Funktionsdefinition in einem Header kann bei Einbindung in mehrere .c-Dateien zu mehrfachen Definitionen beim Linken führen.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. In einen Header gehört hier die Deklaration; die einmalige Definition liegt in einer Quelldatei.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001463",
+   "topicId": "T-34",
+   "type": "mc-single",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T34-declaration-definition",
+   "variantAngle": "rule",
+   "prompt": "Welche Zeile ist nur eine Funktionsdeklaration und noch keine Definition?",
+   "options": [
+    "int summe(int a, int b);",
+    "int summe(int a, int b) { return a + b; }",
+    "return summe(1, 2);",
+    "#define summe(a,b) ((a)+(b))"
+   ],
+   "answerIndex": 0,
+   "explanation": "Der Prototyp endet mit einem Semikolon und besitzt keinen Funktionskörper.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001464",
+   "topicId": "T-35",
+   "type": "true-false",
+   "difficulty": "mittel",
+   "familyId": "MASTER-T35-no-overloading",
+   "variantAngle": "rule",
+   "prompt": "C erlaubt nicht, zwei Funktionen nur anhand unterschiedlicher Parametertypen unter demselben Namen zu überladen.",
+   "options": [
+    "Richtig",
+    "Falsch"
+   ],
+   "answerIndex": 0,
+   "explanation": "Richtig. Eine solche Überladung gehört nicht zum C-Sprachmodell.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
+  },
+  {
+   "id": "Q-001465",
+   "topicId": "T-35",
+   "type": "mc-single",
+   "difficulty": "schwer",
+   "familyId": "MASTER-T35-no-overloading",
+   "variantAngle": "diagnosis",
+   "prompt": "Was gilt für diese beiden Deklarationen in demselben C-Programm?",
+   "code": "int f(int x);\ndouble f(double x);",
+   "options": [
+    "Sie überladen f gültig.",
+    "Sie sind wegen widersprüchlicher Typen für denselben Funktionsnamen unvereinbar.",
+    "Der Linker wählt anhand des Arguments.",
+    "Nur die Reihenfolge der Deklarationen entscheidet."
+   ],
+   "answerIndex": 1,
+   "explanation": "C besitzt keine Funktionsüberladung; die beiden Typangaben für f stehen im Konflikt.",
+   "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
+   "verified": true,
+   "qualityLevel": 2,
+   "qualityTag": "mastery-q2-2026-07",
+   "examFamilyRole": "true-false"
   }
  ]
 };

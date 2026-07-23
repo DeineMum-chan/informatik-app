@@ -193,6 +193,21 @@
     return el('div', { className: 'codeblock' + (multi ? '' : ' inline-expr') }, inner);
   }
 
+  /** Syntaxhervorgehobener Inhalt einer einzelnen, bereits getrennten Codezeile. */
+  function renderCodeLineContent(line) {
+    const content = el('span', { className: 'bug-line-code' });
+    const tokens = tokenizeC(line);
+    for (const token of tokens) {
+      content.appendChild(token.cls
+        ? el('span', { className: token.cls, text: token.text })
+        : document.createTextNode(token.text));
+    }
+    if (line.length === 0) {
+      content.appendChild(el('span', { className: 'bug-empty-line', text: 'Hier Code oder Zeichen ergänzen' }));
+    }
+    return content;
+  }
+
   // ===========================================================================
   // Antwort-Widgets
   // ===========================================================================
@@ -301,6 +316,139 @@
     };
   }
 
+  /**
+   * Fehlersuche direkt im Code: Zeile markieren und eine Korrektur eintragen.
+   * Die Bewertung arbeitet mit bugTargets aus dem Fragenpool; es wird kein
+   * Fragen-Code ausgeführt.
+   */
+  function createBugEditor(q, opts) {
+    const initialMarks = opts && opts.initial && Array.isArray(opts.initial.marks)
+      ? opts.initial.marks : [];
+    const selected = new Map(initialMarks.map((mark) => [
+      Number(mark.line), String(mark.correction || ''),
+    ]));
+    let enabled = true;
+
+    const codeLines = String(q.code || '').replace(/\r\n/g, '\n').replace(/\s+$/, '').split('\n');
+    const targetLines = q.bugTargets.flatMap((target) =>
+      Array.isArray(target.acceptedLines) ? target.acceptedLines : [target.line]);
+    const maxLine = Math.max(codeLines.length, ...targetLines);
+    while (codeLines.length < maxLine) codeLines.push('');
+
+    const rows = new Map();
+    const root = el('div', { className: 'bug-editor' },
+      el('div', { className: 'bug-instructions' },
+        el('strong', { text: 'So geht’s:' }),
+        ' Tippen Sie auf jede fehlerhafte Zeile und tragen Sie darunter die Korrektur oder das fehlende Zeichen ein.'));
+
+    function getAnswer() {
+      if (selected.size === 0) return null;
+      return {
+        marks: [...selected.entries()]
+          .map(([line, correction]) => ({ line, correction }))
+          .sort((a, b) => a.line - b.line),
+      };
+    }
+
+    function notifyChange() {
+      if (opts && opts.onChange) opts.onChange(getAnswer());
+    }
+
+    codeLines.forEach((lineText, index) => {
+      const line = index + 1;
+      const marker = el('span', { className: 'bug-line-marker', text: '○' });
+      const input = el('input', {
+        className: 'bug-correction-input',
+        type: 'text',
+        autocomplete: 'off',
+        autocapitalize: 'off',
+        spellcheck: 'false',
+        placeholder: 'Korrektur oder fehlendes Zeichen …',
+        value: selected.get(line) || '',
+        'aria-label': `Korrektur für Zeile ${line}`,
+        oninput: () => {
+          if (selected.has(line)) {
+            selected.set(line, input.value);
+            notifyChange();
+          }
+        },
+      });
+      const correction = el('div', { className: 'bug-correction' },
+        el('span', { className: 'bug-correction-arrow', text: '↳' }),
+        input);
+      const lineButton = el('button', {
+        type: 'button',
+        className: 'bug-code-line',
+        'aria-pressed': selected.has(line) ? 'true' : 'false',
+        onclick: () => {
+          if (!enabled) return;
+          if (selected.has(line)) {
+            selected.delete(line);
+          } else {
+            selected.set(line, input.value);
+          }
+          syncRow();
+          notifyChange();
+          if (selected.has(line)) window.setTimeout(() => input.focus(), 0);
+        },
+      },
+        marker,
+        el('span', { className: 'bug-line-number', text: String(line) }),
+        renderCodeLineContent(lineText));
+      const row = el('div', { className: 'bug-line-row' }, lineButton, correction);
+
+      function syncRow() {
+        const isSelected = selected.has(line);
+        row.classList.toggle('selected', isSelected);
+        lineButton.setAttribute('aria-pressed', String(isSelected));
+        marker.textContent = isSelected ? '●' : '○';
+        correction.hidden = !isSelected;
+      }
+
+      rows.set(line, { row, lineButton, input, marker, syncRow });
+      syncRow();
+      root.appendChild(row);
+    });
+
+    return {
+      root,
+      getAnswer,
+      setEnabled(value) {
+        enabled = value;
+        for (const ref of rows.values()) {
+          ref.lineButton.disabled = !value;
+          ref.input.disabled = !value;
+        }
+      },
+      reveal(details) {
+        const matched = new Set((details && details.matchedTargets) || []);
+        for (const [line, ref] of rows) {
+          const mark = selected.has(line) ? { line, correction: selected.get(line) } : null;
+          const possibleTargets = q.bugTargets.filter((target) => {
+            const acceptedLines = Array.isArray(target.acceptedLines) ? target.acceptedLines : [target.line];
+            return acceptedLines.includes(line);
+          });
+          if (mark) {
+            if (possibleTargets.some((target) =>
+              CKT.engine.bugCorrectionMatches(target, mark.correction, line))) {
+              ref.row.classList.add('result-correct');
+            } else if (possibleTargets.length > 0) {
+              ref.row.classList.add('result-partial');
+            } else {
+              ref.row.classList.add('result-wrong');
+            }
+          }
+        }
+        for (const target of q.bugTargets) {
+          if (!matched.has(target.id)) {
+            const ref = rows.get(target.line);
+            if (ref) ref.row.classList.add('result-missing');
+          }
+        }
+      },
+    };
+  }
+
   // ===========================================================================
   // Fragekarte (Einzelfrage) — genutzt in Üben, Fehler wiederholen & Klausur
   // ===========================================================================
@@ -341,6 +489,7 @@
   }
 
   function explanationBox(q, order) {
+    if (CKT.engine.isStructuredFindBug(q)) return null;
     if (!q.explanation) return null;
     return el('div', { className: 'explanation' },
       el('span', { className: 'exp-label', text: 'Erklärung' }),
@@ -358,6 +507,10 @@
    */
   function correctAnswerText(q, order) {
     const num = (i) => (order ? order.indexOf(i) : i) + 1;
+    if (CKT.engine.isStructuredFindBug(q)) {
+      return q.bugTargets.map((target) =>
+        `Zeile ${target.line}: ${target.solution}\n${target.description}`).join('\n\n');
+    }
     switch (q.type) {
       case 'mc-single': case 'predict-output': case 'true-false':
         return q.options[q.answerIndex];
@@ -374,6 +527,13 @@
 
   function userAnswerText(q, answer) {
     if (!CKT.engine.isAnswered(q, answer)) return '— (nicht beantwortet)';
+    if (CKT.engine.isStructuredFindBug(q)) {
+      return answer.marks
+        .slice()
+        .sort((a, b) => a.line - b.line)
+        .map((mark) => `Zeile ${mark.line}: ${mark.correction || '— keine Korrektur eingetragen'}`)
+        .join('\n');
+    }
     switch (q.type) {
       case 'mc-single': case 'predict-output': case 'true-false':
         return q.options[answer];
@@ -396,7 +556,7 @@
     card.appendChild(metaRow(q, { mark: true }));
     if (q.group && q.groupPrompt) card.appendChild(el('p', { className: 'group-prompt', text: q.groupPrompt }));
     card.appendChild(el('p', { className: 'qprompt', text: q.prompt }));
-    if (showCode && q.code) card.appendChild(renderCode(q.code));
+    if (showCode && q.code && !CKT.engine.isStructuredFindBug(q)) card.appendChild(renderCode(q.code));
 
     const feedbackSlot = el('div');
     const actionBtn = el('button', { className: 'btn btn-primary', type: 'button', text: 'Antwort prüfen' });
@@ -404,7 +564,9 @@
     let widget = null;
 
     // Widget nach Fragetyp
-    if (q.type === 'short-answer') {
+    if (CKT.engine.isStructuredFindBug(q)) {
+      widget = createBugEditor(q, {});
+    } else if (q.type === 'short-answer') {
       widget = createShortAnswer(q, { onSubmit: () => actionBtn.click() });
     } else if (q.type === 'code-explain') {
       const textarea = el('textarea', { className: 'answer-textarea', placeholder: 'Eigene Erklärung notieren (optional) …' });
@@ -420,10 +582,10 @@
     card.appendChild(widget.root);
     card.appendChild(feedbackSlot);
 
-    function finish(correct) {
+    function finish(correct, extraText) {
       onDone(correct);
-      feedbackSlot.appendChild(feedbackBanner(correct));
-      if (q.type === 'short-answer' || !correct) {
+      feedbackSlot.appendChild(feedbackBanner(correct, extraText));
+      if (q.type === 'short-answer' || CKT.engine.isStructuredFindBug(q) || !correct) {
         feedbackSlot.appendChild(el('div', { className: 'explanation' },
           el('span', { className: 'exp-label', text: 'Musterlösung' }),
           correctAnswerText(q, widget.order)));
@@ -463,14 +625,22 @@
       if (!CKT.engine.isAnswered(q, answer)) return; // noch nichts gewählt/eingegeben
       const res = CKT.engine.gradeSingle(q, answer);
       widget.setEnabled(false);
-      widget.reveal();
-      finish(res.correct);
+      widget.reveal(res);
+      const detail = CKT.engine.isStructuredFindBug(q)
+        ? `${res.locationHits} von ${res.total} Fehlerstellen erkannt, ${res.correctionHits} vollständig korrigiert.`
+        : '';
+      finish(res.correct, detail);
     });
 
     card.appendChild(el('div', { className: 'btn-row' }, actionBtn));
-    card.appendChild(el('p', { className: 'kbd-hint' },
-      el('kbd', { text: '1' }), '–', el('kbd', { text: '9' }), ' Option wählen · ',
-      el('kbd', { text: 'Enter' }), ' prüfen/weiter'));
+    if (CKT.engine.isStructuredFindBug(q)) {
+      card.appendChild(el('p', { className: 'kbd-hint' },
+        'Codezeile anklicken · ', el('kbd', { text: 'Enter' }), ' prüfen/weiter'));
+    } else {
+      card.appendChild(el('p', { className: 'kbd-hint' },
+        el('kbd', { text: '1' }), '–', el('kbd', { text: '9' }), ' Option wählen · ',
+        el('kbd', { text: 'Enter' }), ' prüfen/weiter'));
+    }
 
     // Tastatur der aktiven Frage
     S.keyHandler = (e) => {
@@ -742,7 +912,9 @@
     const data = S.data;
     const f = S.practiceFilters || {
       topicIds: new Set(data.topics.map((t) => t.id)),
-      difficulties: new Set(CKT.engine.DIFFICULTIES),
+      // Q2-Standard: Verständnisfragen statt leichter Wiedererkennung.
+      // "leicht" bleibt für gezieltes Grundlagentraining zuschaltbar.
+      difficulties: new Set(['mittel', 'schwer']),
     };
     S.practiceFilters = f;
 
@@ -766,6 +938,8 @@
       chipRow.appendChild(chip);
     }
     view.appendChild(chipRow);
+    const qualityNote = el('div', { className: 'notice' });
+    view.appendChild(qualityNote);
 
     // Themen nach Bereich
     view.appendChild(el('div', { className: 'section-title', text: 'Themen' }));
@@ -843,6 +1017,11 @@
       countEl.textContent = st.total === 0
         ? 'Keine Fragen ausgewählt'
         : `${st.open} von ${st.total} Konzepten offen`;
+      qualityNote.textContent = st.total === 0
+        ? 'Wählen Sie mindestens ein Thema und eine Schwierigkeit.'
+        : st.singleVariant === 0
+          ? 'Q2 aktiv: Jede ausgewählte Konzeptfamilie besitzt mindestens zwei Varianten; der nächste vollständige Durchlauf wechselt die konkrete Aufgabe.'
+          : `${st.singleVariant} ausgewählte Konzeptfamilie(n) besitzen nur eine Variante. Diese Basisfragen können in einem späteren Durchlauf wortgleich wiederkehren.`;
       startBtn.disabled = st.total === 0;
     }
     updateCount();
@@ -930,7 +1109,7 @@
       el('p', { className: 'result-points', text: total === 1
         ? 'Das Konzept hast du richtig beantwortet.'
         : `Alle ${total} Konzepte mindestens einmal richtig beantwortet.` }),
-      el('p', { className: 'result-sub', text: 'Der Stand wurde zurückgesetzt — der nächste Durchlauf zeigt dir pro Konzept eine andere Variante (andere Zahlen und Namen). Deine Statistik bleibt erhalten.' }),
+      el('p', { className: 'result-sub', text: 'Der Stand wurde zurückgesetzt — der nächste Durchlauf wechselt pro Konzept zuerst die Aufgabenperspektive und danach Zahlen oder Namen. Deine Statistik bleibt erhalten.' }),
       el('div', { className: 'btn-row', style: 'justify-content:center' },
         el('button', { className: 'btn btn-primary', type: 'button', text: 'Neuer Durchlauf', onclick: startPractice }),
         el('button', { className: 'btn', type: 'button', text: 'Themen ändern', onclick: renderPracticeSetup }),
@@ -1021,7 +1200,11 @@
   }
 
   function startExam(options) {
-    const exam = CKT.engine.buildExam(S.data, options);
+    const exam = CKT.engine.buildExam(S.data, {
+      ...options,
+      recentSelection: CKT.storage.getLastExamSelection(),
+    });
+    CKT.storage.rememberExamSelection(CKT.engine.examSelectionSummary(S.data, exam));
     S.exam = {
       exam,
       answers: {},
@@ -1161,10 +1344,19 @@
     const card = el('div', { className: 'card qcard' });
     card.appendChild(metaRow(q));
     card.appendChild(el('p', { className: 'qprompt', text: q.prompt }));
-    if (q.code) card.appendChild(renderCode(q.code));
+    if (q.code && !CKT.engine.isStructuredFindBug(q)) card.appendChild(renderCode(q.code));
 
     let widget;
-    if (q.type === 'short-answer') {
+    if (CKT.engine.isStructuredFindBug(q)) {
+      widget = createBugEditor(q, {
+        initial: ex.answers[q.id],
+        onChange: (answer) => {
+          if (answer) ex.answers[q.id] = answer;
+          else delete ex.answers[q.id];
+          onAnswerChange();
+        },
+      });
+    } else if (q.type === 'short-answer') {
       widget = createShortAnswer(q, {
         initial: typeof ex.answers[q.id] === 'string' ? ex.answers[q.id] : '',
         onChange: (v) => { ex.answers[q.id] = v; onAnswerChange(); },
@@ -1178,8 +1370,10 @@
       });
     }
     card.appendChild(widget.root);
-    if (q.type === 'mc-multi' || q.type === 'find-bug') {
+    if (q.type === 'mc-multi' || (q.type === 'find-bug' && !CKT.engine.isStructuredFindBug(q))) {
       card.appendChild(el('p', { className: 'kbd-hint', text: 'Mehrfachauswahl: alle zutreffenden Aussagen ankreuzen.' }));
+    } else if (CKT.engine.isStructuredFindBug(q)) {
+      card.appendChild(el('p', { className: 'kbd-hint', text: 'Die Aufgabe gilt als vollständig richtig, wenn alle Fehlerstellen markiert und passend korrigiert wurden.' }));
     }
     return card;
   }
@@ -1505,23 +1699,23 @@
    * Der Bestätigungs-Stand liegt im synchronisierten Fortschritt (storage),
    * damit der Dialog nicht auf jedem Gerät neu aufpoppt.
    */
-  const NEWS_VERSION = 2;
+  const NEWS_VERSION = 5;
 
   const NEWS_ITEMS = [
     {
       icon: '🧠',
-      title: 'Kein Déjà-vu mehr beim Üben',
-      text: 'Viele Fragen waren Varianten derselben Vorlage (gleiche Antworten, andere Zahlen) — man kannte die Antwort, ohne das Konzept zu können. Jetzt zählt der Durchlauf in 393 Konzepten: Pro Vorlage kommt genau eine Variante, im nächsten Durchlauf eine andere.',
+      title: 'Q2-Verständnisstandard',
+      text: 'Der normale Durchlauf startet mit mittel und schwer. Jedes aktive Thema ist enthalten und jede ausgewählte Konzeptfamilie besitzt mindestens zwei wechselnde Varianten.',
     },
     {
-      icon: '🔀',
-      title: 'Antworten stehen nie mehr an derselben Stelle',
-      text: '„Es war immer die dritte" funktioniert nicht mehr: Die Antwortmöglichkeiten werden bei jeder Anzeige neu gemischt.',
+      icon: '🔄',
+      title: 'Perspektive statt Zahlenkosmetik',
+      text: '56 neue Q2-Varianten wechseln zwischen Regel, Anwendung, Diagnose und Transfer. Der nächste vollständige Durchlauf zeigt pro Konzept eine andere konkrete Aufgabe.',
     },
     {
-      icon: '📊',
-      title: 'Gesamt-Lernstand auf der Startseite',
-      text: 'Zwei Balken zeigen jetzt deinen Durchlauf-Fortschritt (Konzepte) und wie viele der Einzelfragen du überhaupt schon gesehen hast.',
+      icon: '🧩',
+      title: 'Klausuren mit Wiederholungsschutz',
+      text: 'Klausuren verwenden nur mittel/schwer, vermeiden die vorherigen Varianten und wiederholen außerhalb der sechs Zahlensystem-Richtungen nicht direkt dieselbe Konzeptfamilie.',
     },
   ];
 
@@ -1550,7 +1744,7 @@
     const card = el('div', { className: 'modal-card', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'newsTitle' },
       el('span', { className: 'modal-badge', text: 'Neu' }),
       el('h2', { className: 'modal-title', id: 'newsTitle', text: 'Was ist neu?' }),
-      el('p', { className: 'modal-sub', text: 'Zwei größere Verbesserungen — kurz erklärt, damit du sie auch nutzt:' }),
+      el('p', { className: 'modal-sub', text: 'Die App prüft jetzt gezielter Verständnis statt Wiedererkennung:' }),
       list,
       el('div', { className: 'btn-row' }, okBtn));
 
