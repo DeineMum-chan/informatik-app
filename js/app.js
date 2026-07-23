@@ -317,7 +317,8 @@
   }
 
   /**
-   * Fehlersuche direkt im Code: Zeile markieren und eine Korrektur eintragen.
+   * Fehlersuche direkt im Code: Zeile markieren und die vollständig
+   * korrigierte Codezeile eintragen.
    * Die Bewertung arbeitet mit bugTargets aus dem Fragenpool; es wird kein
    * Fragen-Code ausgeführt.
    */
@@ -339,7 +340,7 @@
     const root = el('div', { className: 'bug-editor' },
       el('div', { className: 'bug-instructions' },
         el('strong', { text: 'So geht’s:' }),
-        ' Tippen Sie auf jede fehlerhafte Zeile und tragen Sie darunter die Korrektur oder das fehlende Zeichen ein.'));
+        ' Tippen Sie auf jede fehlerhafte Zeile und geben Sie darunter immer die vollständig korrigierte Codezeile ein. Auch bei einem fehlenden Zeichen muss die ganze Zeile eingetragen werden.'));
 
     function getAnswer() {
       if (selected.size === 0) return null;
@@ -363,9 +364,9 @@
         autocomplete: 'off',
         autocapitalize: 'off',
         spellcheck: 'false',
-        placeholder: 'Korrektur oder fehlendes Zeichen …',
+        placeholder: 'Vollständig korrigierte Codezeile …',
         value: selected.get(line) || '',
-        'aria-label': `Korrektur für Zeile ${line}`,
+        'aria-label': `Vollständig korrigierte Codezeile ${line}`,
         oninput: () => {
           if (selected.has(line)) {
             selected.set(line, input.value);
@@ -627,7 +628,7 @@
       widget.setEnabled(false);
       widget.reveal(res);
       const detail = CKT.engine.isStructuredFindBug(q)
-        ? `${res.locationHits} von ${res.total} Fehlerstellen erkannt, ${res.correctionHits} vollständig korrigiert.`
+        ? `${res.locationHits} von ${res.total} Fehlerstellen erkannt, ${res.correctionHits} vollständige Korrekturzeilen richtig.`
         : '';
       finish(res.correct, detail);
     });
@@ -767,12 +768,18 @@
     const overall = CKT.engine.overallProgress(data);
     const runAll = overall.families;   // Durchlauf zählt in Konzepten
     const seenQ = overall.questions;   // Gesamtstand zählt in Einzelfragen
+    const practiceSnippetCount = data.groupOrder.filter((id) => !data.groups[id].examOnly).length;
+    const examSnippetCount = data.groupOrder.filter((id) => data.groups[id].examOnly).length;
     const view = el('div', { className: 'view' });
 
     // Hero + Kennzahlen
     view.appendChild(el('div', { className: 'hero' },
       el('h1', {}, 'Bereit für die ', el('span', { className: 'accent', text: 'C-Klausur' }), '?'),
-      el('p', { text: `${data.questions.length} verifizierte Fragen · ${data.groupOrder.length} Code-Snippets · Informatik 1 (THM StudiumPlus)` })
+      el('p', {
+        text: `${data.questions.length} verifizierte Fragen · `
+          + `${practiceSnippetCount} Übungs- und ${examSnippetCount} exklusive Klausur-Snippets · `
+          + 'Informatik 1 (THM StudiumPlus)',
+      })
     ));
 
     view.appendChild(el('div', { className: 'stat-row' },
@@ -811,17 +818,20 @@
 
     // Modus-Karten
     const lastExam = CKT.storage.examHistory()[0];
+    const examSeries = CKT.storage.getExamSeries();
     view.appendChild(el('div', { className: 'mode-grid' },
       el('button', { className: 'mode-card', type: 'button', onclick: renderPracticeSetup },
         el('span', { className: 'mode-icon', text: '▤' }),
         el('h3', { text: 'Üben nach Thema' }),
         el('p', { text: 'Jedes Konzept einmal richtig — geschaffte verschwinden, bis der Durchlauf komplett ist.' }),
         el('span', { className: 'mode-meta', text: runAll.open > 0 ? `${runAll.open} von ${runAll.total} Konzepten offen` : 'alle geschafft 🎉' })),
-      el('button', { className: 'mode-card', type: 'button', onclick: renderExamSetup },
+      el('button', { className: 'mode-card', type: 'button', onclick: () => renderExamSetup() },
         el('span', { className: 'mode-icon', text: '⏱' }),
         el('h3', { text: 'Klausursimulation' }),
-        el('p', { text: 'Realistischer Mix: Teil 1 Ankreuz & Umrechnung, Teil 2 Code-Snippets. Mit Note.' }),
-        el('span', { className: 'mode-meta', text: lastExam ? `Letzte: ${lastExam.grade} (${Math.round(lastExam.percent)} %)` : 'ca. 80 Punkte · 90 min' })),
+        el('p', { text: '47/47 Themen, Q2-Anspruch und keine konkrete Wiederholung innerhalb von sechs Klausuren.' }),
+        el('span', { className: 'mode-meta', text: examSeries.generatedCount >= 6
+          ? 'Serie 6/6 · bereit für Neustart'
+          : `Serie ${examSeries.generatedCount}/6${lastExam ? ` · Letzte: ${lastExam.grade}` : ''}` })),
       el('button', { className: 'mode-card', type: 'button', onclick: renderReview },
         el('span', { className: 'mode-icon', text: '↻' }),
         el('h3', { text: 'Fehler wiederholen' }),
@@ -842,7 +852,9 @@
 
     // Themen-Statistik
     view.appendChild(el('div', { className: 'section-title', text: 'Fortschritt nach Thema' }));
-    const tStats = CKT.storage.topicStats(data.questions);
+    const tStats = CKT.storage.topicStats(
+      data.questions.filter((q) => q.examOnly !== true),
+    );
     for (const area of data.areas) {
       let seenSum = 0, totalSum = 0;
       for (const t of area.topics) {
@@ -955,7 +967,10 @@
 
     const checkboxes = [];
     const topicCounts = {};
-    for (const q of data.questions) topicCounts[q.topicId] = (topicCounts[q.topicId] || 0) + 1;
+    for (const q of data.questions) {
+      if (q.examOnly === true) continue;
+      topicCounts[q.topicId] = (topicCounts[q.topicId] || 0) + 1;
+    }
 
     for (const area of data.areas) {
       const details = el('details', { className: 'area-details', open: '' });
@@ -1163,15 +1178,47 @@
   // Klausursimulation
   // ===========================================================================
 
-  function renderExamSetup() {
+  function renderExamSetup(buildError) {
     S.keyHandler = null;
+    const series = CKT.storage.getExamSeries();
+    const seriesComplete = series.generatedCount >= 6;
     const view = el('div', { className: 'view' });
     view.appendChild(el('div', { className: 'view-header' },
       el('button', { className: 'btn btn-ghost btn-small', type: 'button', text: '← Zurück', onclick: renderHome }),
       el('h1', { text: 'Klausursimulation' })));
 
+    if (buildError) {
+      view.appendChild(el('div', { className: 'card notice notice-warn' },
+        el('strong', { text: 'Klausur konnte nicht regelkonform erzeugt werden.' }),
+        el('p', { text: buildError })));
+    }
+
     const card = el('div', { className: 'card' });
-    card.appendChild(el('p', { text: 'Aufbau wie beim Dozenten: Teil 1 mit klassischen Ankreuz-, Predict-Output- und Umrechnungsaufgaben, Teil 2 mit 4 Code-Snippets (je ~10 Aussagen) und einer Fehler-finden-Aufgabe. Jede Aussage zählt 1 Punkt.' }));
+    card.appendChild(el('h2', {
+      text: seriesComplete
+        ? 'Sechser-Serie abgeschlossen'
+        : `Klausur ${series.generatedCount + 1} von 6`,
+    }));
+    card.appendChild(el('p', {
+      text: 'Jede Klausur deckt alle 47 aktiven Themen ab. Innerhalb der Serie werden weder eine konkrete Einzelfrage noch ein Code-Snippet wiederholt. Der Builder erzeugt keine vereinfachte Ersatzklausur.',
+    }));
+    card.appendChild(el('p', { text: 'Aufbau wie beim Dozenten: Teil 1 mit 5 Richtig/Falsch-, 13 Mehrfachauswahl-, 13 Predict-Output-, 6 Umrechnungs- und 3 Einfachauswahl-Aufgaben. Teil 2 enthält 4 Code-Snippets mit je 10 Aussagen und eine Fehler-finden-Aufgabe. Jede Aussage zählt 1 Punkt.' }));
+
+    if (seriesComplete) {
+      card.appendChild(el('div', { className: 'btn-row' },
+        el('button', {
+          className: 'btn btn-primary btn-block',
+          type: 'button',
+          text: 'Neue Sechser-Serie starten',
+          onclick: () => {
+            CKT.storage.resetExamSeries();
+            renderExamSetup();
+          },
+        })));
+      view.appendChild(card);
+      setView(view, 'Klausurserie 6/6');
+      return;
+    }
 
     const timedBox = el('input', { type: 'checkbox' }); timedBox.checked = true;
     const minutesInput = el('input', { type: 'number', min: '10', max: '240', step: '5', value: '90' });
@@ -1188,7 +1235,8 @@
 
     card.appendChild(el('div', { className: 'btn-row' },
       el('button', {
-        className: 'btn btn-primary btn-block', type: 'button', text: 'Klausur starten',
+        className: 'btn btn-primary btn-block', type: 'button',
+        text: `Klausur ${series.generatedCount + 1} starten`,
         onclick: () => {
           const minutes = Math.min(240, Math.max(10, parseInt(minutesInput.value, 10) || 90));
           startExam({ timed: timedBox.checked, minutes, negative: negBox.checked });
@@ -1196,15 +1244,25 @@
       })));
 
     view.appendChild(card);
-    setView(view, 'Klausur');
+    setView(view, `Klausurserie ${series.generatedCount}/6`);
   }
 
   function startExam(options) {
-    const exam = CKT.engine.buildExam(S.data, {
-      ...options,
-      recentSelection: CKT.storage.getLastExamSelection(),
-    });
-    CKT.storage.rememberExamSelection(CKT.engine.examSelectionSummary(S.data, exam));
+    let exam;
+    try {
+      exam = CKT.engine.buildExam(S.data, {
+        ...options,
+        seriesSelection: CKT.storage.getExamSeries(),
+      });
+    } catch (error) {
+      renderExamSetup(error && error.message
+        ? error.message
+        : 'Die Qualitätsbedingungen konnten nicht erfüllt werden.');
+      return;
+    }
+    const selection = CKT.engine.examSelectionSummary(S.data, exam);
+    CKT.storage.rememberExamSeriesSelection(selection);
+    CKT.storage.rememberExamSelection(selection);
     S.exam = {
       exam,
       answers: {},
@@ -1453,7 +1511,7 @@
         (options.timed ? ` · Bearbeitungszeit ca. ${usedMin} min` : ''),
     }));
     hero.appendChild(el('div', { className: 'btn-row', style: 'justify-content:center' },
-      el('button', { className: 'btn btn-primary', type: 'button', text: 'Neue Klausur', onclick: renderExamSetup }),
+      el('button', { className: 'btn btn-primary', type: 'button', text: 'Neue Klausur', onclick: () => renderExamSetup() }),
       el('button', { className: 'btn', type: 'button', text: 'Fehler wiederholen ↻', onclick: renderReview })));
     view.appendChild(hero);
 
@@ -1699,7 +1757,7 @@
    * Der Bestätigungs-Stand liegt im synchronisierten Fortschritt (storage),
    * damit der Dialog nicht auf jedem Gerät neu aufpoppt.
    */
-  const NEWS_VERSION = 5;
+  const NEWS_VERSION = 8;
 
   const NEWS_ITEMS = [
     {
@@ -1714,8 +1772,18 @@
     },
     {
       icon: '🧩',
-      title: 'Klausuren mit Wiederholungsschutz',
-      text: 'Klausuren verwenden nur mittel/schwer, vermeiden die vorherigen Varianten und wiederholen außerhalb der sechs Zahlensystem-Richtungen nicht direkt dieselbe Konzeptfamilie.',
+      title: 'Harte Sechser-Klausurserie',
+      text: 'Jede Klausur deckt 47/47 Themen ab. Über sechs Simulationen wiederholt sich weder eine konkrete Frage noch ein Code-Snippet; danach ist ein bewusster Serien-Neustart nötig.',
+    },
+    {
+      icon: '⌨',
+      title: 'Fehlersuche mit vollständigen Codezeilen',
+      text: 'Nach dem Markieren einer Fehlerstelle muss jetzt immer die vollständig korrigierte Codezeile eingegeben werden. Einzelne Zeichen oder Stichwörter reichen nicht mehr.',
+    },
+    {
+      icon: '▣',
+      title: '24 exklusive Klausur-Code-Snippets',
+      text: 'Der getrennte Klausurpool umfasst jetzt 24 Programme mit jeweils zehn zusammenhängenden Aussagen — exakt vier unverbrauchte Programme für jede der sechs Simulationen.',
     },
   ];
 

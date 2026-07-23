@@ -49,18 +49,13 @@
     return isNonEmptyString(q.code) && Array.isArray(q.bugTargets) && q.bugTargets.length > 0 &&
       q.bugTargets.every((target) =>
         target && isNonEmptyString(target.id) && Number.isInteger(target.line) && target.line > 0 &&
+        typeof target.originalLine === 'string' &&
         isNonEmptyString(target.solution) &&
-        Array.isArray(target.acceptedCorrections) && target.acceptedCorrections.length > 0 &&
-        target.acceptedCorrections.every(isNonEmptyString) &&
+        Array.isArray(target.acceptedCorrectedLines) && target.acceptedCorrectedLines.length > 0 &&
+        target.acceptedCorrectedLines.every(isNonEmptyString) &&
         (!target.acceptedLines ||
           (Array.isArray(target.acceptedLines) && target.acceptedLines.length > 0 &&
-            target.acceptedLines.every((line) => Number.isInteger(line) && line > 0))) &&
-        (!target.acceptedRepairs ||
-          (Array.isArray(target.acceptedRepairs) && target.acceptedRepairs.length > 0 &&
-            target.acceptedRepairs.every((repair) =>
-              repair && Number.isInteger(repair.line) && repair.line > 0 &&
-              Array.isArray(repair.corrections) && repair.corrections.length > 0 &&
-              repair.corrections.every(isNonEmptyString)))));
+            target.acceptedLines.every((line) => Number.isInteger(line) && line > 0))));
   }
 
   // ---------------------------------------------------------------------------
@@ -136,6 +131,7 @@
     const rawQuestions = Array.isArray(raw.questions) ? raw.questions : [];
     const seenIds = new Set();
     for (const q of rawQuestions) {
+      if (q && q.disabled === true) { result.disabledCount += 1; continue; }
       // Deaktivierte Themen ganz früh aussortieren — vor der Fallback-Logik,
       // sonst würde eine solche Frage unter einem Ersatzthema wieder auftauchen.
       if (q && disabled.has(q.topicId)) { result.disabledCount += 1; continue; }
@@ -162,6 +158,10 @@
             code: isNonEmptyString(q.code) ? q.code : '',
             groupPrompt: isNonEmptyString(q.groupPrompt) ? q.groupPrompt : '',
             topicId: q.topicId,
+            examOnly: q.examOnly === true,
+            examArchetype: isNonEmptyString(q.examArchetype) ? q.examArchetype : q.group,
+            examSeriesRound: Number.isInteger(q.examSeriesRound) ? q.examSeriesRound : null,
+            coverageTopics: [],
             questions: [],
           };
           result.groups[q.group] = g;
@@ -169,6 +169,12 @@
         }
         if (!g.code && isNonEmptyString(q.code)) g.code = q.code;
         if (!g.groupPrompt && isNonEmptyString(q.groupPrompt)) g.groupPrompt = q.groupPrompt;
+        const coverage = Array.isArray(q.coverageTopics) ? q.coverageTopics : [];
+        for (const topicId of coverage) {
+          if (result.topicById[topicId] && !g.coverageTopics.includes(topicId)) {
+            g.coverageTopics.push(topicId);
+          }
+        }
         g.questions.push(q);
       }
     }
@@ -262,20 +268,29 @@
     return unitQuestions(unit).every((q) => CKT.storage.isDone(q.id));
   }
 
+  function unitIsExamOnly(unit) {
+    return unit.kind === 'group' ? unit.group.examOnly === true : unit.q.examOnly === true;
+  }
+
   /** Fortschritt in Familien ("Konzepten") + Fragen über den ganzen Pool. */
   function overallProgress(dataset) {
     let doneF = 0;
+    let totalF = 0;
     for (const fam of dataset.families) {
-      if (fam.units.some(unitFullyDone)) doneF += 1;
+      const practiceUnits = fam.units.filter((unit) => !unitIsExamOnly(unit));
+      if (practiceUnits.length === 0) continue;
+      totalF += 1;
+      if (practiceUnits.some(unitFullyDone)) doneF += 1;
     }
     let answeredQ = 0;
-    for (const q of dataset.questions) {
+    const practiceQuestions = dataset.questions.filter((q) => q.examOnly !== true);
+    for (const q of practiceQuestions) {
       const r = CKT.storage.getRecord(q.id);
       if (r && r.s > 0) answeredQ += 1;
     }
     return {
-      families: { total: dataset.families.length, done: doneF, open: dataset.families.length - doneF },
-      questions: { total: dataset.questions.length, answered: answeredQ },
+      families: { total: totalF, done: doneF, open: totalF - doneF },
+      questions: { total: practiceQuestions.length, answered: answeredQ },
     };
   }
 
@@ -351,6 +366,7 @@
     const difficulties = filters && filters.difficulties;
 
     const eligible = dataset.questions.filter((q) => {
+      if (q.examOnly === true) return false;
       // Leere Auswahl bedeutet "nichts ausgewählt", nicht "kein Filter".
       if (topicIds && !topicIds.has(q.topicId)) return false;
       // Sind alle Schwierigkeiten gewählt, auch Fragen mit unbekanntem Wert zulassen.
@@ -434,7 +450,8 @@
 
   function buildReviewPool(dataset) {
     const ids = CKT.storage.reviewIds();
-    return ids.map((id) => dataset.byId[id]).filter(Boolean);
+    return ids.map((id) => dataset.byId[id])
+      .filter((q) => q && q.examOnly !== true);
   }
 
   /**
@@ -461,161 +478,358 @@
    * à ~10 Aussagen) + 1 Fehler-finden-Aufgabe. Jede Aussage/Frage = 1 Punkt.
    */
   const EXAM_PART1 = [
-    { take: 15, label: 'Einzelaussagen (R/F)', filter: (q) => q.type === 'true-false' && !q.group },
-    { take: 8,  label: '„Was trifft zu?"',      filter: (q) => q.type === 'mc-multi' },
-    { take: 8,  label: 'Predict-Output',        filter: (q) => q.type === 'predict-output' },
-    { take: 6,  label: 'Zahlensysteme',         filter: (q) => q.type === 'short-answer' && q.topicId === 'T-20' },
-    { take: 3,  label: 'Einfachauswahl',        filter: (q) => q.type === 'mc-single' },
+    { key: 'tf', take: 5, label: 'Einzelaussagen (R/F)', filter: (q) => q.type === 'true-false' && !q.group },
+    { key: 'multi', take: 13, label: '„Was trifft zu?"', filter: (q) => q.type === 'mc-multi' },
+    { key: 'predict', take: 13, label: 'Predict-Output', filter: (q) => q.type === 'predict-output' },
+    { key: 'conversion', take: 6, label: 'Zahlensysteme', filter: (q) => q.type === 'short-answer' && q.topicId === 'T-20' },
+    { key: 'single', take: 3, label: 'Einfachauswahl', filter: (q) => q.type === 'mc-single' },
   ];
   const EXAM_GROUP_COUNT = 4;
   const EXAM_FINDBUG_COUNT = 1;
-  const examPreferredQuestion = (q) => q.difficulty === 'mittel' || q.difficulty === 'schwer';
+  const EXAM_SERIES_LENGTH = 6;
+  const CONVERSION_FAMILIES = [
+    'T20-dec-to-bin', 'T20-bin-to-dec', 'T20-dec-to-hex',
+    'T20-hex-to-dec', 'T20-bin-to-hex', 'T20-hex-to-bin',
+  ];
+
+  function canonicalText(value) {
+    return String(value == null ? '' : value)
+      .replace(/\r\n?/g, '\n')
+      .replace(/[ \t]+/g, ' ')
+      .replace(/ *\n */g, '\n')
+      .trim()
+      .toLowerCase();
+  }
 
   /**
-   * Zieht Fragen aus unterschiedlichen Konzeptfamilien. Innerhalb einer
-   * Familie wird eine zufällige Werte-/Namensvariante gewählt.
+   * Inhaltlicher Fingerabdruck statt bloßer ID: Auch versehentlich doppelt
+   * importierte Aufgaben werden innerhalb einer Sechser-Serie ausgeschlossen.
    */
-  function sampleQuestionsByFamily(
-    dataset,
-    filter,
-    take,
-    usedFamilies,
-    usedQuestions,
-    selection,
-  ) {
-    const byFamily = new Map();
-    for (const q of dataset.questions) {
-      if (q.group || usedQuestions.has(q.id) || !filter(q)) continue;
-      // Manche Q2-Familien besitzen bewusst verschiedene Fragetypen. Für die
-      // Klausur wird eine Familie einem festen Topf zugeordnet, damit sie nicht
-      // in aufeinanderfolgenden Klausuren über zwei Töpfe ungewollt wiederkehrt.
-      if (isNonEmptyString(q.examFamilyRole) && q.examFamilyRole !== q.type) continue;
-      const familyIndex = dataset.familyByUnitKey['q:' + q.id];
-      if (usedFamilies.has(familyIndex)) continue;
-      if (!byFamily.has(familyIndex)) byFamily.set(familyIndex, []);
-      byFamily.get(familyIndex).push(q);
-    }
+  function questionFingerprint(q) {
+    const answer = Array.isArray(q.answerIndices)
+      ? q.answerIndices.slice().sort((a, b) => a - b)
+      : (Number.isInteger(q.answerIndex) ? q.answerIndex : q.answer);
+    return JSON.stringify([
+      q.type,
+      canonicalText(q.prompt),
+      canonicalText(q.code),
+      Array.isArray(q.options) ? q.options.map(canonicalText) : [],
+      answer,
+    ]);
+  }
 
-    const recentFamilyKeys = selection && selection.recentFamilyKeys
-      ? selection.recentFamilyKeys : new Set();
-    const recentVariantKeys = selection && selection.recentVariantKeys
-      ? selection.recentVariantKeys : new Set();
-    const preferred = selection && selection.preferredQuestion;
-    const entries = [...byFamily.entries()];
-    const pickedFamilies = [];
+  function groupFingerprint(group) {
+    return JSON.stringify([
+      canonicalText(group.code),
+      group.questions.map((q) => [
+        canonicalText(q.prompt),
+        Number.isInteger(q.answerIndex) ? q.answerIndex : q.answerIndices,
+      ]),
+    ]);
+  }
 
-    function takeFamilyEntries(predicate) {
-      if (pickedFamilies.length >= take) return;
-      const pickedIndexes = new Set(pickedFamilies.map(([index]) => index));
-      const candidates = entries.filter(([familyIndex, variants]) =>
-        !pickedIndexes.has(familyIndex) && predicate(familyIndex, variants));
-      pickedFamilies.push(...sample(candidates, take - pickedFamilies.length));
-    }
+  function coverageTopicsOfQuestion(q) {
+    const values = Array.isArray(q.coverageTopics) ? q.coverageTopics : [];
+    const text = [q.prompt, q.code].concat(Array.isArray(q.options) ? q.options : [])
+      .join('\n').toLowerCase();
+    const inferred = [];
+    const addIf = (topicId, pattern) => { if (pattern.test(text)) inferred.push(topicId); };
+    addIf('T-03', /\bmain\s*\(|return\s+0\b/);
+    addIf('T-04', /#\s*(include|define)|präprozessor/);
+    addIf('T-05', /\bprintf\s*\(|escape-sequenz/);
+    addIf('T-06', /%[-+ #0]*\d*(?:\.\d+)?(?:ll|l|z)?[diufecs]/);
+    addIf('T-08', /\bscanf\s*\(|\bgetchar\s*\(|clrbuf|eingabepuffer/);
+    addIf('T-11', /\bunsigned\b|vorzeichenlos|modulo\s+2\s*(?:hoch|\^)/);
+    addIf('T-13', /\bfmod\s*\(|modulo-operator|rest(?:wert)?\s+einer|%\s*[a-z0-9(]/);
+    addIf('T-14', /math\.h|\b(?:sin|cos|tan|sqrt|pow|ceil|floor)\s*\(/);
+    addIf('T-15', /\bconst\b|magic number/);
+    addIf('T-16', /globale?\s+variable|lokale?\s+variable|gültigkeitsbereich/);
+    addIf('T-17', /shadow|verdeckt|gleichen namen.*(?:block|bereich|variable)/);
+    addIf('T-18', /(?:\+=|-=|\*=|\/=|%=)/);
+    addIf('T-26', /\bif\s*\(|\belse\b/);
+    addIf('T-31', /rückgabewert|funktionsparameter|\breturn\b/);
+    addIf('T-32', /\bvoid\b|funktion ohne rückgabewert/);
+    addIf('T-44', /\btypedef\b|verschachtelte[nr]?\s+struct/);
+    return [...new Set([q.topicId].concat(values, inferred).filter(isNonEmptyString))];
+  }
 
-    // Anspruch hat Vorrang, danach wird die direkte Vorgängerklausur gemieden.
-    takeFamilyEntries((familyIndex, variants) =>
-      (!preferred || variants.some(preferred)) &&
-      !recentFamilyKeys.has(dataset.families[familyIndex].key));
-    takeFamilyEntries((familyIndex, variants) => !preferred || variants.some(preferred));
-    takeFamilyEntries((familyIndex) =>
-      !recentFamilyKeys.has(dataset.families[familyIndex].key));
-    takeFamilyEntries(() => true);
+  function coverageTopicsOfGroup(group) {
+    return [...new Set(['T-47'].concat(
+      Array.isArray(group.coverageTopics) ? group.coverageTopics : [],
+    ))];
+  }
 
+  function examQuestionEligible(q, filter, usedVariantKeys, usedFingerprints) {
+    return !q.group && q.examOnly !== true && q.verified === true &&
+      (q.difficulty === 'mittel' || q.difficulty === 'schwer') &&
+      filter(q) &&
+      !usedVariantKeys.has('q:' + q.id) &&
+      !usedFingerprints.has(questionFingerprint(q));
+  }
+
+  function familyIndexForQuestion(dataset, q) {
+    return dataset.familyByUnitKey['q:' + q.id];
+  }
+
+  function candidatesForBucket(dataset, bucket, series) {
+    return shuffle(dataset.questions.filter((q) =>
+      examQuestionEligible(q, bucket.filter, series.usedVariantKeys, series.usedFingerprints)));
+  }
+
+  function chooseConversions(dataset, candidates, usedFamilies) {
     const selected = [];
-    for (const [familyIndex, variants] of pickedFamilies) {
-      const preferredVariants = preferred ? variants.filter(preferred) : variants;
-      const primaryPool = preferredVariants.length > 0 ? preferredVariants : variants;
-      const unseenVariants = primaryPool.filter((q) => !recentVariantKeys.has('q:' + q.id));
-      const q = sample(unseenVariants.length > 0 ? unseenVariants : primaryPool, 1)[0];
-      usedFamilies.add(familyIndex);
-      usedQuestions.add(q.id);
+    for (const familyId of CONVERSION_FAMILIES) {
+      const options = candidates.filter((q) =>
+        q.familyId === familyId && !usedFamilies.has(familyIndexForQuestion(dataset, q)));
+      if (options.length === 0) return null;
+      const q = options[0];
       selected.push(q);
+      usedFamilies.add(familyIndexForQuestion(dataset, q));
     }
     return selected;
   }
 
-  /** Zieht Snippet-Gruppen aus unterschiedlichen Code-Archetypen. */
-  function sampleGroupsByFamily(dataset, take, selection) {
-    const byFamily = new Map();
-    for (const gid of dataset.groupOrder) {
-      const familyIndex = dataset.familyByUnitKey['g:' + gid];
-      if (!byFamily.has(familyIndex)) byFamily.set(familyIndex, []);
-      byFamily.get(familyIndex).push(dataset.groups[gid]);
+  function fillBucket(dataset, candidates, target, selected, usedFamilies, usedIds) {
+    const primaryAvailability = new Map();
+    const familyAvailability = new Map();
+    for (const q of candidates) {
+      primaryAvailability.set(q.topicId, (primaryAvailability.get(q.topicId) || 0) + 1);
+      const familyIndex = familyIndexForQuestion(dataset, q);
+      familyAvailability.set(familyIndex, (familyAvailability.get(familyIndex) || 0) + 1);
     }
-    const recentFamilyKeys = selection && selection.recentFamilyKeys
-      ? selection.recentFamilyKeys : new Set();
-    const recentVariantKeys = selection && selection.recentVariantKeys
-      ? selection.recentVariantKeys : new Set();
-    const entries = [...byFamily.entries()];
-    const fresh = entries.filter(([familyIndex]) =>
-      !recentFamilyKeys.has(dataset.families[familyIndex].key));
-    const chosen = sample(fresh, take);
-    if (chosen.length < take) {
-      const used = new Set(chosen.map(([familyIndex]) => familyIndex));
-      chosen.push(...sample(
-        entries.filter(([familyIndex]) => !used.has(familyIndex)),
-        take - chosen.length,
-      ));
+    const ordered = shuffle(candidates).sort((left, right) => {
+      const topicDifference =
+        (primaryAvailability.get(right.topicId) || 0) -
+        (primaryAvailability.get(left.topicId) || 0);
+      if (topicDifference !== 0) return topicDifference;
+      return (familyAvailability.get(familyIndexForQuestion(dataset, right)) || 0) -
+        (familyAvailability.get(familyIndexForQuestion(dataset, left)) || 0);
+    });
+    for (const q of ordered) {
+      if (selected.length >= target) break;
+      const familyIndex = familyIndexForQuestion(dataset, q);
+      if (usedIds.has(q.id) || usedFamilies.has(familyIndex)) continue;
+      selected.push(q);
+      usedIds.add(q.id);
+      usedFamilies.add(familyIndex);
     }
-    return chosen.map(([, variants]) => {
-      const unseen = variants.filter((group) => !recentVariantKeys.has('g:' + group.id));
-      return sample(unseen.length > 0 ? unseen : variants, 1)[0];
+    return selected.length === target;
+  }
+
+  /**
+   * Belegt zuerst noch fehlende Themen und füllt danach die festen Fragetöpfe.
+   * Die Rekursion läuft über höchstens 34 offene Plätze; seltene Themen werden
+   * zuerst verarbeitet. Scheitert eine Belegung, wird sauber zurückgesetzt.
+   */
+  function selectSinglesForCoverage(dataset, groups, series) {
+    const bucketStates = EXAM_PART1.map((bucket) => ({
+      bucket,
+      candidates: candidatesForBucket(dataset, bucket, series),
+      selected: [],
+    }));
+    const findBugBucket = {
+      bucket: {
+        key: 'find-bug',
+        take: EXAM_FINDBUG_COUNT,
+        filter: (q) => q.type === 'find-bug',
+      },
+      candidates: candidatesForBucket(dataset, {
+        filter: (q) => q.type === 'find-bug',
+      }, series),
+      selected: [],
+    };
+    const allStates = bucketStates.concat(findBugBucket);
+    if (allStates.some((state) => state.candidates.length < state.bucket.take)) return null;
+
+    const usedFamilies = new Set();
+    const usedIds = new Set();
+    const conversionState = bucketStates.find((state) => state.bucket.key === 'conversion');
+    const conversions = chooseConversions(dataset, conversionState.candidates, usedFamilies);
+    if (!conversions) return null;
+    conversionState.selected.push(...conversions);
+    conversions.forEach((q) => usedIds.add(q.id));
+
+    const covered = new Set();
+    groups.forEach((group) => coverageTopicsOfGroup(group).forEach((id) => covered.add(id)));
+    conversions.forEach((q) => coverageTopicsOfQuestion(q).forEach((id) => covered.add(id)));
+
+    const activeTopics = dataset.topics.map((topic) => topic.id);
+    const initialMissing = activeTopics.filter((id) => !covered.has(id));
+    const selectableStates = bucketStates
+      .filter((state) => state.bucket.key !== 'conversion')
+      .concat(findBugBucket);
+    let visited = 0;
+
+    function search(missing) {
+      visited += 1;
+      if (visited > 120000) return null;
+      if (missing.length === 0) {
+        const snapshots = selectableStates.map((state) => state.selected.length);
+        const familySnapshot = new Set(usedFamilies);
+        const idSnapshot = new Set(usedIds);
+        const complete = selectableStates.every((state) =>
+          fillBucket(
+            dataset,
+            state.candidates,
+            state.bucket.take,
+            state.selected,
+            usedFamilies,
+            usedIds,
+          ));
+        if (complete) return true;
+        selectableStates.forEach((state, index) => { state.selected.length = snapshots[index]; });
+        usedFamilies.clear();
+        familySnapshot.forEach((value) => usedFamilies.add(value));
+        usedIds.clear();
+        idSnapshot.forEach((value) => usedIds.add(value));
+        return null;
+      }
+
+      let chosenTopic = null;
+      let chosenOptions = null;
+      for (const topicId of missing) {
+        const options = [];
+        for (const state of selectableStates) {
+          if (state.selected.length >= state.bucket.take) continue;
+          for (const q of state.candidates) {
+            const familyIndex = familyIndexForQuestion(dataset, q);
+            if (usedIds.has(q.id) || usedFamilies.has(familyIndex)) continue;
+            if (coverageTopicsOfQuestion(q).includes(topicId)) options.push({ state, q, familyIndex });
+          }
+        }
+        if (options.length === 0) return null;
+        if (!chosenOptions || options.length < chosenOptions.length) {
+          chosenTopic = topicId;
+          chosenOptions = options;
+        }
+      }
+
+      for (const option of shuffle(chosenOptions).slice(0, 40)) {
+        const { state, q, familyIndex } = option;
+        state.selected.push(q);
+        usedIds.add(q.id);
+        usedFamilies.add(familyIndex);
+        const qCoverage = new Set(coverageTopicsOfQuestion(q));
+        const nextMissing = missing.filter((id) => !qCoverage.has(id));
+        if (search(nextMissing)) return true;
+        state.selected.pop();
+        usedIds.delete(q.id);
+        usedFamilies.delete(familyIndex);
+      }
+      return null;
+    }
+
+    if (!search(initialMissing)) return null;
+    const questions = [];
+    for (const state of allStates) questions.push(...state.selected);
+    return questions;
+  }
+
+  function groupCandidates(dataset, series) {
+    const requiredRound = series.generatedCount + 1;
+    return shuffle(dataset.groupOrder
+      .map((id) => dataset.groups[id])
+      .filter((group) =>
+        group.examOnly === true &&
+        (!Number.isInteger(group.examSeriesRound) || group.examSeriesRound === requiredRound) &&
+        !series.usedVariantKeys.has('g:' + group.id) &&
+        !series.usedFingerprints.has(groupFingerprint(group))));
+  }
+
+  function groupCombinations(dataset, candidates) {
+    const combinations = [];
+    for (let a = 0; a < candidates.length - 3; a++) {
+      for (let b = a + 1; b < candidates.length - 2; b++) {
+        for (let c = b + 1; c < candidates.length - 1; c++) {
+          for (let d = c + 1; d < candidates.length; d++) {
+            const groups = [candidates[a], candidates[b], candidates[c], candidates[d]];
+            const families = groups.map((group) =>
+              dataset.familyByUnitKey['g:' + group.id]);
+            const archetypes = groups.map((group) => group.examArchetype);
+            if (new Set(families).size === EXAM_GROUP_COUNT &&
+                new Set(archetypes).size === EXAM_GROUP_COUNT) {
+              combinations.push(groups);
+            }
+          }
+        }
+      }
+    }
+    return shuffle(combinations).sort((left, right) => {
+      const l = new Set(left.flatMap(coverageTopicsOfGroup)).size;
+      const r = new Set(right.flatMap(coverageTopicsOfGroup)).size;
+      return r - l;
     });
   }
 
   function buildExam(dataset, options) {
-    const usedQuestions = new Set();
-    const usedFamilies = new Set();
-    const part1 = [];
-    const recent = options && options.recentSelection ? options.recentSelection : {};
-    const selection = {
-      recentFamilyKeys: new Set(Array.isArray(recent.familyKeys) ? recent.familyKeys : []),
-      recentVariantKeys: new Set(Array.isArray(recent.variantKeys) ? recent.variantKeys : []),
-      preferredQuestion: examPreferredQuestion,
+    const stored = options && (options.seriesSelection || options.recentSelection) || {};
+    const series = {
+      generatedCount: Number(stored.generatedCount) || 0,
+      usedVariantKeys: new Set(Array.isArray(stored.variantKeys) ? stored.variantKeys : []),
+      usedFingerprints: new Set(Array.isArray(stored.fingerprints) ? stored.fingerprints : []),
     };
+    if (series.generatedCount >= EXAM_SERIES_LENGTH) {
+      const error = new Error('Die Klausurserie ist vollständig. Starten Sie bewusst eine neue Sechser-Serie.');
+      error.code = 'EXAM_SERIES_COMPLETE';
+      throw error;
+    }
 
-    for (const bucket of EXAM_PART1) {
-      for (const q of sampleQuestionsByFamily(
-        dataset, bucket.filter, bucket.take, usedFamilies, usedQuestions, selection)) {
-        part1.push({ kind: 'single', q });
+    const candidates = groupCandidates(dataset, series);
+    if (candidates.length < EXAM_GROUP_COUNT) {
+      const error = new Error('Der unverbrauchte Code-Snippet-Pool reicht für diese Klausur nicht aus.');
+      error.code = 'EXAM_POOL_EXHAUSTED';
+      throw error;
+    }
+
+    let chosenGroups = null;
+    let chosenQuestions = null;
+    for (const groups of groupCombinations(dataset, candidates)) {
+      const questions = selectSinglesForCoverage(dataset, groups, series);
+      if (questions) {
+        chosenGroups = groups;
+        chosenQuestions = questions;
+        break;
       }
     }
-    // Falls ein Topf zu klein war: mit beliebigen Teil-1-tauglichen Fragen auffüllen.
-    const target1 = EXAM_PART1.reduce((s, b) => s + b.take, 0);
-    if (part1.length < target1) {
-      const fill = sampleQuestionsByFamily(
-        dataset,
-        (q) => q.type !== 'find-bug' && q.type !== 'code-explain',
-        target1 - part1.length,
-        usedFamilies,
-        usedQuestions,
-        selection);
-      for (const q of fill) {
-        part1.push({ kind: 'single', q });
-      }
+    if (!chosenGroups || !chosenQuestions) {
+      const error = new Error(
+        'Keine Klausur erfüllt gleichzeitig Themenabdeckung, Anspruch und Wiederholungsschutz. '
+        + 'Es wurde keine vereinfachte Ersatzklausur erzeugt.',
+      );
+      error.code = 'EXAM_CONSTRAINTS_UNSATISFIED';
+      throw error;
     }
 
-    const part2 = [];
-    for (const group of sampleGroupsByFamily(dataset, EXAM_GROUP_COUNT, selection)) {
-      part2.push({ kind: 'group', group });
+    const part1 = shuffle(chosenQuestions
+      .filter((q) => q.type !== 'find-bug')
+      .map((q) => ({ kind: 'single', q })));
+    const part2 = chosenGroups.map((group) => ({ kind: 'group', group }))
+      .concat(chosenQuestions
+        .filter((q) => q.type === 'find-bug')
+        .map((q) => ({ kind: 'single', q })));
+    const units = part1.concat(part2);
+    const coverageTopics = new Set();
+    for (const unit of units) {
+      const values = unit.kind === 'group'
+        ? coverageTopicsOfGroup(unit.group)
+        : coverageTopicsOfQuestion(unit.q);
+      values.forEach((id) => coverageTopics.add(id));
     }
-    for (const q of sampleQuestionsByFamily(
-      dataset,
-      (candidate) => candidate.type === 'find-bug',
-      EXAM_FINDBUG_COUNT,
-      usedFamilies,
-      usedQuestions,
-      selection)) {
-      part2.push({ kind: 'single', q });
+    const missingTopics = dataset.topics
+      .map((topic) => topic.id)
+      .filter((id) => !coverageTopics.has(id));
+    const maxPoints = units.reduce((sum, unit) => sum + unitQuestions(unit).length, 0);
+    if (units.length !== 45 || maxPoints !== 81 || missingTopics.length > 0) {
+      const error = new Error(`Interner Klausurvalidator fehlgeschlagen: ${missingTopics.join(', ')}`);
+      error.code = 'EXAM_VALIDATION_FAILED';
+      throw error;
     }
-
-    const units = shuffle(part1).concat(part2);
-    let maxPoints = 0;
-    for (const u of units) maxPoints += unitQuestions(u).length;
 
     return {
       units,
       maxPoints,
+      coverageTopics: [...coverageTopics],
+      seriesNumber: series.generatedCount + 1,
       options: {
         timed: !!(options && options.timed),
         minutes: (options && options.minutes) || 90,
@@ -628,15 +842,21 @@
   function examSelectionSummary(dataset, exam) {
     const familyKeys = [];
     const variantKeys = [];
+    const fingerprints = [];
     for (const unit of exam.units) {
       const key = unitKey(unit);
       const familyIndex = dataset.familyByUnitKey[key];
       if (Number.isInteger(familyIndex)) familyKeys.push(dataset.families[familyIndex].key);
       variantKeys.push(key);
+      fingerprints.push(unit.kind === 'group'
+        ? groupFingerprint(unit.group)
+        : questionFingerprint(unit.q));
     }
     return {
       familyKeys: [...new Set(familyKeys)],
       variantKeys: [...new Set(variantKeys)],
+      fingerprints: [...new Set(fingerprints)],
+      coverageTopics: Array.isArray(exam.coverageTopics) ? exam.coverageTopics.slice() : [],
     };
   }
 
@@ -668,36 +888,55 @@
   }
 
   function normalizeBugCorrection(value, caseSensitive) {
-    let normalized = String(value == null ? '' : value)
+    const source = String(value == null ? '' : value)
       .trim()
       .replace(/[„“”]/g, '"')
-      .replace(/[’]/g, "'")
-      .replace(/\s+/g, '');
+      .replace(/[’]/g, "'");
+    let normalized = '';
+    let quote = '';
+    let escaped = false;
+
+    // Formatierung außerhalb von Zeichen- und Stringliteralen ignorieren.
+    // Leerzeichen innerhalb eines Literals sind dagegen Teil des C-Codes.
+    for (const char of source) {
+      if (quote) {
+        normalized += char;
+        if (escaped) {
+          escaped = false;
+        } else if (char === '\\') {
+          escaped = true;
+        } else if (char === quote) {
+          quote = '';
+        }
+      } else if (char === '"' || char === "'") {
+        quote = char;
+        normalized += char;
+      } else if (!/\s/.test(char)) {
+        normalized += char;
+      }
+    }
+
     if (!caseSensitive) normalized = normalized.toLowerCase();
     return normalized;
   }
 
   function bugCorrectionMatches(target, correction, line) {
-    const given = normalizeBugCorrection(correction, !!target.caseSensitive);
+    const caseSensitive = target.caseSensitive !== false;
+    const given = normalizeBugCorrection(correction, caseSensitive);
     if (!given) return false;
-    const repairs = Array.isArray(target.acceptedRepairs) && Number.isInteger(line)
-      ? target.acceptedRepairs.filter((repair) => repair.line === line)
-      : [];
-    const acceptedCorrections = repairs.length > 0
-      ? repairs.flatMap((repair) => repair.corrections)
-      : (Array.isArray(target.acceptedRepairs) && Number.isInteger(line)
-        ? []
-        : target.acceptedCorrections);
-    return acceptedCorrections.some((accepted) =>
-      given === normalizeBugCorrection(accepted, !!target.caseSensitive));
+    const acceptedLines = Array.isArray(target.acceptedLines) ? target.acceptedLines : [target.line];
+    if (Number.isInteger(line) && !acceptedLines.includes(line)) return false;
+    return target.acceptedCorrectedLines.some((accepted) =>
+      given === normalizeBugCorrection(accepted, caseSensitive));
   }
 
   /**
    * Strukturierte Fehlersuche bewerten.
-   * answer = { marks: [{ line: 3, correction: "{" }, ...] }
+   * answer = { marks: [{ line: 3, correction: "int f(int x) {" }, ...] }
    *
    * Für "richtig" müssen alle Fehlerkonzepte mit zulässiger Zeile UND
-   * akzeptierter Korrektur getroffen sein; zusätzliche Markierungen sind falsch.
+   * vollständig korrigierter Codezeile getroffen sein; zusätzliche Markierungen
+   * sind falsch.
    * Die Detailzahlen ermöglichen in der UI trotzdem hilfreiches Teilfeedback.
    */
   function gradeFindBug(q, answer) {
@@ -878,6 +1117,10 @@
     drawReviewQuestion,
     buildExam,
     examSelectionSummary,
+    questionFingerprint,
+    groupFingerprint,
+    coverageTopicsOfQuestion,
+    coverageTopicsOfGroup,
     gradeSingle,
     isAnswered,
     shortAnswerMatches,

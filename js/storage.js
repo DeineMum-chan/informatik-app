@@ -14,7 +14,9 @@
  *   perQuestion: { "Q-000001": { s, c, w, last, m, d, rv } },
  *   global: { answered, correct, streak, bestStreak, lastPracticed },
  *   exams:  [ { ts, points, max, percent, grade, negative, timed } ],
- *   lastExamSelection: { familyKeys: string[], variantKeys: string[] },
+ *   examSeries: {
+ *     id, generatedCount, familyKeys, variantKeys, fingerprints, createdAt
+ *   },
  *   savedAt: Zeitstempel des letzten save()
  * }
  *
@@ -50,12 +52,24 @@
     return currentUser ? `${BASE_KEY}:${currentUser}` : BASE_KEY;
   }
 
+  function emptyExamSeries() {
+    return {
+      id: '',
+      generatedCount: 0,
+      familyKeys: [],
+      variantKeys: [],
+      fingerprints: [],
+      createdAt: 0,
+    };
+  }
+
   function emptyState() {
     return {
       perQuestion: {},
       global: { answered: 0, correct: 0, streak: 0, bestStreak: 0, lastPracticed: null },
       exams: [],
       lastExamSelection: { familyKeys: [], variantKeys: [] },
+      examSeries: emptyExamSeries(),
       newsSeen: 0,   // zuletzt bestätigte Neuerungs-Version (siehe NEWS_VERSION in app.js)
       runSeed: 0,    // rotiert die Varianten-Auswahl pro Übungs-Durchlauf
       savedAt: 0,
@@ -95,11 +109,26 @@
     const variantKeys = Array.isArray(selection.variantKeys)
       ? selection.variantKeys.filter((key) => typeof key === 'string').slice(0, 100)
       : [];
+    const rawSeries = parsed.examSeries && typeof parsed.examSeries === 'object'
+      ? parsed.examSeries : emptyExamSeries();
+    const sanitizeKeys = (values, limit) => Array.isArray(values)
+      ? values.filter((value) => typeof value === 'string').slice(0, limit)
+      : [];
+    const generatedCount = Math.min(6, Math.max(0, Number(rawSeries.generatedCount) || 0));
+    const examSeries = {
+      id: typeof rawSeries.id === 'string' ? rawSeries.id.slice(0, 80) : '',
+      generatedCount,
+      familyKeys: sanitizeKeys(rawSeries.familyKeys, 300),
+      variantKeys: sanitizeKeys(rawSeries.variantKeys, 300),
+      fingerprints: sanitizeKeys(rawSeries.fingerprints, 300),
+      createdAt: Number(rawSeries.createdAt) || 0,
+    };
     return {
       perQuestion,
       global: Object.assign(base.global, parsed.global),
       exams: Array.isArray(parsed.exams) ? parsed.exams : base.exams,
       lastExamSelection: { familyKeys, variantKeys },
+      examSeries,
       newsSeen: Number(parsed.newsSeen) || 0,
       runSeed: Number(parsed.runSeed) || 0,
       savedAt: Number(parsed.savedAt) || 0,
@@ -384,6 +413,50 @@
     };
   }
 
+  /**
+   * Eine erzeugte Klausur gilt als verbraucht, sobald ihr Inhalt angezeigt
+   * wird. So lässt sich der Wiederholungsschutz nicht durch Abbrechen umgehen.
+   */
+  function rememberExamSeriesSelection(selection) {
+    if (state.examSeries.generatedCount >= 6) return getExamSeries();
+    if (!state.examSeries.id) {
+      state.examSeries.id = `series-${Date.now()}`;
+      state.examSeries.createdAt = Date.now();
+    }
+    const appendUnique = (target, values, limit) => {
+      const seen = new Set(target);
+      for (const value of Array.isArray(values) ? values : []) {
+        if (typeof value !== 'string' || seen.has(value)) continue;
+        seen.add(value);
+        target.push(value);
+        if (target.length >= limit) break;
+      }
+    };
+    appendUnique(state.examSeries.familyKeys, selection && selection.familyKeys, 300);
+    appendUnique(state.examSeries.variantKeys, selection && selection.variantKeys, 300);
+    appendUnique(state.examSeries.fingerprints, selection && selection.fingerprints, 300);
+    state.examSeries.generatedCount += 1;
+    save();
+    return getExamSeries();
+  }
+
+  function getExamSeries() {
+    return {
+      id: state.examSeries.id,
+      generatedCount: state.examSeries.generatedCount,
+      familyKeys: state.examSeries.familyKeys.slice(),
+      variantKeys: state.examSeries.variantKeys.slice(),
+      fingerprints: state.examSeries.fingerprints.slice(),
+      createdAt: state.examSeries.createdAt,
+    };
+  }
+
+  function resetExamSeries() {
+    state.examSeries = emptyExamSeries();
+    save();
+    return getExamSeries();
+  }
+
   function resetAll() {
     const seen = state.newsSeen; // Neuerungs-Hinweis nicht erneut zeigen
     state = emptyState();
@@ -439,6 +512,9 @@
     examHistory,
     rememberExamSelection,
     getLastExamSelection,
+    rememberExamSeriesSelection,
+    getExamSeries,
+    resetExamSeries,
     resetAll,
     getNewsSeen,
     setNewsSeen,
