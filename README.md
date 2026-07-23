@@ -114,8 +114,8 @@ erkennt die App das automatisch und läuft wie bisher im Gastmodus ohne Login.
 
 | Modus | Was passiert |
 |---|---|
-| **Üben nach Thema** | Themen/Schwierigkeit wählen, Sofort-Feedback und Erklärung. Standardmäßig ist **Q2** aktiv (`mittel` + `schwer`): 116 Konzeptfamilien decken alle 47 aktiven Themen ab und besitzen jeweils mindestens zwei Varianten. Pro Durchlauf kommt je Konzept eine Variante; der nächste vollständige Durchlauf wechselt zuerst die Perspektive (Regel, Anwendung, Diagnose, Transfer) und danach Zahlen/Namen. Leichte Grundlagen lassen sich freiwillig zuschalten. Geschaffte Konzepte verschwinden, falsche kommen wieder; Antwortoptionen werden gemischt. |
-| **Klausursimulation** | Harte Sechser-Serie: Jede Simulation besitzt 45 Einheiten, 81 Punkte und deckt alle 47 aktiven Themen ab. Teil 1 enthält 5 R/F-, 13 Mehrfachauswahl-, 13 Predict-Output-, alle 6 Zahlensystem-Richtungen und 3 Einfachauswahl-Aufgaben; Teil 2 enthält 4 Code-Snippets mit je 10 Aussagen sowie 1 Fehler-finden-Aufgabe. Der getrennte Pool umfasst 24 klausurexklusive Programme. Innerhalb der sechs Klausuren wiederholt sich weder eine konkrete Einzelfrage noch ein Code-Snippet; zusätzlich schützt ein Inhaltsfingerabdruck vor Dubletten mit anderer ID. Nach Klausur 6 ist ein bewusster Serien-Neustart nötig. Alle Einzelfragen sind verifiziert und mittel/schwer. |
+| **Üben nach Thema** | Themen/Schwierigkeit wählen, Sofort-Feedback und Erklärung. Standardmäßig ist **Q2** aktiv (`mittel` + `schwer): Der aktive Stoffumfang deckt 46 Themen ab; **Zeiger und mehrdimensionale Arrays sind ausdrücklich ausgeschlossen**. Pro Durchlauf kommt je Konzept eine Variante; der nächste vollständige Durchlauf wechselt zuerst die Perspektive (Regel, Anwendung, Diagnose, Transfer) und danach Zahlen/Namen. Leichte Grundlagen lassen sich freiwillig zuschalten. Geschaffte Konzepte verschwinden, falsche kommen wieder; Antwortoptionen werden gemischt. |
+| **Klausursimulation** | Harte Sechser-Serie: Jede Simulation besitzt 45 Einheiten, 81 Punkte und deckt alle 46 aktiven Themen ab. Zeiger und mehrdimensionale Arrays werden nicht abgefragt. Teil 1 enthält 5 R/F-, 13 Mehrfachauswahl-, 13 Predict-Output-, alle 6 Zahlensystem-Richtungen und 3 Einfachauswahl-Aufgaben; Teil 2 enthält 4 Code-Snippets mit je 10 Aussagen sowie 1 Fehler-finden-Aufgabe. Der getrennte Pool umfasst 24 klausurexklusive Programme. Innerhalb der sechs Klausuren wiederholt sich weder eine konkrete Einzelfrage noch ein Code-Snippet; zusätzlich schützt ein Inhaltsfingerabdruck vor Dubletten mit anderer ID. Nach Klausur 6 ist ein bewusster Serien-Neustart nötig. Alle Einzelfragen sind verifiziert und mittel/schwer. |
 | **Fehler wiederholen** | Falsch beantwortete + gemerkte Fragen. Wer eine Frage **einmal richtig** beantwortet, nimmt sie sofort aus dem Pool — so wiederholen sich dieselben Fragen nicht. Gemerkte Fragen bleiben, bis die Markierung entfernt wird. |
 
 **Notenschätzung** (üblicher Hochschulschlüssel, Bestehensgrenze 50 %):
@@ -183,7 +183,7 @@ Coolify gemountete Volume `/app/data-store`) — eine JSON-Datei pro Nutzer.
    ```
 
 4. In `service-worker.js` die Konstante `VERSION` hochzählen (aktuell
-   `ckt-v19`, beim nächsten Update z. B. `ckt-v20`), damit installierte PWAs
+   `ckt-v20`, beim nächsten Update z. B. `ckt-v21`), damit installierte PWAs
    den neuen Pool übernehmen. Beim Laden über den
    Webserver holt sich die App den Pool ohnehin bevorzugt frisch aus dem Netz
    (Network-first für `questions.json`).

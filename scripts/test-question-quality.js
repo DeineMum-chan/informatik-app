@@ -21,7 +21,7 @@ const ckt = {
 const sandbox = {
   window: {
     CKT: ckt,
-    CKT_CONFIG: { disabledTopics: ['T-24'] },
+    CKT_CONFIG: { disabledTopics: ['T-24', 'T-39'] },
   },
   CKT: ckt,
   console,
@@ -40,6 +40,18 @@ vm.runInContext(
 
 const engine = ckt.engine;
 const dataset = engine.prepare(raw);
+const activeQuestionText = (q) =>
+  [q.prompt, q.code, q.explanation].concat(Array.isArray(q.options) ? q.options : []).join('\n');
+const explicitPointerPattern =
+  /\bzeiger\w*|\bpointer\w*|->|\b(?:char|int|double|float|long|short|void|Ergebnis)\s*\*\s*[A-Za-z_]\w*/i;
+const multiDimensionalArrayPattern =
+  /mehrdimension|zweidimensional|2d-array|\[[^\]\n]+\]\s*\[[^\]\n]+\]|\[\]\s*\[[^\]\n]+\]/i;
+assert.equal(dataset.topicById['T-39'], undefined,
+  'Mehrdimensionale Arrays dürfen nicht zum aktiven Stoffumfang gehören.');
+assert.equal(dataset.questions.filter((q) => explicitPointerPattern.test(activeQuestionText(q))).length, 0,
+  'Der aktive Pool darf keine Zeigerdeklarationen, Dereferenzierung oder Zeiger-Distraktoren enthalten.');
+assert.equal(dataset.questions.filter((q) => multiDimensionalArrayPattern.test(activeQuestionText(q))).length, 0,
+  'Der aktive Pool darf keine mehrdimensionalen Arrays enthalten.');
 const qualityTag = 'quality-round-2026-07';
 const details = raw.questions.filter((q) => q.qualityTag === qualityTag);
 const masteryTag = 'mastery-q2-2026-07';
@@ -48,10 +60,10 @@ const examSnippetTag = 'exam-snippets-professor-ss25-v1';
 const examSnippetQuestions = raw.questions.filter((q) => q.examSnippetPool === examSnippetTag);
 const allExamSnippetQuestions = raw.questions.filter((q) => q.examOnly === true && q.group);
 
-assert.equal(raw.meta.version, '1.6', 'Der Fragenpool muss Datenversion 1.6 verwenden.');
+assert.equal(raw.meta.version, '1.7', 'Der Fragenpool muss Datenversion 1.7 verwenden.');
 assert.equal(raw.questions.length, 1550, 'Der vollständige Pool muss 1550 Fragen enthalten.');
-assert.equal(dataset.questions.length, 1450,
-  'Nach T-24 und den drei Löschaufgaben müssen 1450 Fragen aktiv sein.');
+assert.equal(dataset.questions.length, 1436,
+  'Nach T-24, T-39 und den drei Löschaufgaben müssen 1436 Fragen aktiv sein.');
 assert.equal(dataset.skipped, 0, 'Keine aktive Frage darf an der Validierung scheitern.');
 assert.equal(details.length, 28, 'Die Qualitätsrunde muss genau 28 Detailfragen enthalten.');
 assert.ok(details.every((q) => q.verified && q.familyId && engine.validateQuestion(q)),
@@ -97,13 +109,13 @@ for (const [groupId, questions] of examSnippetGroups) {
   assert.ok(trueCount >= 4 && trueCount <= 6,
     `${groupId}: Richtig/Falsch darf nicht einseitig verteilt sein.`);
 }
-assert.equal(dataset.families.length, 362,
-  'Der aktive Gesamtpool muss 362 Familien einschließlich 24 Klausurfamilien bilden.');
+assert.equal(dataset.families.length, 359,
+  'Der aktive Gesamtpool muss 359 Familien einschließlich 24 Klausurfamilien bilden.');
 assert.deepEqual(
   JSON.parse(JSON.stringify(engine.overallProgress(dataset))),
   {
-    families: { total: 338, done: 0, open: 338 },
-    questions: { total: 1210, answered: 0 },
+    families: { total: 335, done: 0, open: 335 },
+    questions: { total: 1196, answered: 0 },
   },
   'Klausurexklusive Inhalte dürfen den normalen Lernfortschritt nicht vergrößern.',
 );
@@ -187,8 +199,8 @@ function selectedUnitsByFamily(session) {
 
 runSeed = 0;
 const q2RunA = engine.createPracticeSession(dataset, q2Filters);
-assert.equal(q2RunA.stats().total, 116,
-  'Der normale Q2-Durchlauf muss 116 semantische Konzeptfamilien enthalten.');
+assert.equal(q2RunA.stats().total, 115,
+  'Der normale Q2-Durchlauf muss 115 semantische Konzeptfamilien enthalten.');
 assert.equal(q2RunA.stats().singleVariant, 0,
   'Keine Q2-Familie darf nur eine auswählbare Variante besitzen.');
 const selectedA = selectedUnitsByFamily(q2RunA);
@@ -287,7 +299,7 @@ for (let cycle = 0; cycle < 20; cycle += 1) {
     assert.equal(exam.seriesNumber, number,
       'Die Klausurnummer innerhalb der Serie muss korrekt fortgeschrieben werden.');
     assert.equal(new Set(exam.coverageTopics).size, dataset.topics.length,
-      'Jede Serienklausur muss 47/47 Themen abdecken.');
+      'Jede Serienklausur muss alle aktiven Themen abdecken.');
     const usedVariants = new Set(seriesSelection.variantKeys);
     assert.equal(selection.variantKeys.filter((key) => usedVariants.has(key)).length, 0,
       'Innerhalb einer Sechser-Serie darf keine konkrete Variante wiederkehren.');
@@ -383,6 +395,7 @@ assert.deepEqual(
     variantKeys: ['q:Q-1'],
     fingerprints: ['fingerprint-1'],
     createdAt: storage.getExamSeries().createdAt,
+    scopeVersion: storage.getExamSeries().scopeVersion,
   },
   'Der Serienstand muss Varianten und Inhaltsfingerabdrücke dauerhaft sammeln.',
 );

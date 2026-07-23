@@ -1,6 +1,6 @@
 {
  "meta": {
-  "version": "1.6",
+  "version": "1.7",
   "course": "Informatik 1 – C (THM StudiumPlus)",
   "language": "de"
  },
@@ -8327,7 +8327,7 @@
    "topicId": "T-38",
    "type": "true-false",
    "difficulty": "leicht",
-   "prompt": "In einer Funktion, der das Array übergeben wurde, liefert sizeof(parameter) nur die Zeigergröße, nicht die Array-Größe.",
+   "prompt": "In einer Funktion mit Arrayparameter liefert sizeof(parameter) nicht die Größe des ursprünglichen Arrays.",
    "options": [
     "Richtig",
     "Falsch"
@@ -8664,7 +8664,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig: variable.element, z. B. p.x = 3; — eckige Klammern sind für Arrays, -> nur für Zeiger auf Structs.",
+   "explanation": "Richtig: Auf eine normale Struct-Variable greift man mit variable.element zu, zum Beispiel p.x = 3;.",
    "source": "T-43 / AT-1",
    "verified": true,
    "familyId": "T43-struct-basics"
@@ -13196,14 +13196,14 @@
    "prompt": "Was trifft auf den Zugriff auf Struct-Elemente zu?",
    "code": "struct punkt { double x; double y; };\nstruct punkt p;",
    "options": [
-    "p->x = 7; ist die im Kurs übliche Zugriffsart auf p.",
+    "x.p = 7; ist die richtige Reihenfolge.",
     "Auf Struct-Elemente greift man mit eckigen Klammern zu.",
     "Der Punkt-Operator verbindet Variable und Elementname."
    ],
    "answerIndices": [
     2
    ],
-   "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.",
+   "explanation": "Die Schreibweise x.p vertauscht Variable und Elementname und ist daher falsch.\n2. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.",
    "source": "T-43 / AT-11",
    "verified": true,
    "familyId": "T43-member-access"
@@ -13424,14 +13424,14 @@
    "prompt": "Was trifft auf den Zugriff auf Struct-Elemente zu?",
    "code": "struct punkt { double x; double y; };\nstruct punkt p;",
    "options": [
-    "p->x = 2; ist die im Kurs übliche Zugriffsart auf p.",
+    "x.p = 2; ist die richtige Reihenfolge.",
     "p.x = 2; setzt das Element x.",
     "Auf Struct-Elemente greift man mit eckigen Klammern zu."
    ],
    "answerIndices": [
     1
    ],
-   "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.",
+   "explanation": "Die Schreibweise x.p vertauscht Variable und Elementname und ist daher falsch.\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.",
    "source": "T-43 / AT-11",
    "verified": true,
    "familyId": "T43-member-access"
@@ -13549,7 +13549,7 @@
    "code": "struct punkt { double x; double y; };\nstruct punkt p;",
    "options": [
     "p.y = 11; setzt das Element y.",
-    "p->x = 11; ist die im Kurs übliche Zugriffsart auf p.",
+    "x.p = 11; ist die richtige Reihenfolge.",
     "Der Punkt-Operator verbindet Variable und Elementname.",
     "p.x = 11; setzt das Element x."
    ],
@@ -13558,7 +13558,7 @@
     2,
     3
    ],
-   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
+   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\nDie Schreibweise x.p vertauscht Variable und Elementname und ist daher falsch.\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
    "verified": true,
    "familyId": "T43-member-access"
@@ -13615,14 +13615,14 @@
    "prompt": "Was trifft auf den Zugriff auf Struct-Elemente zu?",
    "code": "struct punkt { double x; double y; };\nstruct punkt p;",
    "options": [
-    "p->x = 11; ist die im Kurs übliche Zugriffsart auf p.",
+    "x.p = 11; ist die richtige Reihenfolge.",
     "Der Punkt-Operator verbindet Variable und Elementname.",
     "Auf Struct-Elemente greift man mit eckigen Klammern zu."
    ],
    "answerIndices": [
     1
    ],
-   "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.",
+   "explanation": "Die Schreibweise x.p vertauscht Variable und Elementname und ist daher falsch.\n2. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.",
    "source": "T-43 / AT-11",
    "verified": true,
    "familyId": "T43-member-access"
@@ -13740,7 +13740,7 @@
    "code": "struct punkt { double x; double y; };\nstruct punkt p;",
    "options": [
     "p.y = 13; setzt das Element y.",
-    "p->x = 6; ist die im Kurs übliche Zugriffsart auf p.",
+    "x.p = 6; ist die richtige Reihenfolge.",
     "Auf Struct-Elemente greift man mit eckigen Klammern zu.",
     "p.x = 6; setzt das Element x."
    ],
@@ -13748,7 +13748,7 @@
     0,
     3
    ],
-   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
+   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\nDie Schreibweise x.p vertauscht Variable und Elementname und ist daher falsch.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
    "verified": true,
    "familyId": "T43-member-access"
@@ -13786,14 +13786,14 @@
     "p.x = 2; setzt das Element x.",
     "p.y = 13; setzt das Element y.",
     "Der Punkt-Operator verbindet Variable und Elementname.",
-    "p->x = 2; ist die im Kurs übliche Zugriffsart auf p."
+    "x.p = 2; ist die richtige Reihenfolge."
    ],
    "answerIndices": [
     0,
     1,
     2
    ],
-   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\n4. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;",
+   "explanation": "1. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✓ variable.element — so greift man auf Struct-Elemente zu, z. B. p.x = 3;.\nDie Schreibweise x.p vertauscht Variable und Elementname und ist daher falsch.\n",
    "source": "T-43 / AT-11",
    "verified": true,
    "familyId": "T43-member-access"
@@ -13930,7 +13930,7 @@
    "prompt": "Was trifft auf den Zugriff auf Struct-Elemente zu?",
    "code": "struct punkt { double x; double y; };\nstruct punkt p;",
    "options": [
-    "p->x = 3; ist die im Kurs übliche Zugriffsart auf p.",
+    "x.p = 3; ist die richtige Reihenfolge.",
     "p.y = 10; setzt das Element y.",
     "Auf Struct-Elemente greift man mit eckigen Klammern zu.",
     "p.x = 3; setzt das Element x."
@@ -13939,7 +13939,7 @@
     1,
     3
    ],
-   "explanation": "1. ✗ -> ist der Zugriff über einen ZEIGER auf ein Struct. Bei einer normalen Struct-Variablen p nutzt man den Punkt: p.x = …;\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
+   "explanation": "Die Schreibweise x.p vertauscht Variable und Elementname und ist daher falsch.\n2. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.\n3. ✗ Eckige Klammern sind für ARRAY-Indizes. Struct-Elemente erreicht man mit dem Punkt-Operator: konto.saldo.\n4. ✓ Der Punkt-Operator greift auf ein Element einer Struct-Variablen zu: variable.element — genau richtig.",
    "source": "T-43 / AT-11",
    "verified": true,
    "familyId": "T43-member-access"
@@ -20006,7 +20006,7 @@
    "answerIndex": 1,
    "group": "snip-009",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Der Arrayparameter wird als Zeiger auf das erste Element übergeben.",
+   "explanation": "Falsch: Die Funktionen arbeiten mit den Elementen des ursprünglichen Arrays.",
    "source": "T-47 / AT-13",
    "verified": true,
    "familyId": "T47-exam-series-legacy-05",
@@ -20496,7 +20496,7 @@
    "answerIndex": 1,
    "group": "snip-010",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Falsch: Der Arrayparameter wird als Zeiger auf das erste Element übergeben.",
+   "explanation": "Falsch: Die Funktionen arbeiten mit den Elementen des ursprünglichen Arrays.",
    "source": "T-47 / AT-13",
    "verified": true,
    "familyId": "T47-exam-series-legacy-06",
@@ -25411,7 +25411,7 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Der Parameter c ist ein Zeiger auf char.",
+   "prompt": "Der Parameter c enthält einen vollständigen String.",
    "code": "#include <stdio.h>\n\nint zaehle_zeichen(char s[], char c) {\n    int z = 0;\n    for (int i = 0; s[i] != 0; i++) {\n        if (s[i] == c) {\n            z++;\n        }\n    }\n    return z;\n}\n\nint main() {\n    char text[] = \"Informatik\";\n    printf(\"%d\", zaehle_zeichen(text, 'i'));\n    return 0;\n}",
    "options": [
     "Richtig",
@@ -25921,7 +25921,7 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Der Parameter c ist ein Zeiger auf char.",
+   "prompt": "Der Parameter c enthält einen vollständigen String.",
    "code": "#include <stdio.h>\n\nint zaehle_zeichen(char s[], char c) {\n    int z = 0;\n    for (int i = 0; s[i] != 0; i++) {\n        if (s[i] == c) {\n            z++;\n        }\n    }\n    return z;\n}\n\nint main() {\n    char text[] = \"Programmieren\";\n    printf(\"%d\", zaehle_zeichen(text, 'r'));\n    return 0;\n}",
    "options": [
     "Richtig",
@@ -26895,7 +26895,7 @@
    "answerIndex": 0,
    "group": "snip-029",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Zeigergröße.",
+   "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Größe des Arrayparameters.",
    "source": "T-47 / AT-13",
    "verified": true,
    "familyId": "T47-exam-series-legacy-15",
@@ -27375,7 +27375,7 @@
    "answerIndex": 0,
    "group": "snip-030",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Zeigergröße.",
+   "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Größe des Arrayparameters.",
    "source": "T-47 / AT-13",
    "verified": true,
    "familyId": "T47-exam-series-legacy-16",
@@ -27594,7 +27594,7 @@
    "answerIndex": 0,
    "group": "snip-031",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Zeigergröße.",
+   "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Größe des Arrayparameters.",
    "source": "T-47 / AT-13",
    "verified": true,
    "familyId": "T47-archetype-08"
@@ -27784,7 +27784,7 @@
    "answerIndex": 0,
    "group": "snip-032",
    "groupPrompt": "Sie haben folgenden Code. Bewerten Sie die Aussage.",
-   "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Zeigergröße.",
+   "explanation": "Richtig: Im Parameter 'zerfällt' das Array zur Adresse; sizeof ergäbe nur die Größe des Arrayparameters.",
    "source": "T-47 / AT-13",
    "verified": true,
    "familyId": "T47-archetype-08"
@@ -30836,7 +30836,7 @@
     1,
     3
    ],
-   "explanation": "Bei scanf unterscheidet %f einen float* von %lf für double*. Bei printf wird ein float ohnehin zu double befördert; %f und %lf sind dort beide zulässig.",
+   "explanation": "Bei scanf ist %lf für eine double-Variable erforderlich. Bei printf liegt ein double-Wert vor; %f ist korrekt.",
    "familyId": "DETAIL-T06-printf-vs-scanf",
    "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
    "verified": true,
@@ -31386,7 +31386,7 @@
    "options": [
     "p.x besitzt den Wert 1.5.",
     "p.y besitzt den Wert 2.5.",
-    "Auf x wird mit p->x zugegriffen, obwohl p kein Zeiger ist.",
+    "x.p ist eine gültige Alternative zu p.x.",
     "Nach der Kurskonvention belegt p 16 Byte."
    ],
    "answerIndices": [
@@ -31394,7 +31394,7 @@
     1,
     3
    ],
-   "explanation": "Bei einer normalen Struct-Variablen wird der Punkt-Operator verwendet. Zwei double-Elemente belegen in der Kurskonvention zusammen 16 Byte.",
+   "explanation": "Bei einer normalen Struct-Variablen wird der Punkt-Operator in der Reihenfolge variable.element verwendet. Zwei double-Elemente belegen in der Kurskonvention zusammen 16 Byte.",
    "familyId": "DETAIL-T43-struct-initialization",
    "source": "Klausurabgleich mit Dozentenmaterial / redaktionelle Vertiefung",
    "verified": true,
@@ -31511,7 +31511,7 @@
     "scanf(\"%d\", &d); printf(\"%d\", d);"
    ],
    "answerIndex": 1,
-   "explanation": "scanf benötigt für double* den Specifier %lf und die Adresse. Bei printf ist %f für den durch die Argumentübergabe vorliegenden double-Wert korrekt.",
+   "explanation": "scanf benötigt für eine double-Variable den Specifier %lf und den Adressoperator &. Bei printf ist %f korrekt.",
    "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
    "verified": true,
    "qualityLevel": 2,
@@ -31993,10 +31993,10 @@
    "prompt": "Welcher Zugriff auf x ist korrekt?",
    "code": "struct punkt { int x; int y; };\nstruct punkt p = {1, 2};",
    "options": [
-    "p->x",
+    "x.p",
     "p.x",
     "punkt.x",
-    "*p.x"
+    "p[x]"
    ],
    "answerIndex": 1,
    "explanation": "p ist eine normale Struct-Variable und wird deshalb mit dem Punkt-Operator angesprochen.",
@@ -32019,7 +32019,7 @@
     "Falsch"
    ],
    "answerIndex": 0,
-   "explanation": "Richtig. Struct-Parameter werden in C ohne Zeiger als Wertkopie übergeben.",
+   "explanation": "Richtig: Normale Struct-Parameter werden in C als Wertkopie übergeben.",
    "source": "Q2-Verständnisstandard / Abgleich mit Dozentenmaterial",
    "verified": true,
    "qualityLevel": 2,
@@ -33018,7 +33018,7 @@
    "answerIndex": 1,
    "group": "exam-snip-001",
    "groupPrompt": "Klausur-Code-Snippet: Summe und Mittelwert ohne Extremwerte. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: Arrayparameter werden als Zeiger auf das erste Element übergeben.",
+   "explanation": "Falsch: Arrayparameter arbeiten mit dem ursprünglichen Array; Änderungen an Elementen wären dort sichtbar.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
    "familyId": "T47-exam-trimmed-mean",
@@ -33157,7 +33157,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "Die Ausgabe des Programms lautet 5 3 38.",
-   "code": "#include <stdio.h>\n\nvoid tausche(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        tausche(&a[i], &a[n - 1 - i]);\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -33204,8 +33204,8 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Für n == 5 wird tausche genau zweimal aufgerufen.",
-   "code": "#include <stdio.h>\n\nvoid tausche(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        tausche(&a[i], &a[n - 1 - i]);\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
+   "prompt": "Für n == 5 wird der Schleifenrumpf in umkehren genau zweimal ausgeführt.",
+   "code": "#include <stdio.h>\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -33253,7 +33253,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "Das mittlere Element mit dem ursprünglichen Wert 4 wird mit einem anderen Element vertauscht.",
-   "code": "#include <stdio.h>\n\nvoid tausche(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        tausche(&a[i], &a[n - 1 - i]);\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -33301,7 +33301,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "umkehren verändert das Array daten aus main.",
-   "code": "#include <stdio.h>\n\nvoid tausche(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        tausche(&a[i], &a[n - 1 - i]);\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -33309,7 +33309,7 @@
    "answerIndex": 0,
    "group": "exam-snip-002",
    "groupPrompt": "Klausur-Code-Snippet: Array umkehren und gewichtet auswerten. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Die Funktion erhält die Adresse des ersten Elements und vertauscht die ursprünglichen Arrayelemente.",
+   "explanation": "Richtig: Arrayänderungen innerhalb der Funktion sind anschließend im ursprünglichen Array sichtbar.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
    "familyId": "T47-exam-reverse-checksum",
@@ -33349,7 +33349,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "Ein Aufruf umkehren(daten, 0) greift auf daten[-1] zu.",
-   "code": "#include <stdio.h>\n\nvoid tausche(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        tausche(&a[i], &a[n - 1 - i]);\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -33396,8 +33396,8 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "tausche erhält Kopien der beiden int-Werte und kann deshalb daten nicht verändern.",
-   "code": "#include <stdio.h>\n\nvoid tausche(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        tausche(&a[i], &a[n - 1 - i]);\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
+   "prompt": "Die Hilfsvariable temp ist überflüssig, weil die beiden direkten Zuweisungen keinen Wert überschreiben würden.",
+   "code": "#include <stdio.h>\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -33405,7 +33405,7 @@
    "answerIndex": 1,
    "group": "exam-snip-002",
    "groupPrompt": "Klausur-Code-Snippet: Array umkehren und gewichtet auswerten. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: tausche erhält int-Zeiger und schreibt über *x und *y in die ursprünglichen Variablen.",
+   "explanation": "Falsch: Ohne temp ginge der zuerst überschriebene Arraywert verloren.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
    "familyId": "T47-exam-reverse-checksum",
@@ -33444,8 +33444,8 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Mit der Bedingung i <= n / 2 würde tausche bei n == 5 dreimal aufgerufen.",
-   "code": "#include <stdio.h>\n\nvoid tausche(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        tausche(&a[i], &a[n - 1 - i]);\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
+   "prompt": "Mit der Bedingung i <= n / 2 würde der Schleifenrumpf bei n == 5 dreimal ausgeführt.",
+   "code": "#include <stdio.h>\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -33493,7 +33493,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "gewichtete_summe berechnet lediglich die normale Summe aller Arraywerte.",
-   "code": "#include <stdio.h>\n\nvoid tausche(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        tausche(&a[i], &a[n - 1 - i]);\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -33541,7 +33541,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "Für i == 1 verwendet umkehren als zweiten Index den Wert 3.",
-   "code": "#include <stdio.h>\n\nvoid tausche(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        tausche(&a[i], &a[n - 1 - i]);\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -33589,7 +33589,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "Eine void-Funktion wie umkehren muss keinen Wert zurückgeben.",
-   "code": "#include <stdio.h>\n\nvoid tausche(int *x, int *y) {\n    int temp = *x;\n    *x = *y;\n    *y = temp;\n}\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        tausche(&a[i], &a[n - 1 - i]);\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\nvoid umkehren(int a[], int n) {\n    for (int i = 0; i < n / 2; i++) {\n        int temp = a[i];\n        a[i] = a[n - 1 - i];\n        a[n - 1 - i] = temp;\n    }\n}\n\nint gewichtete_summe(const int a[], int n) {\n    int summe = 0;\n    for (int i = 0; i < n; i++) {\n        summe += (i + 1) * a[i];\n    }\n    return summe;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5};\n    int n = sizeof(daten) / sizeof(daten[0]);\n\n    umkehren(daten, n);\n    printf(\"%d %d %d\\n\",\n           daten[0], daten[n - 1],\n           gewichtete_summe(daten, n));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -34116,23 +34116,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "zeilensumme(matrix, 1) liefert den Wert 15.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 3\n\nint zeilensumme(const int m[][SPALTEN], int zeile) {\n    int summe = 0;\n    for (int j = 0; j < SPALTEN; j++) {\n        summe += m[zeile][j];\n    }\n    return summe;\n}\n\nint spaltenmaximum(const int m[][SPALTEN],\n                   int zeilen, int spalte) {\n    int max = m[0][spalte];\n    for (int i = 1; i < zeilen; i++) {\n        if (m[i][spalte] > max) {\n            max = m[i][spalte];\n        }\n    }\n    return max;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {3, 1, 4},\n        {1, 5, 9},\n        {2, 6, 5}\n    };\n\n    printf(\"%d %d\\n\",\n           zeilensumme(matrix, 1),\n           spaltenmaximum(matrix, 3, 2));\n    return 0;\n}",
+   "prompt": "Die Ausgabe des Programms lautet 11 5 9.",
+   "code": "#include <stdio.h>\n\nint summe_bereich(const int a[], int von, int bis) {\n    int summe = 0;\n    for (int i = von; i < bis; i++) {\n        summe += a[i];\n    }\n    return summe;\n}\n\nint index_maximum(const int a[], int n) {\n    int index = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] > a[index]) {\n            index = i;\n        }\n    }\n    return index;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5, 9};\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = index_maximum(daten, n);\n\n    printf(\"%d %d %d\\n\",\n           summe_bereich(daten, 1, 5),\n           k,\n           daten[k]);\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 0,
    "group": "exam-snip-004",
-   "groupPrompt": "Klausur-Code-Snippet: Zeilen- und Spaltenauswertung einer Matrix. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Der Zeilenindex 1 bezeichnet die zweite Zeile {1, 5, 9}; ihre Summe ist 15.",
+   "groupPrompt": "Klausur-Code-Snippet: Teilbereiche und Maximum eines Arrays. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Richtig: Die Werte an den Indizes 1 bis 4 ergeben 11; das Maximum 9 steht an Index 5.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-analysis",
+   "familyId": "T47-exam-array-segments",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-analysis",
+   "examArchetype": "array-segments",
    "examSeriesRound": 1,
    "coverageTopics": [
     "T-03",
@@ -34153,10 +34153,11 @@
     "T-38",
     "T-47",
     "T-15",
+    "T-19",
     "T-23",
     "T-25",
-    "T-32",
-    "T-39"
+    "T-30",
+    "T-32"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -34165,23 +34166,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "spaltenmaximum(matrix, 3, 2) liefert den Wert 9.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 3\n\nint zeilensumme(const int m[][SPALTEN], int zeile) {\n    int summe = 0;\n    for (int j = 0; j < SPALTEN; j++) {\n        summe += m[zeile][j];\n    }\n    return summe;\n}\n\nint spaltenmaximum(const int m[][SPALTEN],\n                   int zeilen, int spalte) {\n    int max = m[0][spalte];\n    for (int i = 1; i < zeilen; i++) {\n        if (m[i][spalte] > max) {\n            max = m[i][spalte];\n        }\n    }\n    return max;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {3, 1, 4},\n        {1, 5, 9},\n        {2, 6, 5}\n    };\n\n    printf(\"%d %d\\n\",\n           zeilensumme(matrix, 1),\n           spaltenmaximum(matrix, 3, 2));\n    return 0;\n}",
+   "prompt": "Der Parameter bis bezeichnet bei summe_bereich die erste nicht mehr einbezogene Position.",
+   "code": "#include <stdio.h>\n\nint summe_bereich(const int a[], int von, int bis) {\n    int summe = 0;\n    for (int i = von; i < bis; i++) {\n        summe += a[i];\n    }\n    return summe;\n}\n\nint index_maximum(const int a[], int n) {\n    int index = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] > a[index]) {\n            index = i;\n        }\n    }\n    return index;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5, 9};\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = index_maximum(daten, n);\n\n    printf(\"%d %d %d\\n\",\n           summe_bereich(daten, 1, 5),\n           k,\n           daten[k]);\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 0,
    "group": "exam-snip-004",
-   "groupPrompt": "Klausur-Code-Snippet: Zeilen- und Spaltenauswertung einer Matrix. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: In der dritten Spalte stehen die Werte 4, 9 und 5.",
+   "groupPrompt": "Klausur-Code-Snippet: Teilbereiche und Maximum eines Arrays. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Richtig: Die Schleifenbedingung lautet i < bis.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-analysis",
+   "familyId": "T47-exam-array-segments",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-analysis",
+   "examArchetype": "array-segments",
    "examSeriesRound": 1,
    "coverageTopics": [
     "T-03",
@@ -34202,10 +34203,11 @@
     "T-38",
     "T-47",
     "T-15",
+    "T-19",
     "T-23",
     "T-25",
-    "T-32",
-    "T-39"
+    "T-30",
+    "T-32"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -34214,23 +34216,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Der Index 1 bezeichnet bei zeilensumme die zweite Matrixzeile.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 3\n\nint zeilensumme(const int m[][SPALTEN], int zeile) {\n    int summe = 0;\n    for (int j = 0; j < SPALTEN; j++) {\n        summe += m[zeile][j];\n    }\n    return summe;\n}\n\nint spaltenmaximum(const int m[][SPALTEN],\n                   int zeilen, int spalte) {\n    int max = m[0][spalte];\n    for (int i = 1; i < zeilen; i++) {\n        if (m[i][spalte] > max) {\n            max = m[i][spalte];\n        }\n    }\n    return max;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {3, 1, 4},\n        {1, 5, 9},\n        {2, 6, 5}\n    };\n\n    printf(\"%d %d\\n\",\n           zeilensumme(matrix, 1),\n           spaltenmaximum(matrix, 3, 2));\n    return 0;\n}",
+   "prompt": "summe_bereich(daten, 1, 5) addiert die Werte 1, 4, 1 und 5.",
+   "code": "#include <stdio.h>\n\nint summe_bereich(const int a[], int von, int bis) {\n    int summe = 0;\n    for (int i = von; i < bis; i++) {\n        summe += a[i];\n    }\n    return summe;\n}\n\nint index_maximum(const int a[], int n) {\n    int index = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] > a[index]) {\n            index = i;\n        }\n    }\n    return index;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5, 9};\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = index_maximum(daten, n);\n\n    printf(\"%d %d %d\\n\",\n           summe_bereich(daten, 1, 5),\n           k,\n           daten[k]);\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 0,
    "group": "exam-snip-004",
-   "groupPrompt": "Klausur-Code-Snippet: Zeilen- und Spaltenauswertung einer Matrix. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Arrayindizes beginnen in C bei 0.",
+   "groupPrompt": "Klausur-Code-Snippet: Teilbereiche und Maximum eines Arrays. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Richtig: Verwendet werden die Arrayindizes 1, 2, 3 und 4.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-analysis",
+   "familyId": "T47-exam-array-segments",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-analysis",
+   "examArchetype": "array-segments",
    "examSeriesRound": 1,
    "coverageTopics": [
     "T-03",
@@ -34251,10 +34253,11 @@
     "T-38",
     "T-47",
     "T-15",
+    "T-19",
     "T-23",
     "T-25",
-    "T-32",
-    "T-39"
+    "T-30",
+    "T-32"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -34263,23 +34266,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Bei einem zweidimensionalen Arrayparameter muss die zweite Dimension hier bekannt sein.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 3\n\nint zeilensumme(const int m[][SPALTEN], int zeile) {\n    int summe = 0;\n    for (int j = 0; j < SPALTEN; j++) {\n        summe += m[zeile][j];\n    }\n    return summe;\n}\n\nint spaltenmaximum(const int m[][SPALTEN],\n                   int zeilen, int spalte) {\n    int max = m[0][spalte];\n    for (int i = 1; i < zeilen; i++) {\n        if (m[i][spalte] > max) {\n            max = m[i][spalte];\n        }\n    }\n    return max;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {3, 1, 4},\n        {1, 5, 9},\n        {2, 6, 5}\n    };\n\n    printf(\"%d %d\\n\",\n           zeilensumme(matrix, 1),\n           spaltenmaximum(matrix, 3, 2));\n    return 0;\n}",
+   "prompt": "index_maximum liefert den größten Arraywert zurück.",
+   "code": "#include <stdio.h>\n\nint summe_bereich(const int a[], int von, int bis) {\n    int summe = 0;\n    for (int i = von; i < bis; i++) {\n        summe += a[i];\n    }\n    return summe;\n}\n\nint index_maximum(const int a[], int n) {\n    int index = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] > a[index]) {\n            index = i;\n        }\n    }\n    return index;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5, 9};\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = index_maximum(daten, n);\n\n    printf(\"%d %d %d\\n\",\n           summe_bereich(daten, 1, 5),\n           k,\n           daten[k]);\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
-   "answerIndex": 0,
+   "answerIndex": 1,
    "group": "exam-snip-004",
-   "groupPrompt": "Klausur-Code-Snippet: Zeilen- und Spaltenauswertung einer Matrix. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Der Compiler benötigt die Spaltenzahl, um die Adresse von m[i][j] zu berechnen.",
+   "groupPrompt": "Klausur-Code-Snippet: Teilbereiche und Maximum eines Arrays. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Falsch: Die Funktion liefert dessen Index zurück; der Wert wird anschließend mit daten[k] gelesen.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-analysis",
+   "familyId": "T47-exam-array-segments",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-analysis",
+   "examArchetype": "array-segments",
    "examSeriesRound": 1,
    "coverageTopics": [
     "T-03",
@@ -34300,10 +34303,11 @@
     "T-38",
     "T-47",
     "T-15",
+    "T-19",
     "T-23",
     "T-25",
-    "T-32",
-    "T-39"
+    "T-30",
+    "T-32"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -34312,23 +34316,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Die vollständige Matrix wird beim Aufruf von zeilensumme kopiert.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 3\n\nint zeilensumme(const int m[][SPALTEN], int zeile) {\n    int summe = 0;\n    for (int j = 0; j < SPALTEN; j++) {\n        summe += m[zeile][j];\n    }\n    return summe;\n}\n\nint spaltenmaximum(const int m[][SPALTEN],\n                   int zeilen, int spalte) {\n    int max = m[0][spalte];\n    for (int i = 1; i < zeilen; i++) {\n        if (m[i][spalte] > max) {\n            max = m[i][spalte];\n        }\n    }\n    return max;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {3, 1, 4},\n        {1, 5, 9},\n        {2, 6, 5}\n    };\n\n    printf(\"%d %d\\n\",\n           zeilensumme(matrix, 1),\n           spaltenmaximum(matrix, 3, 2));\n    return 0;\n}",
+   "prompt": "index wird mit 0 initialisiert, damit zunächst ein gültiges Arrayelement als Maximumskandidat dient.",
+   "code": "#include <stdio.h>\n\nint summe_bereich(const int a[], int von, int bis) {\n    int summe = 0;\n    for (int i = von; i < bis; i++) {\n        summe += a[i];\n    }\n    return summe;\n}\n\nint index_maximum(const int a[], int n) {\n    int index = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] > a[index]) {\n            index = i;\n        }\n    }\n    return index;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5, 9};\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = index_maximum(daten, n);\n\n    printf(\"%d %d %d\\n\",\n           summe_bereich(daten, 1, 5),\n           k,\n           daten[k]);\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
-   "answerIndex": 1,
+   "answerIndex": 0,
    "group": "exam-snip-004",
-   "groupPrompt": "Klausur-Code-Snippet: Zeilen- und Spaltenauswertung einer Matrix. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: Der Parameter verweist auf die ursprünglichen Matrixzeilen; const verhindert nur Schreibzugriffe darüber.",
+   "groupPrompt": "Klausur-Code-Snippet: Teilbereiche und Maximum eines Arrays. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Richtig: Verglichen wird ab Index 1 mit dem bereits vorhandenen Element a[index].",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-analysis",
+   "familyId": "T47-exam-array-segments",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-analysis",
+   "examArchetype": "array-segments",
    "examSeriesRound": 1,
    "coverageTopics": [
     "T-03",
@@ -34349,10 +34353,11 @@
     "T-38",
     "T-47",
     "T-15",
+    "T-19",
     "T-23",
     "T-25",
-    "T-32",
-    "T-39"
+    "T-30",
+    "T-32"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -34361,23 +34366,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Die Schleifenbedingung j <= SPALTEN würde ebenfalls nur gültige Spaltenindizes verwenden.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 3\n\nint zeilensumme(const int m[][SPALTEN], int zeile) {\n    int summe = 0;\n    for (int j = 0; j < SPALTEN; j++) {\n        summe += m[zeile][j];\n    }\n    return summe;\n}\n\nint spaltenmaximum(const int m[][SPALTEN],\n                   int zeilen, int spalte) {\n    int max = m[0][spalte];\n    for (int i = 1; i < zeilen; i++) {\n        if (m[i][spalte] > max) {\n            max = m[i][spalte];\n        }\n    }\n    return max;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {3, 1, 4},\n        {1, 5, 9},\n        {2, 6, 5}\n    };\n\n    printf(\"%d %d\\n\",\n           zeilensumme(matrix, 1),\n           spaltenmaximum(matrix, 3, 2));\n    return 0;\n}",
+   "prompt": "index_maximum(daten, 0) behandelt ein leeres Array sicher und liefert -1.",
+   "code": "#include <stdio.h>\n\nint summe_bereich(const int a[], int von, int bis) {\n    int summe = 0;\n    for (int i = von; i < bis; i++) {\n        summe += a[i];\n    }\n    return summe;\n}\n\nint index_maximum(const int a[], int n) {\n    int index = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] > a[index]) {\n            index = i;\n        }\n    }\n    return index;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5, 9};\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = index_maximum(daten, n);\n\n    printf(\"%d %d %d\\n\",\n           summe_bereich(daten, 1, 5),\n           k,\n           daten[k]);\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 1,
    "group": "exam-snip-004",
-   "groupPrompt": "Klausur-Code-Snippet: Zeilen- und Spaltenauswertung einer Matrix. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: Bei SPALTEN == 3 sind nur die Indizes 0, 1 und 2 gültig; j == 3 wäre außerhalb.",
+   "groupPrompt": "Klausur-Code-Snippet: Teilbereiche und Maximum eines Arrays. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Falsch: Der Code prüft n == 0 nicht und gibt stattdessen den Startwert 0 zurück.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-analysis",
+   "familyId": "T47-exam-array-segments",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-analysis",
+   "examArchetype": "array-segments",
    "examSeriesRound": 1,
    "coverageTopics": [
     "T-03",
@@ -34398,10 +34403,11 @@
     "T-38",
     "T-47",
     "T-15",
+    "T-19",
     "T-23",
     "T-25",
-    "T-32",
-    "T-39"
+    "T-30",
+    "T-32"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -34410,23 +34416,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "spaltenmaximum initialisiert max mit einem tatsächlich vorhandenen Matrixelement.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 3\n\nint zeilensumme(const int m[][SPALTEN], int zeile) {\n    int summe = 0;\n    for (int j = 0; j < SPALTEN; j++) {\n        summe += m[zeile][j];\n    }\n    return summe;\n}\n\nint spaltenmaximum(const int m[][SPALTEN],\n                   int zeilen, int spalte) {\n    int max = m[0][spalte];\n    for (int i = 1; i < zeilen; i++) {\n        if (m[i][spalte] > max) {\n            max = m[i][spalte];\n        }\n    }\n    return max;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {3, 1, 4},\n        {1, 5, 9},\n        {2, 6, 5}\n    };\n\n    printf(\"%d %d\\n\",\n           zeilensumme(matrix, 1),\n           spaltenmaximum(matrix, 3, 2));\n    return 0;\n}",
+   "prompt": "Mit i <= bis würde summe_bereich(daten, 1, 5) zusätzlich daten[5] addieren.",
+   "code": "#include <stdio.h>\n\nint summe_bereich(const int a[], int von, int bis) {\n    int summe = 0;\n    for (int i = von; i < bis; i++) {\n        summe += a[i];\n    }\n    return summe;\n}\n\nint index_maximum(const int a[], int n) {\n    int index = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] > a[index]) {\n            index = i;\n        }\n    }\n    return index;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5, 9};\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = index_maximum(daten, n);\n\n    printf(\"%d %d %d\\n\",\n           summe_bereich(daten, 1, 5),\n           k,\n           daten[k]);\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 0,
    "group": "exam-snip-004",
-   "groupPrompt": "Klausur-Code-Snippet: Zeilen- und Spaltenauswertung einer Matrix. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Als Startwert wird m[0][spalte] verwendet.",
+   "groupPrompt": "Klausur-Code-Snippet: Teilbereiche und Maximum eines Arrays. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Richtig: Dann wäre auch der Index 5 erlaubt und die Summe würde um 9 steigen.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-analysis",
+   "familyId": "T47-exam-array-segments",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-analysis",
+   "examArchetype": "array-segments",
    "examSeriesRound": 1,
    "coverageTopics": [
     "T-03",
@@ -34447,10 +34453,11 @@
     "T-38",
     "T-47",
     "T-15",
+    "T-19",
     "T-23",
     "T-25",
-    "T-32",
-    "T-39"
+    "T-30",
+    "T-32"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -34459,23 +34466,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "spaltenmaximum kann auch dann korrekt arbeiten, wenn alle Werte der Spalte negativ sind.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 3\n\nint zeilensumme(const int m[][SPALTEN], int zeile) {\n    int summe = 0;\n    for (int j = 0; j < SPALTEN; j++) {\n        summe += m[zeile][j];\n    }\n    return summe;\n}\n\nint spaltenmaximum(const int m[][SPALTEN],\n                   int zeilen, int spalte) {\n    int max = m[0][spalte];\n    for (int i = 1; i < zeilen; i++) {\n        if (m[i][spalte] > max) {\n            max = m[i][spalte];\n        }\n    }\n    return max;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {3, 1, 4},\n        {1, 5, 9},\n        {2, 6, 5}\n    };\n\n    printf(\"%d %d\\n\",\n           zeilensumme(matrix, 1),\n           spaltenmaximum(matrix, 3, 2));\n    return 0;\n}",
+   "prompt": "const int a[] bewirkt, dass beim Funktionsaufruf eine vollständige Arraykopie angelegt wird.",
+   "code": "#include <stdio.h>\n\nint summe_bereich(const int a[], int von, int bis) {\n    int summe = 0;\n    for (int i = von; i < bis; i++) {\n        summe += a[i];\n    }\n    return summe;\n}\n\nint index_maximum(const int a[], int n) {\n    int index = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] > a[index]) {\n            index = i;\n        }\n    }\n    return index;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5, 9};\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = index_maximum(daten, n);\n\n    printf(\"%d %d %d\\n\",\n           summe_bereich(daten, 1, 5),\n           k,\n           daten[k]);\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
-   "answerIndex": 0,
+   "answerIndex": 1,
    "group": "exam-snip-004",
-   "groupPrompt": "Klausur-Code-Snippet: Zeilen- und Spaltenauswertung einer Matrix. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Die Initialisierung mit dem ersten Spaltenwert vermeidet einen ungeeigneten Startwert wie 0.",
+   "groupPrompt": "Klausur-Code-Snippet: Teilbereiche und Maximum eines Arrays. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Falsch: const verhindert hier Änderungen über den Parameter; das Array wird nicht vollständig kopiert.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-analysis",
+   "familyId": "T47-exam-array-segments",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-analysis",
+   "examArchetype": "array-segments",
    "examSeriesRound": 1,
    "coverageTopics": [
     "T-03",
@@ -34496,10 +34503,11 @@
     "T-38",
     "T-47",
     "T-15",
+    "T-19",
     "T-23",
     "T-25",
-    "T-32",
-    "T-39"
+    "T-30",
+    "T-32"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -34508,23 +34516,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Wenn matrix[1][2] auf 0 geändert würde, bliebe die Programmausgabe unverändert.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 3\n\nint zeilensumme(const int m[][SPALTEN], int zeile) {\n    int summe = 0;\n    for (int j = 0; j < SPALTEN; j++) {\n        summe += m[zeile][j];\n    }\n    return summe;\n}\n\nint spaltenmaximum(const int m[][SPALTEN],\n                   int zeilen, int spalte) {\n    int max = m[0][spalte];\n    for (int i = 1; i < zeilen; i++) {\n        if (m[i][spalte] > max) {\n            max = m[i][spalte];\n        }\n    }\n    return max;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {3, 1, 4},\n        {1, 5, 9},\n        {2, 6, 5}\n    };\n\n    printf(\"%d %d\\n\",\n           zeilensumme(matrix, 1),\n           spaltenmaximum(matrix, 3, 2));\n    return 0;\n}",
+   "prompt": "Der Ausdruck sizeof(daten) / sizeof(daten[0]) ergibt in main den Wert 6.",
+   "code": "#include <stdio.h>\n\nint summe_bereich(const int a[], int von, int bis) {\n    int summe = 0;\n    for (int i = von; i < bis; i++) {\n        summe += a[i];\n    }\n    return summe;\n}\n\nint index_maximum(const int a[], int n) {\n    int index = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] > a[index]) {\n            index = i;\n        }\n    }\n    return index;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5, 9};\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = index_maximum(daten, n);\n\n    printf(\"%d %d %d\\n\",\n           summe_bereich(daten, 1, 5),\n           k,\n           daten[k]);\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
-   "answerIndex": 1,
+   "answerIndex": 0,
    "group": "exam-snip-004",
-   "groupPrompt": "Klausur-Code-Snippet: Zeilen- und Spaltenauswertung einer Matrix. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: Dann wäre die zweite Zeilensumme 6 und das Maximum der dritten Spalte 5.",
+   "groupPrompt": "Klausur-Code-Snippet: Teilbereiche und Maximum eines Arrays. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Richtig: Die Gesamtgröße des Arrays wird durch die Größe eines Elements geteilt.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-analysis",
+   "familyId": "T47-exam-array-segments",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-analysis",
+   "examArchetype": "array-segments",
    "examSeriesRound": 1,
    "coverageTopics": [
     "T-03",
@@ -34545,10 +34553,11 @@
     "T-38",
     "T-47",
     "T-15",
+    "T-19",
     "T-23",
     "T-25",
-    "T-32",
-    "T-39"
+    "T-30",
+    "T-32"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -34557,23 +34566,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "SPALTEN wird erst zur Laufzeit aus dem Inhalt der Matrix berechnet.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 3\n\nint zeilensumme(const int m[][SPALTEN], int zeile) {\n    int summe = 0;\n    for (int j = 0; j < SPALTEN; j++) {\n        summe += m[zeile][j];\n    }\n    return summe;\n}\n\nint spaltenmaximum(const int m[][SPALTEN],\n                   int zeilen, int spalte) {\n    int max = m[0][spalte];\n    for (int i = 1; i < zeilen; i++) {\n        if (m[i][spalte] > max) {\n            max = m[i][spalte];\n        }\n    }\n    return max;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {3, 1, 4},\n        {1, 5, 9},\n        {2, 6, 5}\n    };\n\n    printf(\"%d %d\\n\",\n           zeilensumme(matrix, 1),\n           spaltenmaximum(matrix, 3, 2));\n    return 0;\n}",
+   "prompt": "Bei gleich großen Maximalwerten würde der strikte Vergleich > immer den späteren Index behalten.",
+   "code": "#include <stdio.h>\n\nint summe_bereich(const int a[], int von, int bis) {\n    int summe = 0;\n    for (int i = von; i < bis; i++) {\n        summe += a[i];\n    }\n    return summe;\n}\n\nint index_maximum(const int a[], int n) {\n    int index = 0;\n    for (int i = 1; i < n; i++) {\n        if (a[i] > a[index]) {\n            index = i;\n        }\n    }\n    return index;\n}\n\nint main() {\n    int daten[] = {3, 1, 4, 1, 5, 9};\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = index_maximum(daten, n);\n\n    printf(\"%d %d %d\\n\",\n           summe_bereich(daten, 1, 5),\n           k,\n           daten[k]);\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 1,
    "group": "exam-snip-004",
-   "groupPrompt": "Klausur-Code-Snippet: Zeilen- und Spaltenauswertung einer Matrix. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: #define ersetzt SPALTEN bereits vor dem Übersetzen durch den Wert 3.",
+   "groupPrompt": "Klausur-Code-Snippet: Teilbereiche und Maximum eines Arrays. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Falsch: Bei Gleichheit ist die Bedingung falsch; dadurch bleibt der frühere Index erhalten.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-analysis",
+   "familyId": "T47-exam-array-segments",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-analysis",
+   "examArchetype": "array-segments",
    "examSeriesRound": 1,
    "coverageTopics": [
     "T-03",
@@ -34594,10 +34603,11 @@
     "T-38",
     "T-47",
     "T-15",
+    "T-19",
     "T-23",
     "T-25",
-    "T-32",
-    "T-39"
+    "T-30",
+    "T-32"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -34866,7 +34876,7 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Dasselbe wäre sicher, wenn text als char *text = \"banana\"; deklariert und anschließend verändert würde.",
+   "prompt": "ersetze könnte den String auch dann verändern, wenn text als const char text[] deklariert wäre.",
    "code": "#include <stdio.h>\n\nint ersetze(char s[], char von, char zu) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] == von) {\n            s[i] = zu;\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laenge(const char s[]) {\n    int n = 0;\n    while (s[n] != '\\0') {\n        n++;\n    }\n    return n;\n}\n\nint main() {\n    char text[] = \"banana\";\n    int geaendert = ersetze(text, 'a', 'o');\n\n    printf(\"%s %d %d\\n\",\n           text, geaendert, laenge(text));\n    return 0;\n}",
    "options": [
     "Richtig",
@@ -34875,7 +34885,7 @@
    "answerIndex": 1,
    "group": "exam-snip-005",
    "groupPrompt": "Klausur-Code-Snippet: Zeichen in einem String ersetzen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: Ein Stringliteral darf nicht verändert werden; ein Schreibzugriff darüber führt zu undefiniertem Verhalten.",
+   "explanation": "Falsch: const verbietet Änderungen an den Arrayelementen; die verändernde Funktion wäre dafür nicht passend.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
    "familyId": "T47-exam-string-replacement",
@@ -34970,7 +34980,7 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Innerhalb von ersetze könnte sizeof(s) zuverlässig die Größe des ursprünglichen Arrays liefern.",
+   "prompt": "Innerhalb von ersetze könnte sizeof(s) zuverlässig die Kapazität des ursprünglichen Arrays liefern.",
    "code": "#include <stdio.h>\n\nint ersetze(char s[], char von, char zu) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] == von) {\n            s[i] = zu;\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laenge(const char s[]) {\n    int n = 0;\n    while (s[n] != '\\0') {\n        n++;\n    }\n    return n;\n}\n\nint main() {\n    char text[] = \"banana\";\n    int geaendert = ersetze(text, 'a', 'o');\n\n    printf(\"%s %d %d\\n\",\n           text, geaendert, laenge(text));\n    return 0;\n}",
    "options": [
     "Richtig",
@@ -34979,7 +34989,7 @@
    "answerIndex": 1,
    "group": "exam-snip-005",
    "groupPrompt": "Klausur-Code-Snippet: Zeichen in einem String ersetzen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: Der Arrayparameter s wird als Zeiger behandelt; sizeof(s) wäre dort die Zeigergröße.",
+   "explanation": "Falsch: Aus dem Arrayparameter allein lässt sich die ursprüngliche Arraykapazität dort nicht bestimmen.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
    "familyId": "T47-exam-string-replacement",
@@ -35074,7 +35084,7 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Die Zuweisung s[i] = zu verändert die Adresse, auf die s zeigt.",
+   "prompt": "Die Zuweisung s[i] = zu ersetzt automatisch alle Vorkommen des Zeichens im String.",
    "code": "#include <stdio.h>\n\nint ersetze(char s[], char von, char zu) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] == von) {\n            s[i] = zu;\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laenge(const char s[]) {\n    int n = 0;\n    while (s[n] != '\\0') {\n        n++;\n    }\n    return n;\n}\n\nint main() {\n    char text[] = \"banana\";\n    int geaendert = ersetze(text, 'a', 'o');\n\n    printf(\"%s %d %d\\n\",\n           text, geaendert, laenge(text));\n    return 0;\n}",
    "options": [
     "Richtig",
@@ -35083,7 +35093,7 @@
    "answerIndex": 1,
    "group": "exam-snip-005",
    "groupPrompt": "Klausur-Code-Snippet: Zeichen in einem String ersetzen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: Sie verändert das Zeichen an Index i, nicht den Zeiger s.",
+   "explanation": "Falsch: Die einzelne Zuweisung verändert nur das Zeichen am aktuellen Index i.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
    "familyId": "T47-exam-string-replacement",
@@ -35127,7 +35137,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "Die Ausgabe des Programms lautet B 26.",
-   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(const Ergebnis *e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e->punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(&a[i]) > gesamt(&a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(&daten[k]));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(Ergebnis e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e.punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(a[i]) > gesamt(a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(daten[k]));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -35177,7 +35187,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "bester_index liefert für das angegebene Array den Index 1.",
-   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(const Ergebnis *e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e->punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(&a[i]) > gesamt(&a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(&daten[k]));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(Ergebnis e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e.punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(a[i]) > gesamt(a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(daten[k]));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -35226,8 +35236,8 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Der Operator -> wird verwendet, weil e ein Zeiger auf ein Ergebnis ist.",
-   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(const Ergebnis *e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e->punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(&a[i]) > gesamt(&a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(&daten[k]));\n    return 0;\n}",
+   "prompt": "gesamt erhält das ausgewählte Ergebnis als Struct-Kopie und greift mit dem Punkt-Operator auf punkte zu.",
+   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(Ergebnis e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e.punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(a[i]) > gesamt(a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(daten[k]));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -35235,7 +35245,7 @@
    "answerIndex": 0,
    "group": "exam-snip-006",
    "groupPrompt": "Klausur-Code-Snippet: Struct-Array auswerten. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: e->punkte entspricht (*e).punkte.",
+   "explanation": "Richtig: Normale Struct-Parameter werden als Wertkopie übergeben; Elemente erreicht man mit e.punkte.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
    "familyId": "T47-exam-struct-ranking",
@@ -35277,7 +35287,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "bester_index erhält eine vollständige Kopie des Arrays daten.",
-   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(const Ergebnis *e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e->punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(&a[i]) > gesamt(&a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(&daten[k]));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(Ergebnis e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e.punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(a[i]) > gesamt(a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(daten[k]));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -35285,7 +35295,7 @@
    "answerIndex": 1,
    "group": "exam-snip-006",
    "groupPrompt": "Klausur-Code-Snippet: Struct-Array auswerten. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: Der Arrayparameter wird als Zeiger auf das erste Struct-Element übergeben.",
+   "explanation": "Falsch: Das Array wird nicht vollständig kopiert; Änderungen an seinen Elementen wären im Original sichtbar.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
    "familyId": "T47-exam-struct-ranking",
@@ -35327,7 +35337,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "Bei gleichem Gesamtwert behält die Funktion wegen des strikten > den früheren Eintrag.",
-   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(const Ergebnis *e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e->punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(&a[i]) > gesamt(&a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(&daten[k]));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(Ergebnis e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e.punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(a[i]) > gesamt(a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(daten[k]));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -35377,7 +35387,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "Bei n == 0 liefert bester_index sicher den Wert -1.",
-   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(const Ergebnis *e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e->punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(&a[i]) > gesamt(&a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(&daten[k]));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(Ergebnis e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e.punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(a[i]) > gesamt(a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(daten[k]));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -35427,7 +35437,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "punkte ist ein Array, das direkt innerhalb jedes Struct-Objekts gespeichert ist.",
-   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(const Ergebnis *e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e->punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(&a[i]) > gesamt(&a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(&daten[k]));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(Ergebnis e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e.punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(a[i]) > gesamt(a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(daten[k]));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -35476,16 +35486,16 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "const beim Parameter von gesamt verhindert Änderungen am übergebenen Ergebnis über e.",
-   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(const Ergebnis *e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e->punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(&a[i]) > gesamt(&a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(&daten[k]));\n    return 0;\n}",
+   "prompt": "Änderungen an e innerhalb von gesamt würden das ursprüngliche Struct-Element in daten verändern.",
+   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(Ergebnis e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e.punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(a[i]) > gesamt(a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(daten[k]));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
-   "answerIndex": 0,
+   "answerIndex": 1,
    "group": "exam-snip-006",
    "groupPrompt": "Klausur-Code-Snippet: Struct-Array auswerten. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: e zeigt auf ein konstantes Ergebnis; Schreibzugriffe über e sind nicht zulässig.",
+   "explanation": "Falsch: e ist eine lokale Struct-Kopie; Änderungen daran blieben auf die Funktion beschränkt.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
    "familyId": "T47-exam-struct-ranking",
@@ -35527,7 +35537,7 @@
    "type": "true-false",
    "difficulty": "schwer",
    "prompt": "Der Gesamtwert von A beträgt 22.",
-   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(const Ergebnis *e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e->punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(&a[i]) > gesamt(&a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(&daten[k]));\n    return 0;\n}",
+   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(Ergebnis e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e.punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(a[i]) > gesamt(a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(daten[k]));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
@@ -35576,16 +35586,16 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "sizeof(e) innerhalb von gesamt wäre gleich der Größe eines vollständigen Ergebnis-Structs.",
-   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(const Ergebnis *e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e->punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(&a[i]) > gesamt(&a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(&daten[k]));\n    return 0;\n}",
+   "prompt": "sizeof(e) innerhalb von gesamt liefert die Größe eines vollständigen Ergebnis-Structs.",
+   "code": "#include <stdio.h>\n\ntypedef struct {\n    char kuerzel;\n    int punkte[3];\n} Ergebnis;\n\nint gesamt(Ergebnis e) {\n    int summe = 0;\n    for (int i = 0; i < 3; i++) {\n        summe += e.punkte[i];\n    }\n    return summe;\n}\n\nint bester_index(const Ergebnis a[], int n) {\n    int bester = 0;\n    for (int i = 1; i < n; i++) {\n        if (gesamt(a[i]) > gesamt(a[bester])) {\n            bester = i;\n        }\n    }\n    return bester;\n}\n\nint main() {\n    Ergebnis daten[] = {\n        {'A', {7, 8, 6}},\n        {'B', {9, 9, 8}},\n        {'C', {10, 5, 7}}\n    };\n    int n = sizeof(daten) / sizeof(daten[0]);\n    int k = bester_index(daten, n);\n\n    printf(\"%c %d\\n\", daten[k].kuerzel, gesamt(daten[k]));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
-   "answerIndex": 1,
+   "answerIndex": 0,
    "group": "exam-snip-006",
    "groupPrompt": "Klausur-Code-Snippet: Struct-Array auswerten. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: e ist ein Zeiger; sizeof(e) liefert die Zeigergröße.",
+   "explanation": "Richtig: e ist hier ein Struct-Objekt und kein Arrayparameter.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
    "familyId": "T47-exam-struct-ranking",
@@ -35626,23 +35636,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Die Ausgabe des Programms lautet 1 0 2.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 4\n\nint finde_erstes(const int m[][SPALTEN],\n                 int zeilen, int wert,\n                 int *fund_zeile, int *fund_spalte) {\n    for (int i = 0; i < zeilen; i++) {\n        for (int j = 0; j < SPALTEN; j++) {\n            if (m[i][j] == wert) {\n                *fund_zeile = i;\n                *fund_spalte = j;\n                return 1;\n            }\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {2, 4, 7, 1},\n        {5, 7, 3, 8},\n        {9, 6, 2, 4}\n    };\n    int zeile = -1;\n    int spalte = -1;\n    int gefunden = finde_erstes(\n        matrix, 3, 7, &zeile, &spalte);\n\n    printf(\"%d %d %d\\n\",\n           gefunden, zeile, spalte);\n    return 0;\n}",
+   "prompt": "Die Ausgabe des Programms lautet 4 5.",
+   "code": "#include <stdio.h>\n\nint anzahl_woerter(const char s[]) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] != ' ' &&\n            (i == 0 || s[i - 1] == ' ')) {\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laengstes_wort(const char s[]) {\n    int aktuell = 0;\n    int maximum = 0;\n    for (int i = 0; ; i++) {\n        if (s[i] != ' ' && s[i] != '\\0') {\n            aktuell++;\n        } else {\n            if (aktuell > maximum) {\n                maximum = aktuell;\n            }\n            aktuell = 0;\n        }\n        if (s[i] == '\\0') {\n            break;\n        }\n    }\n    return maximum;\n}\n\nint main() {\n    char text[] = \"C macht viel Spass\";\n\n    printf(\"%d %d\\n\",\n           anzahl_woerter(text),\n           laengstes_wort(text));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 0,
    "group": "exam-snip-007",
-   "groupPrompt": "Klausur-Code-Snippet: Erstes Vorkommen in einer Matrix suchen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Das erste Vorkommen von 7 wird in Zeile 0, Spalte 2 gefunden.",
+   "groupPrompt": "Klausur-Code-Snippet: Wörter und Wortlängen in einem String. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Richtig: Der Text enthält vier Wörter; macht und Spass haben jeweils fünf Zeichen.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-search",
+   "familyId": "T47-exam-string-analysis",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-search",
+   "examArchetype": "string-analysis",
    "examSeriesRound": 2,
    "coverageTopics": [
     "T-03",
@@ -35663,12 +35673,14 @@
     "T-38",
     "T-47",
     "T-19",
+    "T-21",
     "T-23",
     "T-25",
-    "T-27",
+    "T-28",
     "T-30",
-    "T-39",
-    "T-43"
+    "T-40",
+    "T-41",
+    "T-42"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -35677,23 +35689,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Die Matrix wird zeilenweise von links nach rechts durchsucht.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 4\n\nint finde_erstes(const int m[][SPALTEN],\n                 int zeilen, int wert,\n                 int *fund_zeile, int *fund_spalte) {\n    for (int i = 0; i < zeilen; i++) {\n        for (int j = 0; j < SPALTEN; j++) {\n            if (m[i][j] == wert) {\n                *fund_zeile = i;\n                *fund_spalte = j;\n                return 1;\n            }\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {2, 4, 7, 1},\n        {5, 7, 3, 8},\n        {9, 6, 2, 4}\n    };\n    int zeile = -1;\n    int spalte = -1;\n    int gefunden = finde_erstes(\n        matrix, 3, 7, &zeile, &spalte);\n\n    printf(\"%d %d %d\\n\",\n           gefunden, zeile, spalte);\n    return 0;\n}",
+   "prompt": "anzahl_woerter beendet seine Schleife am Nullterminator.",
+   "code": "#include <stdio.h>\n\nint anzahl_woerter(const char s[]) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] != ' ' &&\n            (i == 0 || s[i - 1] == ' ')) {\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laengstes_wort(const char s[]) {\n    int aktuell = 0;\n    int maximum = 0;\n    for (int i = 0; ; i++) {\n        if (s[i] != ' ' && s[i] != '\\0') {\n            aktuell++;\n        } else {\n            if (aktuell > maximum) {\n                maximum = aktuell;\n            }\n            aktuell = 0;\n        }\n        if (s[i] == '\\0') {\n            break;\n        }\n    }\n    return maximum;\n}\n\nint main() {\n    char text[] = \"C macht viel Spass\";\n\n    printf(\"%d %d\\n\",\n           anzahl_woerter(text),\n           laengstes_wort(text));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 0,
    "group": "exam-snip-007",
-   "groupPrompt": "Klausur-Code-Snippet: Erstes Vorkommen in einer Matrix suchen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Die äußere Schleife läuft über die Zeilen, die innere über die Spalten.",
+   "groupPrompt": "Klausur-Code-Snippet: Wörter und Wortlängen in einem String. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Richtig: Die Bedingung s[i] != '\\0' prüft das Ende des C-Strings.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-search",
+   "familyId": "T47-exam-string-analysis",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-search",
+   "examArchetype": "string-analysis",
    "examSeriesRound": 2,
    "coverageTopics": [
     "T-03",
@@ -35714,12 +35726,14 @@
     "T-38",
     "T-47",
     "T-19",
+    "T-21",
     "T-23",
     "T-25",
-    "T-27",
+    "T-28",
     "T-30",
-    "T-39",
-    "T-43"
+    "T-40",
+    "T-41",
+    "T-42"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -35728,23 +35742,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "fund_zeile und fund_spalte ermöglichen zwei zusätzliche Ergebnisse über Zeigerparameter.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 4\n\nint finde_erstes(const int m[][SPALTEN],\n                 int zeilen, int wert,\n                 int *fund_zeile, int *fund_spalte) {\n    for (int i = 0; i < zeilen; i++) {\n        for (int j = 0; j < SPALTEN; j++) {\n            if (m[i][j] == wert) {\n                *fund_zeile = i;\n                *fund_spalte = j;\n                return 1;\n            }\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {2, 4, 7, 1},\n        {5, 7, 3, 8},\n        {9, 6, 2, 4}\n    };\n    int zeile = -1;\n    int spalte = -1;\n    int gefunden = finde_erstes(\n        matrix, 3, 7, &zeile, &spalte);\n\n    printf(\"%d %d %d\\n\",\n           gefunden, zeile, spalte);\n    return 0;\n}",
+   "prompt": "Ein Wort wird gezählt, wenn ein Nicht-Leerzeichen am Stringanfang oder direkt nach einem Leerzeichen steht.",
+   "code": "#include <stdio.h>\n\nint anzahl_woerter(const char s[]) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] != ' ' &&\n            (i == 0 || s[i - 1] == ' ')) {\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laengstes_wort(const char s[]) {\n    int aktuell = 0;\n    int maximum = 0;\n    for (int i = 0; ; i++) {\n        if (s[i] != ' ' && s[i] != '\\0') {\n            aktuell++;\n        } else {\n            if (aktuell > maximum) {\n                maximum = aktuell;\n            }\n            aktuell = 0;\n        }\n        if (s[i] == '\\0') {\n            break;\n        }\n    }\n    return maximum;\n}\n\nint main() {\n    char text[] = \"C macht viel Spass\";\n\n    printf(\"%d %d\\n\",\n           anzahl_woerter(text),\n           laengstes_wort(text));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 0,
    "group": "exam-snip-007",
-   "groupPrompt": "Klausur-Code-Snippet: Erstes Vorkommen in einer Matrix suchen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Die Funktion schreibt die gefundenen Indizes über die übergebenen Adressen zurück.",
+   "groupPrompt": "Klausur-Code-Snippet: Wörter und Wortlängen in einem String. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Richtig: Genau diese beiden Fälle beschreibt die kombinierte if-Bedingung.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-search",
+   "familyId": "T47-exam-string-analysis",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-search",
+   "examArchetype": "string-analysis",
    "examSeriesRound": 2,
    "coverageTopics": [
     "T-03",
@@ -35765,12 +35779,14 @@
     "T-38",
     "T-47",
     "T-19",
+    "T-21",
     "T-23",
     "T-25",
-    "T-27",
+    "T-28",
     "T-30",
-    "T-39",
-    "T-43"
+    "T-40",
+    "T-41",
+    "T-42"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -35779,23 +35795,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Wenn der Wert nicht gefunden wird, liefert die Funktion -1.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 4\n\nint finde_erstes(const int m[][SPALTEN],\n                 int zeilen, int wert,\n                 int *fund_zeile, int *fund_spalte) {\n    for (int i = 0; i < zeilen; i++) {\n        for (int j = 0; j < SPALTEN; j++) {\n            if (m[i][j] == wert) {\n                *fund_zeile = i;\n                *fund_spalte = j;\n                return 1;\n            }\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {2, 4, 7, 1},\n        {5, 7, 3, 8},\n        {9, 6, 2, 4}\n    };\n    int zeile = -1;\n    int spalte = -1;\n    int gefunden = finde_erstes(\n        matrix, 3, 7, &zeile, &spalte);\n\n    printf(\"%d %d %d\\n\",\n           gefunden, zeile, spalte);\n    return 0;\n}",
+   "prompt": "Zwei direkt aufeinanderfolgende Leerzeichen würden als zusätzliches Wort gezählt.",
+   "code": "#include <stdio.h>\n\nint anzahl_woerter(const char s[]) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] != ' ' &&\n            (i == 0 || s[i - 1] == ' ')) {\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laengstes_wort(const char s[]) {\n    int aktuell = 0;\n    int maximum = 0;\n    for (int i = 0; ; i++) {\n        if (s[i] != ' ' && s[i] != '\\0') {\n            aktuell++;\n        } else {\n            if (aktuell > maximum) {\n                maximum = aktuell;\n            }\n            aktuell = 0;\n        }\n        if (s[i] == '\\0') {\n            break;\n        }\n    }\n    return maximum;\n}\n\nint main() {\n    char text[] = \"C macht viel Spass\";\n\n    printf(\"%d %d\\n\",\n           anzahl_woerter(text),\n           laengstes_wort(text));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 1,
    "group": "exam-snip-007",
-   "groupPrompt": "Klausur-Code-Snippet: Erstes Vorkommen in einer Matrix suchen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: Der Rückgabewert ist dann 0; die Indexvariablen bleiben in main bei -1.",
+   "groupPrompt": "Klausur-Code-Snippet: Wörter und Wortlängen in einem String. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Falsch: Gezählt wird nur ein Nicht-Leerzeichen, das ein neues Wort beginnt.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-search",
+   "familyId": "T47-exam-string-analysis",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-search",
+   "examArchetype": "string-analysis",
    "examSeriesRound": 2,
    "coverageTopics": [
     "T-03",
@@ -35816,12 +35832,14 @@
     "T-38",
     "T-47",
     "T-19",
+    "T-21",
     "T-23",
     "T-25",
-    "T-27",
+    "T-28",
     "T-30",
-    "T-39",
-    "T-43"
+    "T-40",
+    "T-41",
+    "T-42"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -35830,23 +35848,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Ein break in der inneren Schleife würde an derselben Stelle beide Schleifen und die Funktion beenden.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 4\n\nint finde_erstes(const int m[][SPALTEN],\n                 int zeilen, int wert,\n                 int *fund_zeile, int *fund_spalte) {\n    for (int i = 0; i < zeilen; i++) {\n        for (int j = 0; j < SPALTEN; j++) {\n            if (m[i][j] == wert) {\n                *fund_zeile = i;\n                *fund_spalte = j;\n                return 1;\n            }\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {2, 4, 7, 1},\n        {5, 7, 3, 8},\n        {9, 6, 2, 4}\n    };\n    int zeile = -1;\n    int spalte = -1;\n    int gefunden = finde_erstes(\n        matrix, 3, 7, &zeile, &spalte);\n\n    printf(\"%d %d %d\\n\",\n           gefunden, zeile, spalte);\n    return 0;\n}",
+   "prompt": "laengstes_wort zählt Leerzeichen zur jeweiligen Wortlänge hinzu.",
+   "code": "#include <stdio.h>\n\nint anzahl_woerter(const char s[]) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] != ' ' &&\n            (i == 0 || s[i - 1] == ' ')) {\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laengstes_wort(const char s[]) {\n    int aktuell = 0;\n    int maximum = 0;\n    for (int i = 0; ; i++) {\n        if (s[i] != ' ' && s[i] != '\\0') {\n            aktuell++;\n        } else {\n            if (aktuell > maximum) {\n                maximum = aktuell;\n            }\n            aktuell = 0;\n        }\n        if (s[i] == '\\0') {\n            break;\n        }\n    }\n    return maximum;\n}\n\nint main() {\n    char text[] = \"C macht viel Spass\";\n\n    printf(\"%d %d\\n\",\n           anzahl_woerter(text),\n           laengstes_wort(text));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 1,
    "group": "exam-snip-007",
-   "groupPrompt": "Klausur-Code-Snippet: Erstes Vorkommen in einer Matrix suchen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: break beendet nur die unmittelbar umgebende Schleife; return beendet hier direkt die Funktion.",
+   "groupPrompt": "Klausur-Code-Snippet: Wörter und Wortlängen in einem String. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Falsch: Bei einem Leerzeichen wird die aktuelle Wortlänge ausgewertet und anschließend auf 0 gesetzt.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-search",
+   "familyId": "T47-exam-string-analysis",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-search",
+   "examArchetype": "string-analysis",
    "examSeriesRound": 2,
    "coverageTopics": [
     "T-03",
@@ -35867,12 +35885,14 @@
     "T-38",
     "T-47",
     "T-19",
+    "T-21",
     "T-23",
     "T-25",
-    "T-27",
+    "T-28",
     "T-30",
-    "T-39",
-    "T-43"
+    "T-40",
+    "T-41",
+    "T-42"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -35881,23 +35901,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Beim Suchwert 4 wäre das erste Ergebnis Zeile 0, Spalte 1.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 4\n\nint finde_erstes(const int m[][SPALTEN],\n                 int zeilen, int wert,\n                 int *fund_zeile, int *fund_spalte) {\n    for (int i = 0; i < zeilen; i++) {\n        for (int j = 0; j < SPALTEN; j++) {\n            if (m[i][j] == wert) {\n                *fund_zeile = i;\n                *fund_spalte = j;\n                return 1;\n            }\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {2, 4, 7, 1},\n        {5, 7, 3, 8},\n        {9, 6, 2, 4}\n    };\n    int zeile = -1;\n    int spalte = -1;\n    int gefunden = finde_erstes(\n        matrix, 3, 7, &zeile, &spalte);\n\n    printf(\"%d %d %d\\n\",\n           gefunden, zeile, spalte);\n    return 0;\n}",
+   "prompt": "maximum wird mit 0 initialisiert, sodass auch ein leerer String sinnvoll ausgewertet werden kann.",
+   "code": "#include <stdio.h>\n\nint anzahl_woerter(const char s[]) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] != ' ' &&\n            (i == 0 || s[i - 1] == ' ')) {\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laengstes_wort(const char s[]) {\n    int aktuell = 0;\n    int maximum = 0;\n    for (int i = 0; ; i++) {\n        if (s[i] != ' ' && s[i] != '\\0') {\n            aktuell++;\n        } else {\n            if (aktuell > maximum) {\n                maximum = aktuell;\n            }\n            aktuell = 0;\n        }\n        if (s[i] == '\\0') {\n            break;\n        }\n    }\n    return maximum;\n}\n\nint main() {\n    char text[] = \"C macht viel Spass\";\n\n    printf(\"%d %d\\n\",\n           anzahl_woerter(text),\n           laengstes_wort(text));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 0,
    "group": "exam-snip-007",
-   "groupPrompt": "Klausur-Code-Snippet: Erstes Vorkommen in einer Matrix suchen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Die 4 in der ersten Zeile wird vor der späteren 4 in Zeile 2 gefunden.",
+   "groupPrompt": "Klausur-Code-Snippet: Wörter und Wortlängen in einem String. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Richtig: Ohne gefundenes Wort bleiben aktuell und maximum gleich 0.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-search",
+   "familyId": "T47-exam-string-analysis",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-search",
+   "examArchetype": "string-analysis",
    "examSeriesRound": 2,
    "coverageTopics": [
     "T-03",
@@ -35918,12 +35938,14 @@
     "T-38",
     "T-47",
     "T-19",
+    "T-21",
     "T-23",
     "T-25",
-    "T-27",
+    "T-28",
     "T-30",
-    "T-39",
-    "T-43"
+    "T-40",
+    "T-41",
+    "T-42"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -35932,23 +35954,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Die Spaltenzahl 4 muss für den zweidimensionalen Arrayparameter bekannt sein.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 4\n\nint finde_erstes(const int m[][SPALTEN],\n                 int zeilen, int wert,\n                 int *fund_zeile, int *fund_spalte) {\n    for (int i = 0; i < zeilen; i++) {\n        for (int j = 0; j < SPALTEN; j++) {\n            if (m[i][j] == wert) {\n                *fund_zeile = i;\n                *fund_spalte = j;\n                return 1;\n            }\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {2, 4, 7, 1},\n        {5, 7, 3, 8},\n        {9, 6, 2, 4}\n    };\n    int zeile = -1;\n    int spalte = -1;\n    int gefunden = finde_erstes(\n        matrix, 3, 7, &zeile, &spalte);\n\n    printf(\"%d %d %d\\n\",\n           gefunden, zeile, spalte);\n    return 0;\n}",
+   "prompt": "Für einen leeren String liefern beide Funktionen den Wert 0.",
+   "code": "#include <stdio.h>\n\nint anzahl_woerter(const char s[]) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] != ' ' &&\n            (i == 0 || s[i - 1] == ' ')) {\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laengstes_wort(const char s[]) {\n    int aktuell = 0;\n    int maximum = 0;\n    for (int i = 0; ; i++) {\n        if (s[i] != ' ' && s[i] != '\\0') {\n            aktuell++;\n        } else {\n            if (aktuell > maximum) {\n                maximum = aktuell;\n            }\n            aktuell = 0;\n        }\n        if (s[i] == '\\0') {\n            break;\n        }\n    }\n    return maximum;\n}\n\nint main() {\n    char text[] = \"C macht viel Spass\";\n\n    printf(\"%d %d\\n\",\n           anzahl_woerter(text),\n           laengstes_wort(text));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 0,
    "group": "exam-snip-007",
-   "groupPrompt": "Klausur-Code-Snippet: Erstes Vorkommen in einer Matrix suchen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Sie wird für die Adressberechnung von m[i][j] benötigt.",
+   "groupPrompt": "Klausur-Code-Snippet: Wörter und Wortlängen in einem String. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Richtig: Die erste Schleife läuft nicht; die zweite erreicht sofort den Nullterminator.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-search",
+   "familyId": "T47-exam-string-analysis",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-search",
+   "examArchetype": "string-analysis",
    "examSeriesRound": 2,
    "coverageTopics": [
     "T-03",
@@ -35969,12 +35991,14 @@
     "T-38",
     "T-47",
     "T-19",
+    "T-21",
     "T-23",
     "T-25",
-    "T-27",
+    "T-28",
     "T-30",
-    "T-39",
-    "T-43"
+    "T-40",
+    "T-41",
+    "T-42"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -35983,23 +36007,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Der Aufruf wäre unverändert sicher, wenn für fund_zeile der Nullzeiger NULL übergeben würde.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 4\n\nint finde_erstes(const int m[][SPALTEN],\n                 int zeilen, int wert,\n                 int *fund_zeile, int *fund_spalte) {\n    for (int i = 0; i < zeilen; i++) {\n        for (int j = 0; j < SPALTEN; j++) {\n            if (m[i][j] == wert) {\n                *fund_zeile = i;\n                *fund_spalte = j;\n                return 1;\n            }\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {2, 4, 7, 1},\n        {5, 7, 3, 8},\n        {9, 6, 2, 4}\n    };\n    int zeile = -1;\n    int spalte = -1;\n    int gefunden = finde_erstes(\n        matrix, 3, 7, &zeile, &spalte);\n\n    printf(\"%d %d %d\\n\",\n           gefunden, zeile, spalte);\n    return 0;\n}",
+   "prompt": "Bei i == 0 wird in anzahl_woerter zwingend auf s[-1] zugegriffen.",
+   "code": "#include <stdio.h>\n\nint anzahl_woerter(const char s[]) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] != ' ' &&\n            (i == 0 || s[i - 1] == ' ')) {\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laengstes_wort(const char s[]) {\n    int aktuell = 0;\n    int maximum = 0;\n    for (int i = 0; ; i++) {\n        if (s[i] != ' ' && s[i] != '\\0') {\n            aktuell++;\n        } else {\n            if (aktuell > maximum) {\n                maximum = aktuell;\n            }\n            aktuell = 0;\n        }\n        if (s[i] == '\\0') {\n            break;\n        }\n    }\n    return maximum;\n}\n\nint main() {\n    char text[] = \"C macht viel Spass\";\n\n    printf(\"%d %d\\n\",\n           anzahl_woerter(text),\n           laengstes_wort(text));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 1,
    "group": "exam-snip-007",
-   "groupPrompt": "Klausur-Code-Snippet: Erstes Vorkommen in einer Matrix suchen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: Beim Treffer würde *fund_zeile dann einen ungültigen Schreibzugriff verursachen.",
+   "groupPrompt": "Klausur-Code-Snippet: Wörter und Wortlängen in einem String. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Falsch: Wegen der Kurzschlussauswertung von || wird der rechte Ausdruck bei i == 0 nicht ausgewertet.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-search",
+   "familyId": "T47-exam-string-analysis",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-search",
+   "examArchetype": "string-analysis",
    "examSeriesRound": 2,
    "coverageTopics": [
     "T-03",
@@ -36020,12 +36044,14 @@
     "T-38",
     "T-47",
     "T-19",
+    "T-21",
     "T-23",
     "T-25",
-    "T-27",
+    "T-28",
     "T-30",
-    "T-39",
-    "T-43"
+    "T-40",
+    "T-41",
+    "T-42"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -36034,23 +36060,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "Das zweite Vorkommen der 7 wird wegen return 1 nicht mehr untersucht.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 4\n\nint finde_erstes(const int m[][SPALTEN],\n                 int zeilen, int wert,\n                 int *fund_zeile, int *fund_spalte) {\n    for (int i = 0; i < zeilen; i++) {\n        for (int j = 0; j < SPALTEN; j++) {\n            if (m[i][j] == wert) {\n                *fund_zeile = i;\n                *fund_spalte = j;\n                return 1;\n            }\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {2, 4, 7, 1},\n        {5, 7, 3, 8},\n        {9, 6, 2, 4}\n    };\n    int zeile = -1;\n    int spalte = -1;\n    int gefunden = finde_erstes(\n        matrix, 3, 7, &zeile, &spalte);\n\n    printf(\"%d %d %d\\n\",\n           gefunden, zeile, spalte);\n    return 0;\n}",
+   "prompt": "Der Zeichenvergleich mit dem Leerzeichen müsste in C mit \" \" statt mit ' ' geschrieben werden.",
+   "code": "#include <stdio.h>\n\nint anzahl_woerter(const char s[]) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] != ' ' &&\n            (i == 0 || s[i - 1] == ' ')) {\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laengstes_wort(const char s[]) {\n    int aktuell = 0;\n    int maximum = 0;\n    for (int i = 0; ; i++) {\n        if (s[i] != ' ' && s[i] != '\\0') {\n            aktuell++;\n        } else {\n            if (aktuell > maximum) {\n                maximum = aktuell;\n            }\n            aktuell = 0;\n        }\n        if (s[i] == '\\0') {\n            break;\n        }\n    }\n    return maximum;\n}\n\nint main() {\n    char text[] = \"C macht viel Spass\";\n\n    printf(\"%d %d\\n\",\n           anzahl_woerter(text),\n           laengstes_wort(text));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
-   "answerIndex": 0,
+   "answerIndex": 1,
    "group": "exam-snip-007",
-   "groupPrompt": "Klausur-Code-Snippet: Erstes Vorkommen in einer Matrix suchen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Richtig: Die Funktion endet unmittelbar nach dem ersten Treffer.",
+   "groupPrompt": "Klausur-Code-Snippet: Wörter und Wortlängen in einem String. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Falsch: Ein einzelnes Zeichen wird mit einfachen Anführungszeichen geschrieben; doppelte kennzeichnen einen String.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-search",
+   "familyId": "T47-exam-string-analysis",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-search",
+   "examArchetype": "string-analysis",
    "examSeriesRound": 2,
    "coverageTopics": [
     "T-03",
@@ -36071,12 +36097,14 @@
     "T-38",
     "T-47",
     "T-19",
+    "T-21",
     "T-23",
     "T-25",
-    "T-27",
+    "T-28",
     "T-30",
-    "T-39",
-    "T-43"
+    "T-40",
+    "T-41",
+    "T-42"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },
@@ -36085,23 +36113,23 @@
    "topicId": "T-47",
    "type": "true-false",
    "difficulty": "schwer",
-   "prompt": "zeile und spalte werden als normale int-Kopien an finde_erstes übergeben.",
-   "code": "#include <stdio.h>\n\n#define SPALTEN 4\n\nint finde_erstes(const int m[][SPALTEN],\n                 int zeilen, int wert,\n                 int *fund_zeile, int *fund_spalte) {\n    for (int i = 0; i < zeilen; i++) {\n        for (int j = 0; j < SPALTEN; j++) {\n            if (m[i][j] == wert) {\n                *fund_zeile = i;\n                *fund_spalte = j;\n                return 1;\n            }\n        }\n    }\n    return 0;\n}\n\nint main() {\n    int matrix[3][SPALTEN] = {\n        {2, 4, 7, 1},\n        {5, 7, 3, 8},\n        {9, 6, 2, 4}\n    };\n    int zeile = -1;\n    int spalte = -1;\n    int gefunden = finde_erstes(\n        matrix, 3, 7, &zeile, &spalte);\n\n    printf(\"%d %d %d\\n\",\n           gefunden, zeile, spalte);\n    return 0;\n}",
+   "prompt": "Eine der beiden Funktionen verändert den Inhalt von text.",
+   "code": "#include <stdio.h>\n\nint anzahl_woerter(const char s[]) {\n    int anzahl = 0;\n    for (int i = 0; s[i] != '\\0'; i++) {\n        if (s[i] != ' ' &&\n            (i == 0 || s[i - 1] == ' ')) {\n            anzahl++;\n        }\n    }\n    return anzahl;\n}\n\nint laengstes_wort(const char s[]) {\n    int aktuell = 0;\n    int maximum = 0;\n    for (int i = 0; ; i++) {\n        if (s[i] != ' ' && s[i] != '\\0') {\n            aktuell++;\n        } else {\n            if (aktuell > maximum) {\n                maximum = aktuell;\n            }\n            aktuell = 0;\n        }\n        if (s[i] == '\\0') {\n            break;\n        }\n    }\n    return maximum;\n}\n\nint main() {\n    char text[] = \"C macht viel Spass\";\n\n    printf(\"%d %d\\n\",\n           anzahl_woerter(text),\n           laengstes_wort(text));\n    return 0;\n}",
    "options": [
     "Richtig",
     "Falsch"
    ],
    "answerIndex": 1,
    "group": "exam-snip-007",
-   "groupPrompt": "Klausur-Code-Snippet: Erstes Vorkommen in einer Matrix suchen. Bewerten Sie die zehn Aussagen.",
-   "explanation": "Falsch: Übergeben werden mit &zeile und &spalte ihre Adressen.",
+   "groupPrompt": "Klausur-Code-Snippet: Wörter und Wortlängen in einem String. Bewerten Sie die zehn Aussagen.",
+   "explanation": "Falsch: Beide Funktionen lesen den String ausschließlich.",
    "source": "Beispielaufgaben Vorbereitung SS25.pdf / klausurnaher Transfer",
    "verified": true,
-   "familyId": "T47-exam-matrix-search",
+   "familyId": "T47-exam-string-analysis",
    "qualityLevel": 2,
    "variantAngle": "exam-analysis",
    "examOnly": true,
-   "examArchetype": "matrix-search",
+   "examArchetype": "string-analysis",
    "examSeriesRound": 2,
    "coverageTopics": [
     "T-03",
@@ -36122,12 +36150,14 @@
     "T-38",
     "T-47",
     "T-19",
+    "T-21",
     "T-23",
     "T-25",
-    "T-27",
+    "T-28",
     "T-30",
-    "T-39",
-    "T-43"
+    "T-40",
+    "T-41",
+    "T-42"
    ],
    "examSnippetPool": "exam-snippets-professor-ss25-v1"
   },

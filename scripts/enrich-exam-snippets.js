@@ -27,20 +27,20 @@ const coverageByArchetype = {
   'trimmed-mean': ['T-15', 'T-17', 'T-19', 'T-23', 'T-25'],
   'reverse-checksum': ['T-19', 'T-23', 'T-25', 'T-32'],
   'prefix-sums': ['T-19', 'T-23', 'T-25', 'T-32'],
-  'matrix-analysis': ['T-15', 'T-23', 'T-25', 'T-32', 'T-39'],
+  'array-segments': ['T-15', 'T-19', 'T-23', 'T-25', 'T-30', 'T-32'],
   'string-replacement': ['T-19', 'T-21', 'T-23', 'T-25', 'T-28', 'T-40', 'T-41', 'T-42'],
   'struct-ranking': ['T-19', 'T-23', 'T-25', 'T-43', 'T-44', 'T-45'],
-  'matrix-search': ['T-19', 'T-23', 'T-25', 'T-27', 'T-30', 'T-39', 'T-43'],
+  'string-analysis': ['T-19', 'T-21', 'T-23', 'T-25', 'T-28', 'T-30', 'T-40', 'T-41', 'T-42'],
   'positive-filter': ['T-19', 'T-23', 'T-25', 'T-30', 'T-32'],
 };
 const currentArchetypes = {
   'exam-snip-001': 'trimmed-mean',
   'exam-snip-002': 'reverse-checksum',
   'exam-snip-003': 'prefix-sums',
-  'exam-snip-004': 'matrix-analysis',
+  'exam-snip-004': 'array-segments',
   'exam-snip-005': 'string-replacement',
   'exam-snip-006': 'struct-ranking',
-  'exam-snip-007': 'matrix-search',
+  'exam-snip-007': 'string-analysis',
   'exam-snip-008': 'positive-filter',
 };
 const legacyArchetypes = {
@@ -141,7 +141,7 @@ int main() {
       {
         correct: false,
         prompt: 'Das Array daten wird beim Funktionsaufruf vollständig kopiert.',
-        explanation: 'Arrayparameter werden als Zeiger auf das erste Element übergeben.',
+        explanation: 'Arrayparameter arbeiten mit dem ursprünglichen Array; Änderungen an Elementen wären dort sichtbar.',
       },
       {
         correct: false,
@@ -161,15 +161,11 @@ int main() {
     title: 'Array umkehren und gewichtet auswerten',
     code: String.raw`#include <stdio.h>
 
-void tausche(int *x, int *y) {
-    int temp = *x;
-    *x = *y;
-    *y = temp;
-}
-
 void umkehren(int a[], int n) {
     for (int i = 0; i < n / 2; i++) {
-        tausche(&a[i], &a[n - 1 - i]);
+        int temp = a[i];
+        a[i] = a[n - 1 - i];
+        a[n - 1 - i] = temp;
     }
 }
 
@@ -199,7 +195,7 @@ int main() {
       },
       {
         correct: true,
-        prompt: 'Für n == 5 wird tausche genau zweimal aufgerufen.',
+        prompt: 'Für n == 5 wird der Schleifenrumpf in umkehren genau zweimal ausgeführt.',
         explanation: 'Die Schleife läuft für i = 0 und i = 1, weil 5 / 2 bei int-Division 2 ergibt.',
       },
       {
@@ -210,7 +206,7 @@ int main() {
       {
         correct: true,
         prompt: 'umkehren verändert das Array daten aus main.',
-        explanation: 'Die Funktion erhält die Adresse des ersten Elements und vertauscht die ursprünglichen Arrayelemente.',
+        explanation: 'Arrayänderungen innerhalb der Funktion sind anschließend im ursprünglichen Array sichtbar.',
       },
       {
         correct: false,
@@ -219,12 +215,12 @@ int main() {
       },
       {
         correct: false,
-        prompt: 'tausche erhält Kopien der beiden int-Werte und kann deshalb daten nicht verändern.',
-        explanation: 'tausche erhält int-Zeiger und schreibt über *x und *y in die ursprünglichen Variablen.',
+        prompt: 'Die Hilfsvariable temp ist überflüssig, weil die beiden direkten Zuweisungen keinen Wert überschreiben würden.',
+        explanation: 'Ohne temp ginge der zuerst überschriebene Arraywert verloren.',
       },
       {
         correct: true,
-        prompt: 'Mit der Bedingung i <= n / 2 würde tausche bei n == 5 dreimal aufgerufen.',
+        prompt: 'Mit der Bedingung i <= n / 2 würde der Schleifenrumpf bei n == 5 dreimal ausgeführt.',
         explanation: 'Dann wären i = 0, 1 und 2 erlaubt; beim dritten Aufruf würde das mittlere Element mit sich selbst getauscht.',
       },
       {
@@ -332,93 +328,89 @@ int main() {
   },
   {
     id: 'exam-snip-004',
-    familyId: 'T47-exam-matrix-analysis',
-    title: 'Zeilen- und Spaltenauswertung einer Matrix',
+    familyId: 'T47-exam-array-segments',
+    title: 'Teilbereiche und Maximum eines Arrays',
     code: String.raw`#include <stdio.h>
 
-#define SPALTEN 3
-
-int zeilensumme(const int m[][SPALTEN], int zeile) {
+int summe_bereich(const int a[], int von, int bis) {
     int summe = 0;
-    for (int j = 0; j < SPALTEN; j++) {
-        summe += m[zeile][j];
+    for (int i = von; i < bis; i++) {
+        summe += a[i];
     }
     return summe;
 }
 
-int spaltenmaximum(const int m[][SPALTEN],
-                   int zeilen, int spalte) {
-    int max = m[0][spalte];
-    for (int i = 1; i < zeilen; i++) {
-        if (m[i][spalte] > max) {
-            max = m[i][spalte];
+int index_maximum(const int a[], int n) {
+    int index = 0;
+    for (int i = 1; i < n; i++) {
+        if (a[i] > a[index]) {
+            index = i;
         }
     }
-    return max;
+    return index;
 }
 
 int main() {
-    int matrix[3][SPALTEN] = {
-        {3, 1, 4},
-        {1, 5, 9},
-        {2, 6, 5}
-    };
+    int daten[] = {3, 1, 4, 1, 5, 9};
+    int n = sizeof(daten) / sizeof(daten[0]);
+    int k = index_maximum(daten, n);
 
-    printf("%d %d\n",
-           zeilensumme(matrix, 1),
-           spaltenmaximum(matrix, 3, 2));
+    printf("%d %d %d\n",
+           summe_bereich(daten, 1, 5),
+           k,
+           daten[k]);
     return 0;
 }`,
     statements: [
       {
         correct: true,
-        prompt: 'zeilensumme(matrix, 1) liefert den Wert 15.',
-        explanation: 'Der Zeilenindex 1 bezeichnet die zweite Zeile {1, 5, 9}; ihre Summe ist 15.',
+        prompt: 'Die Ausgabe des Programms lautet 11 5 9.',
+        explanation: 'Die Werte an den Indizes 1 bis 4 ergeben 11; das Maximum 9 steht an Index 5.',
       },
       {
         correct: true,
-        prompt: 'spaltenmaximum(matrix, 3, 2) liefert den Wert 9.',
-        explanation: 'In der dritten Spalte stehen die Werte 4, 9 und 5.',
+        prompt: 'Der Parameter bis bezeichnet bei summe_bereich die erste nicht mehr einbezogene Position.',
+        explanation: 'Die Schleifenbedingung lautet i < bis.',
       },
       {
         correct: true,
-        prompt: 'Der Index 1 bezeichnet bei zeilensumme die zweite Matrixzeile.',
-        explanation: 'Arrayindizes beginnen in C bei 0.',
-      },
-      {
-        correct: true,
-        prompt: 'Bei einem zweidimensionalen Arrayparameter muss die zweite Dimension hier bekannt sein.',
-        explanation: 'Der Compiler benötigt die Spaltenzahl, um die Adresse von m[i][j] zu berechnen.',
+        prompt: 'summe_bereich(daten, 1, 5) addiert die Werte 1, 4, 1 und 5.',
+        explanation: 'Verwendet werden die Arrayindizes 1, 2, 3 und 4.',
       },
       {
         correct: false,
-        prompt: 'Die vollständige Matrix wird beim Aufruf von zeilensumme kopiert.',
-        explanation: 'Der Parameter verweist auf die ursprünglichen Matrixzeilen; const verhindert nur Schreibzugriffe darüber.',
-      },
-      {
-        correct: false,
-        prompt: 'Die Schleifenbedingung j <= SPALTEN würde ebenfalls nur gültige Spaltenindizes verwenden.',
-        explanation: 'Bei SPALTEN == 3 sind nur die Indizes 0, 1 und 2 gültig; j == 3 wäre außerhalb.',
+        prompt: 'index_maximum liefert den größten Arraywert zurück.',
+        explanation: 'Die Funktion liefert dessen Index zurück; der Wert wird anschließend mit daten[k] gelesen.',
       },
       {
         correct: true,
-        prompt: 'spaltenmaximum initialisiert max mit einem tatsächlich vorhandenen Matrixelement.',
-        explanation: 'Als Startwert wird m[0][spalte] verwendet.',
+        prompt: 'index wird mit 0 initialisiert, damit zunächst ein gültiges Arrayelement als Maximumskandidat dient.',
+        explanation: 'Verglichen wird ab Index 1 mit dem bereits vorhandenen Element a[index].',
+      },
+      {
+        correct: false,
+        prompt: 'index_maximum(daten, 0) behandelt ein leeres Array sicher und liefert -1.',
+        explanation: 'Der Code prüft n == 0 nicht und gibt stattdessen den Startwert 0 zurück.',
       },
       {
         correct: true,
-        prompt: 'spaltenmaximum kann auch dann korrekt arbeiten, wenn alle Werte der Spalte negativ sind.',
-        explanation: 'Die Initialisierung mit dem ersten Spaltenwert vermeidet einen ungeeigneten Startwert wie 0.',
+        prompt: 'Mit i <= bis würde summe_bereich(daten, 1, 5) zusätzlich daten[5] addieren.',
+        explanation: 'Dann wäre auch der Index 5 erlaubt und die Summe würde um 9 steigen.',
       },
       {
         correct: false,
-        prompt: 'Wenn matrix[1][2] auf 0 geändert würde, bliebe die Programmausgabe unverändert.',
-        explanation: 'Dann wäre die zweite Zeilensumme 6 und das Maximum der dritten Spalte 5.',
+        prompt: 'const int a[] bewirkt, dass beim Funktionsaufruf eine vollständige Arraykopie angelegt wird.',
+        explanation: 'const verhindert hier Änderungen über den Parameter; das Array wird nicht vollständig kopiert.',
+      },
+      {
+        correct: true,
+        prompt: 'Der Ausdruck sizeof(daten) / sizeof(daten[0]) ergibt in main den Wert 6.',
+        explanation: 'Die Gesamtgröße des Arrays wird durch die Größe eines Elements geteilt.',
       },
       {
         correct: false,
-        prompt: 'SPALTEN wird erst zur Laufzeit aus dem Inhalt der Matrix berechnet.',
-        explanation: '#define ersetzt SPALTEN bereits vor dem Übersetzen durch den Wert 3.',
+        prompt: 'Bei gleich großen Maximalwerten würde der strikte Vergleich > immer den späteren Index behalten.',
+        explanation: 'Bei Gleichheit ist die Bedingung falsch; dadurch bleibt der frühere Index erhalten.',
       },
     ],
   },
@@ -483,8 +475,8 @@ int main() {
       },
       {
         correct: false,
-        prompt: 'Dasselbe wäre sicher, wenn text als char *text = "banana"; deklariert und anschließend verändert würde.',
-        explanation: 'Ein Stringliteral darf nicht verändert werden; ein Schreibzugriff darüber führt zu undefiniertem Verhalten.',
+        prompt: 'ersetze könnte den String auch dann verändern, wenn text als const char text[] deklariert wäre.',
+        explanation: 'const verbietet Änderungen an den Arrayelementen; die verändernde Funktion wäre dafür nicht passend.',
       },
       {
         correct: true,
@@ -493,8 +485,8 @@ int main() {
       },
       {
         correct: false,
-        prompt: 'Innerhalb von ersetze könnte sizeof(s) zuverlässig die Größe des ursprünglichen Arrays liefern.',
-        explanation: 'Der Arrayparameter s wird als Zeiger behandelt; sizeof(s) wäre dort die Zeigergröße.',
+        prompt: 'Innerhalb von ersetze könnte sizeof(s) zuverlässig die Kapazität des ursprünglichen Arrays liefern.',
+        explanation: 'Aus dem Arrayparameter allein lässt sich die ursprüngliche Arraykapazität dort nicht bestimmen.',
       },
       {
         correct: true,
@@ -503,8 +495,8 @@ int main() {
       },
       {
         correct: false,
-        prompt: 'Die Zuweisung s[i] = zu verändert die Adresse, auf die s zeigt.',
-        explanation: 'Sie verändert das Zeichen an Index i, nicht den Zeiger s.',
+        prompt: 'Die Zuweisung s[i] = zu ersetzt automatisch alle Vorkommen des Zeichens im String.',
+        explanation: 'Die einzelne Zuweisung verändert nur das Zeichen am aktuellen Index i.',
       },
     ],
   },
@@ -519,10 +511,10 @@ typedef struct {
     int punkte[3];
 } Ergebnis;
 
-int gesamt(const Ergebnis *e) {
+int gesamt(Ergebnis e) {
     int summe = 0;
     for (int i = 0; i < 3; i++) {
-        summe += e->punkte[i];
+        summe += e.punkte[i];
     }
     return summe;
 }
@@ -530,7 +522,7 @@ int gesamt(const Ergebnis *e) {
 int bester_index(const Ergebnis a[], int n) {
     int bester = 0;
     for (int i = 1; i < n; i++) {
-        if (gesamt(&a[i]) > gesamt(&a[bester])) {
+        if (gesamt(a[i]) > gesamt(a[bester])) {
             bester = i;
         }
     }
@@ -546,7 +538,7 @@ int main() {
     int n = sizeof(daten) / sizeof(daten[0]);
     int k = bester_index(daten, n);
 
-    printf("%c %d\n", daten[k].kuerzel, gesamt(&daten[k]));
+    printf("%c %d\n", daten[k].kuerzel, gesamt(daten[k]));
     return 0;
 }`,
     statements: [
@@ -562,13 +554,13 @@ int main() {
       },
       {
         correct: true,
-        prompt: 'Der Operator -> wird verwendet, weil e ein Zeiger auf ein Ergebnis ist.',
-        explanation: 'e->punkte entspricht (*e).punkte.',
+        prompt: 'gesamt erhält das ausgewählte Ergebnis als Struct-Kopie und greift mit dem Punkt-Operator auf punkte zu.',
+        explanation: 'Normale Struct-Parameter werden als Wertkopie übergeben; Elemente erreicht man mit e.punkte.',
       },
       {
         correct: false,
         prompt: 'bester_index erhält eine vollständige Kopie des Arrays daten.',
-        explanation: 'Der Arrayparameter wird als Zeiger auf das erste Struct-Element übergeben.',
+        explanation: 'Das Array wird nicht vollständig kopiert; Änderungen an seinen Elementen wären im Original sichtbar.',
       },
       {
         correct: true,
@@ -586,9 +578,9 @@ int main() {
         explanation: 'Jedes Ergebnis enthält sein eigenes int-Array mit drei Elementen.',
       },
       {
-        correct: true,
-        prompt: 'const beim Parameter von gesamt verhindert Änderungen am übergebenen Ergebnis über e.',
-        explanation: 'e zeigt auf ein konstantes Ergebnis; Schreibzugriffe über e sind nicht zulässig.',
+        correct: false,
+        prompt: 'Änderungen an e innerhalb von gesamt würden das ursprüngliche Struct-Element in daten verändern.',
+        explanation: 'e ist eine lokale Struct-Kopie; Änderungen daran blieben auf die Funktion beschränkt.',
       },
       {
         correct: false,
@@ -596,100 +588,106 @@ int main() {
         explanation: '7 + 8 + 6 ergibt 21.',
       },
       {
-        correct: false,
-        prompt: 'sizeof(e) innerhalb von gesamt wäre gleich der Größe eines vollständigen Ergebnis-Structs.',
-        explanation: 'e ist ein Zeiger; sizeof(e) liefert die Zeigergröße.',
+        correct: true,
+        prompt: 'sizeof(e) innerhalb von gesamt liefert die Größe eines vollständigen Ergebnis-Structs.',
+        explanation: 'e ist hier ein Struct-Objekt und kein Arrayparameter.',
       },
     ],
   },
   {
     id: 'exam-snip-007',
-    familyId: 'T47-exam-matrix-search',
-    title: 'Erstes Vorkommen in einer Matrix suchen',
+    familyId: 'T47-exam-string-analysis',
+    title: 'Wörter und Wortlängen in einem String',
     code: String.raw`#include <stdio.h>
 
-#define SPALTEN 4
-
-int finde_erstes(const int m[][SPALTEN],
-                 int zeilen, int wert,
-                 int *fund_zeile, int *fund_spalte) {
-    for (int i = 0; i < zeilen; i++) {
-        for (int j = 0; j < SPALTEN; j++) {
-            if (m[i][j] == wert) {
-                *fund_zeile = i;
-                *fund_spalte = j;
-                return 1;
-            }
+int anzahl_woerter(const char s[]) {
+    int anzahl = 0;
+    for (int i = 0; s[i] != '\0'; i++) {
+        if (s[i] != ' ' &&
+            (i == 0 || s[i - 1] == ' ')) {
+            anzahl++;
         }
     }
-    return 0;
+    return anzahl;
+}
+
+int laengstes_wort(const char s[]) {
+    int aktuell = 0;
+    int maximum = 0;
+    for (int i = 0; ; i++) {
+        if (s[i] != ' ' && s[i] != '\0') {
+            aktuell++;
+        } else {
+            if (aktuell > maximum) {
+                maximum = aktuell;
+            }
+            aktuell = 0;
+        }
+        if (s[i] == '\0') {
+            break;
+        }
+    }
+    return maximum;
 }
 
 int main() {
-    int matrix[3][SPALTEN] = {
-        {2, 4, 7, 1},
-        {5, 7, 3, 8},
-        {9, 6, 2, 4}
-    };
-    int zeile = -1;
-    int spalte = -1;
-    int gefunden = finde_erstes(
-        matrix, 3, 7, &zeile, &spalte);
+    char text[] = "C macht viel Spass";
 
-    printf("%d %d %d\n",
-           gefunden, zeile, spalte);
+    printf("%d %d\n",
+           anzahl_woerter(text),
+           laengstes_wort(text));
     return 0;
 }`,
     statements: [
       {
         correct: true,
-        prompt: 'Die Ausgabe des Programms lautet 1 0 2.',
-        explanation: 'Das erste Vorkommen von 7 wird in Zeile 0, Spalte 2 gefunden.',
+        prompt: 'Die Ausgabe des Programms lautet 4 5.',
+        explanation: 'Der Text enthält vier Wörter; macht und Spass haben jeweils fünf Zeichen.',
       },
       {
         correct: true,
-        prompt: 'Die Matrix wird zeilenweise von links nach rechts durchsucht.',
-        explanation: 'Die äußere Schleife läuft über die Zeilen, die innere über die Spalten.',
+        prompt: 'anzahl_woerter beendet seine Schleife am Nullterminator.',
+        explanation: 'Die Bedingung s[i] != \'\\0\' prüft das Ende des C-Strings.',
       },
       {
         correct: true,
-        prompt: 'fund_zeile und fund_spalte ermöglichen zwei zusätzliche Ergebnisse über Zeigerparameter.',
-        explanation: 'Die Funktion schreibt die gefundenen Indizes über die übergebenen Adressen zurück.',
+        prompt: 'Ein Wort wird gezählt, wenn ein Nicht-Leerzeichen am Stringanfang oder direkt nach einem Leerzeichen steht.',
+        explanation: 'Genau diese beiden Fälle beschreibt die kombinierte if-Bedingung.',
       },
       {
         correct: false,
-        prompt: 'Wenn der Wert nicht gefunden wird, liefert die Funktion -1.',
-        explanation: 'Der Rückgabewert ist dann 0; die Indexvariablen bleiben in main bei -1.',
+        prompt: 'Zwei direkt aufeinanderfolgende Leerzeichen würden als zusätzliches Wort gezählt.',
+        explanation: 'Gezählt wird nur ein Nicht-Leerzeichen, das ein neues Wort beginnt.',
       },
       {
         correct: false,
-        prompt: 'Ein break in der inneren Schleife würde an derselben Stelle beide Schleifen und die Funktion beenden.',
-        explanation: 'break beendet nur die unmittelbar umgebende Schleife; return beendet hier direkt die Funktion.',
+        prompt: 'laengstes_wort zählt Leerzeichen zur jeweiligen Wortlänge hinzu.',
+        explanation: 'Bei einem Leerzeichen wird die aktuelle Wortlänge ausgewertet und anschließend auf 0 gesetzt.',
       },
       {
         correct: true,
-        prompt: 'Beim Suchwert 4 wäre das erste Ergebnis Zeile 0, Spalte 1.',
-        explanation: 'Die 4 in der ersten Zeile wird vor der späteren 4 in Zeile 2 gefunden.',
+        prompt: 'maximum wird mit 0 initialisiert, sodass auch ein leerer String sinnvoll ausgewertet werden kann.',
+        explanation: 'Ohne gefundenes Wort bleiben aktuell und maximum gleich 0.',
       },
       {
         correct: true,
-        prompt: 'Die Spaltenzahl 4 muss für den zweidimensionalen Arrayparameter bekannt sein.',
-        explanation: 'Sie wird für die Adressberechnung von m[i][j] benötigt.',
+        prompt: 'Für einen leeren String liefern beide Funktionen den Wert 0.',
+        explanation: 'Die erste Schleife läuft nicht; die zweite erreicht sofort den Nullterminator.',
       },
       {
         correct: false,
-        prompt: 'Der Aufruf wäre unverändert sicher, wenn für fund_zeile der Nullzeiger NULL übergeben würde.',
-        explanation: 'Beim Treffer würde *fund_zeile dann einen ungültigen Schreibzugriff verursachen.',
-      },
-      {
-        correct: true,
-        prompt: 'Das zweite Vorkommen der 7 wird wegen return 1 nicht mehr untersucht.',
-        explanation: 'Die Funktion endet unmittelbar nach dem ersten Treffer.',
+        prompt: 'Bei i == 0 wird in anzahl_woerter zwingend auf s[-1] zugegriffen.',
+        explanation: 'Wegen der Kurzschlussauswertung von || wird der rechte Ausdruck bei i == 0 nicht ausgewertet.',
       },
       {
         correct: false,
-        prompt: 'zeile und spalte werden als normale int-Kopien an finde_erstes übergeben.',
-        explanation: 'Übergeben werden mit &zeile und &spalte ihre Adressen.',
+        prompt: 'Der Zeichenvergleich mit dem Leerzeichen müsste in C mit " " statt mit \' \' geschrieben werden.',
+        explanation: 'Ein einzelnes Zeichen wird mit einfachen Anführungszeichen geschrieben; doppelte kennzeichnen einen String.',
+      },
+      {
+        correct: false,
+        prompt: 'Eine der beiden Funktionen verändert den Inhalt von text.',
+        explanation: 'Beide Funktionen lesen den String ausschließlich.',
       },
     ],
   },
@@ -880,14 +878,14 @@ for (const groupId of ['snip-017', 'snip-018']) {
 const falseRewrites = {
   'snip-001': [1, 'main liest exakt fünf Zahlen ein.', 'Falsch: Die Schleife in main liest genau vier Werte.'],
   'snip-002': [1, 'main liest exakt fünf Zahlen ein.', 'Falsch: Die Schleife in main liest genau vier Werte.'],
-  'snip-009': [7, 'Beide Funktionen erhalten jeweils eine vollständige Kopie des Arrays.', 'Falsch: Der Arrayparameter wird als Zeiger auf das erste Element übergeben.'],
-  'snip-010': [7, 'Beide Funktionen erhalten jeweils eine vollständige Kopie des Arrays.', 'Falsch: Der Arrayparameter wird als Zeiger auf das erste Element übergeben.'],
+  'snip-009': [7, 'Beide Funktionen erhalten jeweils eine vollständige Kopie des Arrays.', 'Falsch: Die Funktionen arbeiten mit den Elementen des ursprünglichen Arrays.'],
+  'snip-010': [7, 'Beide Funktionen erhalten jeweils eine vollständige Kopie des Arrays.', 'Falsch: Die Funktionen arbeiten mit den Elementen des ursprünglichen Arrays.'],
   'snip-017': [6, 'Bei n == 0 liefert summe_positiv den Wert 1.', 'Falsch: s bleibt 0 und dieser Wert wird zurückgegeben.'],
   'snip-018': [6, 'Bei n == 0 liefert summe_positiv den Wert 1.', 'Falsch: s bleibt 0 und dieser Wert wird zurückgegeben.'],
   'snip-021': [4, 'Der Rückgabewert liegt bei vier Elementen immer zwischen 1 und 4.', 'Falsch: Arrayindizes beginnen bei 0; möglich sind 0 bis 3.'],
   'snip-022': [4, 'Der Rückgabewert liegt bei fünf Elementen immer zwischen 1 und 5.', 'Falsch: Arrayindizes beginnen bei 0; möglich sind 0 bis 4.'],
-  'snip-025': [7, 'Der Parameter c ist ein Zeiger auf char.', 'Falsch: c ist ein einzelner Wert vom Typ char.'],
-  'snip-026': [7, 'Der Parameter c ist ein Zeiger auf char.', 'Falsch: c ist ein einzelner Wert vom Typ char.'],
+  'snip-025': [7, 'Der Parameter c enthält einen vollständigen String.', 'Falsch: c ist ein einzelner Wert vom Typ char.'],
+  'snip-026': [7, 'Der Parameter c enthält einen vollständigen String.', 'Falsch: c ist ein einzelner Wert vom Typ char.'],
   'snip-029': [7, 'Beide Schleifen laufen jeweils viermal.', 'Falsch: n ist 3; beide Schleifen laufen jeweils dreimal.'],
   'snip-030': [7, 'Beide Schleifen laufen jeweils viermal.', 'Falsch: n ist 3; beide Schleifen laufen jeweils dreimal.'],
 };
@@ -997,8 +995,42 @@ for (const q of data.questions) {
     q.familyId = 'SERIES-T44-typedef-vs-tag';
   }
 }
+
+const byQuestionId = new Map(data.questions.map((q) => [q.id, q]));
+byQuestionId.get('Q-000500').prompt =
+  'In einer Funktion mit Arrayparameter liefert sizeof(parameter) nicht die Größe des ursprünglichen Arrays.';
+byQuestionId.get('Q-000522').explanation =
+  'Richtig: Auf eine normale Struct-Variable greift man mit variable.element zu, zum Beispiel p.x = 3;.';
+for (const id of ['Q-000750', 'Q-000761', 'Q-000767', 'Q-000770', 'Q-000776', 'Q-000778', 'Q-000785']) {
+  const q = byQuestionId.get(id);
+  q.options = q.options.map((option) =>
+    option.replace(/p->x/g, 'x.p').replace(/ist die im Kurs übliche Zugriffsart auf p/, 'ist die richtige Reihenfolge'));
+  q.explanation = q.explanation
+    .replace(/[^\n]*-> ist der Zugriff über einen ZEIGER auf ein Struct\.[^\n]*\n?/g,
+      'Die Schreibweise x.p vertauscht Variable und Elementname und ist daher falsch.\n');
+}
+byQuestionId.get('Q-001383').explanation =
+  'Bei scanf ist %lf für eine double-Variable erforderlich. Bei printf liegt ein double-Wert vor; %f ist korrekt.';
+byQuestionId.get('Q-001406').options =
+  byQuestionId.get('Q-001406').options.map((option) =>
+    option.replace('Auf x wird mit p->x zugegriffen, obwohl p kein Zeiger ist.',
+      'x.p ist eine gültige Alternative zu p.x.'));
+byQuestionId.get('Q-001406').explanation =
+  'Bei einer normalen Struct-Variablen wird der Punkt-Operator in der Reihenfolge variable.element verwendet. Zwei double-Elemente belegen in der Kurskonvention zusammen 16 Byte.';
+byQuestionId.get('Q-001411').explanation =
+  'scanf benötigt für eine double-Variable den Specifier %lf und den Adressoperator &. Bei printf ist %f korrekt.';
+byQuestionId.get('Q-001434').options = ['x.p', 'p.x', 'punkt.x', 'p[x]'];
+byQuestionId.get('Q-001435').explanation =
+  'Richtig: Normale Struct-Parameter werden in C als Wertkopie übergeben.';
+for (const q of data.questions) {
+  if (typeof q.explanation === 'string') {
+    q.explanation = q.explanation
+      .replace(/Zeigergröße/gi, 'Größe des Arrayparameters')
+      .replace(/als Zeiger auf das erste Element/gi, 'als Zugriff auf das ursprüngliche Array');
+  }
+}
 data.questions.push(...generated, ...seriesQuestions);
-data.meta.version = '1.6';
+data.meta.version = '1.7';
 
 const json = JSON.stringify(data, null, 1) + '\n';
 fs.writeFileSync(jsonFile, json, 'utf8');
