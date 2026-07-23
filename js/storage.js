@@ -42,6 +42,7 @@
   const LEGACY_MAX_BOX = 4; // nur noch für die Migration alter Stände
   const MAX_EXAM_HISTORY = 10;
   const SYNC_DEBOUNCE_MS = 2000;
+  const EXAM_SERIES_SCOPE = 'scope-2026-07-no-pointer-matrix';
 
   let currentUser = null;   // null = Gastmodus
   let syncEnabled = false;  // true nur bei aktiver Server-Anmeldung
@@ -55,6 +56,7 @@
   function emptyExamSeries() {
     return {
       id: '',
+      scopeVersion: EXAM_SERIES_SCOPE,
       generatedCount: 0,
       familyKeys: [],
       variantKeys: [],
@@ -109,14 +111,19 @@
     const variantKeys = Array.isArray(selection.variantKeys)
       ? selection.variantKeys.filter((key) => typeof key === 'string').slice(0, 100)
       : [];
-    const rawSeries = parsed.examSeries && typeof parsed.examSeries === 'object'
+    const parsedSeries = parsed.examSeries && typeof parsed.examSeries === 'object'
       ? parsed.examSeries : emptyExamSeries();
+    // Ein fachlich geänderter Pool darf keine teilweise verbrauchte alte Serie
+    // fortsetzen. Dadurch startet der korrigierte Stoffumfang sauber bei 0/6.
+    const rawSeries = parsedSeries.scopeVersion === EXAM_SERIES_SCOPE
+      ? parsedSeries : emptyExamSeries();
     const sanitizeKeys = (values, limit) => Array.isArray(values)
       ? values.filter((value) => typeof value === 'string').slice(0, limit)
       : [];
     const generatedCount = Math.min(6, Math.max(0, Number(rawSeries.generatedCount) || 0));
     const examSeries = {
       id: typeof rawSeries.id === 'string' ? rawSeries.id.slice(0, 80) : '',
+      scopeVersion: EXAM_SERIES_SCOPE,
       generatedCount,
       familyKeys: sanitizeKeys(rawSeries.familyKeys, 300),
       variantKeys: sanitizeKeys(rawSeries.variantKeys, 300),
@@ -443,6 +450,7 @@
   function getExamSeries() {
     return {
       id: state.examSeries.id,
+      scopeVersion: state.examSeries.scopeVersion,
       generatedCount: state.examSeries.generatedCount,
       familyKeys: state.examSeries.familyKeys.slice(),
       variantKeys: state.examSeries.variantKeys.slice(),

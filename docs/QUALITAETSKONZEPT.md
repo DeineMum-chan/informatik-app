@@ -42,7 +42,9 @@ Q2-Garantie und dürfen deshalb einzelne Ein-Varianten-Familien enthalten.
 ### 3. Q2-Klausursimulation
 
 - Der Aufbau bleibt bei 45 Einheiten und 81 Punkten.
-- Jede einzelne Klausur deckt alle 47 aktiven Themen ab.
+- Jede einzelne Klausur deckt alle 46 aktiven Themen ab. Zeiger und
+  mehrdimensionale Arrays gehören nicht zum freigegebenen Stoffumfang und
+  dürfen weder als Aufgabe noch als Distraktor oder Erklärung erscheinen.
 - Innerhalb einer Klausur darf keine Einzelfragen-Familie doppelt vorkommen.
 - Die vier Code-Snippets müssen aus unterschiedlichen Archetypen stammen.
 - Sie werden ausschließlich aus einem getrennten Klausurpool gezogen, bestehen
@@ -81,7 +83,7 @@ Die automatischen Tests müssen nach jeder Pooländerung bestätigen:
 2. keine Q2-Familie besitzt nur eine auswählbare Variante;
 3. zwei aufeinanderfolgende Q2-Durchläufe verwenden pro Familie verschiedene
    konkrete Einheiten;
-4. simulierte Klausuren besitzen 45 Einheiten, 81 Punkte, 47/47 Themen, keine
+4. simulierte Klausuren besitzen 45 Einheiten, 81 Punkte, 46/46 Themen, keine
    leichte Einzelfrage und keine Familien-Dopplung;
 5. in 20 vollständigen Sechser-Serien wiederholt sich weder eine konkrete
    Variante noch ein Inhaltsfingerabdruck;

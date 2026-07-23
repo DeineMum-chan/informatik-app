@@ -13,8 +13,9 @@
  *
  *   Aktuell deaktiviert:
  *     T-24 = "Bitweise Operatoren (&,|,^,~) & bitweise↔logisch"
+ *     T-39 = "Mehrdimensionale (2D-)Arrays"
  */
 
 window.CKT_CONFIG = {
-  disabledTopics: ['T-24'],
+  disabledTopics: ['T-24', 'T-39'],
 };

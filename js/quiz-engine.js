@@ -605,13 +605,28 @@
       return (familyAvailability.get(familyIndexForQuestion(dataset, right)) || 0) -
         (familyAvailability.get(familyIndexForQuestion(dataset, left)) || 0);
     });
-    for (const q of ordered) {
-      if (selected.length >= target) break;
-      const familyIndex = familyIndexForQuestion(dataset, q);
-      if (usedIds.has(q.id) || usedFamilies.has(familyIndex)) continue;
-      selected.push(q);
-      usedIds.add(q.id);
-      usedFamilies.add(familyIndex);
+    const addCandidates = (allowRepeatedPrimaryTopic) => {
+      const usedPrimaryTopics = new Set([...usedIds]
+        .map((id) => dataset.byId[id])
+        .filter(Boolean)
+        .map((q) => q.topicId));
+      for (const q of ordered) {
+        if (selected.length >= target) break;
+        const familyIndex = familyIndexForQuestion(dataset, q);
+        if (usedIds.has(q.id) || usedFamilies.has(familyIndex)) continue;
+        if (!allowRepeatedPrimaryTopic && usedPrimaryTopics.has(q.topicId)) continue;
+        selected.push(q);
+        usedIds.add(q.id);
+        usedFamilies.add(familyIndex);
+        usedPrimaryTopics.add(q.topicId);
+      }
+    };
+    // Knappe Themenvarianten nicht als beliebige Füller mehrfach in derselben
+    // Klausur verbrauchen. Erst wenn der Topf sonst nicht voll wird, sind
+    // weitere Fragen desselben Primärthemas erlaubt.
+    addCandidates(false);
+    if (selected.length < target) {
+      addCandidates(true);
     }
     return selected.length === target;
   }

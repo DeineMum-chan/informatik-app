@@ -20,7 +20,7 @@ const ckt = {
 const sandbox = {
   window: {
     CKT: ckt,
-    CKT_CONFIG: { disabledTopics: ['T-24'] },
+    CKT_CONFIG: { disabledTopics: ['T-24', 'T-39'] },
   },
   CKT: ckt,
   console,
@@ -42,7 +42,7 @@ const dataset = engine.prepare(raw);
 const allFindBugQuestions = raw.questions.filter((q) => q.type === 'find-bug');
 const findBugQuestions = allFindBugQuestions.filter((q) => q.disabled !== true);
 
-assert.equal(raw.meta.version, '1.6', 'Der Fragenpool muss die Datenversion 1.6 verwenden.');
+assert.equal(raw.meta.version, '1.7', 'Der Fragenpool muss die Datenversion 1.7 verwenden.');
 assert.equal(dataset.skipped, 0, 'Keine aktive Frage darf an der Validierung scheitern.');
 assert.equal(allFindBugQuestions.length, 30, 'Der redaktionelle Pool muss 30 Fehlersuchaufgaben behalten.');
 assert.equal(findBugQuestions.length, 27, '27 Fehlersuchaufgaben müssen ohne Löschoperation aktiv sein.');

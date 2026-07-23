@@ -828,7 +828,7 @@
       el('button', { className: 'mode-card', type: 'button', onclick: () => renderExamSetup() },
         el('span', { className: 'mode-icon', text: '⏱' }),
         el('h3', { text: 'Klausursimulation' }),
-        el('p', { text: '47/47 Themen, Q2-Anspruch und keine konkrete Wiederholung innerhalb von sechs Klausuren.' }),
+        el('p', { text: `${data.topics.length}/${data.topics.length} Themen, Q2-Anspruch und keine konkrete Wiederholung innerhalb von sechs Klausuren.` }),
         el('span', { className: 'mode-meta', text: examSeries.generatedCount >= 6
           ? 'Serie 6/6 · bereit für Neustart'
           : `Serie ${examSeries.generatedCount}/6${lastExam ? ` · Letzte: ${lastExam.grade}` : ''}` })),
@@ -846,8 +846,7 @@
       view.appendChild(el('div', { className: 'notice', text: `${data.skipped} fehlerhafte Frage(n) im Pool wurden übersprungen.` }));
     }
     if (data.disabledCount > 0) {
-      const themen = data.disabledTopicNames.length ? ' (' + data.disabledTopicNames.join(', ') + ')' : '';
-      view.appendChild(el('div', { className: 'notice', text: `${data.disabledCount} Frage(n) sind aktuell deaktiviert${themen} und werden nicht abgefragt.` }));
+      view.appendChild(el('div', { className: 'notice', text: `${data.disabledCount} Frage(n) außerhalb des freigegebenen Stoffumfangs sind deaktiviert und werden nicht abgefragt.` }));
     }
 
     // Themen-Statistik
@@ -1200,7 +1199,7 @@
         : `Klausur ${series.generatedCount + 1} von 6`,
     }));
     card.appendChild(el('p', {
-      text: 'Jede Klausur deckt alle 47 aktiven Themen ab. Innerhalb der Serie werden weder eine konkrete Einzelfrage noch ein Code-Snippet wiederholt. Der Builder erzeugt keine vereinfachte Ersatzklausur.',
+      text: `Jede Klausur deckt alle ${S.data.topics.length} aktiven Themen ab. Innerhalb der Serie werden weder eine konkrete Einzelfrage noch ein Code-Snippet wiederholt. Der Builder erzeugt keine vereinfachte Ersatzklausur.`,
     }));
     card.appendChild(el('p', { text: 'Aufbau wie beim Dozenten: Teil 1 mit 5 Richtig/Falsch-, 13 Mehrfachauswahl-, 13 Predict-Output-, 6 Umrechnungs- und 3 Einfachauswahl-Aufgaben. Teil 2 enthält 4 Code-Snippets mit je 10 Aussagen und eine Fehler-finden-Aufgabe. Jede Aussage zählt 1 Punkt.' }));
 
@@ -1757,13 +1756,13 @@
    * Der Bestätigungs-Stand liegt im synchronisierten Fortschritt (storage),
    * damit der Dialog nicht auf jedem Gerät neu aufpoppt.
    */
-  const NEWS_VERSION = 8;
+  const NEWS_VERSION = 9;
 
   const NEWS_ITEMS = [
     {
-      icon: '🧠',
-      title: 'Q2-Verständnisstandard',
-      text: 'Der normale Durchlauf startet mit mittel und schwer. Jedes aktive Thema ist enthalten und jede ausgewählte Konzeptfamilie besitzt mindestens zwei wechselnde Varianten.',
+      icon: '✓',
+      title: 'Stoffumfang korrigiert',
+      text: 'Zeiger und mehrdimensionale Arrays wurden vollständig aus Übung und Klausur entfernt. Die Ersatzaufgaben verwenden ausschließlich behandelte C-Grundlagen.',
     },
     {
       icon: '🔄',
@@ -1773,7 +1772,7 @@
     {
       icon: '🧩',
       title: 'Harte Sechser-Klausurserie',
-      text: 'Jede Klausur deckt 47/47 Themen ab. Über sechs Simulationen wiederholt sich weder eine konkrete Frage noch ein Code-Snippet; danach ist ein bewusster Serien-Neustart nötig.',
+      text: 'Jede Klausur deckt alle aktiven Themen ab. Über sechs Simulationen wiederholt sich weder eine konkrete Frage noch ein Code-Snippet; danach ist ein bewusster Serien-Neustart nötig.',
     },
     {
       icon: '⌨',
