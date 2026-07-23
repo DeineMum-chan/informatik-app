@@ -114,8 +114,8 @@ erkennt die App das automatisch und läuft wie bisher im Gastmodus ohne Login.
 
 | Modus | Was passiert |
 |---|---|
-| **Üben nach Thema** | Themen/Schwierigkeit wählen, Sofort-Feedback und Erklärung. Standardmäßig ist **Q2** aktiv (`mittel` + `schwer`): 117 Konzeptfamilien decken alle 47 aktiven Themen ab und besitzen jeweils mindestens zwei Varianten. Pro Durchlauf kommt je Konzept eine Variante; der nächste vollständige Durchlauf wechselt zuerst die Perspektive (Regel, Anwendung, Diagnose, Transfer) und danach Zahlen/Namen. Leichte Grundlagen lassen sich freiwillig zuschalten. Geschaffte Konzepte verschwinden, falsche kommen wieder; Antwortoptionen werden gemischt. |
-| **Klausursimulation** | Realistischer Mix: Teil 1 (~40 Fragen: R/F-Aussagen, „Was trifft zu?", Predict-Output, alle sechs Zahlensystem-Richtungen, Einfachauswahl) + Teil 2 (4 Code-Snippets à ~10 Aussagen + 1 Fehler-finden). Einzelfragen sind mittel/schwer. Die Auswahl zieht unterschiedliche Konzeptfamilien und Code-Archetypen, vermeidet die konkreten Varianten der unmittelbar vorherigen Klausur und – außer den sechs verpflichtenden Zahlensystem-Familien – auch deren Familien. Bei der Fehlersuche werden Codezeilen direkt markiert und Korrekturen selbst eingetragen. Optionen: Zeitlimit und Negativ-Marking. |
+| **Üben nach Thema** | Themen/Schwierigkeit wählen, Sofort-Feedback und Erklärung. Standardmäßig ist **Q2** aktiv (`mittel` + `schwer`): 116 Konzeptfamilien decken alle 47 aktiven Themen ab und besitzen jeweils mindestens zwei Varianten. Pro Durchlauf kommt je Konzept eine Variante; der nächste vollständige Durchlauf wechselt zuerst die Perspektive (Regel, Anwendung, Diagnose, Transfer) und danach Zahlen/Namen. Leichte Grundlagen lassen sich freiwillig zuschalten. Geschaffte Konzepte verschwinden, falsche kommen wieder; Antwortoptionen werden gemischt. |
+| **Klausursimulation** | Harte Sechser-Serie: Jede Simulation besitzt 45 Einheiten, 81 Punkte und deckt alle 47 aktiven Themen ab. Teil 1 enthält 5 R/F-, 13 Mehrfachauswahl-, 13 Predict-Output-, alle 6 Zahlensystem-Richtungen und 3 Einfachauswahl-Aufgaben; Teil 2 enthält 4 Code-Snippets mit je 10 Aussagen sowie 1 Fehler-finden-Aufgabe. Der getrennte Pool umfasst 24 klausurexklusive Programme. Innerhalb der sechs Klausuren wiederholt sich weder eine konkrete Einzelfrage noch ein Code-Snippet; zusätzlich schützt ein Inhaltsfingerabdruck vor Dubletten mit anderer ID. Nach Klausur 6 ist ein bewusster Serien-Neustart nötig. Alle Einzelfragen sind verifiziert und mittel/schwer. |
 | **Fehler wiederholen** | Falsch beantwortete + gemerkte Fragen. Wer eine Frage **einmal richtig** beantwortet, nimmt sie sofort aus dem Pool — so wiederholen sich dieselben Fragen nicht. Gemerkte Fragen bleiben, bis die Markierung entfernt wird. |
 
 **Notenschätzung** (üblicher Hochschulschlüssel, Bestehensgrenze 50 %):
@@ -147,8 +147,9 @@ c-klausurtrainer/
 ├── scripts/
 │   ├── enrich-find-bug.js  # erzeugt strukturierte Fehlerstellen + Offline-Kopie
 │   ├── enrich-question-quality.js # Fachkorrekturen, Familien + Detailfragen
+│   ├── enrich-exam-snippets.js # 24 exklusive Klausurprogramme à 10 Aussagen
 │   ├── test-find-bug.js    # Regressionstest für Fehlersuche und Klausurbau
-│   └── test-question-quality.js # Q2-Durchläufe + 1500 Klausursimulationen
+│   └── test-question-quality.js # Q2-Durchläufe + vollständige Sechser-Serien
 ├── users.json              # erlaubte Login-Namen (Allowlist)
 ├── Dockerfile              # Container für Coolify
 └── README.md
@@ -171,6 +172,7 @@ Coolify gemountete Volume `/app/data-store`) — eine JSON-Datei pro Nutzer.
    ```
    node scripts/enrich-find-bug.js
    node scripts/enrich-question-quality.js
+   node scripts/enrich-exam-snippets.js
    ```
 
 3. Beide Regressionstests ausführen:
@@ -180,8 +182,9 @@ Coolify gemountete Volume `/app/data-store`) — eine JSON-Datei pro Nutzer.
    node scripts/test-question-quality.js
    ```
 
-4. In `service-worker.js` die Konstante `VERSION` hochzählen (z. B. `ckt-v16`),
-   damit installierte PWAs den neuen Pool übernehmen. Beim Laden über den
+4. In `service-worker.js` die Konstante `VERSION` hochzählen (aktuell
+   `ckt-v19`, beim nächsten Update z. B. `ckt-v20`), damit installierte PWAs
+   den neuen Pool übernehmen. Beim Laden über den
    Webserver holt sich die App den Pool ohnehin bevorzugt frisch aus dem Netz
    (Network-first für `questions.json`).
 
@@ -192,6 +195,9 @@ Coolify gemountete Volume `/app/data-store`) — eine JSON-Datei pro Nutzer.
 führende Nullen; `acceptedAnswers` für Alternativen), `code-explain`
 (Freitext mit Musterlösung zum Selbstabgleich). Fragen mit gleicher `group`
 gehören zu einem Code-Snippet und werden zusammen angezeigt.
+Mit `examOnly: true` markierte Gruppen werden ausschließlich für die vier
+Codeblöcke der Klausursimulation verwendet. Sie zählen nicht zum normalen
+Durchlauf, zum Fehler-Wiederholen oder zum Lernfortschritt.
 
 Mit `familyId` lassen sich Werte-, Namens- oder Codevarianten ausdrücklich
 derselben semantischen Konzeptfamilie zuordnen. Fehlt das Feld, verwendet die
@@ -202,27 +208,36 @@ Klausuren wählen auf Familienebene und danach zufällig eine konkrete Variante.
 vollständige Definition steht in
 [`docs/QUALITAETSKONZEPT.md`](docs/QUALITAETSKONZEPT.md).
 
-`find-bug` unterstützt zusätzlich `bugTargets`: Jede Fehlerstelle enthält eine
-kanonische Zeile, optional alternative zulässige Zeilen sowie akzeptierte
-Korrekturen. Bei alternativen Reparaturwegen lassen sich Korrekturen mit
-`acceptedRepairs` gezielt an bestimmte Zeilen binden. Der Nutzer markiert
-dadurch Fehler direkt im Code, statt aus vorgegebenen Aussagen auszuwählen.
-Für eine vollständig richtige Antwort müssen alle Fehlerstellen passend
-korrigiert sein; zusätzliche Markierungen zählen als falsch. Die bisherigen
+`find-bug` unterstützt zusätzlich `bugTargets`: Jede Fehlerstelle enthält die
+ursprüngliche Zeile (`originalLine`), eine kanonische Vollzeilenlösung
+(`solution`) und alle akzeptierten vollständigen Korrekturzeilen
+(`acceptedCorrectedLines`). Einzelne Zeichen, Operatoren oder Stichwörter
+reichen als Antwort nicht. Formatierungsleerzeichen außerhalb von C-String- und
+Zeichenliteralen werden ignoriert; Schreibweise und der Inhalt von Literalen
+bleiben fachlich relevant. Der Nutzer markiert dadurch Fehler direkt im Code
+und muss anschließend immer die komplette korrigierte Zeile eingeben. Für eine
+vollständig richtige Antwort müssen alle Fehlerstellen passend korrigiert sein;
+zusätzliche Markierungen zählen als falsch. Die bisherigen
 `options`/`answerIndices` bleiben als rückwärtskompatible redaktionelle Quelle
 erhalten.
 
-Nach redaktionellen Änderungen an den 30 Fehlersuche-Aufgaben erzeugt
-`node scripts/enrich-find-bug.js` die strukturierten Fehlerstellen erneut und
-aktualisiert zugleich `data/questions.js`.
+Der redaktionelle Pool enthält 30 Fehlersuche-Aufgaben. Davon sind 27 aktiv;
+drei Aufgaben mit einer notwendigen Löschoperation bleiben als Quelle erhalten,
+werden aber nicht abgefragt. Nach redaktionellen Änderungen erzeugt
+`node scripts/enrich-find-bug.js` die strukturierten Vollzeilen-Fehlerstellen
+erneut und aktualisiert zugleich `data/questions.js`.
 
 `node scripts/enrich-question-quality.js` korrigiert die fachlich geprüften
 Einzelfälle, setzt die expliziten Konzeptfamilien und ergänzt die 28
-Dozenten-Detailfragen sowie 56 zusätzliche Q2-Verständnisvarianten. Danach
+Dozenten-Detailfragen sowie 56 zusätzliche Q2-Verständnisvarianten.
+`node scripts/enrich-exam-snippets.js` stellt anschließend 24
+klausurexklusive Programme mit jeweils zehn zusammenhängenden Aussagen nach
+dem Aufbau der `Beispielaufgaben Vorbereitung SS25.pdf` bereit und ergänzt
+knappe Detailthemen um die für sechs Klausuren nötigen Varianten. Danach
 prüfen `node scripts/test-find-bug.js` und
 `node scripts/test-question-quality.js` Datenvertrag, Bewertung,
-Rückwärtskompatibilität, Familienbildung, Variantenrotation und den
-Wiederholungsschutz aufeinanderfolgender Klausuren automatisch.
+Rückwärtskompatibilität, Familienbildung, Variantenrotation, vollständige
+Themenabdeckung und den Wiederholungsschutz über komplette Sechser-Serien.
 
 ---
 

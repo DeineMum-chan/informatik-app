@@ -46,20 +46,15 @@ for (const id of ['Q-001376', 'Q-001377', 'Q-001378']) {
   );
   const target = q.bugTargets && q.bugTargets.find((item) => item.id === 'double-format');
   if (target) {
-    target.solution = '%f oder %lf';
+    target.solution = 'printf("%f", q);';
     target.description = q.options[optionIndex];
-    target.acceptedCorrections = [
-      '%f',
-      '%lf',
+    target.acceptedCorrectedLines = [
       'printf("%f", q);',
       'printf("%.2f", q);',
       'printf("%lf", q);',
       'printf("%.2lf", q);',
-      'printf("%f",q);',
-      'printf("%.2f",q);',
-      'printf("%lf",q);',
-      'printf("%.2lf",q);',
     ];
+    delete target.acceptedCorrections;
   }
 }
 
@@ -1075,7 +1070,7 @@ for (const q of data.questions) {
   else if (singleExamFamilies.has(q.familyId)) q.examFamilyRole = 'mc-single';
 }
 
-data.meta.version = '1.3';
+data.meta.version = '1.5';
 const json = JSON.stringify(data, null, 1) + '\n';
 fs.writeFileSync(jsonFile, json, 'utf8');
 fs.writeFileSync(

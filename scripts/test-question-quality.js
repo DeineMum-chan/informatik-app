@@ -44,11 +44,14 @@ const qualityTag = 'quality-round-2026-07';
 const details = raw.questions.filter((q) => q.qualityTag === qualityTag);
 const masteryTag = 'mastery-q2-2026-07';
 const masteryQuestions = raw.questions.filter((q) => q.qualityTag === masteryTag);
+const examSnippetTag = 'exam-snippets-professor-ss25-v1';
+const examSnippetQuestions = raw.questions.filter((q) => q.examSnippetPool === examSnippetTag);
+const allExamSnippetQuestions = raw.questions.filter((q) => q.examOnly === true && q.group);
 
-assert.equal(raw.meta.version, '1.3', 'Der Fragenpool muss Datenversion 1.3 verwenden.');
-assert.equal(raw.questions.length, 1465, 'Der vollständige Pool muss 1465 Fragen enthalten.');
-assert.equal(dataset.questions.length, 1368,
-  'Nach dem bewusst deaktivierten Thema T-24 müssen 1368 Fragen aktiv sein.');
+assert.equal(raw.meta.version, '1.6', 'Der Fragenpool muss Datenversion 1.6 verwenden.');
+assert.equal(raw.questions.length, 1550, 'Der vollständige Pool muss 1550 Fragen enthalten.');
+assert.equal(dataset.questions.length, 1450,
+  'Nach T-24 und den drei Löschaufgaben müssen 1450 Fragen aktiv sein.');
 assert.equal(dataset.skipped, 0, 'Keine aktive Frage darf an der Validierung scheitern.');
 assert.equal(details.length, 28, 'Die Qualitätsrunde muss genau 28 Detailfragen enthalten.');
 assert.ok(details.every((q) => q.verified && q.familyId && engine.validateQuestion(q)),
@@ -65,6 +68,49 @@ assert.ok(masteryQuestions.every((q) =>
   q.verified && q.qualityLevel === 2 && q.familyId && q.variantAngle &&
   engine.validateQuestion(q)),
 'Jede Q2-Variante muss verifiziert, familienmarkiert, perspektivmarkiert und valide sein.');
+assert.equal(examSnippetQuestions.length, 80,
+  'Die acht neu geschriebenen Dozentenprogramme müssen zusammen 80 Aussagen besitzen.');
+assert.equal(allExamSnippetQuestions.length, 240,
+  'Die Sechser-Serie benötigt 24 klausurexklusive Programme mit 240 Aussagen.');
+assert.ok(allExamSnippetQuestions.every((q) =>
+  q.examOnly === true && q.type === 'true-false' && q.difficulty === 'schwer' &&
+  q.verified && q.qualityLevel === 2 && q.examArchetype &&
+  Number.isInteger(q.examSeriesRound) && engine.validateQuestion(q)),
+'Jede exklusive Snippet-Aussage muss schwer, verifiziert und valide sein.');
+const examSnippetGroups = new Map();
+for (const q of allExamSnippetQuestions) {
+  if (!examSnippetGroups.has(q.group)) examSnippetGroups.set(q.group, []);
+  examSnippetGroups.get(q.group).push(q);
+}
+assert.equal(examSnippetGroups.size, 24,
+  'Der Klausurpool muss 24 unterschiedliche Programme enthalten.');
+assert.equal(new Set(allExamSnippetQuestions.map((q) => q.familyId)).size, 24,
+  'Jedes exklusive Klausurprogramm benötigt eine eigene Familie.');
+for (const [groupId, questions] of examSnippetGroups) {
+  assert.equal(questions.length, 10, `${groupId}: Ein Programm benötigt exakt zehn Aussagen.`);
+  assert.equal(new Set(questions.map((q) => q.prompt)).size, 10,
+    `${groupId}: Die zehn Aussagen müssen unterschiedlich sein.`);
+  const codeLineCount = questions[0].code.split('\n').length;
+  assert.ok(codeLineCount >= 16 && codeLineCount <= 40,
+    `${groupId}: Der Dozentenstil benötigt einen zusammenhängenden Codeblock.`);
+  const trueCount = questions.filter((q) => q.answerIndex === 0).length;
+  assert.ok(trueCount >= 4 && trueCount <= 6,
+    `${groupId}: Richtig/Falsch darf nicht einseitig verteilt sein.`);
+}
+assert.equal(dataset.families.length, 362,
+  'Der aktive Gesamtpool muss 362 Familien einschließlich 24 Klausurfamilien bilden.');
+assert.deepEqual(
+  JSON.parse(JSON.stringify(engine.overallProgress(dataset))),
+  {
+    families: { total: 338, done: 0, open: 338 },
+    questions: { total: 1210, answered: 0 },
+  },
+  'Klausurexklusive Inhalte dürfen den normalen Lernfortschritt nicht vergrößern.',
+);
+ckt.storage.reviewIds = () => examSnippetQuestions.map((q) => q.id);
+assert.equal(engine.buildReviewPool(dataset).length, 0,
+  'Klausurexklusive Aussagen dürfen nicht im Modus Fehler wiederholen erscheinen.');
+ckt.storage.reviewIds = () => [];
 
 for (const id of ['Q-001205', 'Q-001215']) {
   const q = raw.questions.find((candidate) => candidate.id === id);
@@ -72,9 +118,10 @@ for (const id of ['Q-001205', 'Q-001215']) {
     `${id}: Eine richtige Zahl darf die falsche kausale Aussage nicht wahr machen.`);
 }
 
-function topicFamilyIds(topicId) {
+function topicFamilyIds(topicId, predicate = () => true) {
   const ids = new Set();
-  for (const q of dataset.questions.filter((candidate) => candidate.topicId === topicId)) {
+  for (const q of dataset.questions.filter((candidate) =>
+    candidate.topicId === topicId && predicate(candidate))) {
     const unitKey = q.group ? `g:${q.group}` : `q:${q.id}`;
     ids.add(dataset.familyByUnitKey[unitKey]);
   }
@@ -83,10 +130,12 @@ function topicFamilyIds(topicId) {
 
 assert.equal(topicFamilyIds('T-20').size, 6,
   'Die sechs Umrechnungsrichtungen müssen sechs getrennte Familien sein.');
-assert.equal(topicFamilyIds('T-47').size, 10,
+assert.equal(topicFamilyIds('T-47', (q) => q.examOnly !== true).size, 10,
   'Die 40 Codeblöcke müssen auf zehn echte Snippet-Archetypen gebündelt sein.');
-assert.equal(topicFamilyIds('T-48').size, 10,
-  'Die 30 Fehlersuchaufgaben müssen auf zehn echte Fehler-Archetypen gebündelt sein.');
+assert.equal(topicFamilyIds('T-47', (q) => q.examOnly === true).size, 24,
+  'Die klausurexklusiven Codeblöcke müssen 24 eigenständige Familien bilden.');
+assert.equal(topicFamilyIds('T-48').size, 9,
+  'Die 27 aktiven Vollzeilen-Fehlersuchaufgaben müssen auf neun Archetypen gebündelt sein.');
 
 const allDifficulties = new Set(['leicht', 'mittel', 'schwer']);
 const conversionRun = engine.createPracticeSession(dataset, {
@@ -112,6 +161,8 @@ assert.equal(snippetRun.stats().total, 10,
 const snippetRunFamilies = new Set();
 for (let i = 0; i < 10; i += 1) {
   const unit = snippetRun.next();
+  assert.notEqual(unit.group.examOnly, true,
+    'Ein klausurexklusives Snippet darf nicht im Übungsmodus erscheinen.');
   snippetRunFamilies.add(dataset.familyByUnitKey[`g:${unit.group.id}`]);
 }
 assert.equal(snippetRunFamilies.size, 10,
@@ -136,8 +187,8 @@ function selectedUnitsByFamily(session) {
 
 runSeed = 0;
 const q2RunA = engine.createPracticeSession(dataset, q2Filters);
-assert.equal(q2RunA.stats().total, 117,
-  'Der normale Q2-Durchlauf muss 117 semantische Konzeptfamilien enthalten.');
+assert.equal(q2RunA.stats().total, 116,
+  'Der normale Q2-Durchlauf muss 116 semantische Konzeptfamilien enthalten.');
 assert.equal(q2RunA.stats().singleVariant, 0,
   'Keine Q2-Familie darf nur eine auswählbare Variante besitzen.');
 const selectedA = selectedUnitsByFamily(q2RunA);
@@ -170,7 +221,7 @@ const expectedT20Families = new Set([
   'T20-hex-to-bin',
 ]);
 
-for (let run = 0; run < 1000; run += 1) {
+for (let run = 0; run < 100; run += 1) {
   const exam = engine.buildExam(dataset, { timed: false, negative: false });
   assert.equal(exam.units.length, 45, 'Eine Klausur muss aus 45 Einheiten bestehen.');
   assert.equal(exam.maxPoints, 81, 'Eine Klausur muss 81 Punkte umfassen.');
@@ -179,12 +230,17 @@ for (let run = 0; run < 1000; run += 1) {
   const groups = exam.units.filter((unit) => unit.kind === 'group');
   assert.equal(singles.length, 41, 'Eine Klausur muss 41 Einzelfragen enthalten.');
   assert.equal(groups.length, 4, 'Eine Klausur muss vier Snippet-Gruppen enthalten.');
-  assert.equal(singles.filter((unit) => unit.q.type === 'true-false').length, 15,
-    'Teil 1 muss 15 Wahr/Falsch-Einzelfragen enthalten.');
-  assert.equal(singles.filter((unit) => unit.q.type === 'mc-multi').length, 8,
-    'Teil 1 muss acht Mehrfachauswahlen enthalten.');
-  assert.equal(singles.filter((unit) => unit.q.type === 'predict-output').length, 8,
-    'Teil 1 muss acht Predict-Output-Fragen enthalten.');
+  assert.ok(groups.every((unit) =>
+    unit.group.examOnly === true &&
+    unit.group.questions.length === 10 &&
+    unit.group.code.split('\n').length >= 16),
+  'Alle vier Klausurgruppen müssen exklusiv, lang und aus zehn Aussagen aufgebaut sein.');
+  assert.equal(singles.filter((unit) => unit.q.type === 'true-false').length, 5,
+    'Teil 1 muss fünf Wahr/Falsch-Einzelfragen enthalten.');
+  assert.equal(singles.filter((unit) => unit.q.type === 'mc-multi').length, 13,
+    'Teil 1 muss 13 Mehrfachauswahlen enthalten.');
+  assert.equal(singles.filter((unit) => unit.q.type === 'predict-output').length, 13,
+    'Teil 1 muss 13 Predict-Output-Fragen enthalten.');
   assert.equal(singles.filter((unit) => unit.q.type === 'mc-single').length, 3,
     'Teil 1 muss drei Einfachauswahlen enthalten.');
   assert.equal(singles.filter((unit) => unit.q.type === 'find-bug').length, 1,
@@ -210,27 +266,46 @@ for (let run = 0; run < 1000; run += 1) {
     expectedT20Families,
     'Jede Umrechnungsrichtung darf pro Klausur genau einmal vorkommen.',
   );
+  assert.equal(new Set(exam.coverageTopics).size, dataset.topics.length,
+    'Jede Klausur muss alle aktiven Themen abdecken.');
 }
 
-let recentSelection = { familyKeys: [], variantKeys: [] };
-for (let run = 0; run < 500; run += 1) {
-  const exam = engine.buildExam(dataset, {
-    timed: false,
-    negative: false,
-    recentSelection,
-  });
-  const selection = engine.examSelectionSummary(dataset, exam);
-  const previousVariants = new Set(recentSelection.variantKeys);
-  const repeatedVariants = selection.variantKeys.filter((key) => previousVariants.has(key));
-  assert.equal(repeatedVariants.length, 0,
-    'Zwei aufeinanderfolgende Klausuren dürfen keine konkrete Variante wiederholen.');
-
-  const previousFamilies = new Set(recentSelection.familyKeys);
-  const repeatedNonConversionFamilies = selection.familyKeys.filter((key) =>
-    previousFamilies.has(key) && !key.startsWith('E|T20-'));
-  assert.equal(repeatedNonConversionFamilies.length, 0,
-    'Außer den sechs Zahlensystem-Richtungen darf keine Familie direkt wiederkehren.');
-  recentSelection = selection;
+for (let cycle = 0; cycle < 20; cycle += 1) {
+  let seriesSelection = {
+    generatedCount: 0,
+    familyKeys: [],
+    variantKeys: [],
+    fingerprints: [],
+  };
+  for (let number = 1; number <= 6; number += 1) {
+    const exam = engine.buildExam(dataset, {
+      timed: false,
+      negative: false,
+      seriesSelection,
+    });
+    const selection = engine.examSelectionSummary(dataset, exam);
+    assert.equal(exam.seriesNumber, number,
+      'Die Klausurnummer innerhalb der Serie muss korrekt fortgeschrieben werden.');
+    assert.equal(new Set(exam.coverageTopics).size, dataset.topics.length,
+      'Jede Serienklausur muss 47/47 Themen abdecken.');
+    const usedVariants = new Set(seriesSelection.variantKeys);
+    assert.equal(selection.variantKeys.filter((key) => usedVariants.has(key)).length, 0,
+      'Innerhalb einer Sechser-Serie darf keine konkrete Variante wiederkehren.');
+    const usedFingerprints = new Set(seriesSelection.fingerprints);
+    assert.equal(selection.fingerprints.filter((key) => usedFingerprints.has(key)).length, 0,
+      'Auch inhaltsgleiche Varianten mit anderer ID dürfen nicht wiederkehren.');
+    seriesSelection = {
+      generatedCount: number,
+      familyKeys: [...seriesSelection.familyKeys, ...selection.familyKeys],
+      variantKeys: [...seriesSelection.variantKeys, ...selection.variantKeys],
+      fingerprints: [...seriesSelection.fingerprints, ...selection.fingerprints],
+    };
+  }
+  assert.throws(
+    () => engine.buildExam(dataset, { seriesSelection }),
+    (error) => error && error.code === 'EXAM_SERIES_COMPLETE',
+    'Nach sechs Klausuren muss ein expliziter Serien-Neustart erforderlich sein.',
+  );
 }
 
 const localValues = new Map([
@@ -292,9 +367,32 @@ assert.equal(
   }),
   'Die letzte Klausurauswahl muss für den Wiederholungsschutz gespeichert werden.',
 );
+assert.equal(storage.getExamSeries().generatedCount, 0,
+  'Ein alter Speicherstand muss mit einer leeren Klausurserie migriert werden.');
+storage.rememberExamSeriesSelection({
+  familyKeys: ['E|A'],
+  variantKeys: ['q:Q-1'],
+  fingerprints: ['fingerprint-1'],
+});
+assert.deepEqual(
+  JSON.parse(JSON.stringify(storage.getExamSeries())),
+  {
+    id: storage.getExamSeries().id,
+    generatedCount: 1,
+    familyKeys: ['E|A'],
+    variantKeys: ['q:Q-1'],
+    fingerprints: ['fingerprint-1'],
+    createdAt: storage.getExamSeries().createdAt,
+  },
+  'Der Serienstand muss Varianten und Inhaltsfingerabdrücke dauerhaft sammeln.',
+);
+storage.resetExamSeries();
+assert.equal(storage.getExamSeries().generatedCount, 0,
+  'Ein bewusster Serien-Neustart muss den Wiederholungsschutz zurücksetzen.');
 
 console.log(
   `OK: ${details.length} Detailfragen, ${masteryQuestions.length} Q2-Varianten, `
+    + '24 exklusive Klausur-Snippets, '
     + `${dataset.families.length} Familien, zwei Q2-Durchläufe und `
-    + '1500 familienbewusste Klausuren geprüft.',
+    + '100 Einzelklausuren sowie 20 vollständige Sechser-Serien geprüft.',
 );

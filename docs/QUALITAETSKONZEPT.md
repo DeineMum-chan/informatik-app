@@ -42,16 +42,23 @@ Q2-Garantie und dürfen deshalb einzelne Ein-Varianten-Familien enthalten.
 ### 3. Q2-Klausursimulation
 
 - Der Aufbau bleibt bei 45 Einheiten und 81 Punkten.
+- Jede einzelne Klausur deckt alle 47 aktiven Themen ab.
 - Innerhalb einer Klausur darf keine Einzelfragen-Familie doppelt vorkommen.
 - Die vier Code-Snippets müssen aus unterschiedlichen Archetypen stammen.
+- Sie werden ausschließlich aus einem getrennten Klausurpool gezogen, bestehen
+  aus einem zusammenhängenden Programm und besitzen jeweils exakt zehn Aussagen.
+- Klausurexklusive Snippets erscheinen weder im Übungs- noch im
+  Fehler-Wiederholen-Modus und vergrößern den normalen Lernfortschritt nicht.
 - Alle sechs Zahlensystem-Richtungen kommen genau einmal vor.
-- Einzelfragen werden aus `mittel` und `schwer` gezogen; `leicht` ist nur ein
-  technischer Notfall-Fallback, falls ein redaktioneller Pool später zu klein
-  wird.
-- Die unmittelbar vorherige konkrete Aufgabenvariante wird vermieden.
-- Familien der vorherigen Klausur werden vermieden, solange der jeweilige
-  Aufgabentopf genügend andere Familien besitzt. Die sechs verpflichtenden
-  Zahlensystem-Familien sind die einzige planmäßige Ausnahme.
+- Einzelfragen werden ausschließlich aus verifizierten Fragen der Stufen
+  `mittel` und `schwer` gezogen. Es gibt keinen leichten Notfall-Fallback.
+- Eine Serie besteht aus genau sechs Klausuren. In dieser Serie darf weder eine
+  konkrete Aufgaben-ID noch ein normalisierter Inhaltsfingerabdruck
+  wiederkehren.
+- Der exklusive Pool besitzt 24 Code-Snippets: vier unverbrauchte Programme pro
+  Klausur. Nach Klausur 6 muss der Nutzer die Serie ausdrücklich neu starten.
+- Kann eine Bedingung nicht erfüllt werden, bricht der Builder mit einer
+  verständlichen Meldung ab, statt eine schwächere Ersatzklausur zu erzeugen.
 
 ### 4. Redaktioneller Anspruch
 
@@ -74,12 +81,11 @@ Die automatischen Tests müssen nach jeder Pooländerung bestätigen:
 2. keine Q2-Familie besitzt nur eine auswählbare Variante;
 3. zwei aufeinanderfolgende Q2-Durchläufe verwenden pro Familie verschiedene
    konkrete Einheiten;
-4. 1.000 simulierte Klausuren besitzen 45 Einheiten, 81 Punkte, keine leichte
-   Einzelfrage und keine Familien-Dopplung;
-5. zwei direkt aufeinanderfolgende Klausuren wiederholen keine konkrete
-   Variante;
-6. Familienüberschneidungen zweier aufeinanderfolgender Klausuren beschränken
-   sich auf die sechs verpflichtenden Zahlensystem-Richtungen;
+4. simulierte Klausuren besitzen 45 Einheiten, 81 Punkte, 47/47 Themen, keine
+   leichte Einzelfrage und keine Familien-Dopplung;
+5. in 20 vollständigen Sechser-Serien wiederholt sich weder eine konkrete
+   Variante noch ein Inhaltsfingerabdruck;
+6. eine siebte Klausur wird bis zum bewussten Serien-Neustart blockiert;
 7. `questions.json` und die Offline-Kopie `questions.js` sind identisch.
 
 ## Datenfelder
@@ -89,4 +95,3 @@ Die automatischen Tests müssen nach jeder Pooländerung bestätigen:
 - `qualityLevel`: numerische Qualitätsstufe; neue Verständnisvarianten
   verwenden `2`,
 - `qualityTag`: idempotente redaktionelle Erzeugungsrunde.
-

@@ -39,11 +39,18 @@ vm.runInContext(
 
 const engine = ckt.engine;
 const dataset = engine.prepare(raw);
-const findBugQuestions = raw.questions.filter((q) => q.type === 'find-bug');
+const allFindBugQuestions = raw.questions.filter((q) => q.type === 'find-bug');
+const findBugQuestions = allFindBugQuestions.filter((q) => q.disabled !== true);
 
-assert.equal(raw.meta.version, '1.3', 'Der Fragenpool muss die Datenversion 1.3 verwenden.');
+assert.equal(raw.meta.version, '1.6', 'Der Fragenpool muss die Datenversion 1.6 verwenden.');
 assert.equal(dataset.skipped, 0, 'Keine aktive Frage darf an der Validierung scheitern.');
-assert.equal(findBugQuestions.length, 30, 'Der Pool muss weiterhin 30 Fehlersuchaufgaben enthalten.');
+assert.equal(allFindBugQuestions.length, 30, 'Der redaktionelle Pool muss 30 Fehlersuchaufgaben behalten.');
+assert.equal(findBugQuestions.length, 27, '27 Fehlersuchaufgaben müssen ohne Löschoperation aktiv sein.');
+assert.deepEqual(
+  allFindBugQuestions.filter((q) => q.disabled).map((q) => q.id),
+  ['Q-001373', 'Q-001374', 'Q-001375'],
+  'Nur die drei Aufgaben mit einer erforderlichen Löschoperation dürfen deaktiviert sein.',
+);
 assert.ok(findBugQuestions.every(engine.isStructuredFindBug),
   'Jede Fehlersuchaufgabe benötigt strukturierte Fehlerziele.');
 
@@ -53,7 +60,7 @@ for (const question of findBugQuestions) {
   const correctAnswer = {
     marks: question.bugTargets.map((target) => ({
       line: target.line,
-      correction: target.acceptedCorrections[0],
+      correction: target.acceptedCorrectedLines[0],
     })),
   };
   const correctResult = engine.gradeFindBug(question, correctAnswer);
@@ -74,45 +81,40 @@ for (const question of findBugQuestions) {
     `${question.id}: Eine zusätzliche falsche Markierung muss die Antwort falsch machen.`);
 }
 
-const constQuestion = findBugQuestions.find((q) => q.id === 'Q-001373');
-const constAnswer = {
-  marks: [
-    { line: 2, correction: '#include <math.h>' },
-    { line: 4, correction: 'double pi = 3.14159;' },
-  ],
-};
-assert.equal(engine.gradeFindBug(constQuestion, constAnswer).correct, true,
-  'Die alternative Reparatur an Zeile 4 muss akzeptiert werden.');
-assert.equal(engine.gradeFindBug(constQuestion, {
-  marks: [
-    { line: 2, correction: '#include <math.h>' },
-    { line: 4, correction: 'Zeile löschen' },
-  ],
-}).correct, false, 'Eine Reparatur darf nicht an einer unpassenden Alternativzeile akzeptiert werden.');
-assert.equal(engine.gradeFindBug(constQuestion, {
-  marks: [
-    { line: 2, correction: '#include <math.h>' },
-    { line: 5, correction: 'const entfernen' },
-  ],
-}).correct, false, 'Eine Reparatur muss zur markierten Zeile passen.');
-
 const printfDoubleQuestion = findBugQuestions.find((q) => q.id === 'Q-001376');
 const printfDoubleAnswer = {
   marks: printfDoubleQuestion.bugTargets.map((target) => ({
     line: target.line,
-    correction: target.id === 'double-format' ? '%f' : target.acceptedCorrections[0],
+    correction: target.acceptedCorrectedLines[0],
   })),
 };
 assert.equal(engine.gradeFindBug(printfDoubleQuestion, printfDoubleAnswer).correct, true,
-  'Bei printf muss %f für einen double-Wert als korrekte Reparatur gelten.');
+  'Eine vollständig korrigierte printf-Zeile mit %f muss akzeptiert werden.');
+const printfTarget = printfDoubleQuestion.bugTargets.find((target) => target.id === 'double-format');
+assert.equal(engine.bugCorrectionMatches(printfTarget, '%f', printfTarget.line), false,
+  'Ein einzelnes Korrekturfragment darf nicht mehr genügen.');
+assert.equal(engine.bugCorrectionMatches(
+  printfTarget,
+  'printf ( "%f" , q ) ;',
+  printfTarget.line,
+), true, 'Unterschiedliche Formatierung außerhalb von Literalen muss erlaubt bleiben.');
+assert.equal(engine.bugCorrectionMatches(
+  {
+    line: 1,
+    solution: 'printf("%d ", i);',
+    acceptedCorrectedLines: ['printf("%d ", i);'],
+  },
+  'printf("%d", i);',
+  1,
+), false, 'Leerzeichen innerhalb eines Stringliterals dürfen nicht weg-normalisiert werden.');
 
 const caseQuestion = findBugQuestions.find((q) => q.id === 'Q-001352');
 const caseAnswer = {
   marks: caseQuestion.bugTargets.map((target) => ({
     line: target.line,
     correction: target.id === 'function-case'
-      ? 'QUADRAT(zahl)'
-      : target.acceptedCorrections[0],
+      ? 'printf("%d", QUADRAT(zahl));'
+      : target.acceptedCorrectedLines[0],
   })),
 };
 assert.equal(engine.gradeFindBug(caseQuestion, caseAnswer).correct, false,
@@ -134,6 +136,9 @@ for (let i = 0; i < 100; i += 1) {
   assert.equal(exam.units.filter((unit) =>
     unit.kind === 'single' && unit.q.type === 'find-bug').length, 1,
   'Eine Klausur muss genau eine Fehlersuchaufgabe enthalten.');
+  assert.equal(exam.units.some((unit) =>
+    unit.kind === 'single' && unit.q.type === 'find-bug' && unit.q.disabled), false,
+  'Eine deaktivierte Löschaufgabe darf nicht in einer Klausur erscheinen.');
 }
 
 const embeddedSource = fs.readFileSync(path.join(root, 'data', 'questions.js'), 'utf8')
@@ -147,4 +152,7 @@ assert.deepEqual(
   'questions.json und die eingebettete questions.js müssen identisch sein.',
 );
 
-console.log(`OK: ${findBugQuestions.length} Fehlersuchaufgaben und 100 Klausuren geprüft.`);
+console.log(
+  `OK: ${findBugQuestions.length} aktive Vollzeilen-Fehlersuchaufgaben `
+  + 'und 100 Klausuren geprüft.',
+);
